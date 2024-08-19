@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some common misconceptions about [topic]?",
+    "model_alias": "gpt2-124m"
+}

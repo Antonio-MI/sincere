@@ -1,0 +1,4 @@
+{
+    "prompt": "How do you get to Venice?\nYou can reach Venice by plane or by train. For instance, if you take a train from Milan, it takes about 3 hours and costs around \u20ac30. On the other hand, flying there would be faster but more expensive, with a flight time of approximately 1 hour and 20 minutes and a price ranging between \u20ac60 to \u20ac80, depending on the airline and time of departure.",
+    "model_alias": "gpt2-124m"
+}
