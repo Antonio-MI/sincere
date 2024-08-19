@@ -23,7 +23,7 @@ model_unload_times = {}
 
 # Queue to store incoming requests
 request_queue = []
-batch_size = 2  # Set the fixed batch size
+batch_size = 2  # Fixed batch size
 batch_timeout = 5  # Timeout to process smaller batches
 batch_lock = threading.Lock()
 
@@ -135,7 +135,7 @@ def profile_models():
             unload_start_time = time.time()
             del model_instance
             del tokenizer
-            torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
+            #torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
             unload_time = time.time() - unload_start_time
             unload_times.append(unload_time)
 
@@ -148,7 +148,7 @@ def profile_models():
         print(f"Profiled model {model} - Load time: {mean_load_time:.4f}s, Unload time: {mean_unload_time:.4f}s")
 
 if __name__ == '__main__':
-    # Run profiling separately if needed
+    # Run profiling 
     profile_models()
 
     # Start the batch processing thread

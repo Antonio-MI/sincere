@@ -14,7 +14,7 @@ workload_folder = "./workloads"
 # Define the parameters for the Gamma distribution
 shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
 
-run_duration = 30 #seconds
+run_duration = 20 #seconds
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
