@@ -1,4 +1,4 @@
 {
     "prompt": "How can you describe a situation where two people cannot agree on something?\nA specific example of such a situation could be: \"Two friends who cannot agree on which movie to watch.\"",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

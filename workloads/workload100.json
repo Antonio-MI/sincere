@@ -1,4 +1,4 @@
 {
     "prompt": "What is a good way to prepare for an exam?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

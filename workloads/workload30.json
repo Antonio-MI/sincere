@@ -1,4 +1,4 @@
 {
     "prompt": "What would be an appropriate task to ask an AI assistant to complete that requires some level of language analysis?\nA specific example of such a task could be: \"Analyze the style of writing used in a political speech and identify any common techniques or rhetorical devices employed.\"",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

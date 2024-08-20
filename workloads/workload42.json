@@ -1,4 +1,4 @@
 {
     "prompt": "How would you explain to a five-year old what happens when a person dies?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

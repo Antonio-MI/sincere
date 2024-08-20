@@ -1,4 +1,4 @@
 {
     "prompt": "Why should I learn to play a musical instrument?\nPlaying a musical instrument can have numerous benefits for both your mental and physical health. For instance, learning to play a piano or guitar can improve your memory skills by stimulating different parts of the brain involved in processing and storing information. Moreover, it can also help reduce stress levels and lower blood pressure due to its relaxing effects.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

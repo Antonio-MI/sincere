@@ -6,6 +6,7 @@ import time
 import uuid  # To generate unique request IDs
 import numpy as np
 import random
+#from tqdm.auto import tqdm
 
 # Folder containing models
 base_dir = "./models"
@@ -24,7 +25,7 @@ model_unload_times = {}
 
 # Lists to store requests and their IDs for batching
 request_batch = []
-batch_size = random.choice([2,3,4])  # Fixed batch size (for now)
+#batch_size = random.choice([4])  # Fixed batch size (for now)
 
 # Time constraint variables
 batch_start_time = None
@@ -46,6 +47,7 @@ def load_model(model_alias):
 
     model_dir = os.path.join(base_dir, model_alias)
     tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    # Checfk if this padding works for every model
     tokenizer.padding_side = "left"  # Set padding to the left side for decoder-only architectures
     model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
     
@@ -66,22 +68,12 @@ def create_batch_generator(batch):
 
 app = Flask(__name__)
 
-@app.route('/inference', methods=['POST'])
-def inference():
-    model_alias = request.json.get('model_alias')
-    prompt = request.json.get('prompt')
-    request_id = str(uuid.uuid4())  # Generate a unique request ID
-    print(f"Request with id {request_id} received")
-    # Store the request data for batching
-    request_data = {
-        'id': request_id,
-        'model_alias': model_alias,
-        'prompt': prompt
-    }
-    request_batch.append(request_data)
+def process_batch(condition, batch_size):
+    global request_batch, batch_start_time
 
-    # Check if batch size is met
-    if len(request_batch) >= batch_size:
+    print(f"{condition} condition met")
+
+    if request_batch:
         # Perform batch inference
         model_alias = request_batch[0]['model_alias']
         load_model(model_alias)
@@ -97,27 +89,77 @@ def inference():
             device="cpu",  
         )
 
+        # for out in tqdm(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size )):
+        #     pass
+
         outputs = pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)
-        #print(outputs)
+
         # Prepare the responses
         responses = {}
         for i, output in enumerate(outputs):
-                # Since output is a list containing one dictionary, access the dictionary first
-                generated_text = output[0]['generated_text']
-                request_id = request_batch[i]['id']
-                responses[request_id] = generated_text
+            # Since output is a list containing one dictionary, access the dictionary first
+            generated_text = output[0]['generated_text']
+            request_id = request_batch[i]['id']
+            responses[request_id] = generated_text
 
         # Clear the batch after processing
         request_batch.clear()
 
+        # Reset the timer for the next batch
+        batch_start_time = None
+
+        print(f"Processed batch and cleared requests: {list(responses.keys())}")
+
+        # Return a list of completed inference IDs (for debugging purposes)
+        return list(responses.keys())
+
+app = Flask(__name__)
+
+@app.route('/inference', methods=['POST'])
+def inference():
+    global batch_start_time
+
+    model_alias = request.json.get('model_alias')
+    prompt = request.json.get('prompt')
+    request_id = str(uuid.uuid4())  # Generate a unique request ID
+    print(f"Request with ID {request_id} received")
+    
+    # Store the request data for batching
+    request_data = {
+        'id': request_id,
+        'model_alias': model_alias,
+        'prompt': prompt
+    }
+    request_batch.append(request_data)
+
+    batch_size = 4
+
+    # Start the timer if this is the first request in the batch
+    if batch_start_time is None:
+        batch_start_time = time.time()
+
+    # Check if batch size is met or if time constraint is met
+    if len(request_batch) >= batch_size:
+        # Process the batch because the batch size was met
+        completed_inference_ids = process_batch("Batch size", batch_size)
         # Return the response to the original request
         return jsonify({
-            'Inferences completed': list(responses.keys())
+            'Inferences completed': completed_inference_ids
+        })
+
+    elif (time.time() - batch_start_time) >= batch_time_limit:
+        # Process the batch because the time limit was met
+        batch_size = len(request_batch)
+        completed_inference_ids = process_batch("Time limit", batch_size)
+        # Return the response to the original request
+        return jsonify({
+            'Inferences completed': completed_inference_ids
         })
 
     return jsonify({
-        'message': f"Request queued with ID {request_id}. It will be processed when the batch is full."
+        'message': f"Request queued with ID {request_id}"
     })
+
 
 if __name__ == '__main__':
     # Iterate through all the models available to profile their mean load and unload
@@ -138,7 +180,7 @@ if __name__ == '__main__':
             unload_start_time = time.time()
             del model_instance
             del tokenizer
-            torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
+            #torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
             unload_time = time.time() - unload_start_time
             unload_times.append(unload_time)
 

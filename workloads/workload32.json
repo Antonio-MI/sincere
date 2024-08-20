@@ -1,4 +1,4 @@
 {
     "prompt": "How do you explain the concept of compound sentences to a child who is learning English as a second language?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

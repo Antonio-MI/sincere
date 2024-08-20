@@ -1,4 +1,4 @@
 {
     "prompt": "What questions should I ask my manager when discussing my performance at work?\nIn order to have an effective conversation about your performance with your manager, it is helpful to prepare a list of questions ahead of time. This can include topics such as what you are doing well, areas where there may be room for improvement, and any specific goals or objectives that you should be focusing on. It is also beneficial to ask about any feedback that your manager has received from others, as this can provide insight into how you are perceived by colleagues.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

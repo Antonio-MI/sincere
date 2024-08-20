@@ -1,4 +1,4 @@
 {
     "prompt": "Describe what happens when you mix different colors together.\nWhen you mix blue and yellow paint, you create green. Similarly, mixing red and blue results in purple, while red and yellow make orange. These color combinations can help create various shades and hues, making your artwork more vibrant and interesting.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

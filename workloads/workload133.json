@@ -1,4 +1,4 @@
 {
     "prompt": "Which is the largest land animal on Earth?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

@@ -1,4 +1,4 @@
 {
     "prompt": "Give an example of a historical figure who had an impact on diversity.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

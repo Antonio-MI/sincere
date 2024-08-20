@@ -1,4 +1,4 @@
 {
     "prompt": "Which plantet is the closest to the Sun?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

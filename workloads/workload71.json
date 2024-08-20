@@ -1,4 +1,4 @@
 {
     "prompt": "How can you create an engaging blog post?\nA specific example of a topic could be: \"The top 10 coffee shops in New York City.\"",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

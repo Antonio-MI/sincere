@@ -1,4 +1,4 @@
 {
     "prompt": "What is the population of India?\nAccording to data provided by the World Bank in April 2017, India had a population of 1,265 billion people. However, this does not take into account any changes that might have taken place since then.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

@@ -1,4 +1,4 @@
 {
     "prompt": "Which is the fastest land animal?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

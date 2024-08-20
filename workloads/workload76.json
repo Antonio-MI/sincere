@@ -1,4 +1,4 @@
 {
     "prompt": "Name a famous inventor and describe one of their most successful inventions.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

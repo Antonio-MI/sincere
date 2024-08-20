@@ -1,4 +1,4 @@
 {
     "prompt": "What happens when someone makes a mistake during a meeting?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

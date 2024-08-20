@@ -1,4 +1,4 @@
 {
     "prompt": "How would you define the term \"diversity\"? Please provide a concise and clear definition of this term.",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

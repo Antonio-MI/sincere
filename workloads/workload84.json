@@ -1,4 +1,4 @@
 {
     "prompt": "How can you best use your writing skills when it comes to improving customer service?\nA specific example could be: \"You're responding to an email from a dissatisfied customer about their recent order.\"",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }
