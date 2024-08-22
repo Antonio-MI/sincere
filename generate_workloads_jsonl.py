@@ -7,7 +7,7 @@ input_directory = 'instructlab/generated'
 
 # Define the model aliases
 # model_aliases = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
-model_aliases = ["gpt2medium-355m"]
+model_aliases = ["gpt2medium-355m", "gpt2-124m", "distilgpt2-124m"]
 
 # Create a directory to store the generated JSON files
 output_directory = './workloads'

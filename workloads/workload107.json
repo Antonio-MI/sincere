@@ -1,4 +1,4 @@
 {
     "prompt": "Which is the largest and deepest ocean on Earth?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

@@ -1,4 +1,4 @@
 {
     "prompt": "Why do some people prefer to listen to audiobooks over reading physical books?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

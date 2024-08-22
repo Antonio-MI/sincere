@@ -1,4 +1,4 @@
 {
     "prompt": "What is the primary benefit of using a computer for data analysis over manual methods?\nComputer-aided data analysis offers several advantages over traditional manual methods.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

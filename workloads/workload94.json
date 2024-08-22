@@ -1,4 +1,4 @@
 {
     "prompt": "Explain how to write a good story about overcoming adversity.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

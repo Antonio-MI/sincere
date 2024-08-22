@@ -1,4 +1,4 @@
 {
     "prompt": "How would you describe the atmosphere in the room where I just conducted an interview for my blog?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

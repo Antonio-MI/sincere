@@ -1,4 +1,4 @@
 {
     "prompt": "Name one person who has influenced you deeply and explain why their impact on your life was so significant.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

@@ -1,4 +1,4 @@
 {
     "prompt": "What are some common issues faced by people who start a new business?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

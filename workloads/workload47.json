@@ -1,4 +1,4 @@
 {
     "prompt": "How can I create a more engaging title for my blog post that will attract readers' attention?\nA specific example of a blog post could be: \"The Top 10 Secrets of Successful Entrepreneurs Revealed!\"",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

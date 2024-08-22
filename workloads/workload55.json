@@ -1,4 +1,4 @@
 {
     "prompt": "How do I write an engaging introduction for my essay on the importance of recycling?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

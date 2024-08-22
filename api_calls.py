@@ -4,6 +4,13 @@ import numpy as np
 import json
 import random
 import os
+import aiohttp
+import asyncio
+
+
+# Seed for reproducible trials
+random.seed(42)
+np.random.seed(42)
 
 # Define the API endpoint
 api_url = "http://127.0.0.1:5000/inference"
@@ -14,7 +21,7 @@ workload_folder = "./workloads"
 # Define the parameters for the Gamma distribution
 shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
 
-run_duration = 20 #seconds
+run_duration = 40 #seconds
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""

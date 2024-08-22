@@ -1,4 +1,4 @@
 {
     "prompt": "Describe a famous painting from the Renaissance period.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

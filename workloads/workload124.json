@@ -1,4 +1,4 @@
 {
     "prompt": "Which river is the second-longest in the world and has the largest water discharge?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

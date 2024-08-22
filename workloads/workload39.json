@@ -1,4 +1,4 @@
 {
     "prompt": "Name a famous landmark from your favorite city and describe its significance.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

@@ -1,4 +1,4 @@
 {
     "prompt": "Describe a scenario in which you would use a language translation tool to communicate with someone who does not speak your native tongue.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

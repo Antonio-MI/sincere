@@ -1,4 +1,4 @@
 {
     "prompt": "Which islands are known for their unique species and studies by Charles Darwin?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

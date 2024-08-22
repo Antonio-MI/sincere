@@ -1,4 +1,4 @@
 {
     "prompt": "What is an example of a law that was written down in a scroll?\nAn example could be: \"The Constitution of the United States was written on parchment.\"",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

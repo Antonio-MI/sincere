@@ -1,4 +1,4 @@
 {
     "prompt": "What is one of the fastest-growing plants in the world?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }
