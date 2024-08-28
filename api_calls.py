@@ -19,9 +19,9 @@ api_url = "http://127.0.0.1:5000/inference"
 workload_folder = "./workloads"
 
 # Define the parameters for the Gamma distribution
-shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
+shape, scale = 1.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
 
-run_duration = 40 #seconds
+run_duration = 20 #seconds
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
@@ -73,17 +73,22 @@ def automated_calls(workloads, run_duration):
         # print("Api called")
         # Generate a sleep interval following the Gamma distribution
         interval = np.random.gamma(shape, scale)
-        print(f"Sleeping for {interval:.2f} seconds")
+        print(interval)
+        print(f"Sleeping for {interval:.2f} miliseconds")
         
         # Sleep for the generated interval before the next call
-        time.sleep(interval)
+        time.sleep(interval/1000)
 
 if __name__ == "__main__":
-    workloads = load_workloads_from_folder(workload_folder)
-    # print("Workloads loaded")
-    if not workloads:
-        print("No valid JSON workloads found in the specified folder.")
-    else:
-        # print("Proceding to make calls")
-        automated_calls(workloads, run_duration)
-        # print("Calls made")
+    try:
+        workloads = load_workloads_from_folder(workload_folder)
+        # print("Workloads loaded")
+        if not workloads:
+            print("No valid JSON workloads found in the specified folder.")
+        else:
+            # print("Proceding to make calls")
+            automated_calls(workloads, run_duration)
+            # print("Calls made")
+
+    except KeyboardInterrupt:
+        print("Process stopped")
