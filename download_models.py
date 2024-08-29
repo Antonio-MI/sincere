@@ -24,9 +24,9 @@ if __name__ == "__main__":
     login(token='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')
 
     models = {
-        #"gpt2-124m" : "openai-community/gpt2",
-        #"distilgpt2-124m": "distilbert/distilgpt2",
-        #"gptneo-125m": "EleutherAI/gpt-neo-125m",
+        "gpt2-124m" : "openai-community/gpt2",
+        "distilgpt2-124m": "distilbert/distilgpt2",
+        "gptneo-125m": "EleutherAI/gpt-neo-125m",
         "gpt2medium-355m": "openai-community/gpt2-medium"
         #"granite-7b": "ibm-granite/granite-7b-base", 
         #"gemma-7b": "google/gemma-7b",

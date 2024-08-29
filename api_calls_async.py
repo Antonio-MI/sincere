@@ -78,8 +78,11 @@ async def automated_calls(workloads, run_duration):
             await asyncio.sleep(sleep_time)
 
 if __name__ == "__main__":
-    workloads = load_workloads_from_folder(workload_folder)
-    if not workloads:
-        print("No valid JSON workloads found in the specified folder.")
-    else:
-        asyncio.run(automated_calls(workloads, run_duration))
+    try:
+        workloads = load_workloads_from_folder(workload_folder)
+        if not workloads:
+            print("No valid JSON workloads found in the specified folder.")
+        else:
+            asyncio.run(automated_calls(workloads, run_duration))
+    except KeyboardInterrupt:
+        print("Process stopped")

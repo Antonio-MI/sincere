@@ -18,13 +18,18 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
 batch_timers = {}
+queue_locks = {}
 
 # Dictionaries to store mean load and unload times
 model_load_times = {}
 model_unload_times = {}
 
 # Lists to store requests and their IDs for batching
-request_batches = {}
+#request_batches = {}
+# Now splitted in two
+incoming_request_batches = {}
+running_request_batches = {}
+
 
 default_batch_size = 4
 #batch_size = random.choice([4])  # Fixed batch size (for now)
@@ -70,81 +75,85 @@ def create_batch_generator(batch):
 #app = Flask(__name__)
 
 def process_batch(model_alias, condition, batch_size):
-    global request_batches, batch_start_time
+    global incoming_request_batches, running_request_batches, batch_start_time
 
     print(f"{condition} condition met")
 
-    if request_batches[model_alias]:
-        
-        load_model(model_alias)
+    with queue_locks[model_alias]:
+        if running_request_batches.get(model_alias):
+            batch = running_request_batches.pop(model_alias)
+            load_model(model_alias)
 
-        # Create a generator for batching
-        batch_generator = create_batch_generator(request_batches[model_alias])
+            # Create a generator for batching
+            batch_generator = create_batch_generator(batch)
 
-        # Perform inference using the pipeline
-        pipe = pipeline(
-            "text-generation",
-            model=loaded_models[model_alias]["model"],
-            tokenizer=loaded_models[model_alias]["tokenizer"],
-            device="cpu",  
-        )
 
-        # for out in tqdm(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size )):
-        #     pass
+            # Perform inference using the pipeline
+            pipe = pipeline(
+                "text-generation",
+                model=loaded_models[model_alias]["model"],
+                tokenizer=loaded_models[model_alias]["tokenizer"],
+                device="cpu",  
+            )
 
-        # Measure the inference time
-        #start_time = time.perf_counter()
-        # Check if max_new_tokens affects the inference time - It seems that it doesnt
-        #outputs = pipe(batch_generator, max_new_tokens=256, batch_size=batch_size)
-        #end_time = time.perf_counter()
+            # for out in tqdm(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size )):
+            #     pass
 
-        # Process outputs iteratively without checking for length
-        responses = {}
-        for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
-            try:
-                # Process the generated text for each output
-                generated_text = output[0]['generated_text']
-                request_id = request_batches[model_alias][i]['id']
-                responses[request_id] = generated_text
-            except IndexError:
-                print(f"IndexError: Output index {i} is out of range.")
-                continue  # Skip this entry if an error occurs
-            except Exception as e:
-                print(f"Error processing response: {e}")
-                continue  # Handle unexpected errors gracefully
+            # Measure the inference time
+            #start_time = time.perf_counter()
+            # Check if max_new_tokens affects the inference time - It seems that it doesnt
+            #outputs = pipe(batch_generator, max_new_tokens=256, batch_size=batch_size)
+            #end_time = time.perf_counter()
 
-        # # Calculate the total and average inference time
-        # total_inference_time = end_time - start_time
-        # average_inference_time = total_inference_time / batch_size
-        # print(f"Total inference time for batch: {total_inference_time:.6f} seconds")
-        # print(f"Average inference time per request: {average_inference_time:.6f} seconds")
+            # Process outputs iteratively without checking for length
+            responses = {}
+            for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
+                try:
+                    # Process the generated text for each output
+                    generated_text = output[0]['generated_text']
+                    request_id = batch[i]['id']
+                    responses[request_id] = generated_text
+                except IndexError:
+                    print(f"IndexError: Output index {i} is out of range.")
+                    continue  # Skip this entry if an error occurs
+                except Exception as e:
+                    print(f"Error processing response: {e}")
+                    continue  # Handle unexpected errors gracefully
 
-        # # Prepare the responses
-        # responses = {}
-        # for i, output in enumerate(outputs):
-        #     generated_text = output[0]['generated_text']
-        #     request_id = request_batches[model_alias][i]['id']
-        #     responses[request_id] = generated_text
+            # # Calculate the total and average inference time
+            # total_inference_time = end_time - start_time
+            # average_inference_time = total_inference_time / batch_size
+            # print(f"Total inference time for batch: {total_inference_time:.6f} seconds")
+            # print(f"Average inference time per request: {average_inference_time:.6f} seconds")
 
-        # Clear the batch after processing
-        request_batches[model_alias].clear()
+            # # Prepare the responses
+            # responses = {}
+            # for i, output in enumerate(outputs):
+            #     generated_text = output[0]['generated_text']
+            #     request_id = request_batches[model_alias][i]['id']
+            #     responses[request_id] = generated_text
 
-        # Reset the timer for the next batch
-        batch_timers[model_alias] = None
+            # Clear the batch after processing
+            running_request_batches[model_alias] = []
 
-        print(f"Processed batch: {list(responses.keys())} with {model_alias}")
+            # Reset the timer for the next batch
+            batch_timers[model_alias] = None
 
-        # Return a list of completed inference IDs (for debugging purposes)
-        return list(responses.keys())
+            print(f"Processed batch: {list(responses.keys())} with {model_alias}")
+
+            # Return a list of completed inference IDs (for debugging purposes)
+            return list(responses.keys())
 
 def background_batch_processor():
     while True:
         current_time = time.time()
         for model_alias, timer in batch_timers.items():
             if timer is not None and (current_time - timer) >= batch_time_limit:
-                batch_size = len(request_batches[model_alias])
-                if batch_size > 0:
-                    process_batch(model_alias, "Time limit", batch_size)
+                with queue_locks[model_alias]:
+                    batch_size = len(incoming_request_batches[model_alias])
+                    if batch_size > 0:
+                        running_request_batches[model_alias] = incoming_request_batches.pop(model_alias)
+                        process_batch(model_alias, "Time limit", batch_size)
         time.sleep(0.1)
 
 
@@ -152,7 +161,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, request_batches
+    global batch_timers, incoming_request_batches, running_request_batches, queue_locks
 
     model_alias = request.json.get('model_alias')
     prompt = request.json.get('prompt')
@@ -160,9 +169,11 @@ def inference():
     print(f"Request with ID {request_id} for model {model_alias} received")
     
     # Initialize the request batch and timer for this model if not already done
-    if model_alias not in request_batches:
-        request_batches[model_alias] = []
+    if model_alias not in incoming_request_batches:
+        incoming_request_batches[model_alias] = []
+        running_request_batches[model_alias] = []
         batch_timers[model_alias] = None
+        queue_locks[model_alias] = threading.Lock()
 
     # Store the request data for batching
     request_data = {
@@ -170,31 +181,35 @@ def inference():
         'model_alias': model_alias,
         'prompt': prompt
     }
-    request_batches[model_alias].append(request_data)
 
-    batch_size = default_batch_size
+    with queue_locks[model_alias]:
+        incoming_request_batches[model_alias].append(request_data)
 
-    # Start the timer if this is the first request in the batch
-    if batch_timers[model_alias] is None:
-        batch_timers[model_alias]= time.time()
+        batch_size = default_batch_size
 
-    # Check if batch size is met or if time constraint is met
-    if len(request_batches[model_alias]) >= batch_size:
-        # Process the batch because the batch size was met
-        completed_inference_ids = process_batch(model_alias, "Batch size", batch_size)
-        # Return the response to the original request
-        return jsonify({
-            f'Inferences completed with {model_alias}': completed_inference_ids
-        })
+        # Start the timer if this is the first request in the batch
+        if batch_timers[model_alias] is None:
+            batch_timers[model_alias]= time.time()
 
-    elif (time.time() - batch_timers[model_alias]) >= batch_time_limit:
-        # Process the batch because the time limit was met
-        batch_size = len(request_batches[model_alias])
-        completed_inference_ids = process_batch(model_alias, "Time limit", batch_size)
-        # Return the response to the original request
-        return jsonify({
-            f'Inferences completed with {model_alias}': completed_inference_ids
-        })
+        # Check if batch size is met or if time constraint is met
+        if len(incoming_request_batches[model_alias]) >= batch_size:
+            # Move the batch from incoming to running
+            running_request_batches[model_alias] = incoming_request_batches.pop(model_alias) 
+            # Process the batch because the batch size was met
+            completed_inference_ids = process_batch(model_alias, "Batch size", batch_size)
+            # Return the response to the original request
+            return jsonify({
+                f'Inferences completed with {model_alias}': completed_inference_ids
+            })
+
+        # elif (time.time() - batch_timers[model_alias]) >= batch_time_limit:
+        #     # Process the batch because the time limit was met
+        #     batch_size = len(request_batches[model_alias])
+        #     completed_inference_ids = process_batch(model_alias, "Time limit", batch_size)
+        #     # Return the response to the original request
+        #     return jsonify({
+        #         f'Inferences completed with {model_alias}': completed_inference_ids
+        #     })
 
     return jsonify({
         'message': f"Request queued with ID {request_id} for model {model_alias}"
