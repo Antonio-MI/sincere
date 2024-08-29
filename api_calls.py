@@ -73,11 +73,18 @@ def automated_calls(workloads, run_duration):
         # print("Api called")
         # Generate a sleep interval following the Gamma distribution
         interval = np.random.gamma(shape, scale)
-        print(interval)
-        print(f"Sleeping for {interval:.2f} miliseconds")
-        
+        #print(interval)
+
+        #Miliseconds
+        # print(f"Sleeping for {interval:.2f} miliseconds")
+        # # Sleep for the generated interval before the next call
+        # time.sleep(interval/1000)
+
+        #Seconds
+        print(f"Sleeping for {interval:.2f} seconds")
         # Sleep for the generated interval before the next call
-        time.sleep(interval/1000)
+        time.sleep(interval)
+
 
 if __name__ == "__main__":
     try:

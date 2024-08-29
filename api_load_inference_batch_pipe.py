@@ -5,7 +5,8 @@ import os
 import time
 import uuid  # To generate unique request IDs
 import numpy as np
-import random
+import threading
+#import random
 #from tqdm.auto import tqdm
 
 # Folder containing models
@@ -66,7 +67,7 @@ def create_batch_generator(batch):
     for request_data in batch:
         yield request_data['prompt']
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 def process_batch(model_alias, condition, batch_size):
     global request_batches, batch_start_time
@@ -92,10 +93,10 @@ def process_batch(model_alias, condition, batch_size):
         #     pass
 
         # Measure the inference time
-        start_time = time.perf_counter()
+        #start_time = time.perf_counter()
         # Check if max_new_tokens affects the inference time - It seems that it doesnt
         #outputs = pipe(batch_generator, max_new_tokens=256, batch_size=batch_size)
-        end_time = time.perf_counter()
+        #end_time = time.perf_counter()
 
         # Process outputs iteratively without checking for length
         responses = {}
@@ -131,10 +132,21 @@ def process_batch(model_alias, condition, batch_size):
         # Reset the timer for the next batch
         batch_timers[model_alias] = None
 
-        print(f"Processed batch: {list(responses.keys())}")
+        print(f"Processed batch: {list(responses.keys())} with {model_alias}")
 
         # Return a list of completed inference IDs (for debugging purposes)
         return list(responses.keys())
+
+def background_batch_processor():
+    while True:
+        current_time = time.time()
+        for model_alias, timer in batch_timers.items():
+            if timer is not None and (current_time - timer) >= batch_time_limit:
+                batch_size = len(request_batches[model_alias])
+                if batch_size > 0:
+                    process_batch(model_alias, "Time limit", batch_size)
+        time.sleep(0.1)
+
 
 app = Flask(__name__)
 
@@ -221,6 +233,9 @@ if __name__ == '__main__':
         model_unload_times[model] = mean_unload_time
 
         print(f"Profiled model {model} - Load time: {mean_load_time:.4f}s, Unload time: {mean_unload_time:.4f}s")
+
+    # Start the background thread to process batches based on time limit
+    threading.Thread(target=background_batch_processor, daemon=True).start()
 
     # Start the Flask app
     app.run(host='0.0.0.0', port=5000)
