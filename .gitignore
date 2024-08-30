@@ -5,3 +5,4 @@ ilabprompts.md
 Transformers.ipynb
 .localized
 .DS_Store
+venv/
