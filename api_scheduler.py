@@ -7,13 +7,14 @@ from flask import Flask, request, jsonify
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import numpy as np
+import pandas as pd
 
 # Folder containing models
 base_dir = "./models"
 
 # Select device, cpu for now
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(device)
+print(device) # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -28,9 +29,13 @@ incoming_request_batches = {}
 running_request_batches = {}
 
 # Manually set batch size for now
-default_batch_size = 4
+default_batch_size = 8
 # Time constraint for batch processing
-batch_time_limit = 5  # Seconds
+batch_time_limit = 10  # Seconds
+
+# List of allowed models
+allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
+
 
 # Function to load models
 def load_model(model_alias):
@@ -44,7 +49,8 @@ def load_model(model_alias):
     if loaded_models:
         for old_model_alias in list(loaded_models.keys()):
             del loaded_models[old_model_alias]
-        # torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
+            if device=="cuda": 
+                torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
         print(f"Unloaded previous model")
 
     model_dir = os.path.join(base_dir, model_alias)
@@ -141,6 +147,13 @@ def inference():
     request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
     print(f"Request with ID {request_id} for model {model_alias} received")
     
+    # Check if the model is in the allowed models list
+    if model_alias not in allowed_models:
+        return jsonify({
+            'error': f"Model '{model_alias}' is not allowed."
+        }), 400  # Return a 400 Bad Request response
+
+
     # Initialize the request batch and timer for this model if not already done
     if model_alias not in incoming_request_batches:
         incoming_request_batches[model_alias] = Queue()
@@ -170,20 +183,45 @@ def inference():
             running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
         # Process the batch because the batch size was met
         completed_inference_ids = process_batch(model_alias, "Batch size", batch_size)
+        # return jsonify({
+        #     'message': f'Inferences completed with {model_alias}': completed_inference_ids
+        # })
         return jsonify({
-            f'Inferences completed with {model_alias}': completed_inference_ids
-        })
-
+        'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
+    })
     return jsonify({
         'message': f"Request queued with ID {request_id} for model {model_alias}"
     })
 
 
+def get_model_size_in_bytes(model):
+    # Calculate the size of the model parameters
+    param_size = sum(p.numel() for p in model.parameters() if p.requires_grad) * 4  # 4 bytes per float32 parameter
+    return param_size
+
+def get_tokenizer_size_in_bytes(tokenizer_dir):
+    # Calculate the size of all files in the tokenizer directory
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(tokenizer_dir):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            total_size += os.path.getsize(fp)
+    return total_size
+
+
 if __name__ == '__main__':
+
+    # Model profiling can be a separate script and this one would read the csv
+
+    # Directory for models
+    os.makedirs("./outputs", exist_ok=True)
+    results = []
+
     # Iterate through all the models available to profile their mean load and unload
     for model in ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]:
         load_times = []
         unload_times = []
+        model_sizes = []
 
         for _ in range(10):
             # Profile the loading time
@@ -194,23 +232,52 @@ if __name__ == '__main__':
             load_time = time.time() - load_start_time
             load_times.append(load_time)
 
+            # Calculate model size (parameters + tokenizer)
+            model_param_size = get_model_size_in_bytes(model_instance)
+            tokenizer_size = get_tokenizer_size_in_bytes(model_dir)
+            total_model_size = model_param_size + tokenizer_size
+            model_sizes.append(total_model_size)
+
             # Profile the unloading time
             unload_start_time = time.time()
             del model_instance
             del tokenizer
-            #torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
+            if device=="cuda": 
+                torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
             unload_time = time.time() - unload_start_time
             unload_times.append(unload_time)
 
         # Calculate the mean load and unload times
-        mean_load_time = np.mean(load_times)
-        mean_unload_time = np.mean(unload_times)
+        mean_load_time = round(np.mean(load_times), 4)
+        mean_unload_time = round(np.mean(unload_times), 4)
+        model_size = round(np.mean(model_sizes) / (1024**3), 2)  # Convert bytes to GB
+
+        results.append((
+                            model, model_size, mean_load_time, mean_unload_time
+                        ))
 
         # Store the mean times in the dictionaries
         model_load_times[model] = mean_load_time
         model_unload_times[model] = mean_unload_time
 
         print(f"Profiled model {model} - Load time: {mean_load_time:.4f}s, Unload time: {mean_unload_time:.4f}s")
+
+    # Save model profiling info into a csv
+    df = pd.DataFrame(
+                results,
+                columns=[
+                    "model_name", "model_size", "mean_loading_time", "mean_unloading_time"
+                ],
+                )
+
+    timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+    csv_filename = f"model_loading_times_{device}_{timestamp}.csv"
+    csv_path = "outputs/" + csv_filename
+    file_exists = os.path.isfile(csv_path)
+    if file_exists:
+        df.to_csv(csv_path, mode="a", header=False, index=False)
+    else:
+        df.to_csv(csv_path, index=False)
 
     # Start the background thread to process batches based on time limit
     threading.Thread(target=background_batch_processor, daemon=True).start()

@@ -4,9 +4,20 @@ import time
 import numpy as np
 import json
 import os
+import random
 
 # Seed for reproducible trials
 np.random.seed(42)
+random.seed(42)
+
+
+run_duration = 20  # seconds
+distribution = None #gamma for simulation/ None for profiling batches
+# To profile a single model
+one_model = "distilgpt2-124m" # "gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"
+
+# Define the parameters for the Gamma distribution
+shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
 
 # Define the API endpoint
 api_url = "http://127.0.0.1:5000/inference"
@@ -14,10 +25,6 @@ api_url = "http://127.0.0.1:5000/inference"
 # Folder where workload jsons are located
 workload_folder = "./workloads"
 
-# Define the parameters for the Gamma distribution
-shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
-
-run_duration = 30  # seconds
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
@@ -32,7 +39,7 @@ def load_workloads_from_folder(folder):
 
                 if 'model_alias' in data and 'prompt' in data:
                     filtered_payload = {
-                        "model_alias": data["model_alias"],
+                        "model_alias": one_model if one_model is not None else data["model_alias"],
                         "prompt": data["prompt"]
                     }
                     workloads.append(filtered_payload)
@@ -70,7 +77,10 @@ async def automated_calls(workloads, run_duration):
             asyncio.create_task(send_request(session, workload))
             
             # Generate a sleep interval following the Gamma distribution
-            interval = np.random.gamma(shape, scale)
+            if distribution == "gamma":
+                interval = np.random.gamma(shape, scale)
+            else:
+                interval = 1
             print(f"Sleeping for {interval:.2f} seconds")
 
             # Adjust sleep time if it exceeds remaining time
