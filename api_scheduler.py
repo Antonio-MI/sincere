@@ -13,6 +13,7 @@ base_dir = "./models"
 
 # Select device, cpu for now
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -97,7 +98,7 @@ def process_batch(model_alias, condition, batch_size):
                 generated_text = output[0]['generated_text']
                 request_id = batch[i]['id']
                 responses[request_id] = generated_text
-                print(f"Processed request ID {request_id} with model {model_alias}")
+                #print(f"Processed request ID {request_id} with model {model_alias}")
             except IndexError:
                 print(f"IndexError: Output index {i} is out of range.")
                 continue  # Skip this entry if an error occurs
@@ -106,7 +107,7 @@ def process_batch(model_alias, condition, batch_size):
                 continue  # Handle unexpected errors gracefully
 
         end_time = time.perf_counter()
-        print(f"Processed batch: {list(responses.keys())} in {end_time - start_time:.4f} seconds")
+        print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {end_time - start_time:.4f} seconds")
 
         # Reset the timer for the next batch
         batch_timers[model_alias] = None
