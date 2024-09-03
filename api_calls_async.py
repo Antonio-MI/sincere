@@ -12,9 +12,7 @@ random.seed(42)
 
 
 run_duration = 20  # seconds
-distribution = None #gamma for simulation/ None for profiling batches
-# To profile a single model
-one_model = "distilgpt2-124m" # "gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"
+distribution = "gamma" 
 
 # Define the parameters for the Gamma distribution
 shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
@@ -39,7 +37,7 @@ def load_workloads_from_folder(folder):
 
                 if 'model_alias' in data and 'prompt' in data:
                     filtered_payload = {
-                        "model_alias": one_model if one_model is not None else data["model_alias"],
+                        "model_alias": data["model_alias"],
                         "prompt": data["prompt"]
                     }
                     workloads.append(filtered_payload)
