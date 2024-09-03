@@ -44,7 +44,7 @@ batch_time_limit = 5  # Seconds
 # List of allowed models
 allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
 
-
+padding = True
 
 # Function to load models
 def load_model(model_alias):
@@ -80,6 +80,15 @@ def create_batch_generator(batch):
     for request_data in batch:
         yield request_data['prompt']
 
+def generate_padding_request(model_alias):
+    """Generate a padding request with a simple prompt."""
+    return {
+        'id': str(uuid.uuid4())[:4], # Shorter ids so it easier to recognize
+        'model_alias': model_alias,
+        'prompt': "This is a padding request to fill the batch."
+    }
+
+
 def process_batch(model_alias, condition, batch_size):
     global incoming_request_batches, running_request_batches, batch_timers
 
@@ -87,10 +96,31 @@ def process_batch(model_alias, condition, batch_size):
 
     if running_request_batches.get(model_alias):
         batch = list(running_request_batches[model_alias].queue)
+        print(len(batch))
         running_request_batches[model_alias].queue.clear()  # Clear the running queue after copying
         if not batch:
             print(f"No batch to process for model {model_alias}")
             return
+
+        if padding == True:
+            # Generate padding requests if the batch is smaller than the desired batch size
+            original_batch_size = len(batch)
+            if original_batch_size < default_batch_size:
+                padding_start_time = time.perf_counter()
+
+                while len(batch) < default_batch_size:
+                    padding_request = generate_padding_request(model_alias)
+                    batch.append(padding_request)
+
+                padding_end_time = time.perf_counter()
+                padding_duration = padding_end_time - padding_start_time
+                print(f"Padding requests generated in {padding_duration:.4f} seconds")
+
+                # Optionally save this padding generation time to evaluate its impact
+                # save_padding_time_result(model_alias, batch_size, padding_duration)
+
+            # Update the batch size to the actual size after adding padding
+            updated_batch_size = len(batch)
 
         print(f"Loading model {model_alias}")
         load_model(model_alias)
@@ -108,7 +138,7 @@ def process_batch(model_alias, condition, batch_size):
 
         start_time = time.perf_counter()
         responses = {}
-        for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
+        for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=updated_batch_size)):
             try:
                 generated_text = output[0]['generated_text']
                 request_id = batch[i]['id']
