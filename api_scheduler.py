@@ -46,6 +46,11 @@ allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355
 
 padding = True
 
+# Global dictionary to track model usage frequency
+model_usage_count = {}
+total_requests = 0  # Total number of requests processed
+
+
 # Function to load models
 def load_model(model_alias):
     global loaded_models
@@ -180,7 +185,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, incoming_request_batches, running_request_batches
+    global batch_timers, incoming_request_batches, running_request_batches, model_usage_count, total_requests
 
     model_alias = request.json.get('model_alias')
     prompt = request.json.get('prompt')
@@ -192,6 +197,17 @@ def inference():
         return jsonify({
             'error': f"Model '{model_alias}' is not allowed."
         }), 400  # Return a 400 Bad Request response
+
+    # Update the model usage count
+    total_requests += 1
+    if model_alias in model_usage_count:
+        model_usage_count[model_alias] += 1
+    else:
+        model_usage_count[model_alias] = 1
+
+    # Calculate and print the frequency of this model
+    model_frequency = (model_usage_count[model_alias] / total_requests) * 100
+    print(f"Model {model_alias} has been called {model_usage_count[model_alias]} times ({model_frequency:.2f}% of total requests)")
 
 
     # Initialize the request batch and timer for this model if not already done
