@@ -13,7 +13,7 @@ timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cpu"
+device = "cuda"
 print(device)  # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
