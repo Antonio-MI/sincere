@@ -17,10 +17,10 @@ api_url = "http://127.0.0.1:5000/inference"
 workload_folder = "./workloads"
 
 # List of batch sizes to profile
-batch_sizes = [ 512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
+batch_sizes = [512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
 
 # List of models to profile
-models_to_profile = ["gpt2-124m"]  # Add more models as needed
+models_to_profile = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m"]  # Add more models as needed
 
 # Number of profiling runs per batch size
 num_runs_per_batch_size = 5
@@ -54,6 +54,11 @@ async def send_request(session, workload):
         async with session.post(api_url, json=workload) as response:
             if response.status == 200:
                 result = await response.json()
+                if "error" in result:
+                    print(f"Error: {result['error']}")
+                    if "Out of memory" in result["error"]:
+                        # Return a specific message to indicate OOM error
+                        return "OOM_ERROR"
                 print(f"Response: {result}")
             else:
                 print(f"Error: {response.status} - {await response.text()}")
@@ -72,7 +77,14 @@ async def profile_batch_size(session, workloads, model, batch_size):
         tasks.append(asyncio.create_task(send_request(session, workload)))
 
     # Wait for all tasks in this batch size to complete
-    await asyncio.gather(*tasks)
+    results = await asyncio.gather(*tasks)
+
+    # Check if any task returned an "OOM_ERROR"
+    if "OOM_ERROR" in results:
+        print(f"Out of memory error occurred for model {model} with batch size {batch_size}. Skipping further runs for this model.")
+        return "OOM_ERROR"
+
+    return "SUCCESS"
 
 async def automated_batch_profiling(workloads):
     async with aiohttp.ClientSession() as session:
@@ -82,8 +94,14 @@ async def automated_batch_profiling(workloads):
                 print(f"  Profiling batch size: {batch_size}")
                 for run in range(num_runs_per_batch_size):
                     print(f"    Run {run + 1} for batch size {batch_size}")
-                    await profile_batch_size(session, workloads, model, batch_size)
-                    await asyncio.sleep(2)  # Small delay between runs
+                    result = await profile_batch_size(session, model, batch_size, workloads)
+                    if result == "OOM_ERROR":
+                        # Stop further profiling for this model and move to the next model
+                        break
+                    await asyncio.sleep(1)  # Small delay between runs
+
+                    # await profile_batch_size(session, workloads, model, batch_size)
+                    # await asyncio.sleep(2)  # Small delay between runs
 
 if __name__ == "__main__":
     try:
