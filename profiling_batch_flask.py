@@ -190,12 +190,13 @@ def inference():
             'message': f"Request queued with ID {request_id} for model {model_alias} and batch size {batch_size}"
         })
 
-    except Exception as e:
-        # Handle general errors
-        print(f"An error occurred: {e}")
-        return jsonify({
-            'error': str(e)
-        }), 500
+    except RuntimeError as e:
+        if "out of memory" in str(e).lower():
+            print(f"Out of GPU memory. Error: {e}")
+            return jsonify({'error': f"Out of memory error while processing batch for {model_alias}"}), 500
+        else:
+            print(f"Runtime error: {e}")
+            return jsonify({'error': f"Unexpected error: {e}"}), 500
 
 if __name__ == '__main__':
     os.makedirs("outputs", exist_ok=True)

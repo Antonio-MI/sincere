@@ -55,11 +55,17 @@ async def send_request(session, workload):
             if response.status == 200:
                 result = await response.json()
                 if "error" in result:
-                    print(f"Error: {result['message']}")
-                    if "Out of memory" in result["message"]:
+                    print(f"Error: {result['error']}")
+                    if "Out of memory" in result["error"]:
                         # Return a specific message to indicate OOM error
                         return "OOM_ERROR"
                 print(f"Response: {result}")
+            elif response.status == 500:  # Handle server errors like OOM
+                result = await response.json()
+                if "error" in result:
+                    print(f"Server Error: {result['error']}")
+                    if "Out of memory" in result["error"]:
+                        return "OOM_ERROR"
             else:
                 print(f"Error: {response.status} - {await response.text()}")
     except Exception as e:
