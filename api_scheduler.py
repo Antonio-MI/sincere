@@ -13,7 +13,7 @@ import pandas as pd
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cuda"
+device = "cpu"
 print(device) # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
@@ -38,6 +38,9 @@ running_request_batches = {}
 
 # Manually set batch size for now
 default_batch_size = 4
+# Allowed batch sizes for padding
+allowed_batch_sizes = [4, 8, 16]
+
 # Time constraint for batch processing
 batch_time_limit = 5  # Seconds
 
@@ -93,6 +96,16 @@ def generate_padding_request(model_alias):
         'prompt': "This is a padding request to fill the batch."
     }
 
+def get_allowed_batch_size(current_size, allowed_batch_sizes):
+    """Find the next allowed batch size that is greater than or equal to current_size."""
+    for size in allowed_batch_sizes:
+        if size >= current_size:
+            return size
+    return allowed_batch_sizes[-1]  # Default to the largest batch size if none is larger
+
+# HOW TO NOT TRIGGER PROCESSING WHEN BATCH IS LARGER THAN 4??
+# JUST TRIGGER BY TIME OR THE LARGER BATCH SIZE? AND THE ADD PADDING
+# BASED THAT OF MODEL USAGE STATISTICS INSEAD? - WAIT FOR MOST USEL MODELS
 
 def process_batch(model_alias, condition, batch_size):
     global incoming_request_batches, running_request_batches, batch_timers

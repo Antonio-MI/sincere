@@ -5,12 +5,16 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import numpy as np
 import pandas as pd
+import platform
 
 # Folder containing models
 base_dir = "./models"
 
 # Select device, cpu for now
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
+
+machine_name = platform.node()
 
 # Dictionaries to store mean load and unload times
 model_load_times = {}
@@ -69,8 +73,11 @@ for model in ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]:
     mean_unload_time = round(np.mean(unload_times), 4)
     model_size = round(np.mean(model_sizes) / (1024**3), 2)  # Convert bytes to GB
 
+    std_load_time = round(np.std(load_times), 4)
+    std_unload_time = round(np.std(unload_times), 4)
+
     results.append((
-                        model, model_size, mean_load_time, mean_unload_time
+                        model, model_size, mean_load_time, std_load_time, mean_unload_time, std_unload_time
                     ))
 
     # Store the mean times in the dictionaries
@@ -83,12 +90,12 @@ for model in ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]:
 df = pd.DataFrame(
             results,
             columns=[
-                "model_name", "model_size", "mean_loading_time", "mean_unloading_time"
+                "model_name", "model_size /GB", "mean_loading_time /s", "std_loading_time /s", "mean_unloading_time /s", "std_unloading_time /s"
             ],
             )
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-csv_filename = f"model_loading_times_{device}_{timestamp}.csv"
+csv_filename = f"model_loading_times_{machine_name}_{device}_{timestamp}.csv"
 csv_path = "outputs/" + csv_filename
 file_exists = os.path.isfile(csv_path)
 if file_exists:

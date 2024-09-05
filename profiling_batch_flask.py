@@ -6,6 +6,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import time
 import pandas as pd
+import platform
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 
@@ -15,6 +16,9 @@ base_dir = "./models"
 # Select device, cpu for now
 device = "cuda"
 print(device)  # Check with nvidia-smi
+
+# Save machine name to identify csv
+machine_name = platform.node()
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -107,7 +111,7 @@ def process_batch(model_alias, batch_size):
         return list(responses.keys())
 
 def save_profiling_result(model_alias, batch_size, processing_time):
-    csv_filename = f"batch_profiling_results_{device}_{timestamp}.csv"
+    csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "model_alias": model_alias,
