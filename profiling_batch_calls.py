@@ -17,13 +17,13 @@ api_url = "http://127.0.0.1:5000/inference"
 workload_folder = "./workloads"
 
 # List of batch sizes to profile
-batch_sizes = [1, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
+batch_sizes = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
 
 # List of models to profile
 models_to_profile = ["gpt2-124m"]  # Add more models as needed
 
 # Number of profiling runs per batch size
-num_runs_per_batch_size = 3
+num_runs_per_batch_size = 5
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""

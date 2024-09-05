@@ -79,34 +79,50 @@ def process_batch(model_alias, batch_size):
         # Create a generator for batching
         batch_generator = create_batch_generator(batch)
 
-        # Perform inference using the pipeline
-        pipe = pipeline(
-            "text-generation",
-            model=loaded_models[model_alias]["model"],
-            tokenizer=loaded_models[model_alias]["tokenizer"],
-            device=device,
-        )
+        try:
+            # Perform inference using the pipeline
+            pipe = pipeline(
+                "text-generation",
+                model=loaded_models[model_alias]["model"],
+                tokenizer=loaded_models[model_alias]["tokenizer"],
+                device=device,
+            )
 
-        start_time = time.perf_counter()
-        responses = {}
-        for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
-            try:
-                generated_text = output[0]['generated_text']
-                request_id = batch[i]['id']
-                responses[request_id] = generated_text
-            except IndexError:
-                print(f"IndexError: Output index {i} is out of range.")
-                continue  # Skip this entry if an error occurs
-            except Exception as e:
-                print(f"Error processing response: {e}")
-                continue  # Handle unexpected errors gracefully
+            start_time = time.perf_counter()
+            responses = {}
+            for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
+                try:
+                    generated_text = output[0]['generated_text']
+                    request_id = batch[i]['id']
+                    responses[request_id] = generated_text
+                except IndexError:
+                    print(f"IndexError: Output index {i} is out of range.")
+                    continue  # Skip this entry if an error occurs
+                except Exception as e:
+                    print(f"Error processing response: {e}")
+                    continue  # Handle unexpected errors gracefully
 
-        end_time = time.perf_counter()
-        elapsed_time = end_time - start_time
-        print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {elapsed_time:.4f} seconds")
+            end_time = time.perf_counter()
+            elapsed_time = end_time - start_time
+            print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {elapsed_time:.4f} seconds")
 
-        # Save the result to a CSV file
-        save_profiling_result(model_alias, batch_size, elapsed_time)
+            # Save the result to a CSV file
+            save_profiling_result(model_alias, batch_size, elapsed_time)
+            
+        except torch.cuda.OutOfMemoryError as e:
+            # Handle out-of-memory error
+            print(f"Out of GPU memory. Error: {e}")
+            torch.cuda.empty_cache()  # Clear GPU memory
+            print("GPU memory cleared after OOM error.")
+
+            # Save the result to a CSV file
+            elapsed_time = "None"
+            save_profiling_result(model_alias, batch_size, elapsed_time)
+
+            return None, f"Out of memory error while processing batch for {model_alias}"
+
+        # Clean cache after processing
+        torch.cuda.empty_cache()
 
         return list(responses.keys())
 
@@ -117,7 +133,7 @@ def save_profiling_result(model_alias, batch_size, processing_time):
         "model_alias": model_alias,
         "batch_size": batch_size,
         "processing_time": processing_time,
-        "throughput": round(batch_size/processing_time, 3)
+        "throughput": round(batch_size/processing_time, 2)
     }
     df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
