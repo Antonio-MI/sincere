@@ -96,14 +96,22 @@ async def automated_batch_profiling(workloads):
     async with aiohttp.ClientSession() as session:
         for model in models_to_profile:
             print(f"Profiling model: {model}")
+            model_has_error = False  # Flag to check if an OOM error occurred for the model
+
             for batch_size in batch_sizes:
+                if model_has_error:  # Skip to the next model if OOM error occurred
+                    break
+
                 print(f"  Profiling batch size: {batch_size}")
                 for run in range(num_runs_per_batch_size):
                     print(f"    Run {run + 1} for batch size {batch_size}")
                     result = await profile_batch_size(session, model, batch_size, workloads)
+
                     if result == "OOM_ERROR":
                         # Stop further profiling for this model and move to the next model
+                        model_has_error = True  # Set flag to skip further batch sizes
                         break
+
                     await asyncio.sleep(1)  # Small delay between runs
 
 if __name__ == "__main__":
