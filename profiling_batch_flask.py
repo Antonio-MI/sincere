@@ -109,22 +109,24 @@ def process_batch(model_alias, batch_size):
             # Save the result to a CSV file
             save_profiling_result(model_alias, batch_size, elapsed_time)
             
-        except torch.cuda.OutOfMemoryError as e:
-            # Handle out-of-memory error
-            print(f"Out of GPU memory. Error: {e}")
-            torch.cuda.empty_cache()  # Clear GPU memory
-            print("GPU memory cleared after OOM error.")
+        except RuntimeError as e:
+            if "out of memory" in str(e).lower():
+                print(f"Out of GPU memory. Error: {e}")
+                torch.cuda.empty_cache()  # Clear GPU memory
+                print(f"GPU memory cleared after OOM error.")
+                save_profiling_result(model_alias, batch_size, elapsed_time)
+                return None, f"Out of memory error while processing batch for {model_alias}"
+            else:
+                print(f"Unexpected runtime error: {e}")
+                save_profiling_result(model_alias, batch_size, elapsed_time)
+                return None, f"Unexpected error while processing batch for {model_alias}"
 
-            # Save the result to a CSV file
-            elapsed_time = "None"
-            save_profiling_result(model_alias, batch_size, elapsed_time)
 
-            return None, f"Out of memory error while processing batch for {model_alias}"
 
         # Clean cache after processing
         torch.cuda.empty_cache()
 
-        return list(responses.keys())
+        return list(responses.keys()), None
 
 def save_profiling_result(model_alias, batch_size, processing_time):
     csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
@@ -182,10 +184,16 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
-            completed_inference_ids = process_batch(model_alias, batch_size)
+            completed_inference_ids, error = process_batch(model_alias, batch_size)
+
+            # If there's an error (e.g., OOM), return it in the response
+            if error:
+                return jsonify({'error': error}), 500
+
             return jsonify({
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
+
         return jsonify({
             'message': f"Request queued with ID {request_id} for model {model_alias} and batch size {batch_size}"
         })
