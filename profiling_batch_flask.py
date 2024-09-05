@@ -124,7 +124,6 @@ def process_batch(model_alias, batch_size):
                 return None, f"Unexpected error while processing batch for {model_alias}"
 
 
-
         # Clean cache after processing
         torch.cuda.empty_cache()
 
@@ -187,9 +186,6 @@ def inference():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
             completed_inference_ids, error = process_batch(model_alias, batch_size)
-
-            print(f"completed_inference_ids: {completed_inference_ids}")
-            print(f"Error: {error}")
 
             # If there's an error (e.g., OOM), return it in the response
             if completed_inference_ids is None:

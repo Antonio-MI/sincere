@@ -264,9 +264,7 @@ def inference():
             running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
         # Process the batch because the batch size was met
         completed_inference_ids = process_batch(model_alias, "Batch size", batch_size)
-        # return jsonify({
-        #     'message': f'Inferences completed with {model_alias}': completed_inference_ids
-        # })
+
         return jsonify({
         'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
     })
