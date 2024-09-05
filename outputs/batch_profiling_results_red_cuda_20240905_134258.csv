@@ -1,4 +1,0 @@
-model_alias,batch_size,processing_time,throughput
-gpt2-124m,8,0.7369378870062064,10.86
-gpt2-124m,4096,None,None
-distilgpt2-124m,8,0.15480108102201484,51.68
