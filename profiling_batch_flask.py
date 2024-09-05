@@ -14,7 +14,7 @@ timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cuda"
+device = "cpu"
 print(device)  # Check with nvidia-smi
 
 # Save machine name to identify csv
@@ -133,7 +133,7 @@ def save_profiling_result(model_alias, batch_size, processing_time):
         "model_alias": model_alias,
         "batch_size": batch_size,
         "processing_time": processing_time,
-        "throughput": round(batch_size/processing_time, 2)
+        "throughput": "None" if processing_time=="None" else round(batch_size/processing_time, 2)
     }
     df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
@@ -146,48 +146,56 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global incoming_request_batches, running_request_batches
+    try:
+        global incoming_request_batches, running_request_batches
 
-    model_alias = request.json.get('model_alias')
-    prompt = request.json.get('prompt')
-    batch_size = int(request.json.get('batch_size'))  # Get batch size from the request
-    request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
-    print(f"Request with ID {request_id} for model {model_alias} and batch size {batch_size} received")
+        model_alias = request.json.get('model_alias')
+        prompt = request.json.get('prompt')
+        batch_size = int(request.json.get('batch_size'))  # Get batch size from the request
+        request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
+        print(f"Request with ID {request_id} for model {model_alias} and batch size {batch_size} received")
 
-    # Check if the model is in the allowed models list
-    if model_alias not in allowed_models:
+        # Check if the model is in the allowed models list
+        if model_alias not in allowed_models:
+            return jsonify({
+                'error': f"Model '{model_alias}' is not allowed."
+            }), 400  # Return a 400 Bad Request response
+
+        # Initialize the request batch for this model if not already done
+        if model_alias not in incoming_request_batches:
+            incoming_request_batches[model_alias] = Queue()
+            running_request_batches[model_alias] = Queue()
+
+        # Store the request data for batching
+        request_data = {
+            'id': request_id,
+            'model_alias': model_alias,
+            'prompt': prompt
+        }
+
+        incoming_request_batches[model_alias].put(request_data)
+
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= batch_size:
+            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            completed_inference_ids = process_batch(model_alias, batch_size)
+            return jsonify({
+                'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+            })
         return jsonify({
-            'error': f"Model '{model_alias}' is not allowed."
-        }), 400  # Return a 400 Bad Request response
-
-    # Initialize the request batch for this model if not already done
-    if model_alias not in incoming_request_batches:
-        incoming_request_batches[model_alias] = Queue()
-        running_request_batches[model_alias] = Queue()
-
-    # Store the request data for batching
-    request_data = {
-        'id': request_id,
-        'model_alias': model_alias,
-        'prompt': prompt
-    }
-
-    incoming_request_batches[model_alias].put(request_data)
-
-    # Check if batch size is met
-    if incoming_request_batches[model_alias].qsize() >= batch_size:
-        print(f"Moving batch for {model_alias} from incoming to running due to batch size")
-        running_request_batches[model_alias] = Queue()
-        while not incoming_request_batches[model_alias].empty():
-            running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-        # Process the batch because the batch size was met
-        completed_inference_ids = process_batch(model_alias, batch_size)
-        return jsonify({
-            'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+            'message': f"Request queued with ID {request_id} for model {model_alias} and batch size {batch_size}"
         })
-    return jsonify({
-        'message': f"Request queued with ID {request_id} for model {model_alias} and batch size {batch_size}"
-    })
+
+    except Exception as e:
+        # Handle general errors
+        print(f"An error occurred: {e}")
+        return jsonify({
+            'error': str(e)
+        }), 500
 
 if __name__ == '__main__':
     os.makedirs("outputs", exist_ok=True)
