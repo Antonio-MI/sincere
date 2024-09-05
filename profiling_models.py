@@ -14,6 +14,7 @@ base_dir = "./models"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
+# Save machine name to identify csv
 machine_name = platform.node()
 
 # Dictionaries to store mean load and unload times
