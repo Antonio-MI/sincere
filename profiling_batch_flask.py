@@ -188,8 +188,11 @@ def inference():
             # Process the batch because the batch size was met
             completed_inference_ids, error = process_batch(model_alias, batch_size)
 
+            print(f"completed_inference_ids: {completed_inference_ids}")
+            print(f"Error: {error}")
+
             # If there's an error (e.g., OOM), return it in the response
-            if 'Out of memory error' in completed_inference_ids:
+            if completed_inference_ids is None:
                 return jsonify({'error': error}), 500
 
             return jsonify({

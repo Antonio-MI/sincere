@@ -17,7 +17,7 @@ api_url = "http://127.0.0.1:5000/inference"
 workload_folder = "./workloads"
 
 # List of batch sizes to profile
-batch_sizes = [512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
+batch_sizes = [8, 4096, 8192, 16384, 32768] #One twice so the model is already in memory
 
 # List of models to profile
 models_to_profile = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m"]  # Add more models as needed
@@ -105,9 +105,6 @@ async def automated_batch_profiling(workloads):
                         # Stop further profiling for this model and move to the next model
                         break
                     await asyncio.sleep(1)  # Small delay between runs
-
-                    # await profile_batch_size(session, workloads, model, batch_size)
-                    # await asyncio.sleep(2)  # Small delay between runs
 
 if __name__ == "__main__":
     try:
