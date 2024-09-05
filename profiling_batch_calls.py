@@ -23,7 +23,7 @@ batch_sizes = [512, 1024, 2048, 4096, 8192, 16384, 32768] #One twice so the mode
 models_to_profile = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m"]  # Add more models as needed
 
 # Number of profiling runs per batch size
-num_runs_per_batch_size = 5
+num_runs_per_batch_size = 1
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
@@ -55,10 +55,10 @@ async def send_request(session, workload):
             if response.status == 200:
                 result = await response.json()
                 if "error" in result:
-                    print(f"Error: {result['error']}")
-                elif "Out of memory" in result:
-                    # Return a specific message to indicate OOM error
-                    return "OOM_ERROR"
+                    print(f"Error: {result['message']}")
+                    if "Out of memory" in result["message"]:
+                        # Return a specific message to indicate OOM error
+                        return "OOM_ERROR"
                 print(f"Response: {result}")
             else:
                 print(f"Error: {response.status} - {await response.text()}")
