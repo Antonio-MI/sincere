@@ -114,10 +114,12 @@ def process_batch(model_alias, batch_size):
                 print(f"Out of GPU memory. Error: {e}")
                 torch.cuda.empty_cache()  # Clear GPU memory
                 print(f"GPU memory cleared after OOM error.")
+                elapsed_time = "None"
                 save_profiling_result(model_alias, batch_size, elapsed_time)
                 return None, f"Out of memory error while processing batch for {model_alias}"
             else:
                 print(f"Unexpected runtime error: {e}")
+                elapsed_time = "None"
                 save_profiling_result(model_alias, batch_size, elapsed_time)
                 return None, f"Unexpected error while processing batch for {model_alias}"
 
@@ -187,7 +189,7 @@ def inference():
             completed_inference_ids, error = process_batch(model_alias, batch_size)
 
             # If there's an error (e.g., OOM), return it in the response
-            if error:
+            if 'Out of memory error' in completed_inference_ids:
                 return jsonify({'error': error}), 500
 
             return jsonify({
