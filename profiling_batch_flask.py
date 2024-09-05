@@ -14,7 +14,7 @@ timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cpu"
+device = "cuda"
 print(device)  # Check with nvidia-smi
 
 # Save machine name to identify csv
