@@ -65,7 +65,7 @@ async def send_request(session, workload):
     except Exception as e:
         print(f"Failed to make the request: {e}")
 
-async def profile_batch_size(session, workloads, model, batch_size):
+async def profile_batch_size(session, model, batch_size, workloads):
     tasks = []
     for _ in range(batch_size):
         # Select a random workload from the list
