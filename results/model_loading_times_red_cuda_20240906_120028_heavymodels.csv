@@ -1,0 +1,4 @@
+model_name,model_size /GB,mean_loading_time /s,std_loading_time /s,mean_unloading_time /s,std_unloading_time /s
+granite-7b,50.21,8.9661,2.0398,0.0051,0.0002
+gemma-7b,63.63,12.0832,2.4614,0.0392,0.0017
+llama3-8b,59.84,11.0054,2.3099,0.0162,0.0018

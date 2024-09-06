@@ -28,7 +28,7 @@ incoming_request_batches = {}
 running_request_batches = {}
 
 # List of allowed models
-allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
+allowed_models = ["granite-7b", "gemma-7b", "llama3-8b"]
 
 # Function to load models
 def load_model(model_alias):

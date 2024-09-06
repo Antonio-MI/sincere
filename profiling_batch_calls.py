@@ -20,7 +20,7 @@ workload_folder = "./workloads"
 batch_sizes = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768] 
 
 # List of models to profile
-models_to_profile = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]  # Add more models as needed
+models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"]  # Add more models as needed
 
 # Number of profiling runs per batch size
 num_runs_per_batch_size = 5
