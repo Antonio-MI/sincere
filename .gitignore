@@ -8,3 +8,7 @@ Transformers.ipynb
 venv/
 workloads_padding/
 update.py
+components_test.py
+api_load_inference_batch_pipe.py
+api_load_inference_batch.py
+api_load_inference.py

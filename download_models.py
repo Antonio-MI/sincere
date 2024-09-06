@@ -18,9 +18,9 @@ def download_and_save_model(model_name, model_dir):
     model.save_pretrained(model_dir)
 
 
-
 if __name__ == "__main__":
 
+    # HuggingFace Token
     login(token='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')
 
     models = {

@@ -10,7 +10,9 @@ import platform
 # Folder containing models
 base_dir = "./models"
 
-# Select device, cpu for now
+models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
+
+# Select device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
@@ -40,7 +42,7 @@ os.makedirs("./outputs", exist_ok=True)
 results = []
 
 # Iterate through all the models available to profile their mean load and unload
-for model in ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]:
+for model in models_to_profile:
     load_times = []
     unload_times = []
     model_sizes = []
