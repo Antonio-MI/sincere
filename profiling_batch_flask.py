@@ -86,6 +86,7 @@ def process_batch(model_alias, batch_size):
                 model=loaded_models[model_alias]["model"],
                 tokenizer=loaded_models[model_alias]["tokenizer"],
                 device=device,
+                torch_dtype=torch.float16
             )
 
             start_time = time.perf_counter()
