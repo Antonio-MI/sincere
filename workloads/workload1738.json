@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an interesting fact you could share about your hometown?\n[Response]\nI grew up in a small town called <hometown-name> with just over 10,000 residents. It's famous for being one of the oldest towns in the state and having lots of history \u2013 there are several museums dedicated to preserving artifacts from its past!",
+    "model_alias": "gpt2-124m"
+}

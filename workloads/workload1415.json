@@ -1,0 +1,4 @@
+{
+    "prompt": "List two examples of how a manager could use machine learning algorithms to optimize their workflow.\nA manager might use machine learning algorithms to optimize their workflow by analyzing historical data on workloads, absences, and preferences. This could involve using supervised learning techniques such as regression or decision trees to model the relationship between different variables and determine ideal task prioritization. The manager can then use reinforcement learning to evaluate and update these models in real-time based on feedback from employees and adjust workflows accordingly. Another example is using natural language processing to automate repetitive tasks such as drafting reports or responding to emails, freeing up more time for higher priority activities.",
+    "model_alias": "gpt2medium-355m"
+}

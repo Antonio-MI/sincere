@@ -1,0 +1,4 @@
+{
+    "prompt": "Please describe how a linguist could utilize machine learning algorithms for analyzing languages.\nA linguist might employ machine learning to analyze language structures by training statistical models on large corpora of texts. These models can then be used to identify patterns and trends in language usage, as well as predict the likelihood of certain grammatical constructions occurring. The linguist may also utilize natural language processing techniques to extract semantic features from text data, enabling them to perform sentiment analysis or automated translation tasks.",
+    "model_alias": "distilgpt2-124m"
+}

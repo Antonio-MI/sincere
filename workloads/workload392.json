@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you help me find an example of a news article about a recent scientific discovery?\nI am looking for a scientific breakthrough that has occurred in the past year.",
+    "model_alias": "gpt2medium-355m"
+}

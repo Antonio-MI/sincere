@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain the benefits of using data visualization over text-based data presentation.\nData visualization offers several advantages over traditional text-based data presentations. Firstly, it enables users to quickly grasp complex information by presenting data in a graphical format that is easy to understand and digest. Secondly, it enhances engagement levels since visuals tend to capture people's attention more effectively than plain text. Thirdly, data visualizations facilitate comparisons among different sets of data, allowing for easier identification of patterns and trends.",
+    "model_alias": "gpt2-124m"
+}

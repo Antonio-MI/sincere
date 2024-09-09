@@ -1,0 +1,4 @@
+{
+    "prompt": "What does \"distributed denial of service\" mean and what are some examples of when it might occur?\nA distributed denial of service (DDoS) attack is a malicious attempt to disrupt online traffic by overwhelming servers with artificial requests from multiple sources. This type of cyberattack can make websites unavailable or slow down response times for legitimate users. Examples include flooding a website with fake account creation requests, overloading a server with numerous connection attempts, and causing network congestion by sending a large volume of data packets.",
+    "model_alias": "gpt2medium-355m"
+}

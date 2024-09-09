@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you name a well-known figure in my industry who has achieved significant success?\nYou need to provide a reason why you think this person is successful and relevant to the field of interest. For example, \"This person has won multiple awards for their work.\" The input should involve realistic data and should not contain simple placeholders. It should ideally not exceed 100 words.",
+    "model_alias": "gpt2medium-355m"
+}

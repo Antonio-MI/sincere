@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you generate a list of 20 random numbers between 1 and 100, each on a new line?",
+    "model_alias": "gpt2medium-355m"
+}

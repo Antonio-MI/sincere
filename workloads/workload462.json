@@ -1,0 +1,4 @@
+{
+    "prompt": "Please list some popular food items from your country and briefly describe how they are typically prepared or served.\nI would like you to recommend some popular fast-food dishes that represent my country. For instance, if you're in the United States, you could mention the iconic burger and fries combo or perhaps even a classic hot dog with all the fixings. Please provide me with a list of 3 to 4 such dishes and briefly explain how they are typically prepared or served.",
+    "model_alias": "gpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Kindly tell me how the invention of artificial intelligence has impacted the field of astronomy.\nThe invention of artificial intelligence (AI) has significantly transformed the field of astronomy by enabling researchers to analyze vast amounts of astronomical data and identify patterns that might otherwise be difficult or impossible for humans to detect. For example, AI algorithms can help scientists search through massive datasets of images captured by telescopes and identify previously unknown celestial bodies, such as exoplanets orbiting other stars. This has greatly expanded our understanding of the universe beyond just our own solar system.",
+    "model_alias": "distilgpt2-124m"
+}

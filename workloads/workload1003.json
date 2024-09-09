@@ -1,0 +1,4 @@
+{
+    "prompt": "Give me an example of how a company might use machine learning techniques to optimize its supply chain management.\nThink of a large multinational corporation with complex supply chains, like Walmart or Amazon. These companies often face challenges related to demand forecasting and inventory management, which can be addressed by implementing machine learning techniques. For instance, Walmart could employ machine learning algorithms to predict seasonal demand spikes for specific products in different geographical regions based on historical sales data and other relevant factors.",
+    "model_alias": "gpt2medium-355m"
+}

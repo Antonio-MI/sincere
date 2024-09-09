@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some common questions a customer service representative might ask a customer during a call?\nA customer service representative might ask a customer during a call: \u201cHow can I help you with your issue today?\u201d; \u201cCan I clarify any points for you in our policy regarding XYZ?\u201d; or, \u201cHave you tried looking up information on our website about XYZ?\u201d among other things.",
+    "model_alias": "distilgpt2-124m"
+}

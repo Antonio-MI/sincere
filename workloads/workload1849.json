@@ -1,0 +1,4 @@
+{
+    "prompt": "Write a review about your favorite book/author, focusing on why it is special to you.",
+    "model_alias": "distilgpt2-124m"
+}

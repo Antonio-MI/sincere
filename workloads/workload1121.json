@@ -1,0 +1,4 @@
+{
+    "prompt": "Given two popular sports teams (e.g., football or basketball), compare their performance statistics over a certain period of time to determine which team has been more successful.\nThe New York Knicks and the Los Angeles Lakers are both professional basketball teams that have experienced varying degrees of success throughout their histories. Over the past five years, the Lakers have achieved a record of 230-176 while the Knicks have managed to win just 187 games out of 405 matches played during this period.",
+    "model_alias": "gpt2medium-355m"
+}

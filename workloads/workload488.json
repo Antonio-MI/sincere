@@ -1,0 +1,4 @@
+{
+    "prompt": "How do I make a reservation at a restaurant?\nI would like to make a reservation for two people this coming Friday night at 7 pm. Is there a specific way that I need to do this?",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some examples of common questions a researcher might ask when conducting an experiment?\nA researcher might ask when conducting an experiment: \u201cHow can I control for variability in my results?\u201d; or, \u201cCan I replicate these findings using different methods?\u201d; or, \u201cHave I accounted for all potential confounding variables?\u201d among other things.",
+    "model_alias": "distilgpt2-124m"
+}

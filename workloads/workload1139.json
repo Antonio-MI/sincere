@@ -1,0 +1,4 @@
+{
+    "prompt": "What are two of the most famous paintings in the world?\nYou should mention at least two paintings that are well known and recognized by people across the globe. You can provide a brief description or context for each painting, such as the artist who created it or where it is currently located.",
+    "model_alias": "gpt2medium-355m"
+}

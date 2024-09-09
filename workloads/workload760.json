@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the difference between a microprocessor and a CPU? How do they interact with one another during normal operation?\nA microprocessor, as previously mentioned, is a central processing unit that performs computations based on instructions from software or firmware. It typically requires external memory and peripherals to function properly. A CPU, on the other hand, is just part of a microprocessor responsible for executing instructions sequentially according to its design.",
+    "model_alias": "gpt2medium-355m"
+}

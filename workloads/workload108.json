@@ -1,4 +1,4 @@
 {
     "prompt": "What is the highest mountain above sea level?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain how to make an easy dinner for four people using ingredients that are already available in the fridge and pantry.\nAn example of such a meal could be spaghetti Bolognese with tomato sauce, garlic bread, and salad. For this meal, you will need:\n- 1 can (400g) of tomatoes;\n- 1 small onion;\n- 2 cloves of garlic;\n- 500g of minced beef or pork;\n- A small amount of olive oil for frying;\n- Salt and pepper to taste;\n- 500g of spaghetti noodles;\n- 1 loaf of bread (about 4 slices);\n- Some lettuce, tomatoes, cucumbers, and maybe olives for the salad.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -8,6 +8,15 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import numpy as np
 import pandas as pd
+import platform
+
+timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+
+# Measure GPU usage (time) - consider use as inference 
+# Calls to get GPU metrics - every x time  to check this is not the bottleneck
+
+# Save machine name to identify csv
+machine_name = platform.node()
 
 # Folder containing models
 base_dir = "./models"
@@ -93,7 +102,8 @@ def generate_padding_request(model_alias):
     return {
         'id': str(uuid.uuid4())[:4], # Shorter ids so it easier to recognize
         'model_alias': model_alias,
-        'prompt': "This is a padding request to fill the batch."
+        'prompt': "This is a padding request to fill the batch.",
+        'request_time': time.perf_counter()
     }
 
 def get_allowed_batch_size(current_size, allowed_batch_sizes):
@@ -102,6 +112,22 @@ def get_allowed_batch_size(current_size, allowed_batch_sizes):
         if size >= current_size:
             return size
     return allowed_batch_sizes[-1]  # Default to the largest batch size if none is larger
+
+def save_latency(request_id, latency, batch_size, model_alias):
+    csv_filename = f"latency_results_{machine_name}_{device}_{timestamp}.csv"
+    csv_path = os.path.join("outputs", csv_filename)
+    data = {
+        "request_id": request_id,
+        "latency": latency,
+        "batch_size": batch_size,
+        "model": model_alias
+    }
+    df = pd.DataFrame([data])
+    file_exists = os.path.isfile(csv_path)
+    if file_exists:
+        df.to_csv(csv_path, mode="a", header=False, index=False)
+    else:
+        df.to_csv(csv_path, index=False)
 
 # HOW TO NOT TRIGGER PROCESSING WHEN BATCH IS LARGER THAN 4??
 # JUST TRIGGER BY TIME OR THE LARGER BATCH SIZE? AND THE ADD PADDING
@@ -172,6 +198,16 @@ def process_batch(model_alias, condition, batch_size):
         end_time = time.perf_counter()
         print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {end_time - start_time:.4f} seconds")
 
+        # Calculate latency for each request
+        for request in batch:
+            request_id = request['id']
+            request_time = request['request_time']
+            latency = end_time - request_time  # Time since the request was received until the batch was processed
+
+            # Save the latency result to a CSV file
+            save_latency(request_id, latency, batch_size, model_alias)
+
+
         # Reset the timer for the next batch
         batch_timers[model_alias] = None
 
@@ -203,6 +239,8 @@ def inference():
     model_alias = request.json.get('model_alias')
     prompt = request.json.get('prompt')
     request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
+    request_time = time.perf_counter()  # Time when the request was received
+    #print(f"request_time: {request_time}")
     print(f"Request with ID {request_id} for model {model_alias} received")
     
     # Check if the model is in the allowed models list
@@ -233,7 +271,8 @@ def inference():
     request_data = {
         'id': request_id,
         'model_alias': model_alias,
-        'prompt': prompt
+        'prompt': prompt,
+        'request_time': request_time
     }
     
     incoming_request_batches[model_alias].put(request_data)

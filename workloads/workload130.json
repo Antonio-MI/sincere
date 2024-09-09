@@ -1,4 +1,4 @@
 {
     "prompt": "What does the ozone layer do?",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

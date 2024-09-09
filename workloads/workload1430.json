@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some common misconceptions about [topic]?\n[Topic] is often misunderstood due to a lack of understanding about certain aspects related to it. I am curious to know what types of errors or wrong information people tend to believe when it comes to [topic], so that I can correct them and prevent further confusion in the future.",
+    "model_alias": "gpt2-124m"
+}

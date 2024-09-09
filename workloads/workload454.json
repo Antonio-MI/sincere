@@ -1,0 +1,4 @@
+{
+    "prompt": "Please suggest a book related to physics that I would enjoy.",
+    "model_alias": "distilgpt2-124m"
+}

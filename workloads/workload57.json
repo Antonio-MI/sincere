@@ -1,4 +1,4 @@
 {
     "prompt": "What is the longest river in Europe?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

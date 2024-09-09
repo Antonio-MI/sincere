@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you help me rephrase this sentence without using the word \"or\"?\nIn addition to our usual services, we also offer specialized solutions for customers who require customized support. If they need something specific done that isn\u2019t included in our regular offerings, then these are the options available.",
+    "model_alias": "distilgpt2-124m"
+}

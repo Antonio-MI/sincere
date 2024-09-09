@@ -1,0 +1,4 @@
+{
+    "prompt": "Please provide examples of creative problem-solving techniques you have used in your work.\nTo resolve a technical issue with our ecommerce website, I suggested using an offline mode that would allow customers to continue shopping even when the server went down temporarily. This solution not only kept sales coming but also prevented customer frustration from losing orders unexpectedly.",
+    "model_alias": "gpt2medium-355m"
+}

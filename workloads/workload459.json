@@ -1,0 +1,4 @@
+{
+    "prompt": "Given a list of adjectives, create a sentence that uses at least three of them to describe the beauty of nature.",
+    "model_alias": "gpt2medium-355m"
+}

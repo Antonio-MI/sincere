@@ -1,0 +1,4 @@
+{
+    "prompt": "What advice would you give to someone looking for a job in your industry?\nIn the competitive world of [industry], standing out from the crowd is essential. Here are some tips to help you land your dream job: first, showcase your unique skills and experience through a compelling resume and cover letter; secondly, craft impressive responses to common interview questions by practicing ahead of time; thirdly, take advantage of social media platforms such as LinkedIn or Twitter to expand your network; and fourthly, don't underestimate the power of word-of-mouth recommendations \u2013 often times, personal connections can lead to unexpected opportunities.",
+    "model_alias": "distilgpt2-124m"
+}

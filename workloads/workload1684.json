@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you provide an example of how you would use data visualization to make complex information more accessible?\nImagine presenting financial data from a company's quarterly report to stakeholders or investors. The report contains numerous figures, percentages, and trends that might be challenging for non-experts to understand at first glance.",
+    "model_alias": "gpt2medium-355m"
+}

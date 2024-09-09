@@ -1,0 +1,4 @@
+{
+    "prompt": "How do I write a letter of recommendation for someone?\nDear [Recipient's Name],\nI am writing this letter of recommendation to express my strong support for [Recommended Person's Name]. During the past [Number] years that I have known and worked with [Recommended Person's Name], I have been consistently impressed by their dedication, expertise, and ability to manage complex projects. Their contributions to our team were invaluable, and I am confident that they will continue to excel in any future endeavors.\n[Optional: You can also add some details about the person\u2019s strengths or specific achievements that you observed.]",
+    "model_alias": "distilgpt2-124m"
+}

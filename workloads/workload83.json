@@ -1,4 +1,4 @@
 {
     "prompt": "What is your opinion on the best place to go for outdoor activities?",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2-124m"
 }

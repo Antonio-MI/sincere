@@ -1,0 +1,4 @@
+{
+    "prompt": "How can I best explain the concept of <some_concept> in a way that is easy to understand for someone who doesn't have any prior knowledge about it?",
+    "model_alias": "gpt2-124m"
+}

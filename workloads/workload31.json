@@ -1,4 +1,4 @@
 {
     "prompt": "What is an example of a common phrase that I should include in my essay about the importance of recycling?",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2-124m"
 }

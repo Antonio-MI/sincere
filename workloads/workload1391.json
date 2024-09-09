@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe a real-world scenario where data analysis was used to make informed decisions.\nConsider a situation where you manage a small business selling products online. To better understand your customers' preferences, you conduct market research and analyze the sales data from your e-commerce platform. Based on this analysis, you discover that your target audience tends to purchase certain items together in bundled packages. As a result, you decide to offer these items as bundled sets at discounted prices to increase customer satisfaction and encourage repeat purchases.",
+    "model_alias": "gpt2-124m"
+}

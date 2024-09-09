@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you explain the concept of entropy in a simple way?\nEntropy is a measure of how energy is distributed within a system. It is often used in thermodynamics and information theory. In the context of heat, entropy is related to the amount of energy available for a given temperature difference between two bodies or systems. For example, when you touch a hot stove, your hand absorbs heat from the stove, and the entropy level of the stove decreases as it loses thermal energy. Conversely, if you place a cold can in warm water, the water around the can will absorb some of its heat, causing the temperature of the water to increase and leading to an increase in entropy.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the difference between a computer that runs on a single operating system and one running multiple ones?\nTwo computers are identical in terms of hardware specifications, but one runs only on Windows while the other runs Linux alongside macOS.",
+    "model_alias": "distilgpt2-124m"
+}

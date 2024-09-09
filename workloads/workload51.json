@@ -1,4 +1,4 @@
 {
     "prompt": "How do plants create their own food?\nA specific example of how to do so could be: \"Through photosynthesis, they convert sunlight into energy.\"",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

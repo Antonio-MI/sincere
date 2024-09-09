@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the best way to learn about a new programming language or framework? Should you read the documentation, watch tutorials, or experiment with code samples?",
+    "model_alias": "distilgpt2-124m"
+}

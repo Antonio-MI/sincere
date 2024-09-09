@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an example of a real-world problem that could be solved using data analytics techniques?\nI want to know if I can use data analytics to identify customers at risk of churning and prevent them from leaving my company.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Please recommend a popular book on the subject of artificial intelligence that is easy to understand for someone with limited knowledge in this field.\nI am looking for a book that explains AI in simple language without using too much technical jargon. I want to learn more about the principles and practical applications of AI so that I can make informed decisions when discussing it with others.",
+    "model_alias": "gpt2medium-355m"
+}

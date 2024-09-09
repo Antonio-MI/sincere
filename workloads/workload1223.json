@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you help me understand a complicated concept related to <some_topic>?",
+    "model_alias": "gpt2-124m"
+}

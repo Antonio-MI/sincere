@@ -1,0 +1,4 @@
+{
+    "prompt": "How many countries have a capital city with a population of one million or more?",
+    "model_alias": "gpt2-124m"
+}

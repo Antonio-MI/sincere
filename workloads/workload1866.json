@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you suggest a popular book about space exploration written within the past 10 years?",
+    "model_alias": "distilgpt2-124m"
+}

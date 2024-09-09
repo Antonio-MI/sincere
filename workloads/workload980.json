@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain how you would use parallel processing techniques to speed up a complex computation task.\nParallel processing is a method for dividing a complex task into smaller sub-tasks that can be executed simultaneously on multiple processors or cores. By doing so, we can significantly reduce the overall time required to complete the task. This technique is particularly useful when dealing with large datasets or intensive computations. For example, if you have a program that takes hours to run and you want to speed it up, parallel processing allows you to distribute the workload among multiple processors so that each one works on its own portion of the data. This way, not only do we finish faster but also make better use of our available resources as well.",
+    "model_alias": "gpt2-124m"
+}

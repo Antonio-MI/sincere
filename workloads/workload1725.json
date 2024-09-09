@@ -1,0 +1,4 @@
+{
+    "prompt": "How should you begin writing a research paper on artificial intelligence?\nWhen beginning to write a research paper about artificial intelligence (AI), always start by defining what AI means \u2013 whether it refers specifically to software programs that mimic human behavior or encompasses broader ideas such as intelligent systems and automation technologies. After establishing this foundation, conduct thorough research into relevant subtopics like machine learning algorithms and big data analytics; summarize key findings in your introduction paragraph and use them throughout the body of your paper when discussing each individual topic.",
+    "model_alias": "distilgpt2-124m"
+}

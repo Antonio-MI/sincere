@@ -1,0 +1,4 @@
+{
+    "prompt": "Write a short summary of your favorite book from last year.",
+    "model_alias": "distilgpt2-124m"
+}

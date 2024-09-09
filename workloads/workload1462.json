@@ -1,0 +1,4 @@
+{
+    "prompt": "Create a poll about the best way to learn a new language.\nThere are multiple ways to learn a new language, and each one has its own merits. Some popular methods include attending language classes, studying abroad in a country where the language is spoken, using language learning apps, or watching foreign movies with subtitles in the target language.",
+    "model_alias": "gpt2medium-355m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you explain the concept of a blockchain to someone who has no prior knowledge about it?\nTo introduce someone new to the idea of a blockchain, I would first explain that a blockchain is a decentralized digital ledger where transactions are recorded chronologically and publicly. It's like an ever-growing list of records, or \"blocks,\" that are linked together in a chain. Each block contains information about recent transactions, such as who transferred what amount to whom, along with relevant metadata like time stamps, hashes, and unique identifiers for each party involved. This makes it difficult, if not impossible, for anyone to alter previous records without altering all subsequent ones too.",
+    "model_alias": "gpt2medium-355m"
+}

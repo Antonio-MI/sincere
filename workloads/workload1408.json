@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the purpose of a \"cryptographic hash function\" and what kind of security does it provide?\nA cryptographic hash function is a mathematical function used in computer science to map data of arbitrary size to a fixed size output known as a hash value or message digest. It provides data integrity, confidentiality, and authentication by ensuring that the input data remains unchanged even after processing. This allows for detecting tampering with sensitive data, ensuring secure communication channels, and verifying digital signatures.",
+    "model_alias": "gpt2-124m"
+}

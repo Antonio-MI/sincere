@@ -1,0 +1,4 @@
+{
+    "prompt": "Provide an example of a well-structured response to the following prompt: \"What are your thoughts on the recent development in X industry?\" where \"X\" represents a specific industry.\nThe recent development in the tech industry is the introduction of 5G technology. This innovation has brought about faster internet speeds, improved connectivity between devices, and opened up new opportunities for businesses to explore through innovative applications like virtual reality and autonomous vehicles. As a tech enthusiast, I am excited about the potential that 5G offers and look forward to seeing how it will continue to shape our digital world in the coming years.",
+    "model_alias": "distilgpt2-124m"
+}

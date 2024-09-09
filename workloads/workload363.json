@@ -1,0 +1,4 @@
+{
+    "prompt": "Please describe an intriguing scenario in which you would like to learn more about how it was resolved or what its outcome was.\nImagine being stranded on a deserted island with no way of contacting anyone for help. After days of struggling to survive, you finally manage to build a rudimentary radio set from scrap materials and manage to get a message out to the mainland. The response comes back: \u201cWe will attempt to send a rescue team immediately; however, due to unforeseen circumstances such as bad weather or mechanical issues with our aircrafts, we may not be able to reach you until several days later.\u201d How did they finally reach you? What were the challenges faced by the rescuers while trying to reach you?",
+    "model_alias": "gpt2-124m"
+}

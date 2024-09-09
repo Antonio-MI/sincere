@@ -1,0 +1,4 @@
+{
+    "prompt": "How can I generate more effective titles for my articles?\nTo create captivating article titles, consider employing intriguing language, incorporating numbers or lists (e.g., \u201c5 Tips for a Successful Summer\u201d), posing thought-provoking questions (e.g., \u201cIs It Time to Change Our Perspective on [Topic]?\u201d), and teasing readers with tantalizing previews of the content (e.g., \u201cDiscover How This New Trend Is Reshaping Your Industry\u201d). Additionally, ensure your titles are concise, accurate, and keyword-rich for improved search engine optimization.",
+    "model_alias": "distilgpt2-124m"
+}

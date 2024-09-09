@@ -1,0 +1,4 @@
+{
+    "prompt": "List an example of a complex sentence structure.\nConsider the following complex sentence structure: \"Although Jane had been a good student in her previous classes, she struggled to understand the more advanced concepts in this course because she lacked background knowledge in the required prerequisites.\" This sentence is structured with a main clause (\"Jane struggled...\") followed by a subordinate clause (\"because she lacked background knowledge...\"). The sentence also contains compound adjectives (a \"good student\" who \"struggled to understand\") and an adverbial phrase (\"in this course\").",
+    "model_alias": "gpt2-124m"
+}

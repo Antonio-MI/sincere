@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you tell me why I should use a semicolon instead of a comma when listing items in a sentence?",
+    "model_alias": "distilgpt2-124m"
+}

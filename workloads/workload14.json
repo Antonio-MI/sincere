@@ -1,4 +1,4 @@
 {
     "prompt": "How do you make a good cup of coffee?",
-    "model_alias": "gpt2-124m"
+    "model_alias": "distilgpt2-124m"
 }

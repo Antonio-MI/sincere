@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you tell me the most common cause of a fever?",
+    "model_alias": "gpt2medium-355m"
+}

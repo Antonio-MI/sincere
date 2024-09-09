@@ -1,0 +1,4 @@
+{
+    "prompt": "If you were asked by a stranger on the street who was visiting your hometown for the first time, where would you recommend him/her go? Please provide as much detail about this place as possible such as its name, type of attraction or activity there, and any other relevant information.",
+    "model_alias": "gpt2-124m"
+}

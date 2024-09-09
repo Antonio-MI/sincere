@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you help me rephrase this sentence to make it less repetitive?\nThe new policy states that all employees must complete a training course before they can access the system. This is so they are familiar with how to use it properly and safely. It also helps ensure compliance with company regulations and standards.",
+    "model_alias": "distilgpt2-124m"
+}

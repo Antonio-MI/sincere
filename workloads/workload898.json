@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the maximum length of a regular basketball game in NBA? How much time is allowed between quarters?",
+    "model_alias": "distilgpt2-124m"
+}

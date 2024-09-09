@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you explain the concept of entropy to someone who has never heard about it before? Please keep your response as simple as possible.",
+    "model_alias": "distilgpt2-124m"
+}

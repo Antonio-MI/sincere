@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you explain the difference between a \"noun clause\" and an \"adverbial phrase\"? Please provide examples for each.\nA noun clause is a group of words that acts as a noun in a sentence, usually including a subject and verb but sometimes omitting one or both. Examples: \"Who broke the vase?\" \"What he said was fascinating.\" Noun clauses can function as subjects, direct objects, indirect objects, appositives (nouns that rename other nouns), or even adverbial modifiers (words that modify verbs).\n\nAdverbial phrases, on the other hand, are groups of words that modify verbs, adjectives, or other adverbs by providing more information about when, where, how long, to what extent, or under what conditions something happens. Examples: \"She sang loudly.\" \"They arrived early this morning.\" \"He walks quickly down the street.\"",
+    "model_alias": "gpt2-124m"
+}

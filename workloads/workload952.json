@@ -1,0 +1,4 @@
+{
+    "prompt": "Please summarize the key findings from the past year's research on your chosen topic.",
+    "model_alias": "gpt2medium-355m"
+}

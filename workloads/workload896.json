@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain how to use the \"find\" function in Microsoft Excel to locate specific values in a table or data set.\nThe \"find\" function in Microsoft Excel is a useful tool for locating specific values within a table or data set. To utilize this feature, first select the cell or range of cells containing the values you wish to search. Then, click on the \"Find\" button located in the \"Home\" tab of the ribbon interface. In the dialogue box that appears, enter the value(s) you are searching for in the \"Within\" field. If you are searching for text, select the \"Text\" radio button. Click \"OK\" to initiate the search. The function will highlight all instances of the specified value(s) within the selected cells or data set.",
+    "model_alias": "gpt2-124m"
+}

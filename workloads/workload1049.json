@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you describe the benefits of using open-source software in the workplace?\nUsing open-source software in the workplace offers several advantages over proprietary solutions, including cost savings from not requiring additional licenses and improved customizability due to access to source code. Open-source software also encourages community collaboration on projects, leading to enhanced innovation and problem solving through shared knowledge and resources.",
+    "model_alias": "distilgpt2-124m"
+}

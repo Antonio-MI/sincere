@@ -1,0 +1,4 @@
+{
+    "prompt": "Who is your favorite soccer player?\nMy favorite soccer player is <yourfavoriteplayername>. I have always admired his skill and determination on the field. He has inspired me to pursue my own goals with perseverance and never give up.",
+    "model_alias": "distilgpt2-124m"
+}

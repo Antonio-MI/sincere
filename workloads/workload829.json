@@ -1,0 +1,4 @@
+{
+    "prompt": "What are the primary steps involved in creating an augmented reality experience using a smartphone?\nInvolves using a smartphone's camera to overlay virtual objects onto real-world environments, allowing users to interact with them via gestures or touch controls. The primary steps include:\n  1. Calibrating the camera for accurate tracking of the user's movements and positioning in space.\n  2. Generating realistic 3D models of virtual objects based on data from cloud servers or local storage devices.\n  3. Overlaying these 3D models onto the user's real-world view using advanced algorithms that account for lighting conditions, perspective, and motion parallax.\n  4. Allowing users to interact with virtual objects via gestures or touch controls by detecting their movements and translating them into corresponding actions within the AR environment.",
+    "model_alias": "gpt2medium-355m"
+}

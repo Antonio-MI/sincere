@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the main difference between the English language versions of Wikipedia and Wiktionary?\nWikipedia is an online encyclopedia containing information on a wide range of topics, while Wiktionary focuses specifically on definitions of words and phrases in various languages. Both sites are run by volunteers who edit and maintain them as part-time jobs.",
+    "model_alias": "gpt2medium-355m"
+}

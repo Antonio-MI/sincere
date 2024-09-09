@@ -1,0 +1,4 @@
+{
+    "prompt": "Kindly provide me with an explanation of the concept of \"artificial intelligence\" (AI) and its practical applications, including those relevant to my profession as a software developer.\nI am interested in learning how AI can be applied to enhance the development process for software applications I create. As a developer, I would like to understand the potential benefits and challenges of incorporating AI into my projects.",
+    "model_alias": "distilgpt2-124m"
+}

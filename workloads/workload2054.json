@@ -1,0 +1,4 @@
+{
+    "prompt": "Summarize what you learned about writing good summaries from this experience with generating summaries for your writing prompt.\nAfter trying to generate summaries for my writing prompts, I realized that writing concise yet informative summaries requires practice and patience. It's important to read the entire text thoroughly before attempting to sum it up, as understanding all details allows me to make accurate selections of what information matters most. Additionally, using clear language helps ensure clarity in my summary too!",
+    "model_alias": "distilgpt2-124m"
+}

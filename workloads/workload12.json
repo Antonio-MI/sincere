@@ -1,4 +1,4 @@
 {
     "prompt": "Can you list some causes of deforestation?",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

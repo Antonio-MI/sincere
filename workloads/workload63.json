@@ -1,4 +1,4 @@
 {
     "prompt": "How can I improve my public speaking skills?\nIn order to improve your public speaking skills, consider practicing in front of a mirror or recording yourself so that you can critique your own delivery. Additionally, try joining local clubs, organizations, or groups that focus on public speaking and performance arts, as they often provide constructive feedback and opportunities for improvement.",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

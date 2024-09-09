@@ -1,0 +1,4 @@
+{
+    "prompt": "What are the benefits of a hybrid vehicle compared to those of an electric one?\nHybrid vehicles offer both gasoline and electric power sources, making them more energy efficient than traditional internal combustion engine cars. They can also operate on electricity alone at low speeds or during idling conditions, saving fuel costs. For example, consider a hybrid car that uses 20 gallons of gas per week versus an electric one using 10 kWh weekly; the former would have lower emissions while costing less in terms of energy expenditure.",
+    "model_alias": "gpt2medium-355m"
+}

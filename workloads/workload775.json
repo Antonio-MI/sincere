@@ -1,0 +1,4 @@
+{
+    "prompt": "How do you calculate a person's BMI? What does it mean to have an unhealthy BMI?",
+    "model_alias": "gpt2medium-355m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Please summarize the main points discussed during a meeting between two negotiating parties about their upcoming collaboration project.\nThe meeting covered several key topics related to the project. Firstly, both parties agreed on the goals and objectives of the collaboration. Secondly, they discussed the timeline for completion and the resources required. Thirdly, they established a system for tracking progress and communicating updates. Lastly, they set expectations around potential challenges and how they would address them jointly.",
+    "model_alias": "gpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Please provide me with the top 5 countries in terms of their number of Olympic medals won in the history of the Olympics?",
+    "model_alias": "distilgpt2-124m"
+}

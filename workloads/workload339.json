@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you help me with an example of how to solve this problem?\nI am working on a data entry project for my company. However, some of the data entries require manual intervention due to formatting issues. I would like your assistance in creating an automated solution that can handle these problems without requiring any human interference.",
+    "model_alias": "gpt2medium-355m"
+}

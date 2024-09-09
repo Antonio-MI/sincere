@@ -1,0 +1,4 @@
+{
+    "prompt": "Name some things that might be challenging when trying to learn how to program in Python.\nFor instance, one of the biggest challenges I faced was getting used to the syntax and structure of Python code. It can be difficult to understand how variables are declared and initialized, especially since there's no need for semicolons or braces like in some other languages. Also, it took me a while to get comfortable with writing functions and methods using indentation rather than parentheses. What do you think might be some other common struggles that new programmers face when learning Python?",
+    "model_alias": "distilgpt2-124m"
+}

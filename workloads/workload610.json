@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you explain a complex scientific concept using analogies and metaphors? For instance, what's an analogy for quantum entanglement that isn't too technical?\nQuantum Entanglement: A pair of electrons that share the same spin state and are separated by large distances can behave as if they were connected by an invisible thread or bond. This phenomenon is often called \"quantum entanglement.\"",
+    "model_alias": "distilgpt2-124m"
+}

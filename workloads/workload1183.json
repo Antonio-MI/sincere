@@ -1,0 +1,4 @@
+{
+    "prompt": "Tell me about a historical figure who has made significant contributions to [a specific field].\nApart from Einstein, can you tell me about another historical figure who has made substantial advancements in the field of physics?",
+    "model_alias": "gpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain what you would do if your smart home device suddenly stopped working and why.\nIf my smart home device suddenly stopped working, I would first attempt to diagnose the issue myself by checking the power supply, network connection, and any potential software glitches that could cause the problem. If I am unable to identify the cause of the issue, I would then contact the manufacturer's customer support for assistance in troubleshooting the problem and providing a solution. I would not simply ignore the issue or attempt to fix it myself without proper knowledge or skills because this could lead to further damage or potential safety hazards.",
+    "model_alias": "distilgpt2-124m"
+}

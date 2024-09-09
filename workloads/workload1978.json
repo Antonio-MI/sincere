@@ -1,0 +1,4 @@
+{
+    "prompt": "Generate a summary of the latest developments in computer science research.",
+    "model_alias": "distilgpt2-124m"
+}

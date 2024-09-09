@@ -1,0 +1,4 @@
+{
+    "prompt": "Create a short list of questions to ask someone about their favorite book or movie. Make sure the questions are open-ended and encourage the person to share their thoughts and feelings.",
+    "model_alias": "distilgpt2-124m"
+}

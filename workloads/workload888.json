@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe how you would analyze a set of customer reviews to identify common themes and trends in the data.\nIn my e-commerce business, I want to analyze customer feedback on various products. I need to identify patterns in their comments that can help improve product features and boost sales. Here's an example of a recent customer review for one of our top-selling items: \"I love this product! It's sturdy and lasts long, but it could be more comfortable for my back.\"",
+    "model_alias": "gpt2-124m"
+}

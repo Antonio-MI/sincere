@@ -1,0 +1,4 @@
+{
+    "prompt": "Kindly describe the process of creating a custom computer game for me.\nI would like to create a custom computer game that involves some form of strategy. I am thinking about something along the lines of chess but with more unique pieces and rules. Additionally, I'd like the game to have a medieval or fantasy theme to it, possibly set in a magical kingdom.",
+    "model_alias": "distilgpt2-124m"
+}

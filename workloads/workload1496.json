@@ -1,0 +1,4 @@
+{
+    "prompt": "How can you make your website more user-friendly and easier to navigate? Provide at least three suggestions.\nTo improve user experience, consider implementing the following suggestions:\n  1. Implement a clear and concise navigation structure, such as a well-organized menu with dropdown options that guide users through the site's content easily.\n  2. Use consistent design elements, such as fonts, colors, and spacing to ensure a cohesive look and feel throughout the website.\n  3. Implement search functionality to help users quickly locate specific content or pages on your site without having to sift through multiple menus or sections first.",
+    "model_alias": "gpt2medium-355m"
+}

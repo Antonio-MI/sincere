@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you describe how to conduct a scientific experiment step by step?",
+    "model_alias": "distilgpt2-124m"
+}

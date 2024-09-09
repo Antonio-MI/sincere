@@ -1,0 +1,4 @@
+{
+    "prompt": "Please suggest an interesting question about a particular historical event from the past century.\nWhen asking questions about a notable historical occasion from the past hundred years, consider the following aspects: its significance within global events, its impact on contemporary society, its relevance to current debates, and any lessons learned or misconceptions perpetuated by our understanding of this event. Also be aware of any potential biases or preconceived notions you might have regarding this topic.",
+    "model_alias": "gpt2medium-355m"
+}

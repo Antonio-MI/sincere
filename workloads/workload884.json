@@ -1,0 +1,4 @@
+{
+    "prompt": "Please write me a letter expressing your views on whether you think robots should replace humans in certain jobs or not.\nI do not believe that robots should replace humans in any job, but rather work alongside them to make both parties more efficient and productive. I believe that this collaboration will result in an environment where humans can focus on tasks that require creative thinking, problem-solving abilities, and emotional intelligence while robots perform repetitive tasks or those that are dangerous for human safety.",
+    "model_alias": "distilgpt2-124m"
+}

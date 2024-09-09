@@ -1,0 +1,4 @@
+{
+    "prompt": "What is a good question to ask about the impact of a specific piece of legislation?\nSuppose you want to discuss the effects of a new law that prohibits smoking in public spaces: what would be important factors to consider when writing about this topic? What should you focus on, given its unique implications for public health and personal freedoms?",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Please summarize the main points of the most recent United Nations Security Council Resolution.\nThe latest UNSCR (264) passed on July 30, 2022, mandates sanctions against Da\u2019esh (ISIL) and other affiliated individuals in Iraq and Syria. The resolution calls for an end to the armed conflict between the government of Iraq and the Islamic State of Iraq and Levant (ISIL), and urges all states to cooperate in the search for a lasting political solution. It also condemns terrorist acts, including those committed by ISIL, and stresses the need to combat by all means terrorism and violent extremism.",
+    "model_alias": "gpt2medium-355m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "How can I improve my skills in creating effective marketing campaigns?\nYou need to provide a specific example of a successful marketing campaign and explain why it was successful. For example, \"This marketing campaign for our latest product launch generated over $1 million in sales.\" The input should involve realistic data and should not contain simple placeholders. It should ideally not exceed 100 words.",
+    "model_alias": "gpt2-124m"
+}

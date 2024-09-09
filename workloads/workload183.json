@@ -1,0 +1,4 @@
+{
+    "prompt": "How many stars can you see with the naked eye on a clear night?\nI live in [your location] and I am looking up at the sky on a clear night.",
+    "model_alias": "gpt2-124m"
+}

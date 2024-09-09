@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the best way for me to find a job in my field of interest?\nYou need to provide a reason why you think this method is effective for finding jobs in one\u2019s field of interest. For example, \"Networking with professionals in your field can help you learn about job opportunities and make connections that could lead to employment.\" The input should involve realistic data and should not contain simple placeholders. It should ideally not exceed 100 words.",
+    "model_alias": "distilgpt2-124m"
+}

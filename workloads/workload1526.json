@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an example of a time-saving feature that could be added to a word processing software?\nTo enhance user productivity in word processing applications, consider incorporating intelligent features like automatic formatting based on content type (e.g., dates, phone numbers, etc.), automatic creation of tables and lists from unstructured data, real-time translation capabilities, and enhanced text-to-speech or voice input support. These tools can save users time by reducing manual effort in editing text and formatting documents.",
+    "model_alias": "gpt2-124m"
+}

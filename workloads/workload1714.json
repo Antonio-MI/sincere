@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you provide me with information about the country of origin for the item I just bought?\nI recently purchased a pair of shoes from the <input_placeholder>. I'm curious about where they were made.",
+    "model_alias": "distilgpt2-124m"
+}

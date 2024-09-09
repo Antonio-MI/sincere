@@ -1,0 +1,4 @@
+{
+    "prompt": "Create a graphical representation that displays the difference between the number of positive and negative responses to your question.",
+    "model_alias": "distilgpt2-124m"
+}

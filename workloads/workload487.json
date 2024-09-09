@@ -1,0 +1,4 @@
+{
+    "prompt": "How do I set a reminder?\nI would like to be reminded of my appointment with Dr. Smith tomorrow at 10 am. Can you help me set up a reminder?",
+    "model_alias": "gpt2-124m"
+}

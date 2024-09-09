@@ -1,0 +1,4 @@
+{
+    "prompt": "How can I create a poll using natural language processing? Please explain the process step by step.",
+    "model_alias": "distilgpt2-124m"
+}

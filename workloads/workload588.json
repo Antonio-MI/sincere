@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you rewrite a sentence with vague language so that it becomes more specific?\nThey left town after the storm had passed, but their destination remains unknown.",
+    "model_alias": "gpt2medium-355m"
+}

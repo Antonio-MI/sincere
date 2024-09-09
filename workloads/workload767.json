@@ -1,0 +1,4 @@
+{
+    "prompt": "Could you explain what a \"quantum superposition\" is in simple terms?\nQuantum superposition is the ability of a quantum system\u2014like an electron orbiting an atomic nucleus\u2014to exist in multiple states at once, until we observe it and it collapses into one state. It's like trying to imagine all possibilities happening simultaneously before someone watches and decides which outcome is real.",
+    "model_alias": "gpt2medium-355m"
+}

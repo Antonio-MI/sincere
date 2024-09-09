@@ -1,0 +1,4 @@
+{
+    "prompt": "How much money does it cost to run a nuclear power plant for one year?\nAccording to the World Nuclear Association, the average cost of running a nuclear power plant for one year is around $1.6 billion. This figure includes not only the costs associated with fuel but also labor, maintenance, depreciation, and other operational expenses. However, it's important to note that these figures can vary significantly based on factors such as location, design of the plant, and current market conditions.",
+    "model_alias": "distilgpt2-124m"
+}

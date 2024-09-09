@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain the concept of Bayes theorem in simple terms.\nBayes Theorem, also known as Bayes' Rule, is a fundamental principle in probability theory that describes how to update the probability for an event based on new evidence. It shows mathematically how to calculate probabilities when given certain pieces of information. For example, if you know the probability of an event occurring under some set of conditions (like flipping a coin), and then learn some additional facts about what's happening around that event (like knowing whether someone has been cheating), Bayes Theorem allows you to recalculate your original guess by incorporating this new information. This way, it helps us understand how likely different outcomes are given our current understanding of the situation.",
+    "model_alias": "gpt2medium-355m"
+}

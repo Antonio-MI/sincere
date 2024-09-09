@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you provide examples of how I could use artificial intelligence to automate repetitive tasks in my workflow?\nRepetitive tasks like data entry or organizing files can be automated using artificial intelligence. AI can learn from previous examples and make decisions based on patterns it identifies, eliminating the need for manual intervention.",
+    "model_alias": "gpt2-124m"
+}

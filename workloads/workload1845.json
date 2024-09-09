@@ -1,0 +1,4 @@
+{
+    "prompt": "Kindly provide me with a clear and concise definition of a specific term that is related to the field of biology but not necessarily confined to it. For example, what does the term \u201cmetabolism\u201d mean?\nMetabolism refers to all chemical reactions within cells of living organisms, including humans, to maintain life. Metabolic pathways are complex networks of enzymatic reactions that convert substrates into products in order to sustain life functions such as growth, reproduction, and repair. These metabolic pathways can be categorized based on their energy requirements and whether they generate energy or consume it.",
+    "model_alias": "gpt2medium-355m"
+}

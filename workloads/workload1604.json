@@ -1,0 +1,4 @@
+{
+    "prompt": "Suggest an interesting question to ask during a job interview for a position as a web developer.",
+    "model_alias": "distilgpt2-124m"
+}

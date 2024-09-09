@@ -1,0 +1,4 @@
+{
+    "prompt": "Please suggest a specific piece of advice for someone who is trying to improve their writing skills in general.\nConsider the challenges that non-expert writers may face when learning to write, and offer an advice based on your experience or knowledge.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an example of a question where you might need to look up statistical data?\nSuppose you want to find out how many people live in New York City and what their average income is. In this case, looking up accurate statistical data about the population size and income distribution in New York would be helpful for making informed decisions related to urban planning or economic policy.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Please summarize the main points discussed in this week's episode of your favorite podcast series about modern art history and culture.",
+    "model_alias": "gpt2-124m"
+}

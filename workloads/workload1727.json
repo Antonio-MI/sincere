@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain the concept of \"the third derivative of a function\" in simple terms.\nA function is a rule that relates one quantity to another. For example, a mathematical function might take an input number and return a corresponding output. A derivative of a function, on the other hand, represents how much its value changes in relation to a specific variable or parameter. The first derivative provides information about the rate at which a function changes; the second derivative indicates how rapidly that rate is changing; and the third derivative reveals how quickly the second derivative is changing.",
+    "model_alias": "distilgpt2-124m"
+}

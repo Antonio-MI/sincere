@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain the process of how a plant cell would respond if there were a deficiency in magnesium ion supply.\nI am conducting an experiment to study the effect of different ion concentrations on plant cells, particularly the effect of magnesium ions. I have prepared a solution containing varying levels of magnesium ion concentration and will be introducing it into a group of identical plant cells. The plant cells are from the same lineage and share the same genome. Their only difference is their exposure to different concentrations of magnesium ions.",
+    "model_alias": "distilgpt2-124m"
+}

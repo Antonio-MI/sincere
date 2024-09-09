@@ -1,0 +1,4 @@
+{
+    "prompt": "Please explain the concept of \"feedback\" in the context of a control system.\nFeedback is an essential component of control systems that helps maintain stability and improve performance. It refers to the process whereby output information from the controlled system is fed back into the input of the system to adjust its behavior. In essence, feedback provides a means for correcting errors or deviations from the desired state by comparing actual outputs with expected values.",
+    "model_alias": "gpt2medium-355m"
+}

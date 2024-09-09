@@ -1,0 +1,4 @@
+{
+    "prompt": "How should I cite a source that I have found in an online journal?\nFor instance, I am currently reading an article on how artificial intelligence can help in predicting weather patterns. The article was published in the online journal \"Scientific American\" and I would like to use it as a reference for my own research project.",
+    "model_alias": "gpt2medium-355m"
+}

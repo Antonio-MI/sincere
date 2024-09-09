@@ -1,4 +1,4 @@
 {
     "prompt": "Explain how a classic children\u2019s story could be turned into an adventure game that requires problem-solving skills.",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2-124m"
 }

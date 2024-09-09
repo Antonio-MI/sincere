@@ -1,0 +1,4 @@
+{
+    "prompt": "Please help me choose a topic for an article about the latest developments in artificial intelligence, focusing on one specific aspect of this rapidly evolving field.\nGiven that recent breakthroughs in machine learning have led to advancements in natural language processing and understanding, I would like to explore how these improvements can be applied to generate more engaging content for various applications, such as social media platforms or customer service chatbots.",
+    "model_alias": "gpt2medium-355m"
+}

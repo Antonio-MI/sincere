@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe an ethical dilemma or moral issue you have faced recently. What was your decision and why?\nRecently, I had to decide whether to give a colleague confidential information that they requested. They wanted the data for their research project but it would mean breaking our company\u2019s policy on sharing sensitive information with outside parties without proper authorization. After careful consideration, I chose not to provide them with the information because doing so could put us at risk of legal liabilities and also undermine trust within our organization. Our policy exists for a reason \u2013 to protect both ourselves and our clients \u2013 and I didn\u2019t feel comfortable compromising it just because someone asked nicely!",
+    "model_alias": "distilgpt2-124m"
+}

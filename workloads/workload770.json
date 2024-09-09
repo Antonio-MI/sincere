@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe a historical event in detail.",
+    "model_alias": "distilgpt2-124m"
+}

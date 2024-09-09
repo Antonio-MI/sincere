@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe a situation where you had to adapt your writing style to suit a specific audience. How did you approach this task?\nYou are an environmental activist who has been asked to write a letter to the local mayor advocating for stricter pollution laws. The mayor has stated that he is not an expert on environmental issues and tends to be skeptical of such matters, but he values the opinion of people within his community. You decide to tailor your message accordingly by using concrete examples from within the city as well as citing scientific data in a way that is easy for him to understand.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,4 +1,4 @@
 {
     "prompt": "What are some ways to make money online?\nA specific example of such a way could be: \"Creating and selling digital products, such as e-books or courses.\"",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

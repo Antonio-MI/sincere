@@ -10,6 +10,7 @@ import random
 np.random.seed(42)
 random.seed(42)
 
+# Try different frequency of use for each model
 
 run_duration = 20  # seconds
 distribution = "gamma" 

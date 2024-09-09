@@ -1,0 +1,4 @@
+{
+    "prompt": "What is your favorite children's book and why?\nYour response should describe why this children's book has caught your attention so much. It can be up to 15 words long. For example, \"I like 'The Giving Tree' because it teaches about unselfishness.\"",
+    "model_alias": "gpt2-124m"
+}

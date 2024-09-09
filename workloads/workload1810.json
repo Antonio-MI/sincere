@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an example of when you had to use your writing skills to explain a complex concept?\nIn high school, I was part of the science team and often needed to write explanatory articles about scientific concepts for non-specialist audiences. For instance, one time we had to explain the process of photosynthesis in plants. Although it is a relatively simple concept in biology, it can be challenging to convey in layman's terms. My article focused on describing how plants convert sunlight and water into glucose using chlorophyll, emphasizing the role of chloroplasts and the light-dependent and light-independent reactions. By providing an accessible explanation, I was able to help our team win that round of competitions.",
+    "model_alias": "distilgpt2-124m"
+}

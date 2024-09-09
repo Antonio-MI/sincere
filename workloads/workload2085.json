@@ -1,0 +1,4 @@
+{
+    "prompt": "What is an example of a creative challenge that could be presented as part of this task?\nConsider presenting the user with a scenario where they must come up with five unique ideas for promoting their new business or product within 24 hours. The ideas should be shareable across multiple channels (e.g., social media, email newsletters, blog posts) and ideally would require little to no additional investment beyond basic resources such as time spent on brainstorming sessions and minimal expenditure related to sharing content online.",
+    "model_alias": "distilgpt2-124m"
+}

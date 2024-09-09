@@ -1,0 +1,4 @@
+{
+    "prompt": "Given an article about a person's favorite books, can you summarize the book that was mentioned most often in the article?\nThe person's favorite book is \"To Kill A Mockingbird\" by Harper Lee. It was mentioned more than any other book. The article also mentions that the person read the book in high school and it has had a significant impact on them.",
+    "model_alias": "distilgpt2-124m"
+}

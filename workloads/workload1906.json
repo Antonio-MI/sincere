@@ -1,0 +1,4 @@
+{
+    "prompt": "What questions would you ask when interviewing someone for a job position?\nWhen interviewing someone for a job position, I would ask questions that help me understand their skills, experience levels, and potential fit within the team:\n1. Can you tell me about your experiences in this industry so far?\n2. What is your strongest skill set related to this role?\n3. How would you approach solving problems we might encounter on the job?\n4. How do you collaborate with others as part of a team project or task?\n5. Can you share any examples from past experiences where you demonstrated leadership skills?\n6. Do you have any questions for me about our company culture, mission statement, or values?",
+    "model_alias": "gpt2medium-355m"
+}

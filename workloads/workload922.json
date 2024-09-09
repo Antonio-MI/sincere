@@ -1,0 +1,4 @@
+{
+    "prompt": "How do I describe the process of making my favorite soup recipe to someone who has never cooked before?\nMy favorite soup is <insert_favorite_soup_name>, which involves cooking chicken, onions, garlic, carrots, celery, potatoes, and canned tomatoes in a large pot. After about an hour of simmering, add salt, pepper, thyme, rosemary, and basil to taste. Serve hot with crusty bread.",
+    "model_alias": "gpt2medium-355m"
+}

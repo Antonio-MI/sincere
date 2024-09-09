@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you please provide a brief yet informative response to the question, \"What is the highest peak in the world?\".",
+    "model_alias": "distilgpt2-124m"
+}

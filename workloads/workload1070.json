@@ -1,0 +1,4 @@
+{
+    "prompt": "Please give me a list of three foods I should never eat again due to health reasons.\nYou need to provide a reason why you think this food is not healthy for you. For example, \"I am allergic to peanut butter.\" The input should involve realistic data and should not contain simple placeholders. It should ideally not exceed 100 words.",
+    "model_alias": "gpt2medium-355m"
+}

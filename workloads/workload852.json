@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some common questions a tutor might ask a student during a one-on-one session?\nA tutor might ask a student during a one-on-one session: \u201cHow can I help you with your current assignment?\u201d; or, \u201cCan I clarify any points for you in our lesson regarding XYZ?\u201d; or, \u201cHave you tried working through this problem on your own?\u201d among other things.",
+    "model_alias": "gpt2medium-355m"
+}

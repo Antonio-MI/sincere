@@ -1,4 +1,4 @@
 {
     "prompt": "Explain the process of creating a logo for a business.\nA specific example of a business could be: \"A coffee shop called 'Coffee Cravings'.\"",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "gpt2-124m"
 }

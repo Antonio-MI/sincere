@@ -1,0 +1,4 @@
+{
+    "prompt": "Given a topic related to <some_topic>, can you suggest a thought-provoking question to ask?",
+    "model_alias": "distilgpt2-124m"
+}

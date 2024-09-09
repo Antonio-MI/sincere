@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the capital city of Australia?\nThe input should specify that we are asking about the political capital of Australia and provide a brief context if necessary (e.g., \"for geography purposes\"). The response should be less than 10 words long and should clearly state the name of the country's political capital. If necessary, use simple placeholders to fill in the blanks, like \"[Country Name]'s capital city is [Capital City Name].\"",
+    "model_alias": "distilgpt2-124m"
+}

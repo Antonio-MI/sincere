@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you summarize a novel into a single sentence?\nI am looking for a concise but informative way to express the essence of a novel in a single sentence, while preserving its complexity and capturing the attention of potential readers.",
+    "model_alias": "distilgpt2-124m"
+}

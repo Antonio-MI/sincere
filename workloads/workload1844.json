@@ -1,0 +1,4 @@
+{
+    "prompt": "Could you please explain how a particular method or approach is used in a given context? For instance, describe how the concept of supply chain management has been applied within a retail setting.\nSupply chain management involves optimizing all stages of production from raw material sourcing to delivery. This includes streamlining operations, reducing costs, improving efficiency, and ensuring product availability at all times. In a retail context, this means effectively managing inventory levels so that products are always in stock on store shelves and available for purchase by customers.",
+    "model_alias": "gpt2-124m"
+}

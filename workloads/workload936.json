@@ -1,0 +1,4 @@
+{
+    "prompt": "Tell me about the most popular dish in your city.",
+    "model_alias": "distilgpt2-124m"
+}

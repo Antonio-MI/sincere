@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you tell me how this technology works?\nI would like to know more about the inner workings of artificial intelligence, specifically focusing on the algorithms and machine learning techniques that are used.",
+    "model_alias": "distilgpt2-124m"
+}

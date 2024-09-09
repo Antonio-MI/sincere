@@ -1,0 +1,4 @@
+{
+    "prompt": "What is a good way to structure an argument for my essay?\nWhen structuring an argument for your essay, consider using the following format: introduction, background, thesis statement, body (each point supporting your argument with evidence and examples), refutation of counterarguments, conclusion. Ensure each section flows naturally into the next, providing context and transition between ideas.",
+    "model_alias": "distilgpt2-124m"
+}

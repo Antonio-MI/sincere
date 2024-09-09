@@ -1,0 +1,4 @@
+{
+    "prompt": "What is a good way to analyze the frequency of words in a piece of text?\nAnalyzing the frequency of words in a text can be helpful for understanding its content and style. For example, if you're writing an essay about your favorite books, it might be interesting to see which words appear most frequently.",
+    "model_alias": "gpt2medium-355m"
+}

@@ -1,4 +1,4 @@
 {
     "prompt": "What would be an appropriate task to ask an AI assistant to complete that requires some level of logical reasoning?\nA specific example of such a task could be: \"Identify and list all the elements needed to build a simple table.\"",
-    "model_alias": "gpt2-124m"
+    "model_alias": "gpt2medium-355m"
 }

@@ -1,0 +1,4 @@
+{
+    "prompt": "Explain how you would evaluate an idea for a new product or service.\nSuppose I am considering launching a new mobile application that offers personalized meal plans based on users' dietary preferences, exercise routines, and health goals. To evaluate this concept, I would begin by researching my target market to determine whether there is sufficient demand for such a product. I would also consult with industry experts to ensure my idea aligns with current trends and best practices in the field of nutrition technology.\nAdditionally, I would develop prototype versions of my app to gather user feedback and iterate on the design based on their input. This would allow me to refine my concept and make necessary adjustments before fully investing resources into its development and marketing.",
+    "model_alias": "gpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some common questions a hiring manager might ask a job candidate during an interview?\nA hiring manager might ask a job candidate during an interview: \u201cWhy do you think you\u2019d be good at working here?\u201d; \u201cHow would you describe your experience with XYZ?\u201d or, \u201cCan you give me some examples of how you handled situations where you needed to be proactive and take charge of something on your own initiative?\u201d among other things.",
+    "model_alias": "distilgpt2-124m"
+}

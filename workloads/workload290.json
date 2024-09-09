@@ -1,0 +1,4 @@
+{
+    "prompt": "How does a doctor diagnose a patient with a rare disease?\nA doctor diagnoses a patient with a rare disease by first ruling out common conditions through medical tests and interviews. Once they suspect the presence of a rare disease, they consult with experts in related fields and review relevant literature to narrow down potential causes. They then perform further specialized tests to confirm the diagnosis before treating the condition accordingly.",
+    "model_alias": "gpt2-124m"
+}

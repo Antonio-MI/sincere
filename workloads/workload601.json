@@ -1,0 +1,4 @@
+{
+    "prompt": "How do I determine if an article I'm writing is too long or short?\nI've written 2000 words so far about the impact of renewable energy sources but I'm not sure if it's too much or too little.",
+    "model_alias": "distilgpt2-124m"
+}

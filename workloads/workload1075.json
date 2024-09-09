@@ -1,0 +1,4 @@
+{
+    "prompt": "Give a piece of advice on how to improve your writing skills.\nConsider providing actionable steps or tips that aspiring writers can follow to enhance their writing skills, such as reading more, practicing regularly, or seeking feedback from others. It is also acceptable to provide advice about specific genres or styles of writing if desired. The input should be up to 15 words long and contain your advice in a clear manner.",
+    "model_alias": "distilgpt2-124m"
+}

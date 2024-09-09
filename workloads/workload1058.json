@@ -1,0 +1,4 @@
+{
+    "prompt": "Could you please summarize the main points of this article in a concise manner?",
+    "model_alias": "distilgpt2-124m"
+}

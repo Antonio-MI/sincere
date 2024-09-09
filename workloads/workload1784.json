@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you suggest a list of three skills that I need to improve if I want to become a better writer?\nYou need to provide a reason why you think this skill is important for improving my writing. For example, \"Writing clear and concise sentences will help you avoid confusion and make your work easier to understand.\" The input should involve realistic data and should not contain simple placeholders. It should ideally not exceed 100 words.",
+    "model_alias": "gpt2medium-355m"
+}

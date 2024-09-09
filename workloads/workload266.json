@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe an important moment in your life.\nYour response should ideally describe a personal memory and should involve other people. It should be about ten words long. For example, \"The day I married my wife was the best moment of my life.\"",
+    "model_alias": "distilgpt2-124m"
+}

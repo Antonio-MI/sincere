@@ -1,0 +1,4 @@
+{
+    "prompt": "What would you say if someone asked you to choose between two options? For example: \u201cWould you prefer to live in a small town or a big city?\u201d",
+    "model_alias": "distilgpt2-124m"
+}

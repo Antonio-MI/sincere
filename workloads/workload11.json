@@ -1,4 +1,4 @@
 {
     "prompt": "How do we calculate the area of a circle?",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2-124m"
 }

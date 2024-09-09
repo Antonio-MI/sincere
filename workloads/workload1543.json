@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you go about teaching someone the concept of probability? For example: \u201cWhat strategies can I use to help my younger brother understand the idea behind rolling dice?\u201d\nMy younger brother, aged 8, is interested in learning how to roll dice and understands basic addition. I want to show him the concept of probability by explaining how likely it is for certain numbers to appear when throwing a six-sided die.",
+    "model_alias": "gpt2medium-355m"
+}

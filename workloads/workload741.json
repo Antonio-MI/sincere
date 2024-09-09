@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you explain the concept of \"machine learning\" to someone who has never heard this term before?\nMachine learning refers to a method of programming that enables computers to learn from data without explicit instructions from human programmers. Instead of being hard-coded with specific instructions, machine learning algorithms can identify patterns within data and use those patterns to make predictions or decisions on new data. Machine learning is important because it allows us to create intelligent systems that can adapt to changing environments and improve performance over time.",
+    "model_alias": "gpt2-124m"
+}

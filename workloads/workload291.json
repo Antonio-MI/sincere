@@ -1,0 +1,4 @@
+{
+    "prompt": "How does a software engineer ensure code quality for their project?\nMaintaining high-quality code involves writing clear, concise, and well-documented code. This ensures that other developers can understand and build upon it easily. Furthermore, implementing automated testing procedures helps catch bugs early in the development process, while adhering to industry best practices and standards minimizes potential security vulnerabilities.",
+    "model_alias": "gpt2-124m"
+}

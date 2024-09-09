@@ -1,0 +1,4 @@
+{
+    "prompt": "How can you write a persuasive essay to convince someone of your opinion on a specific topic?\nLet's assume you want to convince someone that renewable energy sources such as wind turbines and solar panels are more beneficial for the environment than fossil fuels. You should provide solid evidence supporting this claim, mentioning real-life examples where renewable energy has proven effective in reducing pollution levels or improving public health indices compared to using nonrenewable resources.",
+    "model_alias": "gpt2-124m"
+}

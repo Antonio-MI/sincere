@@ -1,0 +1,4 @@
+{
+    "prompt": "Write a tweet praising a popular restaurant in your home town that you recently visited and explain why it is so good.\nI recently visited <restaurant name>, and I must say, they have the most delicious burgers ever! The patty was cooked to perfection, the bun was soft yet crusty, and the condiments were all freshly prepared on site. Not only did they have excellent service, but also their decor was modern with a touch of nostalgia.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe a situation where someone is displaying good problem-solving skills.\nConsider you're a technical support specialist at a large corporation, and one day a customer calls in with an issue about their account that they can\u2019t seem to resolve themselves. You listen attentively to each detail of the situation, asking questions when necessary until you fully understand what is causing this problem before suggesting possible solutions based on your knowledge of similar cases or procedures available within the company's policies and guidelines.",
+    "model_alias": "distilgpt2-124m"
+}

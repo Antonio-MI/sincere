@@ -1,0 +1,4 @@
+{
+    "prompt": "Suggest me an interesting topic for a short essay. The topic should be related to [a specific field]. I would like it to be engaging and thought-provoking.\nCan you recommend an intriguing topic for a concise article about the environment? I am interested in topics that are both captivating and thought-provoking.",
+    "model_alias": "distilgpt2-124m"
+}

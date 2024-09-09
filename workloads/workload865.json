@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe what a \"quantum entanglement\" means in simple terms.\nQuantum entanglement is when two or more particles become interconnected so that the state of each particle cannot be described independently of the others, even when the particles are separated by a large distance. It's like having two parts of a whole that can affect each other no matter how far apart they may be.",
+    "model_alias": "gpt2-124m"
+}

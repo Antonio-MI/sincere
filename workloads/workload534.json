@@ -1,0 +1,4 @@
+{
+    "prompt": "Summarize a person's personality traits.\nConsider the traits of an introverted person who enjoys spending time alone, reflecting on their thoughts and feelings, and engaging in introspective activities such as reading, writing, or meditating. They tend to be more reserved in social situations, preferring deeper connections with a smaller number of people over numerous superficial relationships. Introverts often value solitude, independence, and self-discovery, and may find excessive stimulation draining or overwhelming.",
+    "model_alias": "distilgpt2-124m"
+}

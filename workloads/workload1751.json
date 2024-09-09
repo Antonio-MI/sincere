@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you give me an example of a \"causal inference\" using simple terms?\nA causal inference is when you make a conclusion about what causes something to happen based on your observations or data analysis. For example, if I observe that people who drink more coffee tend to perform better on tests, I might infer that drinking coffee causes better test performance. However, this could also be due to some other factor such as more motivated students being more likely to both drink coffee and do well on tests; therefore, this is just a possible explanation based on my observation.",
+    "model_alias": "gpt2-124m"
+}

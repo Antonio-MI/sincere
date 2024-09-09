@@ -1,0 +1,4 @@
+{
+    "prompt": "How can one use artificial intelligence to improve a software development process?\nTo incorporate AI into a software development workflow effectively, consider implementing intelligent code suggestions, automated code reviews, and continuous integration practices. This approach helps minimize human errors, streamline processes, and improve overall efficiency in the software development lifecycle.",
+    "model_alias": "gpt2medium-355m"
+}

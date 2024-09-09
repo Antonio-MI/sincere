@@ -1,0 +1,4 @@
+{
+    "prompt": "Summarize the main differences between the two books \"The Catcher in the Rye\" by JD Salinger and \"To Kill a Mockingbird\" by Harper Lee.",
+    "model_alias": "distilgpt2-124m"
+}

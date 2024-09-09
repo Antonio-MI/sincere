@@ -1,0 +1,4 @@
+{
+    "prompt": "What is your favorite food to cook for a party?\nYour response should ideally describe what food you like to cook. It should be about ten words long. For example, \"Spaghetti bolognese is one of my favorites.\"",
+    "model_alias": "gpt2-124m"
+}

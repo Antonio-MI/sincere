@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you describe the process of creating a neural network model in a way that a high school student can understand?\nCreating a neural network model involves using software to mimic the workings of the human brain. In a neural network, \"nodes\" represent the brain's neurons, while \"connections\" represent the synapses between them. By adjusting the nodes and connections in our neural network, we can make it learn from data and then predict or decide on new information.",
+    "model_alias": "gpt2medium-355m"
+}

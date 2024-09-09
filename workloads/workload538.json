@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you summarize your favorite book in just one sentence?",
+    "model_alias": "distilgpt2-124m"
+}

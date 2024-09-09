@@ -1,0 +1,4 @@
+{
+    "prompt": "Create a poll with at least two options based on the provided data set. Make sure your question is clear and concise, allowing participants to easily understand what they are being asked about and how to respond.\nHere is a dataset containing information about different types of shoes:\n\n| Type of Shoe | Sales in 2019 (millions) | Rating on a scale of 1-5 (average) |\n|---------------|-----------------------|-----------------------------|\n| Running Shoes | 23.4                  | 4.7                      |\n| Athletic Shoes | 18.0                  | 4.2                      |\n| Hiking Boots  | 9.6                   | 4.5                      |\n| Casual Shoes  | 32.2                  | 4.8                      |\n| Formal Shoes | 7.8                    | 4.3                      |\n| Sandals       | 10.4                  | 4.2                      |",
+    "model_alias": "gpt2medium-355m"
+}

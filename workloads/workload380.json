@@ -1,0 +1,4 @@
+{
+    "prompt": "Give me some examples of how a manager could use machine learning algorithms for making decisions?\nA manager might employ machine learning to optimize employee schedules by analyzing historical data on workloads, absences, and preferences. This could involve using supervised learning techniques such as regression or decision trees to model the relationship between different variables and determine ideal shift patterns. The manager can then use reinforcement learning to evaluate and update these models in real-time based on feedback from employees and adjust schedules accordingly.",
+    "model_alias": "distilgpt2-124m"
+}

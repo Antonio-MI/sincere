@@ -1,0 +1,4 @@
+{
+    "prompt": "What are some questions to ask when interviewing a candidate for an IT position?\nI am planning on hiring someone with expertise in computer programming, database management, and system administration. I would like to know what specific topics related to these areas I should explore during the interview process.",
+    "model_alias": "distilgpt2-124m"
+}

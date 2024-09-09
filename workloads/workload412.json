@@ -1,0 +1,4 @@
+{
+    "prompt": "Can you describe some of the advantages of using a traditional text editor over modern word processors?\nA traditional text editor such as Emacs or Vim has several features that make it appealing compared to modern word processors like Microsoft Word and Google Docs.",
+    "model_alias": "distilgpt2-124m"
+}

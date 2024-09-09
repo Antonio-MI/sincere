@@ -1,0 +1,4 @@
+{
+    "prompt": "What are the top 10 best selling books in recent times?",
+    "model_alias": "distilgpt2-124m"
+}

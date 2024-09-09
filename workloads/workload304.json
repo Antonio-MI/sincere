@@ -1,0 +1,4 @@
+{
+    "prompt": "What is the best way to write an essay?\nI am writing about the impact of global warming on biodiversity and I want to use this structure:\n1. Introduction \u2013 background information, thesis statement\n2. Body paragraphs \u2013 explain different aspects of global warming\u2019s impact on biodiversity, using specific examples where possible\n3. Conclusion \u2013 summarize main points, include a call to action or suggestion for mitigation",
+    "model_alias": "distilgpt2-124m"
+}

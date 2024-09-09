@@ -1,0 +1,4 @@
+{
+    "prompt": "Write a short paragraph about something you've recently learned that has piqued your interest.\nI recently learned about the concept of \"The Fibonacci Sequence\" and how it relates to nature, art, architecture, and even finance! This mathematical sequence, where each number is the sum of the two previous ones (0, 1, 1, 2, 3, 5, 8, 13, 21), can be found in various natural settings such as tree branching patterns, pinecone arrangements, and flower petals. Artists and architects have used this sequence for centuries to create aesthetically pleasing compositions based on its golden ratio. In finance, traders often use the Fibonacci sequence when setting price targets or determining optimal investment strategies.",
+    "model_alias": "gpt2-124m"
+}

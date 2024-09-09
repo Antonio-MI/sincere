@@ -1,0 +1,4 @@
+{
+    "prompt": "Please give an example of a common misconception about <topic> and clarify why it's wrong.\nA common misconception is that artificial intelligence (AI) is only used for complex tasks such as scientific research or large-scale industrial applications. In reality, AI technology has become increasingly accessible to the general public, enabling even simple tasks like setting a reminder on your phone or recommending music based on past listening history.",
+    "model_alias": "gpt2-124m"
+}

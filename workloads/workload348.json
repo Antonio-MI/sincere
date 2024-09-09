@@ -1,0 +1,4 @@
+{
+    "prompt": "List the top 10 countries by population and their respective populations.",
+    "model_alias": "distilgpt2-124m"
+}

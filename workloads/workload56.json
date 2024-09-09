@@ -1,4 +1,4 @@
 {
     "prompt": "Name a city that is both an industrial hub and a tourist destination.\nNew York City",
-    "model_alias": "gpt2medium-355m"
+    "model_alias": "distilgpt2-124m"
 }

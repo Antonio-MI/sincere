@@ -1,0 +1,4 @@
+{
+    "prompt": "Give me a question that I can use to find out about the culture of a country.\nWhat is an important tradition or custom that you observe in your home country?",
+    "model_alias": "distilgpt2-124m"
+}

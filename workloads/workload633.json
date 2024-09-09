@@ -1,0 +1,4 @@
+{
+    "prompt": "How can I calculate the sum of all digits in a number?\nI want to find out how to determine the total value of a number by adding up all its individual digits. For example, if I have the number 23487659, I would like to know what is the result when I add these numbers together.",
+    "model_alias": "gpt2-124m"
+}

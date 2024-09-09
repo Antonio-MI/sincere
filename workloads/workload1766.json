@@ -1,0 +1,4 @@
+{
+    "prompt": "Please suggest a question that could be asked in an interview setting related to your chosen career path.",
+    "model_alias": "gpt2-124m"
+}

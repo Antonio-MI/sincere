@@ -1,0 +1,4 @@
+{
+    "prompt": "Given a specific topic, find a piece of literature or art that best represents or embodies this subject.\nI am looking for an essay that exemplifies the beauty and wonder of nature.",
+    "model_alias": "distilgpt2-124m"
+}

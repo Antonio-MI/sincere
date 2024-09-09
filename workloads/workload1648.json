@@ -1,0 +1,4 @@
+{
+    "prompt": "Describe a situation in which you demonstrated strong problem-solving abilities.\nDuring my tenure as a software engineer, I encountered an issue where one of our applications had stopped functioning due to an unexpected bug. After isolating the root cause and conducting extensive research, I discovered that the problem was caused by an incompatible library version we were using. To resolve this, I reached out to the library vendor for support and collaborated with them on a temporary patch while awaiting their official update. This allowed us to restore functionality to the affected application quickly and avoid any negative impacts on our users or business operations.",
+    "model_alias": "distilgpt2-124m"
+}

@@ -1,0 +1,4 @@
+{
+    "prompt": "What should I do if my computer is running very slowly?\nIf your computer is running very slowly, the first thing you should check is whether there are any programs running in the background that might be using up all of its processing power. If so, close down these unnecessary programs to free up some space for the operating system and other applications to use. Another possibility is that your hard drive might be getting full and you need to delete some files to create more space.",
+    "model_alias": "gpt2medium-355m"
+}

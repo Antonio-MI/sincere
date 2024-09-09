@@ -1,0 +1,4 @@
+{
+    "prompt": "Given a group of people you know, can you suggest a specific activity everyone would likely enjoy participating in together?",
+    "model_alias": "gpt2-124m"
+}

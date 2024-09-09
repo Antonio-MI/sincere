@@ -1,0 +1,4 @@
+{
+    "prompt": "Write a paragraph that explains the concept of parallel processing and its advantages.\nParallel processing involves running multiple tasks simultaneously on a computer system, allowing for faster computation times compared to sequential processing. This technique is often used in applications requiring high performance, such as scientific simulations or data analysis. By breaking down large problems into smaller tasks that can be executed concurrently, parallel processing significantly reduces the time it takes to complete complex operations.",
+    "model_alias": "gpt2-124m"
+}

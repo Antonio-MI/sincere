@@ -1,4 +1,4 @@
 {
     "prompt": "Please describe your favorite experience of watching sports events in person or through television broadcasts.",
-    "model_alias": "distilgpt2-124m"
+    "model_alias": "gpt2-124m"
 }

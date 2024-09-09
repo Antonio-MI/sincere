@@ -1,0 +1,4 @@
+{
+    "prompt": "How could you use a given technology (e.g., artificial intelligence) in a practical setting? Describe an example scenario where the technology might be helpful.\nArtificial Intelligence can automate various tasks, making it ideal for handling repetitive or complex procedures that require significant time investments. In a healthcare context, AI-driven systems can analyze patient data, detect patterns, and make predictions about potential health issues. This information allows doctors to make informed decisions about patient care and develop customized treatment plans.",
+    "model_alias": "gpt2-124m"
+}

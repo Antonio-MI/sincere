@@ -1,0 +1,4 @@
+{
+    "prompt": "Please explain the concept of machine learning algorithms in a simple manner that a non-expert can understand.\nMachine learning algorithms are essentially mathematical models used to help computers learn and make decisions on their own. These algorithms analyze data inputs, identify patterns, and make predictions or recommendations based on what they\u2019ve learned. They can be used for all sorts of applications, from predicting stock market trends to identifying objects in images.",
+    "model_alias": "gpt2medium-355m"
+}

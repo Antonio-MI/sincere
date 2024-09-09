@@ -1,0 +1,4 @@
+{
+    "prompt": "How would you explain something to a five-year-old?\nFor example, imagine that I want to describe how a bicycle works to my niece, who is five years old and loves playing with her little toy bike.",
+    "model_alias": "distilgpt2-124m"
+}
