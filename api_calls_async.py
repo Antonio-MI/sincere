@@ -72,6 +72,9 @@ async def automated_calls(workloads, run_duration):
             # Select a random workload from the list
             workload = np.random.choice(workloads)
             
+            # To change the frequency of each model, edit here:
+            # workload['model_alias'] = ... 
+
             # Send the request asynchronously
             asyncio.create_task(send_request(session, workload))
             
