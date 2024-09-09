@@ -10,7 +10,7 @@ import platform
 # Folder containing models
 base_dir = "./models"
 
-models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
+models_to_profile =  ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] #["granite-7b", "gemma-7b", "llama3-8b"]
 
 # Select device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -47,7 +47,7 @@ for model in models_to_profile:
     unload_times = []
     model_sizes = []
 
-    for _ in range(10):
+    for _ in range(20):
         # Profile the loading time
         load_start_time = time.time()
         model_dir = os.path.join(base_dir, model)
