@@ -1,0 +1,311 @@
+2024-09-10 12:54:52,499 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://9.74.11.77:5000
+2024-09-10 12:54:52,500 [33mPress CTRL+C to quit[0m
+2024-09-10 12:54:52,604 Request with ID 9caaddca for model gpt2-124m received
+2024-09-10 12:54:52,605 Adjusted time limit based on total queue size 1: 6.0000 seconds
+2024-09-10 12:54:52,605 Adjusted time limit for model gpt2-124m: 4.3502 seconds
+2024-09-10 12:54:52,606 127.0.0.1 - - [10/Sep/2024 12:54:52] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:52,688 Request with ID 8e1ca5e4 for model gpt2-124m received
+2024-09-10 12:54:52,688 Adjusted time limit based on total queue size 2: 6.0000 seconds
+2024-09-10 12:54:52,688 127.0.0.1 - - [10/Sep/2024 12:54:52] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:52,851 Request with ID 40406349 for model gpt2medium-355m received
+2024-09-10 12:54:52,851 Adjusted time limit based on total queue size 3: 6.0000 seconds
+2024-09-10 12:54:52,851 Adjusted time limit for model gpt2medium-355m: 0.9550 seconds
+2024-09-10 12:54:52,851 127.0.0.1 - - [10/Sep/2024 12:54:52] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:52,899 Request with ID bef6f9a3 for model gpt2-124m received
+2024-09-10 12:54:52,899 Adjusted time limit based on total queue size 4: 4.5000 seconds
+2024-09-10 12:54:52,899 127.0.0.1 - - [10/Sep/2024 12:54:52] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:53,180 Request with ID 3b2936d7 for model gpt2-124m received
+2024-09-10 12:54:53,180 Adjusted time limit based on total queue size 5: 4.5000 seconds
+2024-09-10 12:54:53,180 127.0.0.1 - - [10/Sep/2024 12:54:53] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:53,678 Request with ID 96414c82 for model distilgpt2-124m received
+2024-09-10 12:54:53,678 Adjusted time limit based on total queue size 6: 4.5000 seconds
+2024-09-10 12:54:53,679 Adjusted time limit for model distilgpt2-124m: 5.2150 seconds
+2024-09-10 12:54:53,679 127.0.0.1 - - [10/Sep/2024 12:54:53] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:53,817 Time limit condition met for model gpt2medium-355m
+2024-09-10 12:54:53,818 Updated batch size:4
+2024-09-10 12:54:53,818 Loading model gpt2medium-355m
+2024-09-10 12:54:54,134 Request with ID f23ac61a for model distilgpt2-124m received
+2024-09-10 12:54:54,134 Adjusted time limit based on total queue size 6: 4.5000 seconds
+2024-09-10 12:54:54,134 127.0.0.1 - - [10/Sep/2024 12:54:54] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:54,559 Request with ID 3f22c3ce for model gpt2medium-355m received
+2024-09-10 12:54:54,559 Adjusted time limit based on total queue size 7: 4.5000 seconds
+2024-09-10 12:54:54,559 127.0.0.1 - - [10/Sep/2024 12:54:54] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:54,853 Request with ID 933fb41a for model distilgpt2-124m received
+2024-09-10 12:54:54,853 Adjusted time limit based on total queue size 8: 3.0000 seconds
+2024-09-10 12:54:54,854 127.0.0.1 - - [10/Sep/2024 12:54:54] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:55,195 Request with ID 120d50e8 for model gpt2medium-355m received
+2024-09-10 12:54:55,195 Adjusted time limit based on total queue size 9: 3.0000 seconds
+2024-09-10 12:54:55,196 127.0.0.1 - - [10/Sep/2024 12:54:55] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:55,563 Request with ID 97c094d9 for model gpt2-124m received
+2024-09-10 12:54:55,563 Adjusted time limit based on total queue size 10: 3.0000 seconds
+2024-09-10 12:54:55,563 127.0.0.1 - - [10/Sep/2024 12:54:55] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:56,021 Request with ID a62d7d7c for model gpt2medium-355m received
+2024-09-10 12:54:56,021 Adjusted time limit based on total queue size 11: 3.0000 seconds
+2024-09-10 12:54:56,022 127.0.0.1 - - [10/Sep/2024 12:54:56] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:56,294 Request with ID 5c88e3c6 for model gpt2-124m received
+2024-09-10 12:54:56,294 Adjusted time limit based on total queue size 12: 3.0000 seconds
+2024-09-10 12:54:56,294 127.0.0.1 - - [10/Sep/2024 12:54:56] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:56,544 Processed batch: ['40406349', 'ee6f', 'bb97', 'd389'] with model gpt2medium-355m in 2.5686 seconds
+2024-09-10 12:54:56,544 Latency for request 40406349 with model gpt2medium-355m: 3.6930 seconds
+2024-09-10 12:54:56,546 Latency for request ee6f with model gpt2medium-355m: 2.7260 seconds
+2024-09-10 12:54:56,546 Request with ID 5a4cac79 for model distilgpt2-124m received
+2024-09-10 12:54:56,547 Adjusted time limit based on total queue size 13: 3.0000 seconds
+2024-09-10 12:54:56,547 127.0.0.1 - - [10/Sep/2024 12:54:56] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:56,547 Latency for request bb97 with model gpt2medium-355m: 2.7259 seconds
+2024-09-10 12:54:56,547 Latency for request d389 with model gpt2medium-355m: 2.7259 seconds
+2024-09-10 12:54:57,354 Request with ID dea46862 for model gpt2-124m received
+2024-09-10 12:54:57,355 Adjusted time limit based on total queue size 14: 3.0000 seconds
+2024-09-10 12:54:57,355 127.0.0.1 - - [10/Sep/2024 12:54:57] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:58,003 Time limit condition met for model gpt2-124m
+2024-09-10 12:54:58,004 Updated batch size:8
+2024-09-10 12:54:58,004 Loading model gpt2-124m
+2024-09-10 12:54:58,252 Request with ID 865979b9 for model gpt2-124m received
+2024-09-10 12:54:58,252 Adjusted time limit based on total queue size 8: 3.0000 seconds
+2024-09-10 12:54:58,252 127.0.0.1 - - [10/Sep/2024 12:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:58,802 Request with ID 8eec8093 for model distilgpt2-124m received
+2024-09-10 12:54:58,802 Adjusted time limit based on total queue size 9: 3.0000 seconds
+2024-09-10 12:54:58,802 127.0.0.1 - - [10/Sep/2024 12:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:54:59,257 Processed batch: ['9caaddca', '8e1ca5e4', 'bef6f9a3', '3b2936d7', '97c094d9', '5c88e3c6', 'dea46862', '47d2'] with model gpt2-124m in 1.1743 seconds
+2024-09-10 12:54:59,257 Latency for request 9caaddca with model gpt2-124m: 6.6529 seconds
+2024-09-10 12:54:59,258 Latency for request 8e1ca5e4 with model gpt2-124m: 6.5695 seconds
+2024-09-10 12:54:59,259 Latency for request bef6f9a3 with model gpt2-124m: 6.3584 seconds
+2024-09-10 12:54:59,259 Latency for request 3b2936d7 with model gpt2-124m: 6.0777 seconds
+2024-09-10 12:54:59,259 Latency for request 97c094d9 with model gpt2-124m: 3.6946 seconds
+2024-09-10 12:54:59,259 Latency for request 5c88e3c6 with model gpt2-124m: 2.9632 seconds
+2024-09-10 12:54:59,260 Latency for request dea46862 with model gpt2-124m: 1.9030 seconds
+2024-09-10 12:54:59,260 Latency for request 47d2 with model gpt2-124m: 1.2536 seconds
+2024-09-10 12:54:59,365 Time limit condition met for model distilgpt2-124m
+2024-09-10 12:54:59,365 Updated batch size:8
+2024-09-10 12:54:59,365 Loading model distilgpt2-124m
+2024-09-10 12:55:00,276 Processed batch: ['96414c82', 'f23ac61a', '933fb41a', '5a4cac79', '8eec8093', '9142', 'edf2', 'f99e'] with model distilgpt2-124m in 0.8545 seconds
+2024-09-10 12:55:00,276 Latency for request 96414c82 with model distilgpt2-124m: 6.5981 seconds
+2024-09-10 12:55:00,278 Latency for request f23ac61a with model distilgpt2-124m: 6.1423 seconds
+2024-09-10 12:55:00,278 Latency for request 933fb41a with model distilgpt2-124m: 5.4229 seconds
+2024-09-10 12:55:00,278 Latency for request 5a4cac79 with model distilgpt2-124m: 3.7296 seconds
+2024-09-10 12:55:00,278 Latency for request 8eec8093 with model distilgpt2-124m: 1.4745 seconds
+2024-09-10 12:55:00,279 Latency for request 9142 with model distilgpt2-124m: 0.9110 seconds
+2024-09-10 12:55:00,279 Latency for request edf2 with model distilgpt2-124m: 0.9110 seconds
+2024-09-10 12:55:00,279 Latency for request f99e with model distilgpt2-124m: 0.9110 seconds
+2024-09-10 12:55:00,917 Request with ID be550064 for model gpt2-124m received
+2024-09-10 12:55:00,917 Adjusted time limit based on total queue size 5: 4.5000 seconds
+2024-09-10 12:55:00,917 Adjusted time limit for model gpt2-124m: 4.3439 seconds
+2024-09-10 12:55:00,918 127.0.0.1 - - [10/Sep/2024 12:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:01,851 Request with ID f1095d0a for model gpt2medium-355m received
+2024-09-10 12:55:01,852 Adjusted time limit based on total queue size 6: 4.5000 seconds
+2024-09-10 12:55:01,852 Adjusted time limit for model gpt2medium-355m: 0.9487 seconds
+2024-09-10 12:55:01,852 127.0.0.1 - - [10/Sep/2024 12:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:02,557 Request with ID 2747d309 for model gpt2medium-355m received
+2024-09-10 12:55:02,557 Adjusted time limit based on total queue size 7: 4.5000 seconds
+2024-09-10 12:55:02,558 127.0.0.1 - - [10/Sep/2024 12:55:02] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:03,034 Request with ID fa2abc02 for model gpt2medium-355m received
+2024-09-10 12:55:03,034 Adjusted time limit based on total queue size 8: 3.0000 seconds
+2024-09-10 12:55:03,035 127.0.0.1 - - [10/Sep/2024 12:55:03] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:03,902 Request with ID 77a65306 for model gpt2medium-355m received
+2024-09-10 12:55:03,902 Adjusted time limit based on total queue size 9: 3.0000 seconds
+2024-09-10 12:55:03,903 127.0.0.1 - - [10/Sep/2024 12:55:03] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:04,435 Request with ID 50be261b for model gpt2-124m received
+2024-09-10 12:55:04,435 Adjusted time limit based on total queue size 10: 3.0000 seconds
+2024-09-10 12:55:04,436 127.0.0.1 - - [10/Sep/2024 12:55:04] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:04,741 Request with ID 7b540496 for model distilgpt2-124m received
+2024-09-10 12:55:04,742 Adjusted time limit based on total queue size 11: 3.0000 seconds
+2024-09-10 12:55:04,742 Adjusted time limit for model distilgpt2-124m: 5.2087 seconds
+2024-09-10 12:55:04,743 127.0.0.1 - - [10/Sep/2024 12:55:04] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:05,268 Time limit condition met for model gpt2-124m
+2024-09-10 12:55:05,268 Updated batch size:4
+2024-09-10 12:55:05,268 Loading model gpt2-124m
+2024-09-10 12:55:05,535 Request with ID 55963b50 for model distilgpt2-124m received
+2024-09-10 12:55:05,535 Adjusted time limit based on total queue size 9: 3.0000 seconds
+2024-09-10 12:55:05,535 127.0.0.1 - - [10/Sep/2024 12:55:05] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:06,170 Processed batch: ['865979b9', 'be550064', '50be261b', '2d1c'] with model gpt2-124m in 0.8258 seconds
+2024-09-10 12:55:06,170 Latency for request 865979b9 with model gpt2-124m: 7.9178 seconds
+2024-09-10 12:55:06,171 Latency for request be550064 with model gpt2-124m: 5.2530 seconds
+2024-09-10 12:55:06,171 Latency for request 50be261b with model gpt2-124m: 1.7349 seconds
+2024-09-10 12:55:06,172 Latency for request 2d1c with model gpt2-124m: 0.9017 seconds
+2024-09-10 12:55:06,213 Request with ID fa80a1de for model distilgpt2-124m received
+2024-09-10 12:55:06,213 Adjusted time limit based on total queue size 10: 3.0000 seconds
+2024-09-10 12:55:06,213 127.0.0.1 - - [10/Sep/2024 12:55:06] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:06,308 Request with ID 4dd3a1f2 for model gpt2-124m received
+2024-09-10 12:55:06,308 Adjusted time limit based on total queue size 11: 3.0000 seconds
+2024-09-10 12:55:06,308 Adjusted time limit for model gpt2-124m: 4.3434 seconds
+2024-09-10 12:55:06,308 127.0.0.1 - - [10/Sep/2024 12:55:06] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:07,195 Request with ID 11807362 for model gpt2medium-355m received
+2024-09-10 12:55:07,195 Adjusted time limit based on total queue size 12: 3.0000 seconds
+2024-09-10 12:55:07,195 127.0.0.1 - - [10/Sep/2024 12:55:07] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:07,779 Request with ID 1276dd8f for model gpt2medium-355m received
+2024-09-10 12:55:07,780 Adjusted time limit based on total queue size 13: 3.0000 seconds
+2024-09-10 12:55:07,780 127.0.0.1 - - [10/Sep/2024 12:55:07] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:07,857 Request with ID 85d655d7 for model gpt2medium-355m received
+2024-09-10 12:55:07,858 Adjusted time limit based on total queue size 14: 3.0000 seconds
+2024-09-10 12:55:07,858 127.0.0.1 - - [10/Sep/2024 12:55:07] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:08,969 Request with ID be4763c8 for model gpt2medium-355m received
+2024-09-10 12:55:08,970 Adjusted time limit based on total queue size 15: 3.0000 seconds
+2024-09-10 12:55:08,970 127.0.0.1 - - [10/Sep/2024 12:55:08] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:09,507 Request with ID 47d41604 for model gpt2-124m received
+2024-09-10 12:55:09,507 Adjusted time limit based on total queue size 16: 1.5000 seconds
+2024-09-10 12:55:09,507 127.0.0.1 - - [10/Sep/2024 12:55:09] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:09,955 Request with ID 45d945ed for model gpt2medium-355m received
+2024-09-10 12:55:09,955 Adjusted time limit based on total queue size 17: 1.5000 seconds
+2024-09-10 12:55:09,956 127.0.0.1 - - [10/Sep/2024 12:55:09] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:10,015 Time limit condition met for model distilgpt2-124m
+2024-09-10 12:55:10,016 Updated batch size:4
+2024-09-10 12:55:10,016 Loading model distilgpt2-124m
+2024-09-10 12:55:10,280 Request with ID 4eb7fc3d for model gpt2medium-355m received
+2024-09-10 12:55:10,280 Adjusted time limit based on total queue size 15: 3.0000 seconds
+2024-09-10 12:55:10,280 127.0.0.1 - - [10/Sep/2024 12:55:10] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:10,492 Request with ID 0771048a for model gpt2-124m received
+2024-09-10 12:55:10,492 Adjusted time limit based on total queue size 16: 1.5000 seconds
+2024-09-10 12:55:10,492 127.0.0.1 - - [10/Sep/2024 12:55:10] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:10,822 Processed batch: ['7b540496', '55963b50', 'fa80a1de', '9b9b'] with model distilgpt2-124m in 0.7224 seconds
+2024-09-10 12:55:10,822 Latency for request 7b540496 with model distilgpt2-124m: 6.0810 seconds
+2024-09-10 12:55:10,823 Latency for request 55963b50 with model distilgpt2-124m: 5.2872 seconds
+2024-09-10 12:55:10,824 Latency for request fa80a1de with model distilgpt2-124m: 4.6094 seconds
+2024-09-10 12:55:10,824 Latency for request 9b9b with model distilgpt2-124m: 0.8066 seconds
+2024-09-10 12:55:10,929 Time limit condition met for model gpt2-124m
+2024-09-10 12:55:10,929 Updated batch size:4
+2024-09-10 12:55:10,929 Loading model gpt2-124m
+2024-09-10 12:55:11,200 Request with ID 62f9f5c0 for model gpt2medium-355m received
+2024-09-10 12:55:11,200 Adjusted time limit based on total queue size 14: 3.0000 seconds
+2024-09-10 12:55:11,200 127.0.0.1 - - [10/Sep/2024 12:55:11] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:11,864 Processed batch: ['4dd3a1f2', '47d41604', '0771048a', '638b'] with model gpt2-124m in 0.8706 seconds
+2024-09-10 12:55:11,864 Latency for request 4dd3a1f2 with model gpt2-124m: 5.5558 seconds
+2024-09-10 12:55:11,865 Latency for request 47d41604 with model gpt2-124m: 2.3576 seconds
+2024-09-10 12:55:11,866 Latency for request 0771048a with model gpt2-124m: 1.3722 seconds
+2024-09-10 12:55:11,866 Latency for request 638b with model gpt2-124m: 0.9347 seconds
+2024-09-10 12:55:11,988 Request with ID e40bfd89 for model distilgpt2-124m received
+2024-09-10 12:55:11,988 Adjusted time limit based on total queue size 15: 3.0000 seconds
+2024-09-10 12:55:11,988 Adjusted time limit for model distilgpt2-124m: 5.2082 seconds
+2024-09-10 12:55:11,988 127.0.0.1 - - [10/Sep/2024 12:55:11] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:12,524 Request with ID bb7b0412 for model gpt2-124m received
+2024-09-10 12:55:12,524 Adjusted time limit based on total queue size 16: 1.5000 seconds
+2024-09-10 12:55:12,524 Adjusted time limit for model gpt2-124m: 4.3434 seconds
+2024-09-10 12:55:12,525 127.0.0.1 - - [10/Sep/2024 12:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:12,739 Request with ID 009bf3e3 for model gpt2medium-355m received
+2024-09-10 12:55:12,740 Adjusted time limit based on total queue size 17: 1.5000 seconds
+2024-09-10 12:55:12,740 127.0.0.1 - - [10/Sep/2024 12:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:13,053 Request with ID 1d71d85f for model gpt2-124m received
+2024-09-10 12:55:13,054 Adjusted time limit based on total queue size 18: 1.5000 seconds
+2024-09-10 12:55:13,054 127.0.0.1 - - [10/Sep/2024 12:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:13,067 Request with ID 64b07043 for model gpt2-124m received
+2024-09-10 12:55:13,068 Adjusted time limit based on total queue size 19: 1.5000 seconds
+2024-09-10 12:55:13,068 127.0.0.1 - - [10/Sep/2024 12:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:13,605 Request with ID 0ddecd25 for model gpt2-124m received
+2024-09-10 12:55:13,605 Adjusted time limit based on total queue size 20: 1.5000 seconds
+2024-09-10 12:55:13,605 127.0.0.1 - - [10/Sep/2024 12:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:13,888 Request with ID 2d141f76 for model distilgpt2-124m received
+2024-09-10 12:55:13,888 Adjusted time limit based on total queue size 21: 1.5000 seconds
+2024-09-10 12:55:13,889 127.0.0.1 - - [10/Sep/2024 12:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:14,149 Request with ID 2f3b385c for model distilgpt2-124m received
+2024-09-10 12:55:14,149 Adjusted time limit based on total queue size 22: 1.5000 seconds
+2024-09-10 12:55:14,150 127.0.0.1 - - [10/Sep/2024 12:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:14,892 Request with ID c0d3cf53 for model distilgpt2-124m received
+2024-09-10 12:55:14,892 Adjusted time limit based on total queue size 23: 1.5000 seconds
+2024-09-10 12:55:14,893 127.0.0.1 - - [10/Sep/2024 12:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:15,054 Request with ID 4d34a3ca for model distilgpt2-124m received
+2024-09-10 12:55:15,055 Adjusted time limit based on total queue size 24: 1.5000 seconds
+2024-09-10 12:55:15,055 127.0.0.1 - - [10/Sep/2024 12:55:15] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:15,493 Request with ID 2da468c2 for model distilgpt2-124m received
+2024-09-10 12:55:15,493 Adjusted time limit based on total queue size 25: 1.5000 seconds
+2024-09-10 12:55:15,494 127.0.0.1 - - [10/Sep/2024 12:55:15] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:15,752 Request with ID 0da24ad9 for model distilgpt2-124m received
+2024-09-10 12:55:15,752 Adjusted time limit based on total queue size 26: 1.5000 seconds
+2024-09-10 12:55:15,753 127.0.0.1 - - [10/Sep/2024 12:55:15] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:16,049 Request with ID 5c022413 for model distilgpt2-124m received
+2024-09-10 12:55:16,050 Adjusted time limit based on total queue size 27: 1.5000 seconds
+2024-09-10 12:55:16,050 127.0.0.1 - - [10/Sep/2024 12:55:16] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:16,402 Request with ID 2226dec4 for model distilgpt2-124m received
+2024-09-10 12:55:16,403 Adjusted time limit based on total queue size 28: 1.5000 seconds
+2024-09-10 12:55:16,403 127.0.0.1 - - [10/Sep/2024 12:55:16] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:16,636 Request with ID 2e574ef8 for model distilgpt2-124m received
+2024-09-10 12:55:16,636 Adjusted time limit based on total queue size 29: 1.5000 seconds
+2024-09-10 12:55:16,636 127.0.0.1 - - [10/Sep/2024 12:55:16] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:16,953 Time limit condition met for model gpt2-124m
+2024-09-10 12:55:16,954 Updated batch size:4
+2024-09-10 12:55:16,954 Loading model gpt2-124m
+2024-09-10 12:55:17,582 Request with ID 8ac54911 for model gpt2medium-355m received
+2024-09-10 12:55:17,582 Adjusted time limit based on total queue size 26: 1.5000 seconds
+2024-09-10 12:55:17,582 Batch size condition met for model gpt2medium-355m
+2024-09-10 12:55:17,755 Processed batch: ['bb7b0412', '1d71d85f', '64b07043', '0ddecd25'] with model gpt2-124m in 0.8006 seconds
+2024-09-10 12:55:17,755 Latency for request bb7b0412 with model gpt2-124m: 5.2313 seconds
+2024-09-10 12:55:17,756 Latency for request 1d71d85f with model gpt2-124m: 4.7018 seconds
+2024-09-10 12:55:17,756 Latency for request 64b07043 with model gpt2-124m: 4.6880 seconds
+2024-09-10 12:55:17,756 Latency for request 0ddecd25 with model gpt2-124m: 4.1504 seconds
+2024-09-10 12:55:17,756 Updated batch size:16
+2024-09-10 12:55:17,756 Loading model gpt2medium-355m
+2024-09-10 12:55:17,887 Request with ID cd241751 for model gpt2-124m received
+2024-09-10 12:55:17,887 Adjusted time limit based on total queue size 11: 3.0000 seconds
+2024-09-10 12:55:17,887 Adjusted time limit for model gpt2-124m: 4.3395 seconds
+2024-09-10 12:55:17,887 127.0.0.1 - - [10/Sep/2024 12:55:17] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:19,134 Request with ID bb4aa919 for model gpt2-124m received
+2024-09-10 12:55:19,134 Adjusted time limit based on total queue size 12: 3.0000 seconds
+2024-09-10 12:55:19,134 127.0.0.1 - - [10/Sep/2024 12:55:19] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:19,620 Time limit condition met for model distilgpt2-124m
+2024-09-10 12:55:19,902 Request with ID daaedcf8 for model distilgpt2-124m received
+2024-09-10 12:55:19,902 Adjusted time limit based on total queue size 3: 6.0000 seconds
+2024-09-10 12:55:19,902 127.0.0.1 - - [10/Sep/2024 12:55:19] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:20,519 Request with ID 1a94f27f for model distilgpt2-124m received
+2024-09-10 12:55:20,519 Adjusted time limit based on total queue size 4: 4.5000 seconds
+2024-09-10 12:55:20,519 127.0.0.1 - - [10/Sep/2024 12:55:20] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:20,706 Request with ID 31e05cbf for model gpt2-124m received
+2024-09-10 12:55:20,706 Adjusted time limit based on total queue size 5: 4.5000 seconds
+2024-09-10 12:55:20,706 127.0.0.1 - - [10/Sep/2024 12:55:20] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:21,445 Request with ID bb325f3f for model gpt2-124m received
+2024-09-10 12:55:21,446 Adjusted time limit based on total queue size 6: 4.5000 seconds
+2024-09-10 12:55:21,446 127.0.0.1 - - [10/Sep/2024 12:55:21] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:21,579 Request with ID 803fe2c8 for model gpt2-124m received
+2024-09-10 12:55:21,579 Adjusted time limit based on total queue size 7: 4.5000 seconds
+2024-09-10 12:55:21,579 127.0.0.1 - - [10/Sep/2024 12:55:21] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:21,902 Request with ID 7c0caa17 for model gpt2-124m received
+2024-09-10 12:55:21,902 Adjusted time limit based on total queue size 8: 3.0000 seconds
+2024-09-10 12:55:21,902 127.0.0.1 - - [10/Sep/2024 12:55:21] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:24,099 Processed batch: ['3f22c3ce', '120d50e8', 'a62d7d7c', 'f1095d0a', '2747d309', 'fa2abc02', '77a65306', '11807362', '1276dd8f', '85d655d7', 'be4763c8', '45d945ed', '4eb7fc3d', '62f9f5c0', '009bf3e3', '8ac54911'] with model gpt2medium-355m in 6.2376 seconds
+2024-09-10 12:55:24,099 Latency for request 3f22c3ce with model gpt2medium-355m: 29.5401 seconds
+2024-09-10 12:55:24,100 Latency for request 120d50e8 with model gpt2medium-355m: 28.9037 seconds
+2024-09-10 12:55:24,101 Latency for request a62d7d7c with model gpt2medium-355m: 28.0778 seconds
+2024-09-10 12:55:24,101 Latency for request f1095d0a with model gpt2medium-355m: 22.2478 seconds
+2024-09-10 12:55:24,101 Latency for request 2747d309 with model gpt2medium-355m: 21.5424 seconds
+2024-09-10 12:55:24,101 Latency for request fa2abc02 with model gpt2medium-355m: 21.0654 seconds
+2024-09-10 12:55:24,101 Latency for request 77a65306 with model gpt2medium-355m: 20.1972 seconds
+2024-09-10 12:55:24,102 Latency for request 11807362 with model gpt2medium-355m: 16.9046 seconds
+2024-09-10 12:55:24,102 Latency for request 1276dd8f with model gpt2medium-355m: 16.3199 seconds
+2024-09-10 12:55:24,102 Latency for request 85d655d7 with model gpt2medium-355m: 16.2418 seconds
+2024-09-10 12:55:24,102 Latency for request be4763c8 with model gpt2medium-355m: 15.1300 seconds
+2024-09-10 12:55:24,103 Latency for request 45d945ed with model gpt2medium-355m: 14.1446 seconds
+2024-09-10 12:55:24,103 Latency for request 4eb7fc3d with model gpt2medium-355m: 13.8192 seconds
+2024-09-10 12:55:24,103 Latency for request 62f9f5c0 with model gpt2medium-355m: 12.8995 seconds
+2024-09-10 12:55:24,103 Latency for request 009bf3e3 with model gpt2medium-355m: 11.3599 seconds
+2024-09-10 12:55:24,103 Latency for request 8ac54911 with model gpt2medium-355m: 6.5175 seconds
+2024-09-10 12:55:24,104 127.0.0.1 - - [10/Sep/2024 12:55:24] "POST /inference HTTP/1.1" 200 -
+2024-09-10 12:55:24,104 Updated batch size:16
+2024-09-10 12:55:24,104 Loading model distilgpt2-124m
+2024-09-10 12:55:25,313 Processed batch: ['e40bfd89', '2d141f76', '2f3b385c', 'c0d3cf53', '4d34a3ca', '2da468c2', '0da24ad9', '5c022413', '2226dec4', '2e574ef8', '80f9', '1c65', '8596', 'c13c', '85c8', 'ba78'] with model distilgpt2-124m in 1.1529 seconds
+2024-09-10 12:55:25,313 Latency for request e40bfd89 with model distilgpt2-124m: 13.3249 seconds
+2024-09-10 12:55:25,314 Latency for request 2d141f76 with model distilgpt2-124m: 11.4250 seconds
+2024-09-10 12:55:25,314 Latency for request 2f3b385c with model distilgpt2-124m: 11.1641 seconds
+2024-09-10 12:55:25,315 Latency for request c0d3cf53 with model distilgpt2-124m: 10.4214 seconds
+2024-09-10 12:55:25,315 Latency for request 4d34a3ca with model distilgpt2-124m: 10.2587 seconds
+2024-09-10 12:55:25,315 Latency for request 2da468c2 with model distilgpt2-124m: 9.8202 seconds
+2024-09-10 12:55:25,315 Latency for request 0da24ad9 with model distilgpt2-124m: 9.5611 seconds
+2024-09-10 12:55:25,315 Latency for request 5c022413 with model distilgpt2-124m: 9.2639 seconds
+2024-09-10 12:55:25,316 Latency for request 2226dec4 with model distilgpt2-124m: 8.9107 seconds
+2024-09-10 12:55:25,316 Latency for request 2e574ef8 with model distilgpt2-124m: 8.6773 seconds
+2024-09-10 12:55:25,316 Latency for request 80f9 with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,316 Latency for request 1c65 with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,317 Latency for request 8596 with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,317 Latency for request c13c with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,317 Latency for request 85c8 with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,317 Latency for request ba78 with model distilgpt2-124m: 1.2092 seconds
+2024-09-10 12:55:25,422 Time limit condition met for model gpt2-124m
+2024-09-10 12:55:25,423 Updated batch size:8
+2024-09-10 12:55:25,423 Loading model gpt2-124m
+2024-09-10 12:55:26,541 Processed batch: ['cd241751', 'bb4aa919', '31e05cbf', 'bb325f3f', '803fe2c8', '7c0caa17', 'fe0d', 'd91d'] with model gpt2-124m in 1.0553 seconds
+2024-09-10 12:55:26,541 Latency for request cd241751 with model gpt2-124m: 8.6543 seconds
+2024-09-10 12:55:26,542 Latency for request bb4aa919 with model gpt2-124m: 7.4074 seconds
+2024-09-10 12:55:26,542 Latency for request 31e05cbf with model gpt2-124m: 5.8355 seconds
+2024-09-10 12:55:26,542 Latency for request bb325f3f with model gpt2-124m: 5.0957 seconds
+2024-09-10 12:55:26,543 Latency for request 803fe2c8 with model gpt2-124m: 4.9621 seconds
+2024-09-10 12:55:26,543 Latency for request 7c0caa17 with model gpt2-124m: 4.6390 seconds
+2024-09-10 12:55:26,543 Latency for request fe0d with model gpt2-124m: 1.1187 seconds
+2024-09-10 12:55:26,543 Latency for request d91d with model gpt2-124m: 1.1187 seconds

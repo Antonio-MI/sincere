@@ -80,7 +80,7 @@ async def automated_calls(workloads, run_duration):
             
             # Generate a sleep interval following the Gamma distribution
             if distribution == "gamma":
-                interval = np.random.gamma(shape, scale)/2
+                interval = np.random.gamma(shape, scale)/4
             else:
                 interval = 1
             print(f"Sleeping for {interval:.2f} seconds")
