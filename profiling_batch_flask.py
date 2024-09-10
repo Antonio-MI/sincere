@@ -14,7 +14,7 @@ timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cpu"
+device = "cuda"
 print(device)  # Check with nvidia-smi
 
 # Save machine name to identify csv
@@ -28,7 +28,7 @@ incoming_request_batches = {}
 running_request_batches = {}
 
 # List of allowed models
-allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] #["granite-7b", "gemma-7b", "llama3-8b"]
+allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m", "granite-7b", "gemma-7b", "llama3-8b"]
 
 # Function to load models
 def load_model(model_alias):
