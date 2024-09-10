@@ -12,7 +12,7 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 30  # seconds
+run_duration = 20  # seconds
 distribution = "gamma" 
 
 # Define the parameters for the Gamma distribution
@@ -51,7 +51,7 @@ def load_workloads_from_folder(folder):
 
 async def send_request(session, workload):
     try:
-        async with session.post(api_url, json=workload) as response:
+        async with session.post(api_url, json=workload, timeout=60) as response:
             if response.status == 200:
                 result = await response.json()
                 print(f"Response: {result}")
@@ -80,7 +80,7 @@ async def automated_calls(workloads, run_duration):
             
             # Generate a sleep interval following the Gamma distribution
             if distribution == "gamma":
-                interval = np.random.gamma(shape, scale)/4
+                interval = np.random.gamma(shape, scale)/3
             else:
                 interval = 1
             print(f"Sleeping for {interval:.2f} seconds")

@@ -22,6 +22,7 @@ logging.basicConfig(filename=f"logs/batch_processing_debug_{timestamp}.log", lev
 # Lock to not process another batch until the current one has finished
 batch_processing_lock = threading.Lock()
 
+
 # Measure GPU usage (time) - consider use as inference 
 # Calls to get GPU metrics - every x time  to check this is not the bottleneck
 
@@ -32,7 +33,7 @@ machine_name = platform.node()
 base_dir = "./models"
 
 # Select device, cpu for now
-device = "cpu"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device) # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
@@ -60,11 +61,11 @@ incoming_request_batches = {}
 running_request_batches = {}
 
 # Manually set batch size for now
-default_batch_size = 4
-allowed_batch_sizes = [4, 8, 16]
+# default_batch_size = 4
+allowed_batch_sizes = [1, 2, 4, 8]
 
 # Time constraint for batch processing
-batch_time_limit = 10  # Seconds
+batch_time_limit = 15  # Seconds
 
 # List of allowed models
 allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
@@ -77,6 +78,11 @@ total_requests = 0  # Total number of requests processed
 
 # Global dictionary to store flags for each model_alias
 correction_applied = {}
+
+# To measure device's time doing inference vs idle
+first_request_time = None  # Time when the first request is received
+last_batch_processed_time = None  # Time when the last batch is processed
+
 
 
 # Function to load models
@@ -125,9 +131,6 @@ def get_processing_time(model_alias, batch_size):
     """Retrieve processing time for a given model and batch size from profiling data."""
     return processing_times.get((model_alias, batch_size), batch_time_limit), processing_times_std.get((model_alias, batch_size), batch_time_limit)  # Default to batch_time_limit if not found
 
-# def get_processing_time_std(model_alias, batch_size):
-#     return processing_times_std.get((model_alias, batch_size), batch_time_limit)
-
 
 def save_latency(request_id, latency, batch_size, model_alias):
     csv_filename = f"latency_results_{machine_name}_{device}_{timestamp}.csv"
@@ -162,12 +165,13 @@ def adjust_time_limit_based_on_queue_length(base_time_limit, queue_size):
     """
     Adjust the batch processing time limit dynamically based on the number of requests in the queue.
     """
+    # For GPU the correction shouldnt be so severe, since the inference time does not increase linearly
     if queue_size < 4:
         # Full time limit
         return base_time_limit
     elif 4 <= queue_size < 8:
         # Reduce time limit by 25%
-        return base_time_limit * 0.75
+        return base_time_limit * 0.6
     elif 8 <= queue_size < 16:
         # Reduce time limit by 50%
         return base_time_limit * 0.5
@@ -177,13 +181,11 @@ def adjust_time_limit_based_on_queue_length(base_time_limit, queue_size):
 
 
 
+total_inference_time = 0  # Global variable to track total inference time
 
-# HOW TO NOT TRIGGER PROCESSING WHEN BATCH IS LARGER THAN 4??
-# JUST TRIGGER BY TIME OR THE LARGER BATCH SIZE? AND THE ADD PADDING
-# BASED THAT OF MODEL USAGE STATISTICS INSEAD? - WAIT FOR MOST USEL MODELS
 
 def process_batch(model_alias, condition, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time
 
     logging.debug(f"{condition} condition met for model {model_alias}")
 
@@ -251,6 +253,11 @@ def process_batch(model_alias, condition, batch_size):
             end_time = time.perf_counter()
             logging.debug(f"Processed batch: {list(responses.keys())} with model {model_alias} in {end_time - start_time:.4f} seconds")
 
+            batch_inference_time = end_time - start_time
+            # Add the batch inference time to the total inference time
+            total_inference_time += batch_inference_time
+
+
             # Calculate latency for each request
             for request in batch:
                 request_id = request['id']
@@ -264,32 +271,73 @@ def process_batch(model_alias, condition, batch_size):
             # Reset the timer for the next batch
             batch_timers[model_alias] = None
 
+
+            # After processing the final batch, record the time
+            if all(queue.qsize() == 0 for queue in incoming_request_batches.values()):
+                last_batch_processed_time = time.perf_counter()
+
+                # Log the total time and the percentage of inference time
+                total_time = last_batch_processed_time - first_request_time
+                inference_percentage = (total_inference_time / total_time) * 100
+
+                logging.debug(f"Total time: {total_time:.4f} seconds")
+                logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
+                logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
+
  
         # Return a list of completed inference IDs (for debugging purposes)
         return list(responses.keys())
 
 def background_batch_processor():
+    global incoming_request_batches, running_request_batches, last_batch_processed_time, total_time, total_inference_time, first_request_time, last_batch_processed_time, total_time
     while True:
         current_time = time.time()
         for model_alias, timer in list(batch_timers.items()):
             # if timer is not None and (current_time - timer) >= batch_time_limit:
             if timer is not None and current_time >= timer:
-                #logging.debug(f"Time limit reached for model {model_alias} at {current_time:.4f}")
-                if model_alias in incoming_request_batches and not incoming_request_batches[model_alias].empty():
-                    batch_size = incoming_request_batches[model_alias].qsize()
-                    #logging.debug(f"Moving batch for {model_alias} from incoming to running due to time limit with batch size {batch_size}")
-                    running_request_batches[model_alias] = Queue()
-                    while not incoming_request_batches[model_alias].empty():
-                        running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-                    #print(f"Triggering batch processing for model {model_alias}")
-                    process_batch(model_alias, "Time limit", batch_size)
+                
+                #logging.debug(f"Moving batch for {model_alias} from incoming to running due to time limit with batch size {batch_size}")
+                running_request_batches[model_alias] = Queue()
+                while not incoming_request_batches[model_alias].empty():
+                    running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+                batch_size = incoming_request_batches[model_alias].qsize()
+                process_batch(model_alias, "Time limit", batch_size)
+
+        # Force process any remaining requests that have not met the batch size
+        for model_alias in list(incoming_request_batches.keys()):  # Iterate over a copy of the keys
+            queue = incoming_request_batches[model_alias]
+            if not queue.empty():
+                running_request_batches[model_alias] = Queue()
+                while not incoming_request_batches[model_alias].empty():
+                    running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+                batch_size = running_request_batches[model_alias].qsize()
+                process_batch(model_alias, "Remaining requests", batch_size)
+
+
+        # Check if all requests are processed
+        if all(queue.qsize() == 0 for queue in incoming_request_batches.values()) and first_request_time is not None:
+            last_batch_processed_time = time.perf_counter()
+
+            # Log the total time and the percentage of inference time
+            total_time = last_batch_processed_time - first_request_time
+            inference_percentage = (total_inference_time / total_time) * 100
+
+            logging.debug(f"Total time: {total_time:.4f} seconds")
+            logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
+            logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
+     
+
         time.sleep(0.1)  # Change if requests arrive in the order of miliseconds
 
 app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, incoming_request_batches, running_request_batches, model_usage_count, total_requests
+    global batch_timers, incoming_request_batches, running_request_batches, model_usage_count, total_requests, first_request_time, last_batch_processed_time, total_time
+
+    # Record the time of the first request
+    if first_request_time is None:
+        first_request_time = time.perf_counter()
 
     model_alias = request.json.get('model_alias')
     prompt = request.json.get('prompt')
@@ -371,9 +419,9 @@ def inference():
         logging.debug(f"Adjusted time limit for model {model_alias}: {adjusted_time_limit:.4f} seconds")
 
 
-    expected_batch_size = 8
+    expected_batch_size = 8 
 
-    if batch_timers[model_alias] is not None and current_batch_size>min(allowed_batch_sizes):
+    if batch_timers[model_alias] is not None and current_batch_size > min(allowed_batch_sizes):
         processing_times, processing_times_std = get_processing_time(model_alias, expected_batch_size)
         processing_time = processing_times + 3 * processing_times_std
         # Previuous processing times for smaller batch size, already considered so we substract that
@@ -397,9 +445,11 @@ def inference():
         return jsonify({
         'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
     })
+
     return jsonify({
         'message': f"Request queued with ID {request_id} for model {model_alias}"
     })
+
 
 
 

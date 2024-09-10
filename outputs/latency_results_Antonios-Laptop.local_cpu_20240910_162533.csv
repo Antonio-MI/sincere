@@ -1,0 +1,3 @@
+request_id,latency,batch_size,model
+ff3d9750,0.5563722910010256,1,gpt2-124m
+ea5a09c0,0.4058363750009448,1,gpt2-124m
