@@ -59,8 +59,6 @@ running_request_batches = {}
 
 # Manually set batch size for now
 default_batch_size = 4
-# Allowed batch sizes for padding
-# allowed_batch_sizes = [4, 8, 16]
 
 # Time constraint for batch processing
 batch_time_limit = 8  # Seconds
@@ -125,12 +123,6 @@ def get_processing_time(model_alias, batch_size):
 def get_processing_time_std(model_alias, batch_size):
     return processing_times_std.get((model_alias, batch_size), batch_time_limit)
 
-# def get_allowed_batch_size(current_size, allowed_batch_sizes):
-#     """Find the next allowed batch size that is greater than or equal to current_size."""
-#     for size in allowed_batch_sizes:
-#         if size >= current_size:
-#             return size
-#     return allowed_batch_sizes[-1]  # Default to the largest batch size if none is larger
 
 def save_latency(request_id, latency, batch_size, model_alias):
     csv_filename = f"latency_results_{machine_name}_{device}_{timestamp}.csv"
@@ -325,10 +317,7 @@ def inference():
 
         batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
-    #logging.debug(f"Current time: {time.time():.4f}")
-    #logging.debug(f"Model {model_alias} loading time: {loading_time:.4f} seconds, unloading time: {unloading_time:.4f} seconds")
         logging.debug(f"Adjusted time limit for model {model_alias}: {adjusted_time_limit:.4f} seconds")
-    #logging.debug(f"Timer for model {model_alias} set to fire at: {batch_timers[model_alias]:.4f}")
 
 
     # Check if batch size is met
@@ -350,10 +339,9 @@ def inference():
 
 
 if __name__ == '__main__':
-    print("a")
+
     # Start the background thread to process batches based on time limit
     threading.Thread(target=background_batch_processor, daemon=True).start()
-    print("b")
+
     # Start the Flask app
     app.run(host='0.0.0.0', port=5000, debug=False)
-    print("c")
