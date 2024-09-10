@@ -12,7 +12,7 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 20  # seconds
+run_duration = 30  # seconds
 distribution = "gamma" 
 
 # Define the parameters for the Gamma distribution

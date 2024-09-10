@@ -1,0 +1,125 @@
+2024-09-09 18:39:21,635 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-09 18:39:21,642 [33mPress CTRL+C to quit[0m
+2024-09-09 18:41:28,400 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:28,457 127.0.0.1 - - [09/Sep/2024 18:41:28] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:30,867 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:30,880 127.0.0.1 - - [09/Sep/2024 18:41:30] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:31,847 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:31,859 127.0.0.1 - - [09/Sep/2024 18:41:31] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:32,046 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:32,059 127.0.0.1 - - [09/Sep/2024 18:41:32] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:33,155 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:33,168 127.0.0.1 - - [09/Sep/2024 18:41:33] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:35,136 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:35,149 127.0.0.1 - - [09/Sep/2024 18:41:35] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:36,968 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:36,980 127.0.0.1 - - [09/Sep/2024 18:41:36] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-09 18:41:38,671 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'inference' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-09 18:41:38,684 127.0.0.1 - - [09/Sep/2024 18:41:38] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
