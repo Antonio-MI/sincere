@@ -81,9 +81,12 @@ correction_applied = {}
 
 # To measure device's time doing inference vs idle
 first_request_time = None  # Time when the first request is received
-last_batch_processed_time = None  # Time when the last batch is processed
+last_request_time = None  # Time when the last batch is processed
 
+# Flag for log inference % only once
+inference_flag = False
 
+last_request_time = None
 
 # Function to load models
 def load_model(model_alias):
@@ -185,7 +188,7 @@ total_inference_time = 0  # Global variable to track total inference time
 
 
 def process_batch(model_alias, condition, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag
 
     logging.debug(f"{condition} condition met for model {model_alias}")
 
@@ -271,25 +274,33 @@ def process_batch(model_alias, condition, batch_size):
             # Reset the timer for the next batch
             batch_timers[model_alias] = None
 
+            last_batch_processed_time = time.time()
 
             # After processing the final batch, record the time
-            if all(queue.qsize() == 0 for queue in incoming_request_batches.values()):
-                last_batch_processed_time = time.perf_counter()
+            #if all(queue.qsize() == 0 for queue in incoming_request_batches.values()):
+                #time.sleep(0.1)
+            if last_batch_processed_time is not None:
+                if time.time() >= last_batch_processed_time + 5:
+                    if inference_flag==False:
 
-                # Log the total time and the percentage of inference time
-                total_time = last_batch_processed_time - first_request_time
-                inference_percentage = (total_inference_time / total_time) * 100
+                        last_batch_processed_time = time.perf_counter()-5
 
-                logging.debug(f"Total time: {total_time:.4f} seconds")
-                logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
-                logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
+                        # Log the total time and the percentage of inference time
+                        total_time = last_batch_processed_time - first_request_time
+                        inference_percentage = (total_inference_time / total_time) * 100
+
+                        logging.debug(f"Total time: {total_time:.4f} seconds")
+                        logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
+                        logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
+
+                        inference_flag = True
 
  
         # Return a list of completed inference IDs (for debugging purposes)
         return list(responses.keys())
 
 def background_batch_processor():
-    global incoming_request_batches, running_request_batches, last_batch_processed_time, total_time, total_inference_time, first_request_time, last_batch_processed_time, total_time
+    global incoming_request_batches, running_request_batches, last_batch_processed_time, total_time, total_inference_time, first_request_time, last_batch_processed_time, total_time, inference_flag
     while True:
         current_time = time.time()
         for model_alias, timer in list(batch_timers.items()):
@@ -304,28 +315,37 @@ def background_batch_processor():
                 process_batch(model_alias, "Time limit", batch_size)
 
         # Force process any remaining requests that have not met the batch size
-        for model_alias in list(incoming_request_batches.keys()):  # Iterate over a copy of the keys
-            queue = incoming_request_batches[model_alias]
-            if not queue.empty():
-                running_request_batches[model_alias] = Queue()
-                while not incoming_request_batches[model_alias].empty():
-                    running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-                batch_size = running_request_batches[model_alias].qsize()
-                process_batch(model_alias, "Remaining requests", batch_size)
+        # for model_alias in list(incoming_request_batches.keys()):  # Iterate over a copy of the keys
+        #     queue = incoming_request_batches[model_alias]
+        #     if not queue.empty():
+        #         running_request_batches[model_alias] = Queue()
+        #         while not incoming_request_batches[model_alias].empty():
+        #             running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+        #         batch_size = running_request_batches[model_alias].qsize()
+        #         process_batch(model_alias, "Remaining requests", batch_size)
 
 
         # Check if all requests are processed
-        if all(queue.qsize() == 0 for queue in incoming_request_batches.values()) and first_request_time is not None:
-            last_batch_processed_time = time.perf_counter()
+        # if all(queue.qsize() == 0 for queue in incoming_request_batches.values()) and first_request_time is not None:
+        #     time.sleep(0.2)
+        if last_batch_processed_time is not None:
+            if time.time() >= last_batch_processed_time + 5:
+                if inference_flag==False:
 
-            # Log the total time and the percentage of inference time
-            total_time = last_batch_processed_time - first_request_time
-            inference_percentage = (total_inference_time / total_time) * 100
+                    last_batch_processed_time = time.perf_counter()-5
 
-            logging.debug(f"Total time: {total_time:.4f} seconds")
-            logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
-            logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
-     
+                #if inference_flag==False:
+                    #last_batch_processed_time = time.perf_counter()
+
+                    # Log the total time and the percentage of inference time
+                    total_time = last_batch_processed_time - first_request_time
+                    inference_percentage = (total_inference_time / total_time) * 100
+
+                    logging.debug(f"Total time: {total_time:.4f} seconds")
+                    logging.debug(f"Total inference time: {total_inference_time:.4f} seconds")
+                    logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
+
+                    inference_flag = True
 
         time.sleep(0.1)  # Change if requests arrive in the order of miliseconds
 

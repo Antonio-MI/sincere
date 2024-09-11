@@ -1,0 +1,627 @@
+2024-09-11 11:43:16,550 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-11 11:43:16,551 [33mPress CTRL+C to quit[0m
+2024-09-11 11:43:19,536 Request with ID ad473819 for model gpt2-124m received
+2024-09-11 11:43:19,536 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:19,536 Adjusted time limit for model gpt2-124m: 13.6926 seconds
+2024-09-11 11:43:19,536 127.0.0.1 - - [11/Sep/2024 11:43:19] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:19,541 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:19,541 Updated batch size:1
+2024-09-11 11:43:19,541 Loading model gpt2-124m
+2024-09-11 11:43:20,006 Processed batch: ['ad473819'] with model gpt2-124m in 0.3819 seconds
+2024-09-11 11:43:20,006 Latency for request ad473819 with model gpt2-124m: 0.4701 seconds
+2024-09-11 11:43:20,007 Total time: 0.4719 seconds
+2024-09-11 11:43:20,007 Total inference time: 0.3819 seconds
+2024-09-11 11:43:20,007 Inference time as percentage of total time: 80.92%
+2024-09-11 11:43:20,008 Total time: 0.4720 seconds
+2024-09-11 11:43:20,008 Total inference time: 0.3819 seconds
+2024-09-11 11:43:20,008 Inference time as percentage of total time: 80.90%
+2024-09-11 11:43:20,109 Total time: 0.5739 seconds
+2024-09-11 11:43:20,110 Total inference time: 0.3819 seconds
+2024-09-11 11:43:20,110 Inference time as percentage of total time: 66.53%
+2024-09-11 11:43:20,215 Total time: 0.6790 seconds
+2024-09-11 11:43:20,215 Total inference time: 0.3819 seconds
+2024-09-11 11:43:20,215 Inference time as percentage of total time: 56.23%
+2024-09-11 11:43:20,320 Total time: 0.7842 seconds
+2024-09-11 11:43:20,320 Total inference time: 0.3819 seconds
+2024-09-11 11:43:20,320 Inference time as percentage of total time: 48.69%
+2024-09-11 11:43:20,361 Request with ID 23edf7fd for model gpt2-124m received
+2024-09-11 11:43:20,361 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:20,362 Adjusted time limit for model gpt2-124m: 13.6858 seconds
+2024-09-11 11:43:20,362 127.0.0.1 - - [11/Sep/2024 11:43:20] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:20,425 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:20,425 Updated batch size:1
+2024-09-11 11:43:20,425 Loading model gpt2-124m
+2024-09-11 11:43:20,483 Processed batch: ['23edf7fd'] with model gpt2-124m in 0.0573 seconds
+2024-09-11 11:43:20,483 Latency for request 23edf7fd with model gpt2-124m: 0.1214 seconds
+2024-09-11 11:43:20,484 Total time: 0.9480 seconds
+2024-09-11 11:43:20,484 Total inference time: 0.4392 seconds
+2024-09-11 11:43:20,484 Inference time as percentage of total time: 46.32%
+2024-09-11 11:43:20,589 Total time: 1.0531 seconds
+2024-09-11 11:43:20,589 Total inference time: 0.4392 seconds
+2024-09-11 11:43:20,589 Inference time as percentage of total time: 41.70%
+2024-09-11 11:43:20,693 Request with ID 8606d7e1 for model gpt2medium-355m received
+2024-09-11 11:43:20,693 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:20,693 Adjusted time limit for model gpt2medium-355m: 11.8798 seconds
+2024-09-11 11:43:20,693 127.0.0.1 - - [11/Sep/2024 11:43:20] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:20,694 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:20,694 Updated batch size:1
+2024-09-11 11:43:20,694 Loading model gpt2medium-355m
+2024-09-11 11:43:20,772 Request with ID be529dc4 for model gpt2-124m received
+2024-09-11 11:43:20,772 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:20,772 Adjusted time limit for model gpt2-124m: 13.6926 seconds
+2024-09-11 11:43:20,773 127.0.0.1 - - [11/Sep/2024 11:43:20] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:21,127 Request with ID 3568a639 for model gpt2-124m received
+2024-09-11 11:43:21,127 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:21,127 127.0.0.1 - - [11/Sep/2024 11:43:21] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:21,791 Request with ID 0de3f272 for model distilgpt2-124m received
+2024-09-11 11:43:21,791 Adjusted time limit based on total queue size 3: 15.0000 seconds
+2024-09-11 11:43:21,791 Adjusted time limit for model distilgpt2-124m: 14.1775 seconds
+2024-09-11 11:43:21,791 127.0.0.1 - - [11/Sep/2024 11:43:21] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:22,060 Processed batch: ['8606d7e1'] with model gpt2medium-355m in 1.2577 seconds
+2024-09-11 11:43:22,060 Latency for request 8606d7e1 with model gpt2medium-355m: 1.3670 seconds
+2024-09-11 11:43:22,166 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:22,166 Updated batch size:2
+2024-09-11 11:43:22,166 Loading model gpt2-124m
+2024-09-11 11:43:22,400 Request with ID 68855cc9 for model distilgpt2-124m received
+2024-09-11 11:43:22,400 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:22,400 127.0.0.1 - - [11/Sep/2024 11:43:22] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:22,932 Processed batch: ['be529dc4', '3568a639'] with model gpt2-124m in 0.7010 seconds
+2024-09-11 11:43:22,932 Latency for request be529dc4 with model gpt2-124m: 2.1599 seconds
+2024-09-11 11:43:22,932 Latency for request 3568a639 with model gpt2-124m: 1.8045 seconds
+2024-09-11 11:43:22,933 Remaining requests condition met for model distilgpt2-124m
+2024-09-11 11:43:22,933 Updated batch size:2
+2024-09-11 11:43:22,933 Loading model distilgpt2-124m
+2024-09-11 11:43:22,967 Request with ID 5e0f7b2c for model gpt2medium-355m received
+2024-09-11 11:43:22,967 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:22,975 Adjusted time limit for model gpt2medium-355m: 11.8866 seconds
+2024-09-11 11:43:22,977 127.0.0.1 - - [11/Sep/2024 11:43:22] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:23,359 Request with ID 9b510dbb for model distilgpt2-124m received
+2024-09-11 11:43:23,359 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:23,359 127.0.0.1 - - [11/Sep/2024 11:43:23] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:23,496 Processed batch: ['0de3f272', '68855cc9'] with model distilgpt2-124m in 0.5106 seconds
+2024-09-11 11:43:23,496 Latency for request 0de3f272 with model distilgpt2-124m: 1.7045 seconds
+2024-09-11 11:43:23,496 Latency for request 68855cc9 with model distilgpt2-124m: 1.0958 seconds
+2024-09-11 11:43:23,602 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:23,602 Updated batch size:1
+2024-09-11 11:43:23,602 Loading model gpt2medium-355m
+2024-09-11 11:43:23,814 Request with ID 4f5be233 for model gpt2medium-355m received
+2024-09-11 11:43:23,814 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:23,815 127.0.0.1 - - [11/Sep/2024 11:43:23] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:24,304 Request with ID ead0f39a for model gpt2-124m received
+2024-09-11 11:43:24,304 Adjusted time limit based on total queue size 3: 15.0000 seconds
+2024-09-11 11:43:24,304 Adjusted time limit for model gpt2-124m: 13.6819 seconds
+2024-09-11 11:43:24,304 127.0.0.1 - - [11/Sep/2024 11:43:24] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:24,915 Request with ID 7f8c949c for model gpt2medium-355m received
+2024-09-11 11:43:24,916 Adjusted time limit based on total queue size 4: 9.0000 seconds
+2024-09-11 11:43:24,916 127.0.0.1 - - [11/Sep/2024 11:43:24] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:24,920 Processed batch: ['5e0f7b2c'] with model gpt2medium-355m in 1.2013 seconds
+2024-09-11 11:43:24,920 Latency for request 5e0f7b2c with model gpt2medium-355m: 1.9525 seconds
+2024-09-11 11:43:24,920 Remaining requests condition met for model distilgpt2-124m
+2024-09-11 11:43:24,920 Updated batch size:1
+2024-09-11 11:43:24,920 Loading model distilgpt2-124m
+2024-09-11 11:43:25,279 Request with ID 03b0db9c for model gpt2-124m received
+2024-09-11 11:43:25,279 Adjusted time limit based on total queue size 4: 9.0000 seconds
+2024-09-11 11:43:25,279 127.0.0.1 - - [11/Sep/2024 11:43:25] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:25,326 Processed batch: ['9b510dbb'] with model distilgpt2-124m in 0.3067 seconds
+2024-09-11 11:43:25,326 Latency for request 9b510dbb with model distilgpt2-124m: 1.9675 seconds
+2024-09-11 11:43:25,432 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:25,432 Updated batch size:2
+2024-09-11 11:43:25,432 Loading model gpt2-124m
+2024-09-11 11:43:25,615 Request with ID 5000dee3 for model distilgpt2-124m received
+2024-09-11 11:43:25,615 Adjusted time limit based on total queue size 3: 15.0000 seconds
+2024-09-11 11:43:25,615 Adjusted time limit for model distilgpt2-124m: 14.1814 seconds
+2024-09-11 11:43:25,615 127.0.0.1 - - [11/Sep/2024 11:43:25] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:26,171 Processed batch: ['ead0f39a', '03b0db9c'] with model gpt2-124m in 0.6765 seconds
+2024-09-11 11:43:26,171 Latency for request ead0f39a with model gpt2-124m: 1.8672 seconds
+2024-09-11 11:43:26,172 Latency for request 03b0db9c with model gpt2-124m: 0.8924 seconds
+2024-09-11 11:43:26,172 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:26,172 Updated batch size:2
+2024-09-11 11:43:26,172 Loading model gpt2medium-355m
+2024-09-11 11:43:26,688 Request with ID 19672e06 for model gpt2-124m received
+2024-09-11 11:43:26,688 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:26,688 Adjusted time limit for model gpt2-124m: 13.6819 seconds
+2024-09-11 11:43:26,688 127.0.0.1 - - [11/Sep/2024 11:43:26] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:27,886 Request with ID 02b20887 for model gpt2-124m received
+2024-09-11 11:43:27,887 Adjusted time limit based on total queue size 3: 15.0000 seconds
+2024-09-11 11:43:27,887 127.0.0.1 - - [11/Sep/2024 11:43:27] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:28,620 Request with ID afd63cc6 for model distilgpt2-124m received
+2024-09-11 11:43:28,620 Adjusted time limit based on total queue size 4: 9.0000 seconds
+2024-09-11 11:43:28,620 127.0.0.1 - - [11/Sep/2024 11:43:28] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:28,660 Processed batch: ['4f5be233', '7f8c949c'] with model gpt2medium-355m in 2.3788 seconds
+2024-09-11 11:43:28,660 Latency for request 4f5be233 with model gpt2medium-355m: 4.8452 seconds
+2024-09-11 11:43:28,661 Latency for request 7f8c949c with model gpt2medium-355m: 3.7442 seconds
+2024-09-11 11:43:28,661 Remaining requests condition met for model distilgpt2-124m
+2024-09-11 11:43:28,661 Updated batch size:2
+2024-09-11 11:43:28,661 Loading model distilgpt2-124m
+2024-09-11 11:43:29,191 Processed batch: ['5000dee3', 'afd63cc6'] with model distilgpt2-124m in 0.4742 seconds
+2024-09-11 11:43:29,191 Latency for request 5000dee3 with model distilgpt2-124m: 3.5760 seconds
+2024-09-11 11:43:29,192 Latency for request afd63cc6 with model distilgpt2-124m: 0.5713 seconds
+2024-09-11 11:43:29,297 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:29,297 Updated batch size:2
+2024-09-11 11:43:29,298 Loading model gpt2-124m
+2024-09-11 11:43:30,013 Processed batch: ['19672e06', '02b20887'] with model gpt2-124m in 0.6529 seconds
+2024-09-11 11:43:30,013 Latency for request 19672e06 with model gpt2-124m: 3.3252 seconds
+2024-09-11 11:43:30,014 Latency for request 02b20887 with model gpt2-124m: 2.1265 seconds
+2024-09-11 11:43:30,014 Total time: 10.4780 seconds
+2024-09-11 11:43:30,014 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,014 Inference time as percentage of total time: 82.07%
+2024-09-11 11:43:30,117 Total time: 10.5805 seconds
+2024-09-11 11:43:30,117 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,117 Inference time as percentage of total time: 81.27%
+2024-09-11 11:43:30,222 Total time: 10.6856 seconds
+2024-09-11 11:43:30,222 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,222 Inference time as percentage of total time: 80.47%
+2024-09-11 11:43:30,327 Total time: 10.7907 seconds
+2024-09-11 11:43:30,327 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,327 Inference time as percentage of total time: 79.69%
+2024-09-11 11:43:30,432 Total time: 10.8959 seconds
+2024-09-11 11:43:30,433 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,433 Inference time as percentage of total time: 78.92%
+2024-09-11 11:43:30,538 Total time: 11.0018 seconds
+2024-09-11 11:43:30,539 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,539 Inference time as percentage of total time: 78.16%
+2024-09-11 11:43:30,644 Total time: 11.1076 seconds
+2024-09-11 11:43:30,644 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,644 Inference time as percentage of total time: 77.41%
+2024-09-11 11:43:30,748 Total time: 11.2112 seconds
+2024-09-11 11:43:30,748 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,748 Inference time as percentage of total time: 76.70%
+2024-09-11 11:43:30,853 Total time: 11.3169 seconds
+2024-09-11 11:43:30,854 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,854 Inference time as percentage of total time: 75.98%
+2024-09-11 11:43:30,959 Total time: 11.4228 seconds
+2024-09-11 11:43:30,960 Total inference time: 8.5989 seconds
+2024-09-11 11:43:30,960 Inference time as percentage of total time: 75.28%
+2024-09-11 11:43:31,063 Total time: 11.5262 seconds
+2024-09-11 11:43:31,063 Total inference time: 8.5989 seconds
+2024-09-11 11:43:31,063 Inference time as percentage of total time: 74.60%
+2024-09-11 11:43:31,169 Total time: 11.6324 seconds
+2024-09-11 11:43:31,169 Total inference time: 8.5989 seconds
+2024-09-11 11:43:31,169 Inference time as percentage of total time: 73.92%
+2024-09-11 11:43:31,271 Total time: 11.7350 seconds
+2024-09-11 11:43:31,272 Total inference time: 8.5989 seconds
+2024-09-11 11:43:31,272 Inference time as percentage of total time: 73.28%
+2024-09-11 11:43:31,377 Total time: 11.8404 seconds
+2024-09-11 11:43:31,377 Total inference time: 8.5989 seconds
+2024-09-11 11:43:31,377 Inference time as percentage of total time: 72.62%
+2024-09-11 11:43:31,439 Request with ID 32fa96ac for model gpt2-124m received
+2024-09-11 11:43:31,439 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:31,439 Adjusted time limit for model gpt2-124m: 13.6858 seconds
+2024-09-11 11:43:31,440 127.0.0.1 - - [11/Sep/2024 11:43:31] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:31,479 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:31,480 Updated batch size:1
+2024-09-11 11:43:31,480 Loading model gpt2-124m
+2024-09-11 11:43:31,868 Processed batch: ['32fa96ac'] with model gpt2-124m in 0.3873 seconds
+2024-09-11 11:43:31,868 Latency for request 32fa96ac with model gpt2-124m: 0.4289 seconds
+2024-09-11 11:43:31,869 Total time: 12.3322 seconds
+2024-09-11 11:43:31,869 Total inference time: 8.9862 seconds
+2024-09-11 11:43:31,869 Inference time as percentage of total time: 72.87%
+2024-09-11 11:43:31,971 Total time: 12.4349 seconds
+2024-09-11 11:43:31,971 Total inference time: 8.9862 seconds
+2024-09-11 11:43:31,971 Inference time as percentage of total time: 72.27%
+2024-09-11 11:43:32,076 Total time: 12.5400 seconds
+2024-09-11 11:43:32,076 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,076 Inference time as percentage of total time: 71.66%
+2024-09-11 11:43:32,182 Total time: 12.6451 seconds
+2024-09-11 11:43:32,182 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,182 Inference time as percentage of total time: 71.06%
+2024-09-11 11:43:32,287 Total time: 12.7503 seconds
+2024-09-11 11:43:32,287 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,287 Inference time as percentage of total time: 70.48%
+2024-09-11 11:43:32,390 Total time: 12.8539 seconds
+2024-09-11 11:43:32,391 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,391 Inference time as percentage of total time: 69.91%
+2024-09-11 11:43:32,496 Total time: 12.9597 seconds
+2024-09-11 11:43:32,497 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,497 Inference time as percentage of total time: 69.34%
+2024-09-11 11:43:32,602 Total time: 13.0657 seconds
+2024-09-11 11:43:32,603 Total inference time: 8.9862 seconds
+2024-09-11 11:43:32,603 Inference time as percentage of total time: 68.78%
+2024-09-11 11:43:32,683 Request with ID dc449b7d for model gpt2medium-355m received
+2024-09-11 11:43:32,684 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:32,684 Adjusted time limit for model gpt2medium-355m: 11.8798 seconds
+2024-09-11 11:43:32,684 127.0.0.1 - - [11/Sep/2024 11:43:32] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:32,708 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:32,708 Updated batch size:1
+2024-09-11 11:43:32,708 Loading model gpt2medium-355m
+2024-09-11 11:43:33,621 Request with ID a4398542 for model gpt2medium-355m received
+2024-09-11 11:43:33,622 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:33,622 127.0.0.1 - - [11/Sep/2024 11:43:33] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:34,163 Processed batch: ['dc449b7d'] with model gpt2medium-355m in 1.2881 seconds
+2024-09-11 11:43:34,163 Latency for request dc449b7d with model gpt2medium-355m: 1.4794 seconds
+2024-09-11 11:43:34,255 Request with ID 29ac1081 for model gpt2medium-355m received
+2024-09-11 11:43:34,255 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:34,255 Adjusted time limit for model gpt2medium-355m: 11.8759 seconds
+2024-09-11 11:43:34,255 127.0.0.1 - - [11/Sep/2024 11:43:34] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:34,269 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:34,269 Updated batch size:2
+2024-09-11 11:43:34,269 Loading model gpt2medium-355m
+2024-09-11 11:43:35,412 Request with ID fa67a08e for model gpt2medium-355m received
+2024-09-11 11:43:35,412 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:35,413 127.0.0.1 - - [11/Sep/2024 11:43:35] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:36,121 Request with ID a8837b0c for model gpt2-124m received
+2024-09-11 11:43:36,121 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:36,121 Adjusted time limit for model gpt2-124m: 13.6819 seconds
+2024-09-11 11:43:36,121 127.0.0.1 - - [11/Sep/2024 11:43:36] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:36,461 Processed batch: ['a4398542', '29ac1081'] with model gpt2medium-355m in 2.1925 seconds
+2024-09-11 11:43:36,461 Latency for request a4398542 with model gpt2medium-355m: 2.8399 seconds
+2024-09-11 11:43:36,462 Latency for request 29ac1081 with model gpt2medium-355m: 2.2062 seconds
+2024-09-11 11:43:36,528 Request with ID bac1f144 for model distilgpt2-124m received
+2024-09-11 11:43:36,528 Adjusted time limit based on total queue size 3: 15.0000 seconds
+2024-09-11 11:43:36,528 Adjusted time limit for model distilgpt2-124m: 14.1775 seconds
+2024-09-11 11:43:36,528 127.0.0.1 - - [11/Sep/2024 11:43:36] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:36,568 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:36,568 Updated batch size:1
+2024-09-11 11:43:36,568 Loading model gpt2-124m
+2024-09-11 11:43:37,096 Processed batch: ['a8837b0c'] with model gpt2-124m in 0.4614 seconds
+2024-09-11 11:43:37,096 Latency for request a8837b0c with model gpt2-124m: 0.9750 seconds
+2024-09-11 11:43:37,097 Remaining requests condition met for model gpt2medium-355m
+2024-09-11 11:43:37,097 Updated batch size:1
+2024-09-11 11:43:37,097 Loading model gpt2medium-355m
+2024-09-11 11:43:37,589 Request with ID 6494bf47 for model distilgpt2-124m received
+2024-09-11 11:43:37,589 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:37,590 127.0.0.1 - - [11/Sep/2024 11:43:37] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:38,456 Processed batch: ['fa67a08e'] with model gpt2medium-355m in 1.2469 seconds
+2024-09-11 11:43:38,456 Latency for request fa67a08e with model gpt2medium-355m: 3.0439 seconds
+2024-09-11 11:43:38,457 Remaining requests condition met for model distilgpt2-124m
+2024-09-11 11:43:38,457 Updated batch size:2
+2024-09-11 11:43:38,457 Loading model distilgpt2-124m
+2024-09-11 11:43:38,500 Request with ID 065105fc for model distilgpt2-124m received
+2024-09-11 11:43:38,500 Adjusted time limit based on total queue size 1: 15.0000 seconds
+2024-09-11 11:43:38,500 127.0.0.1 - - [11/Sep/2024 11:43:38] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:38,620 Request with ID c6a1a111 for model gpt2-124m received
+2024-09-11 11:43:38,620 Adjusted time limit based on total queue size 2: 15.0000 seconds
+2024-09-11 11:43:38,620 Adjusted time limit for model gpt2-124m: 13.6863 seconds
+2024-09-11 11:43:38,620 127.0.0.1 - - [11/Sep/2024 11:43:38] "POST /inference HTTP/1.1" 200 -
+2024-09-11 11:43:39,111 Processed batch: ['bac1f144', '6494bf47'] with model distilgpt2-124m in 0.5897 seconds
+2024-09-11 11:43:39,111 Latency for request bac1f144 with model distilgpt2-124m: 2.5825 seconds
+2024-09-11 11:43:39,112 Latency for request 6494bf47 with model distilgpt2-124m: 1.5212 seconds
+2024-09-11 11:43:39,217 Remaining requests condition met for model gpt2-124m
+2024-09-11 11:43:39,217 Updated batch size:1
+2024-09-11 11:43:39,217 Loading model gpt2-124m
+2024-09-11 11:43:39,714 Processed batch: ['c6a1a111'] with model gpt2-124m in 0.4312 seconds
+2024-09-11 11:43:39,714 Latency for request c6a1a111 with model gpt2-124m: 1.0941 seconds
+2024-09-11 11:43:39,714 Remaining requests condition met for model distilgpt2-124m
+2024-09-11 11:43:39,714 Updated batch size:1
+2024-09-11 11:43:39,714 Loading model distilgpt2-124m
+2024-09-11 11:43:40,069 Processed batch: ['065105fc'] with model distilgpt2-124m in 0.2985 seconds
+2024-09-11 11:43:40,069 Latency for request 065105fc with model distilgpt2-124m: 1.5689 seconds
+2024-09-11 11:43:40,070 Total time: 20.5332 seconds
+2024-09-11 11:43:40,070 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,070 Inference time as percentage of total time: 75.46%
+2024-09-11 11:43:40,175 Total time: 20.6383 seconds
+2024-09-11 11:43:40,175 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,175 Inference time as percentage of total time: 75.08%
+2024-09-11 11:43:40,280 Total time: 20.7435 seconds
+2024-09-11 11:43:40,280 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,280 Inference time as percentage of total time: 74.70%
+2024-09-11 11:43:40,385 Total time: 20.8487 seconds
+2024-09-11 11:43:40,385 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,386 Inference time as percentage of total time: 74.32%
+2024-09-11 11:43:40,491 Total time: 20.9539 seconds
+2024-09-11 11:43:40,491 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,491 Inference time as percentage of total time: 73.95%
+2024-09-11 11:43:40,596 Total time: 21.0595 seconds
+2024-09-11 11:43:40,597 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,597 Inference time as percentage of total time: 73.57%
+2024-09-11 11:43:40,703 Total time: 21.1662 seconds
+2024-09-11 11:43:40,703 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,704 Inference time as percentage of total time: 73.20%
+2024-09-11 11:43:40,804 Total time: 21.2675 seconds
+2024-09-11 11:43:40,805 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,805 Inference time as percentage of total time: 72.85%
+2024-09-11 11:43:40,908 Total time: 21.3707 seconds
+2024-09-11 11:43:40,908 Total inference time: 15.4944 seconds
+2024-09-11 11:43:40,908 Inference time as percentage of total time: 72.50%
+2024-09-11 11:43:41,009 Total time: 21.4721 seconds
+2024-09-11 11:43:41,009 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,009 Inference time as percentage of total time: 72.16%
+2024-09-11 11:43:41,111 Total time: 21.5746 seconds
+2024-09-11 11:43:41,112 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,112 Inference time as percentage of total time: 71.82%
+2024-09-11 11:43:41,217 Total time: 21.6805 seconds
+2024-09-11 11:43:41,218 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,218 Inference time as percentage of total time: 71.47%
+2024-09-11 11:43:41,322 Total time: 21.7850 seconds
+2024-09-11 11:43:41,322 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,323 Inference time as percentage of total time: 71.12%
+2024-09-11 11:43:41,427 Total time: 21.8902 seconds
+2024-09-11 11:43:41,427 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,428 Inference time as percentage of total time: 70.78%
+2024-09-11 11:43:41,529 Total time: 21.9926 seconds
+2024-09-11 11:43:41,530 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,530 Inference time as percentage of total time: 70.45%
+2024-09-11 11:43:41,630 Total time: 22.0935 seconds
+2024-09-11 11:43:41,631 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,631 Inference time as percentage of total time: 70.13%
+2024-09-11 11:43:41,733 Total time: 22.1961 seconds
+2024-09-11 11:43:41,733 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,734 Inference time as percentage of total time: 69.81%
+2024-09-11 11:43:41,839 Total time: 22.3017 seconds
+2024-09-11 11:43:41,839 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,839 Inference time as percentage of total time: 69.48%
+2024-09-11 11:43:41,944 Total time: 22.4076 seconds
+2024-09-11 11:43:41,945 Total inference time: 15.4944 seconds
+2024-09-11 11:43:41,945 Inference time as percentage of total time: 69.15%
+2024-09-11 11:43:42,050 Total time: 22.5135 seconds
+2024-09-11 11:43:42,051 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,051 Inference time as percentage of total time: 68.82%
+2024-09-11 11:43:42,156 Total time: 22.6194 seconds
+2024-09-11 11:43:42,157 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,157 Inference time as percentage of total time: 68.50%
+2024-09-11 11:43:42,261 Total time: 22.7240 seconds
+2024-09-11 11:43:42,261 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,261 Inference time as percentage of total time: 68.19%
+2024-09-11 11:43:42,363 Total time: 22.8262 seconds
+2024-09-11 11:43:42,363 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,364 Inference time as percentage of total time: 67.88%
+2024-09-11 11:43:42,465 Total time: 22.9282 seconds
+2024-09-11 11:43:42,465 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,466 Inference time as percentage of total time: 67.58%
+2024-09-11 11:43:42,571 Total time: 23.0340 seconds
+2024-09-11 11:43:42,571 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,571 Inference time as percentage of total time: 67.27%
+2024-09-11 11:43:42,676 Total time: 23.1387 seconds
+2024-09-11 11:43:42,676 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,676 Inference time as percentage of total time: 66.96%
+2024-09-11 11:43:42,781 Total time: 23.2446 seconds
+2024-09-11 11:43:42,782 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,782 Inference time as percentage of total time: 66.66%
+2024-09-11 11:43:42,884 Total time: 23.3473 seconds
+2024-09-11 11:43:42,884 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,884 Inference time as percentage of total time: 66.36%
+2024-09-11 11:43:42,989 Total time: 23.4526 seconds
+2024-09-11 11:43:42,990 Total inference time: 15.4944 seconds
+2024-09-11 11:43:42,990 Inference time as percentage of total time: 66.07%
+2024-09-11 11:43:43,095 Total time: 23.5578 seconds
+2024-09-11 11:43:43,095 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,095 Inference time as percentage of total time: 65.77%
+2024-09-11 11:43:43,200 Total time: 23.6631 seconds
+2024-09-11 11:43:43,200 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,200 Inference time as percentage of total time: 65.48%
+2024-09-11 11:43:43,304 Total time: 23.7674 seconds
+2024-09-11 11:43:43,305 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,305 Inference time as percentage of total time: 65.19%
+2024-09-11 11:43:43,410 Total time: 23.8731 seconds
+2024-09-11 11:43:43,410 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,411 Inference time as percentage of total time: 64.90%
+2024-09-11 11:43:43,512 Total time: 23.9747 seconds
+2024-09-11 11:43:43,512 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,512 Inference time as percentage of total time: 64.63%
+2024-09-11 11:43:43,618 Total time: 24.0806 seconds
+2024-09-11 11:43:43,618 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,618 Inference time as percentage of total time: 64.34%
+2024-09-11 11:43:43,723 Total time: 24.1865 seconds
+2024-09-11 11:43:43,724 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,724 Inference time as percentage of total time: 64.06%
+2024-09-11 11:43:43,825 Total time: 24.2883 seconds
+2024-09-11 11:43:43,826 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,826 Inference time as percentage of total time: 63.79%
+2024-09-11 11:43:43,929 Total time: 24.3920 seconds
+2024-09-11 11:43:43,929 Total inference time: 15.4944 seconds
+2024-09-11 11:43:43,930 Inference time as percentage of total time: 63.52%
+2024-09-11 11:43:44,035 Total time: 24.4979 seconds
+2024-09-11 11:43:44,035 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,035 Inference time as percentage of total time: 63.25%
+2024-09-11 11:43:44,139 Total time: 24.6017 seconds
+2024-09-11 11:43:44,139 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,139 Inference time as percentage of total time: 62.98%
+2024-09-11 11:43:44,244 Total time: 24.7075 seconds
+2024-09-11 11:43:44,245 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,245 Inference time as percentage of total time: 62.71%
+2024-09-11 11:43:44,350 Total time: 24.8134 seconds
+2024-09-11 11:43:44,351 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,351 Inference time as percentage of total time: 62.44%
+2024-09-11 11:43:44,455 Total time: 24.9183 seconds
+2024-09-11 11:43:44,456 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,456 Inference time as percentage of total time: 62.18%
+2024-09-11 11:43:44,561 Total time: 25.0242 seconds
+2024-09-11 11:43:44,561 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,561 Inference time as percentage of total time: 61.92%
+2024-09-11 11:43:44,666 Total time: 25.1294 seconds
+2024-09-11 11:43:44,666 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,666 Inference time as percentage of total time: 61.66%
+2024-09-11 11:43:44,772 Total time: 25.2347 seconds
+2024-09-11 11:43:44,772 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,772 Inference time as percentage of total time: 61.40%
+2024-09-11 11:43:44,874 Total time: 25.3369 seconds
+2024-09-11 11:43:44,874 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,874 Inference time as percentage of total time: 61.15%
+2024-09-11 11:43:44,980 Total time: 25.4428 seconds
+2024-09-11 11:43:44,980 Total inference time: 15.4944 seconds
+2024-09-11 11:43:44,980 Inference time as percentage of total time: 60.90%
+2024-09-11 11:43:45,082 Total time: 25.5451 seconds
+2024-09-11 11:43:45,083 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,083 Inference time as percentage of total time: 60.66%
+2024-09-11 11:43:45,187 Total time: 25.6501 seconds
+2024-09-11 11:43:45,188 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,188 Inference time as percentage of total time: 60.41%
+2024-09-11 11:43:45,293 Total time: 25.7558 seconds
+2024-09-11 11:43:45,293 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,293 Inference time as percentage of total time: 60.16%
+2024-09-11 11:43:45,395 Total time: 25.8582 seconds
+2024-09-11 11:43:45,396 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,396 Inference time as percentage of total time: 59.92%
+2024-09-11 11:43:45,496 Total time: 25.9595 seconds
+2024-09-11 11:43:45,497 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,497 Inference time as percentage of total time: 59.69%
+2024-09-11 11:43:45,602 Total time: 26.0654 seconds
+2024-09-11 11:43:45,603 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,603 Inference time as percentage of total time: 59.44%
+2024-09-11 11:43:45,708 Total time: 26.1711 seconds
+2024-09-11 11:43:45,709 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,709 Inference time as percentage of total time: 59.20%
+2024-09-11 11:43:45,809 Total time: 26.2723 seconds
+2024-09-11 11:43:45,810 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,810 Inference time as percentage of total time: 58.98%
+2024-09-11 11:43:45,915 Total time: 26.3782 seconds
+2024-09-11 11:43:45,916 Total inference time: 15.4944 seconds
+2024-09-11 11:43:45,916 Inference time as percentage of total time: 58.74%
+2024-09-11 11:43:46,021 Total time: 26.4842 seconds
+2024-09-11 11:43:46,022 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,022 Inference time as percentage of total time: 58.50%
+2024-09-11 11:43:46,125 Total time: 26.5876 seconds
+2024-09-11 11:43:46,125 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,125 Inference time as percentage of total time: 58.28%
+2024-09-11 11:43:46,231 Total time: 26.6938 seconds
+2024-09-11 11:43:46,231 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,231 Inference time as percentage of total time: 58.04%
+2024-09-11 11:43:46,337 Total time: 26.7996 seconds
+2024-09-11 11:43:46,337 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,337 Inference time as percentage of total time: 57.82%
+2024-09-11 11:43:46,439 Total time: 26.9017 seconds
+2024-09-11 11:43:46,439 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,439 Inference time as percentage of total time: 57.60%
+2024-09-11 11:43:46,544 Total time: 27.0074 seconds
+2024-09-11 11:43:46,545 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,545 Inference time as percentage of total time: 57.37%
+2024-09-11 11:43:46,650 Total time: 27.1133 seconds
+2024-09-11 11:43:46,652 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,652 Inference time as percentage of total time: 57.15%
+2024-09-11 11:43:46,757 Total time: 27.2205 seconds
+2024-09-11 11:43:46,758 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,758 Inference time as percentage of total time: 56.92%
+2024-09-11 11:43:46,863 Total time: 27.3265 seconds
+2024-09-11 11:43:46,864 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,864 Inference time as percentage of total time: 56.70%
+2024-09-11 11:43:46,969 Total time: 27.4320 seconds
+2024-09-11 11:43:46,970 Total inference time: 15.4944 seconds
+2024-09-11 11:43:46,970 Inference time as percentage of total time: 56.48%
+2024-09-11 11:43:47,071 Total time: 27.5343 seconds
+2024-09-11 11:43:47,072 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,072 Inference time as percentage of total time: 56.27%
+2024-09-11 11:43:47,173 Total time: 27.6359 seconds
+2024-09-11 11:43:47,173 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,173 Inference time as percentage of total time: 56.07%
+2024-09-11 11:43:47,279 Total time: 27.7418 seconds
+2024-09-11 11:43:47,279 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,279 Inference time as percentage of total time: 55.85%
+2024-09-11 11:43:47,385 Total time: 27.8476 seconds
+2024-09-11 11:43:47,385 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,385 Inference time as percentage of total time: 55.64%
+2024-09-11 11:43:47,489 Total time: 27.9517 seconds
+2024-09-11 11:43:47,489 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,489 Inference time as percentage of total time: 55.43%
+2024-09-11 11:43:47,594 Total time: 28.0574 seconds
+2024-09-11 11:43:47,595 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,595 Inference time as percentage of total time: 55.22%
+2024-09-11 11:43:47,696 Total time: 28.1592 seconds
+2024-09-11 11:43:47,697 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,697 Inference time as percentage of total time: 55.02%
+2024-09-11 11:43:47,800 Total time: 28.2627 seconds
+2024-09-11 11:43:47,800 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,800 Inference time as percentage of total time: 54.82%
+2024-09-11 11:43:47,905 Total time: 28.3683 seconds
+2024-09-11 11:43:47,906 Total inference time: 15.4944 seconds
+2024-09-11 11:43:47,906 Inference time as percentage of total time: 54.62%
+2024-09-11 11:43:48,011 Total time: 28.4742 seconds
+2024-09-11 11:43:48,012 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,012 Inference time as percentage of total time: 54.42%
+2024-09-11 11:43:48,117 Total time: 28.5802 seconds
+2024-09-11 11:43:48,118 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,118 Inference time as percentage of total time: 54.21%
+2024-09-11 11:43:48,223 Total time: 28.6861 seconds
+2024-09-11 11:43:48,224 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,224 Inference time as percentage of total time: 54.01%
+2024-09-11 11:43:48,328 Total time: 28.7914 seconds
+2024-09-11 11:43:48,329 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,329 Inference time as percentage of total time: 53.82%
+2024-09-11 11:43:48,434 Total time: 28.8971 seconds
+2024-09-11 11:43:48,435 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,435 Inference time as percentage of total time: 53.62%
+2024-09-11 11:43:48,538 Total time: 29.0008 seconds
+2024-09-11 11:43:48,538 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,538 Inference time as percentage of total time: 53.43%
+2024-09-11 11:43:48,643 Total time: 29.1063 seconds
+2024-09-11 11:43:48,644 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,644 Inference time as percentage of total time: 53.23%
+2024-09-11 11:43:48,748 Total time: 29.2113 seconds
+2024-09-11 11:43:48,749 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,749 Inference time as percentage of total time: 53.04%
+2024-09-11 11:43:48,854 Total time: 29.3168 seconds
+2024-09-11 11:43:48,854 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,854 Inference time as percentage of total time: 52.85%
+2024-09-11 11:43:48,958 Total time: 29.4205 seconds
+2024-09-11 11:43:48,958 Total inference time: 15.4944 seconds
+2024-09-11 11:43:48,958 Inference time as percentage of total time: 52.67%
+2024-09-11 11:43:49,058 Total time: 29.5212 seconds
+2024-09-11 11:43:49,058 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,059 Inference time as percentage of total time: 52.49%
+2024-09-11 11:43:49,164 Total time: 29.6268 seconds
+2024-09-11 11:43:49,164 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,164 Inference time as percentage of total time: 52.30%
+2024-09-11 11:43:49,270 Total time: 29.7326 seconds
+2024-09-11 11:43:49,270 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,270 Inference time as percentage of total time: 52.11%
+2024-09-11 11:43:49,371 Total time: 29.8341 seconds
+2024-09-11 11:43:49,372 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,372 Inference time as percentage of total time: 51.94%
+2024-09-11 11:43:49,477 Total time: 29.9397 seconds
+2024-09-11 11:43:49,477 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,477 Inference time as percentage of total time: 51.75%
+2024-09-11 11:43:49,582 Total time: 30.0453 seconds
+2024-09-11 11:43:49,583 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,583 Inference time as percentage of total time: 51.57%
+2024-09-11 11:43:49,685 Total time: 30.1479 seconds
+2024-09-11 11:43:49,685 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,685 Inference time as percentage of total time: 51.39%
+2024-09-11 11:43:49,787 Total time: 30.2498 seconds
+2024-09-11 11:43:49,787 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,787 Inference time as percentage of total time: 51.22%
+2024-09-11 11:43:49,889 Total time: 30.3517 seconds
+2024-09-11 11:43:49,889 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,889 Inference time as percentage of total time: 51.05%
+2024-09-11 11:43:49,995 Total time: 30.4577 seconds
+2024-09-11 11:43:49,995 Total inference time: 15.4944 seconds
+2024-09-11 11:43:49,995 Inference time as percentage of total time: 50.87%
+2024-09-11 11:43:50,101 Total time: 30.5635 seconds
+2024-09-11 11:43:50,101 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,101 Inference time as percentage of total time: 50.70%
+2024-09-11 11:43:50,207 Total time: 30.6695 seconds
+2024-09-11 11:43:50,207 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,207 Inference time as percentage of total time: 50.52%
+2024-09-11 11:43:50,312 Total time: 30.7754 seconds
+2024-09-11 11:43:50,313 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,313 Inference time as percentage of total time: 50.35%
+2024-09-11 11:43:50,418 Total time: 30.8814 seconds
+2024-09-11 11:43:50,419 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,419 Inference time as percentage of total time: 50.17%
+2024-09-11 11:43:50,521 Total time: 30.9841 seconds
+2024-09-11 11:43:50,522 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,522 Inference time as percentage of total time: 50.01%
+2024-09-11 11:43:50,627 Total time: 31.0903 seconds
+2024-09-11 11:43:50,628 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,628 Inference time as percentage of total time: 49.84%
+2024-09-11 11:43:50,732 Total time: 31.1952 seconds
+2024-09-11 11:43:50,733 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,733 Inference time as percentage of total time: 49.67%
+2024-09-11 11:43:50,838 Total time: 31.3011 seconds
+2024-09-11 11:43:50,838 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,838 Inference time as percentage of total time: 49.50%
+2024-09-11 11:43:50,943 Total time: 31.4064 seconds
+2024-09-11 11:43:50,944 Total inference time: 15.4944 seconds
+2024-09-11 11:43:50,944 Inference time as percentage of total time: 49.34%
+2024-09-11 11:43:51,049 Total time: 31.5117 seconds
+2024-09-11 11:43:51,049 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,049 Inference time as percentage of total time: 49.17%
+2024-09-11 11:43:51,152 Total time: 31.6144 seconds
+2024-09-11 11:43:51,152 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,152 Inference time as percentage of total time: 49.01%
+2024-09-11 11:43:51,257 Total time: 31.7203 seconds
+2024-09-11 11:43:51,258 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,258 Inference time as percentage of total time: 48.85%
+2024-09-11 11:43:51,363 Total time: 31.8262 seconds
+2024-09-11 11:43:51,364 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,364 Inference time as percentage of total time: 48.68%
+2024-09-11 11:43:51,469 Total time: 31.9321 seconds
+2024-09-11 11:43:51,470 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,470 Inference time as percentage of total time: 48.52%
+2024-09-11 11:43:51,572 Total time: 32.0350 seconds
+2024-09-11 11:43:51,572 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,573 Inference time as percentage of total time: 48.37%
+2024-09-11 11:43:51,675 Total time: 32.1374 seconds
+2024-09-11 11:43:51,675 Total inference time: 15.4944 seconds
+2024-09-11 11:43:51,675 Inference time as percentage of total time: 48.21%
