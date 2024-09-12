@@ -4,7 +4,7 @@
 timestamp=$(date +"%Y%m%d_%H%M%S")
 
 # Output file for logging the GPU utilization with a timestamp in the filename
-output_file="gpu_usage_${timestamp}.csv"
+output_file="gpu_utilization/gpu_usage_${timestamp}.csv"
 
 # Interval between each query (in seconds)
 interval=1
