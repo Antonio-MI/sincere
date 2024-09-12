@@ -12,8 +12,10 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 10  # seconds
+run_duration = 30  # seconds
 distribution = "gamma" 
+
+model_list = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"]
 
 # Define the parameters for the Gamma distribution
 shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
@@ -58,7 +60,8 @@ async def send_request(session, workload):
             else:
                 print(f"Error: {response.status} - {await response.text()}")
     except Exception as e:
-        print(f"Failed to make the request: {e}")
+        #print(f"Failed to make the request: {e}")
+        print()
 
 async def automated_calls(workloads, run_duration):
     start_time = time.time()
@@ -73,14 +76,15 @@ async def automated_calls(workloads, run_duration):
             workload = np.random.choice(workloads)
             
             # To change the frequency of each model, edit here:
-            # workload['model_alias'] = ... 
+            workload['model_alias'] = np.random.choice(model_list) 
+            print(workload['model_alias'])
 
             # Send the request asynchronously
             asyncio.create_task(send_request(session, workload))
             
             # Generate a sleep interval following the Gamma distribution
             if distribution == "gamma":
-                interval = np.random.gamma(shape, scale)/3
+                interval = np.random.gamma(shape, scale)/2
             else:
                 interval = 1
             print(f"Sleeping for {interval:.2f} seconds")

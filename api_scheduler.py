@@ -68,7 +68,7 @@ allowed_batch_sizes = [1, 2, 4, 8]
 batch_time_limit = 15  # Seconds
 
 # List of allowed models
-allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]
+allowed_models = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"]
 
 padding = True
 
