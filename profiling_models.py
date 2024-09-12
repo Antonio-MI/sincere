@@ -10,7 +10,7 @@ import platform
 # Folder containing models
 base_dir = "./models"
 
-models_to_profile =  ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] #["granite-7b", "gemma-7b", "llama3-8b"]
+models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] 
 
 # Select device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
