@@ -2,14 +2,15 @@
 
 # Timeout duration (e.g., 60 seconds)
 timeout_duration=60
+timeout_flask_duration=75
 
 # Start the Flask API in the background
 echo "Starting Flask API..."
-timeout $timeout_duration python3 profiling_batch_flask.py &
+timeout $timeout_flask_duration python3 profiling_batch_flask.py &
 
 # Wait for Flask API to initialize (e.g., 5 seconds)
 echo "Waiting for Flask API to initialize..."
-sleep 10
+sleep 15
 
 # Start the GPU utilization monitoring script in the background
 echo "Starting GPU utilization monitoring..."
