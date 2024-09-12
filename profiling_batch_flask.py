@@ -208,6 +208,11 @@ def inference():
             print(f"Runtime error: {e}")
             return jsonify({'error': f"Unexpected error: {e}"}), 500
 
+@app.route('/health')
+def health():
+    return 'OK', 200
+
+
 if __name__ == '__main__':
     os.makedirs("outputs", exist_ok=True)
     
