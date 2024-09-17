@@ -76,7 +76,7 @@ last_request_time = None
 
 # Initialize the GPU monitoring
 monitoring = True
-if device == "cuda":
+if device.type == "cuda":
     logging.debug(f"Monitoring status set to {monitoring}")
     monitor = Monitor(cuda_enabled=True)
 
