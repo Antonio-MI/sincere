@@ -44,6 +44,7 @@ running_request_batches = {}
 # Manually set batch size for now
 # default_batch_size = 4
 if mode == "FCFS":
+    logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = [1]
 
 # Time constraint for batch processing
@@ -74,11 +75,11 @@ inference_flag = False
 last_request_time = None
 
 # Initialize the GPU monitoring
-monitoring = False
+monitoring = True
 if device == "cuda":
-    monitoring = True
     logging.debug(f"Monitoring status set to {monitoring}")
     monitor = Monitor(cuda_enabled=True)
+
 
 
 # Function to load models
