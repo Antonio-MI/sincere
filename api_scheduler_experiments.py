@@ -31,7 +31,7 @@ base_dir = "./models"
 
 # Select device, cpu for now
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(device) # Check with nvidia-smi
+logging.debug(f"Using device: {device}") # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -208,7 +208,7 @@ total_inference_time = 0  # Global variable to track total inference time
 
 
 def process_batch(model_alias, condition, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring
 
     logging.debug(f"{condition} condition met for model {model_alias}")
 
@@ -375,6 +375,7 @@ def inference():
     remaining_requests = sum(queue.qsize() for queue in incoming_request_batches.values()) + sum(queue.qsize() for queue in running_request_batches.values())
     if model_alias=="Stop" and inference_flag == False:
         while remaining_requests >0:
+            remaining_requests = sum(queue.qsize() for queue in incoming_request_batches.values()) + sum(queue.qsize() for queue in running_request_batches.values())
             logging.debug("Waiting for running processes to finish")
             time.sleep(0.1)
         # Log the total time and the percentage of inference time
