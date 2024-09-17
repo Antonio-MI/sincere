@@ -158,16 +158,14 @@ def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, 
         "sys_info": sys_info
     }
 
-    print(sys_info)
+    sys_info_columns = {
+            key: [status[key] for status in df0["sys_info"]]
+            for key in df0["sys_info"].keys()
+        }
+    data = pd.concat([df0, pd.DataFrame(sys_info_columns)], axis=1)
+    data = data.drop("sys_info", axis=1)
 
-    # sys_info_columns = {
-    #         key: [status[key] for status in df0["sys_info"]]
-    #         for key in df0["sys_info"][0].keys()
-    #     }
-    # data = pd.concat([df0, pd.DataFrame(sys_info_columns)], axis=1)
-    # data = data.drop("sys_info", axis=1)
-
-    df = pd.DataFrame([df0])
+    df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
     if file_exists:
         df.to_csv(csv_path, mode="a", header=False, index=False)
