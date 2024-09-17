@@ -12,7 +12,7 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 20  # seconds
+run_duration = 180  # seconds
 distribution = "gamma" 
 
 model_list = ["granite-7b", "gemma-7b", "llama3-8b"]

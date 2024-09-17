@@ -155,7 +155,6 @@ def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, 
         "batch_size": batch_size,
         "latency": latency,
         "throughput": throughput,
-        "sys_info": sys_info
     }
 
     # Update the data dictionary with the sys_info entries
