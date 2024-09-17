@@ -1,0 +1,404 @@
+2024-09-17 13:17:57,221 Using device: cuda
+2024-09-17 13:17:57,222 Scheduling mode set as FCFS
+2024-09-17 13:18:12,241 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-17 13:18:12,241 [33mPress CTRL+C to quit[0m
+2024-09-17 13:18:12,679 Request with ID 42ad6d18 for model granite-7b received
+2024-09-17 13:18:12,680 Batch size condition met for model granite-7b
+2024-09-17 13:18:12,680 Next: call load_model for granite-7b
+2024-09-17 13:18:14,861 Request with ID f6a7db69 for model llama3-8b received
+2024-09-17 13:18:14,862 Batch size condition met for model llama3-8b
+2024-09-17 13:18:17,139 Request with ID 4db3aa6e for model llama3-8b received
+2024-09-17 13:18:17,139 Batch size condition met for model llama3-8b
+2024-09-17 13:18:19,325 Request with ID b04f9d28 for model granite-7b received
+2024-09-17 13:18:19,326 Batch size condition met for model granite-7b
+2024-09-17 13:18:20,024 Request with ID f97661e0 for model granite-7b received
+2024-09-17 13:18:20,024 Batch size condition met for model granite-7b
+2024-09-17 13:18:20,685 Request with ID bf99cb0c for model gemma-7b received
+2024-09-17 13:18:20,685 Batch size condition met for model gemma-7b
+2024-09-17 13:18:21,501 Request with ID 0472e588 for model llama3-8b received
+2024-09-17 13:18:21,501 Batch size condition met for model llama3-8b
+2024-09-17 13:18:23,112 Request with ID fd4efcd2 for model gemma-7b received
+2024-09-17 13:18:23,112 Batch size condition met for model gemma-7b
+2024-09-17 13:18:25,333 Waiting for running processes to finish
+2024-09-17 13:18:25,434 Waiting for running processes to finish
+2024-09-17 13:18:25,534 Waiting for running processes to finish
+2024-09-17 13:18:25,635 Waiting for running processes to finish
+2024-09-17 13:18:25,736 Waiting for running processes to finish
+2024-09-17 13:18:25,837 Waiting for running processes to finish
+2024-09-17 13:18:25,938 Waiting for running processes to finish
+2024-09-17 13:18:26,038 Waiting for running processes to finish
+2024-09-17 13:18:26,205 Waiting for running processes to finish
+2024-09-17 13:18:26,306 Waiting for running processes to finish
+2024-09-17 13:18:26,407 Waiting for running processes to finish
+2024-09-17 13:18:26,507 Waiting for running processes to finish
+2024-09-17 13:18:26,608 Waiting for running processes to finish
+2024-09-17 13:18:26,708 Waiting for running processes to finish
+2024-09-17 13:18:26,809 Waiting for running processes to finish
+2024-09-17 13:18:26,910 Waiting for running processes to finish
+2024-09-17 13:18:27,010 Waiting for running processes to finish
+2024-09-17 13:18:27,111 Waiting for running processes to finish
+2024-09-17 13:18:27,212 Waiting for running processes to finish
+2024-09-17 13:18:27,312 Waiting for running processes to finish
+2024-09-17 13:18:27,413 Waiting for running processes to finish
+2024-09-17 13:18:27,544 Waiting for running processes to finish
+2024-09-17 13:18:27,544 Loaded model granite-7b
+2024-09-17 13:18:27,547 Batch processing started for model granite-7b
+2024-09-17 13:18:27,644 Waiting for running processes to finish
+2024-09-17 13:18:27,747 Waiting for running processes to finish
+2024-09-17 13:18:27,849 Waiting for running processes to finish
+2024-09-17 13:18:27,951 Waiting for running processes to finish
+2024-09-17 13:18:28,052 Waiting for running processes to finish
+2024-09-17 13:18:28,153 Waiting for running processes to finish
+2024-09-17 13:18:28,253 Waiting for running processes to finish
+2024-09-17 13:18:28,354 Waiting for running processes to finish
+2024-09-17 13:18:28,455 Waiting for running processes to finish
+2024-09-17 13:18:28,555 Waiting for running processes to finish
+2024-09-17 13:18:28,656 Waiting for running processes to finish
+2024-09-17 13:18:28,757 Waiting for running processes to finish
+2024-09-17 13:18:28,858 Waiting for running processes to finish
+2024-09-17 13:18:28,959 Waiting for running processes to finish
+2024-09-17 13:18:29,059 Waiting for running processes to finish
+2024-09-17 13:18:29,160 Waiting for running processes to finish
+2024-09-17 13:18:29,261 Waiting for running processes to finish
+2024-09-17 13:18:29,362 Waiting for running processes to finish
+2024-09-17 13:18:29,462 Waiting for running processes to finish
+2024-09-17 13:18:29,563 Waiting for running processes to finish
+2024-09-17 13:18:29,664 Waiting for running processes to finish
+2024-09-17 13:18:29,743 Processed batch: ['42ad6d18'] with model granite-7b in 2.1957 seconds
+2024-09-17 13:18:29,743 Saving sys info
+2024-09-17 13:18:29,743 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 500, in inference
+    completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 264, in process_batch
+    sys_info = monitor.get_sys_info()
+NameError: name 'monitor' is not defined
+2024-09-17 13:18:29,744 Next: call load_model for llama3-8b
+2024-09-17 13:18:29,745 127.0.0.1 - - [17/Sep/2024 13:18:29] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-17 13:18:29,746 Unloaded previous model
+2024-09-17 13:18:29,978 Waiting for running processes to finish
+2024-09-17 13:18:30,131 Waiting for running processes to finish
+2024-09-17 13:18:30,242 Waiting for running processes to finish
+2024-09-17 13:18:30,365 Waiting for running processes to finish
+2024-09-17 13:18:30,504 Waiting for running processes to finish
+2024-09-17 13:18:30,684 Waiting for running processes to finish
+2024-09-17 13:18:30,785 Waiting for running processes to finish
+2024-09-17 13:18:30,886 Waiting for running processes to finish
+2024-09-17 13:18:30,987 Waiting for running processes to finish
+2024-09-17 13:18:31,088 Waiting for running processes to finish
+2024-09-17 13:18:31,188 Waiting for running processes to finish
+2024-09-17 13:18:31,289 Waiting for running processes to finish
+2024-09-17 13:18:31,389 Waiting for running processes to finish
+2024-09-17 13:18:31,490 Waiting for running processes to finish
+2024-09-17 13:18:31,591 Waiting for running processes to finish
+2024-09-17 13:18:31,691 Waiting for running processes to finish
+2024-09-17 13:18:31,792 Waiting for running processes to finish
+2024-09-17 13:18:31,893 Waiting for running processes to finish
+2024-09-17 13:18:31,993 Waiting for running processes to finish
+2024-09-17 13:18:32,094 Waiting for running processes to finish
+2024-09-17 13:18:32,195 Waiting for running processes to finish
+2024-09-17 13:18:32,295 Waiting for running processes to finish
+2024-09-17 13:18:32,396 Waiting for running processes to finish
+2024-09-17 13:18:32,496 Waiting for running processes to finish
+2024-09-17 13:18:32,723 Waiting for running processes to finish
+2024-09-17 13:18:32,823 Waiting for running processes to finish
+2024-09-17 13:18:32,924 Waiting for running processes to finish
+2024-09-17 13:18:33,024 Waiting for running processes to finish
+2024-09-17 13:18:33,125 Waiting for running processes to finish
+2024-09-17 13:18:33,226 Waiting for running processes to finish
+2024-09-17 13:18:33,326 Waiting for running processes to finish
+2024-09-17 13:18:33,427 Waiting for running processes to finish
+2024-09-17 13:18:33,527 Waiting for running processes to finish
+2024-09-17 13:18:33,628 Waiting for running processes to finish
+2024-09-17 13:18:33,729 Waiting for running processes to finish
+2024-09-17 13:18:33,829 Waiting for running processes to finish
+2024-09-17 13:18:33,930 Waiting for running processes to finish
+2024-09-17 13:18:34,030 Waiting for running processes to finish
+2024-09-17 13:18:34,131 Waiting for running processes to finish
+2024-09-17 13:18:34,232 Waiting for running processes to finish
+2024-09-17 13:18:34,332 Waiting for running processes to finish
+2024-09-17 13:18:34,473 Waiting for running processes to finish
+2024-09-17 13:18:34,573 Waiting for running processes to finish
+2024-09-17 13:18:34,674 Waiting for running processes to finish
+2024-09-17 13:18:34,775 Waiting for running processes to finish
+2024-09-17 13:18:34,875 Waiting for running processes to finish
+2024-09-17 13:18:34,976 Waiting for running processes to finish
+2024-09-17 13:18:35,077 Waiting for running processes to finish
+2024-09-17 13:18:35,177 Waiting for running processes to finish
+2024-09-17 13:18:35,278 Waiting for running processes to finish
+2024-09-17 13:18:35,378 Waiting for running processes to finish
+2024-09-17 13:18:35,479 Waiting for running processes to finish
+2024-09-17 13:18:35,580 Waiting for running processes to finish
+2024-09-17 13:18:35,680 Waiting for running processes to finish
+2024-09-17 13:18:35,781 Waiting for running processes to finish
+2024-09-17 13:18:35,882 Waiting for running processes to finish
+2024-09-17 13:18:35,982 Waiting for running processes to finish
+2024-09-17 13:18:36,083 Waiting for running processes to finish
+2024-09-17 13:18:36,184 Waiting for running processes to finish
+2024-09-17 13:18:36,395 Waiting for running processes to finish
+2024-09-17 13:18:36,496 Waiting for running processes to finish
+2024-09-17 13:18:36,597 Waiting for running processes to finish
+2024-09-17 13:18:36,697 Waiting for running processes to finish
+2024-09-17 13:18:36,798 Waiting for running processes to finish
+2024-09-17 13:18:36,899 Waiting for running processes to finish
+2024-09-17 13:18:36,999 Waiting for running processes to finish
+2024-09-17 13:18:37,100 Waiting for running processes to finish
+2024-09-17 13:18:37,201 Waiting for running processes to finish
+2024-09-17 13:18:37,301 Waiting for running processes to finish
+2024-09-17 13:18:37,402 Waiting for running processes to finish
+2024-09-17 13:18:37,503 Waiting for running processes to finish
+2024-09-17 13:18:37,603 Waiting for running processes to finish
+2024-09-17 13:18:37,704 Waiting for running processes to finish
+2024-09-17 13:18:37,804 Waiting for running processes to finish
+2024-09-17 13:18:37,905 Waiting for running processes to finish
+2024-09-17 13:18:38,006 Waiting for running processes to finish
+2024-09-17 13:18:38,106 Waiting for running processes to finish
+2024-09-17 13:18:38,207 Waiting for running processes to finish
+2024-09-17 13:18:38,364 Waiting for running processes to finish
+2024-09-17 13:18:38,464 Waiting for running processes to finish
+2024-09-17 13:18:38,565 Waiting for running processes to finish
+2024-09-17 13:18:38,666 Waiting for running processes to finish
+2024-09-17 13:18:38,766 Waiting for running processes to finish
+2024-09-17 13:18:38,867 Waiting for running processes to finish
+2024-09-17 13:18:38,968 Waiting for running processes to finish
+2024-09-17 13:18:39,068 Waiting for running processes to finish
+2024-09-17 13:18:39,169 Waiting for running processes to finish
+2024-09-17 13:18:39,270 Waiting for running processes to finish
+2024-09-17 13:18:39,370 Waiting for running processes to finish
+2024-09-17 13:18:39,471 Waiting for running processes to finish
+2024-09-17 13:18:39,572 Waiting for running processes to finish
+2024-09-17 13:18:39,672 Waiting for running processes to finish
+2024-09-17 13:18:39,773 Waiting for running processes to finish
+2024-09-17 13:18:39,873 Waiting for running processes to finish
+2024-09-17 13:18:39,974 Waiting for running processes to finish
+2024-09-17 13:18:40,075 Waiting for running processes to finish
+2024-09-17 13:18:40,175 Waiting for running processes to finish
+2024-09-17 13:18:40,358 Waiting for running processes to finish
+2024-09-17 13:18:40,459 Waiting for running processes to finish
+2024-09-17 13:18:40,559 Waiting for running processes to finish
+2024-09-17 13:18:40,660 Waiting for running processes to finish
+2024-09-17 13:18:40,761 Waiting for running processes to finish
+2024-09-17 13:18:40,861 Waiting for running processes to finish
+2024-09-17 13:18:40,962 Waiting for running processes to finish
+2024-09-17 13:18:41,063 Waiting for running processes to finish
+2024-09-17 13:18:41,163 Waiting for running processes to finish
+2024-09-17 13:18:41,264 Waiting for running processes to finish
+2024-09-17 13:18:41,365 Waiting for running processes to finish
+2024-09-17 13:18:41,465 Waiting for running processes to finish
+2024-09-17 13:18:41,566 Waiting for running processes to finish
+2024-09-17 13:18:41,667 Waiting for running processes to finish
+2024-09-17 13:18:41,767 Waiting for running processes to finish
+2024-09-17 13:18:41,868 Waiting for running processes to finish
+2024-09-17 13:18:41,969 Waiting for running processes to finish
+2024-09-17 13:18:42,069 Waiting for running processes to finish
+2024-09-17 13:18:42,170 Waiting for running processes to finish
+2024-09-17 13:18:42,271 Waiting for running processes to finish
+2024-09-17 13:18:42,479 Waiting for running processes to finish
+2024-09-17 13:18:42,580 Waiting for running processes to finish
+2024-09-17 13:18:42,681 Waiting for running processes to finish
+2024-09-17 13:18:42,781 Waiting for running processes to finish
+2024-09-17 13:18:42,882 Waiting for running processes to finish
+2024-09-17 13:18:42,983 Waiting for running processes to finish
+2024-09-17 13:18:43,083 Waiting for running processes to finish
+2024-09-17 13:18:43,184 Waiting for running processes to finish
+2024-09-17 13:18:43,285 Waiting for running processes to finish
+2024-09-17 13:18:43,385 Waiting for running processes to finish
+2024-09-17 13:18:43,525 Waiting for running processes to finish
+2024-09-17 13:18:43,525 Loaded model llama3-8b
+2024-09-17 13:18:43,529 Batch processing started for model llama3-8b
+2024-09-17 13:18:43,626 Waiting for running processes to finish
+2024-09-17 13:18:43,727 Waiting for running processes to finish
+2024-09-17 13:18:43,827 Waiting for running processes to finish
+2024-09-17 13:18:43,928 Waiting for running processes to finish
+2024-09-17 13:18:44,029 Waiting for running processes to finish
+2024-09-17 13:18:44,129 Waiting for running processes to finish
+2024-09-17 13:18:44,230 Waiting for running processes to finish
+2024-09-17 13:18:44,331 Waiting for running processes to finish
+2024-09-17 13:18:44,431 Waiting for running processes to finish
+2024-09-17 13:18:44,532 Waiting for running processes to finish
+2024-09-17 13:18:44,633 Waiting for running processes to finish
+2024-09-17 13:18:44,734 Waiting for running processes to finish
+2024-09-17 13:18:44,834 Waiting for running processes to finish
+2024-09-17 13:18:44,935 Waiting for running processes to finish
+2024-09-17 13:18:45,036 Waiting for running processes to finish
+2024-09-17 13:18:45,136 Waiting for running processes to finish
+2024-09-17 13:18:45,237 Waiting for running processes to finish
+2024-09-17 13:18:45,338 Waiting for running processes to finish
+2024-09-17 13:18:45,438 Waiting for running processes to finish
+2024-09-17 13:18:45,507 Processed batch: ['0472e588'] with model llama3-8b in 1.9785 seconds
+2024-09-17 13:18:45,507 Saving sys info
+2024-09-17 13:18:45,507 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 500, in inference
+    completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 264, in process_batch
+    sys_info = monitor.get_sys_info()
+NameError: name 'monitor' is not defined
+2024-09-17 13:18:45,508 127.0.0.1 - - [17/Sep/2024 13:18:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-17 13:18:45,508 No batch to process for model llama3-8b
+2024-09-17 13:18:45,509 127.0.0.1 - - [17/Sep/2024 13:18:45] "POST /inference HTTP/1.1" 200 -
+2024-09-17 13:18:45,509 Next: call load_model for granite-7b
+2024-09-17 13:18:45,510 Unloaded previous model
+2024-09-17 13:18:45,580 Waiting for running processes to finish
+2024-09-17 13:18:45,747 Waiting for running processes to finish
+2024-09-17 13:18:45,923 Waiting for running processes to finish
+2024-09-17 13:18:46,048 Waiting for running processes to finish
+2024-09-17 13:18:46,176 Waiting for running processes to finish
+2024-09-17 13:18:46,281 Waiting for running processes to finish
+2024-09-17 13:18:46,381 Waiting for running processes to finish
+2024-09-17 13:18:46,482 Waiting for running processes to finish
+2024-09-17 13:18:46,583 Waiting for running processes to finish
+2024-09-17 13:18:46,683 Waiting for running processes to finish
+2024-09-17 13:18:46,784 Waiting for running processes to finish
+2024-09-17 13:18:46,885 Waiting for running processes to finish
+2024-09-17 13:18:46,985 Waiting for running processes to finish
+2024-09-17 13:18:47,086 Waiting for running processes to finish
+2024-09-17 13:18:47,187 Waiting for running processes to finish
+2024-09-17 13:18:47,287 Waiting for running processes to finish
+2024-09-17 13:18:47,388 Waiting for running processes to finish
+2024-09-17 13:18:47,489 Waiting for running processes to finish
+2024-09-17 13:18:47,589 Waiting for running processes to finish
+2024-09-17 13:18:47,690 Waiting for running processes to finish
+2024-09-17 13:18:47,791 Waiting for running processes to finish
+2024-09-17 13:18:47,950 Waiting for running processes to finish
+2024-09-17 13:18:48,051 Waiting for running processes to finish
+2024-09-17 13:18:48,151 Waiting for running processes to finish
+2024-09-17 13:18:48,252 Waiting for running processes to finish
+2024-09-17 13:18:48,353 Waiting for running processes to finish
+2024-09-17 13:18:48,453 Waiting for running processes to finish
+2024-09-17 13:18:48,554 Waiting for running processes to finish
+2024-09-17 13:18:48,655 Waiting for running processes to finish
+2024-09-17 13:18:48,755 Waiting for running processes to finish
+2024-09-17 13:18:48,856 Waiting for running processes to finish
+2024-09-17 13:18:48,957 Waiting for running processes to finish
+2024-09-17 13:18:49,057 Waiting for running processes to finish
+2024-09-17 13:18:49,158 Waiting for running processes to finish
+2024-09-17 13:18:49,259 Waiting for running processes to finish
+2024-09-17 13:18:49,359 Waiting for running processes to finish
+2024-09-17 13:18:49,460 Waiting for running processes to finish
+2024-09-17 13:18:49,565 Waiting for running processes to finish
+2024-09-17 13:18:49,666 Waiting for running processes to finish
+2024-09-17 13:18:49,767 Waiting for running processes to finish
+2024-09-17 13:18:49,867 Waiting for running processes to finish
+2024-09-17 13:18:49,968 Waiting for running processes to finish
+2024-09-17 13:18:50,069 Waiting for running processes to finish
+2024-09-17 13:18:50,169 Waiting for running processes to finish
+2024-09-17 13:18:50,270 Waiting for running processes to finish
+2024-09-17 13:18:50,370 Waiting for running processes to finish
+2024-09-17 13:18:50,471 Waiting for running processes to finish
+2024-09-17 13:18:50,572 Waiting for running processes to finish
+2024-09-17 13:18:50,673 Waiting for running processes to finish
+2024-09-17 13:18:50,773 Waiting for running processes to finish
+2024-09-17 13:18:50,874 Waiting for running processes to finish
+2024-09-17 13:18:50,975 Waiting for running processes to finish
+2024-09-17 13:18:51,144 Waiting for running processes to finish
+2024-09-17 13:18:51,245 Waiting for running processes to finish
+2024-09-17 13:18:51,345 Waiting for running processes to finish
+2024-09-17 13:18:51,446 Waiting for running processes to finish
+2024-09-17 13:18:51,547 Waiting for running processes to finish
+2024-09-17 13:18:51,647 Waiting for running processes to finish
+2024-09-17 13:18:51,748 Waiting for running processes to finish
+2024-09-17 13:18:51,849 Waiting for running processes to finish
+2024-09-17 13:18:51,950 Waiting for running processes to finish
+2024-09-17 13:18:52,050 Waiting for running processes to finish
+2024-09-17 13:18:52,151 Waiting for running processes to finish
+2024-09-17 13:18:52,252 Waiting for running processes to finish
+2024-09-17 13:18:52,352 Waiting for running processes to finish
+2024-09-17 13:18:52,453 Waiting for running processes to finish
+2024-09-17 13:18:52,642 Waiting for running processes to finish
+2024-09-17 13:18:52,743 Waiting for running processes to finish
+2024-09-17 13:18:52,844 Waiting for running processes to finish
+2024-09-17 13:18:52,945 Waiting for running processes to finish
+2024-09-17 13:18:53,045 Waiting for running processes to finish
+2024-09-17 13:18:53,146 Waiting for running processes to finish
+2024-09-17 13:18:53,247 Waiting for running processes to finish
+2024-09-17 13:18:53,347 Waiting for running processes to finish
+2024-09-17 13:18:53,448 Waiting for running processes to finish
+2024-09-17 13:18:53,549 Waiting for running processes to finish
+2024-09-17 13:18:53,649 Waiting for running processes to finish
+2024-09-17 13:18:53,750 Waiting for running processes to finish
+2024-09-17 13:18:53,851 Waiting for running processes to finish
+2024-09-17 13:18:53,951 Waiting for running processes to finish
+2024-09-17 13:18:54,150 Waiting for running processes to finish
+2024-09-17 13:18:54,250 Waiting for running processes to finish
+2024-09-17 13:18:54,351 Waiting for running processes to finish
+2024-09-17 13:18:54,452 Waiting for running processes to finish
+2024-09-17 13:18:54,552 Waiting for running processes to finish
+2024-09-17 13:18:54,653 Waiting for running processes to finish
+2024-09-17 13:18:54,754 Waiting for running processes to finish
+2024-09-17 13:18:54,854 Waiting for running processes to finish
+2024-09-17 13:18:54,966 Waiting for running processes to finish
+2024-09-17 13:18:54,967 Loaded model granite-7b
+2024-09-17 13:18:54,970 Batch processing started for model granite-7b
+2024-09-17 13:18:55,067 Waiting for running processes to finish
+2024-09-17 13:18:55,168 Waiting for running processes to finish
+2024-09-17 13:18:55,269 Waiting for running processes to finish
+2024-09-17 13:18:55,370 Waiting for running processes to finish
+2024-09-17 13:18:55,470 Waiting for running processes to finish
+2024-09-17 13:18:55,571 Waiting for running processes to finish
+2024-09-17 13:18:55,672 Waiting for running processes to finish
+2024-09-17 13:18:55,772 Waiting for running processes to finish
+2024-09-17 13:18:55,873 Waiting for running processes to finish
+2024-09-17 13:18:55,974 Waiting for running processes to finish
+2024-09-17 13:18:56,075 Waiting for running processes to finish
+2024-09-17 13:18:56,175 Waiting for running processes to finish
+2024-09-17 13:18:56,276 Waiting for running processes to finish
+2024-09-17 13:18:56,377 Waiting for running processes to finish
+2024-09-17 13:18:56,477 Waiting for running processes to finish
+2024-09-17 13:18:56,578 Waiting for running processes to finish
+2024-09-17 13:18:56,587 Processed batch: ['f97661e0'] with model granite-7b in 1.6175 seconds
+2024-09-17 13:18:56,587 Saving sys info
+2024-09-17 13:18:56,588 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 500, in inference
+    completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 264, in process_batch
+    sys_info = monitor.get_sys_info()
+NameError: name 'monitor' is not defined
+2024-09-17 13:18:56,588 127.0.0.1 - - [17/Sep/2024 13:18:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-17 13:18:56,588 No batch to process for model granite-7b
+2024-09-17 13:18:56,589 127.0.0.1 - - [17/Sep/2024 13:18:56] "POST /inference HTTP/1.1" 200 -
+2024-09-17 13:18:56,590 Next: call load_model for gemma-7b
+2024-09-17 13:18:56,590 Unloaded previous model
+2024-09-17 13:18:57,084 Waiting for running processes to finish
+2024-09-17 13:18:57,245 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 388, in inference
+    total_time = last_batch_processed_time - first_request_time
+NameError: name 'last_batch_processed_time' is not defined
+2024-09-17 13:18:57,250 127.0.0.1 - - [17/Sep/2024 13:18:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
