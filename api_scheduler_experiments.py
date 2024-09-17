@@ -77,6 +77,7 @@ last_request_time = None
 monitoring = False
 if device == "cuda":
     monitoring == True
+    logging.debug(f"Monitoring status set to {monitoring}")
     monitor = Monitor(cuda_enabled=True)
 
 
@@ -258,6 +259,7 @@ def process_batch(model_alias, condition, batch_size):
             logging.debug(f"Processed batch: {list(responses.keys())} with model {model_alias} in {end_time - start_time:.4f} seconds")
 
             if monitoring == True:
+                logging.debug("Saving sys info")
                 sys_info = monitor.get_sys_info()
 
             batch_inference_time = end_time - start_time
@@ -275,8 +277,10 @@ def process_batch(model_alias, condition, batch_size):
 
                 # Save the latency result to a CSV file
                 if monitoring == True:
+                    logging.debug("Saving results with gpu monitoring")
                     save_measurements_and_monitor(request_id, model_alias, current_batch_size, latency, batch_throughput, sys_info)
                 else:
+                    logging.debug("Saving results without gpu monitoring")
                     save_measurements(request_id, model_alias, current_batch_size, latency, batch_throughput)
 
             # Reset the timer for the next batch
