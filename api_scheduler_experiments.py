@@ -154,11 +154,12 @@ def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, 
         "model": model_alias,
         "batch_size": batch_size,
         "latency": latency,
-        "throughput": throughput     
+        "throughput": throughput,
+        "sys_info": sys_info
     }
 
     sys_info_columns = {
-            key: [status[key] for status in df["sys_info"]]
+            key: [status[key] for status in df0["sys_info"]]
             for key in df["sys_info"][0].keys()
         }
     data = pd.concat([df0, pd.DataFrame(sys_info_columns)], axis=1)
