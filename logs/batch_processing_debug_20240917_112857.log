@@ -1,0 +1,76 @@
+2024-09-17 11:28:57,869 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-17 11:28:57,869 [33mPress CTRL+C to quit[0m
+2024-09-17 11:29:10,927 Request with ID 03a825f7 for model gpt2medium-355m received
+2024-09-17 11:29:10,927 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:29:10,927 Next: call load_model for gpt2medium-355m
+2024-09-17 11:29:11,088 Loaded model gpt2medium-355m
+2024-09-17 11:29:11,088 Batch processing started for model gpt2medium-355m
+2024-09-17 11:29:12,252 Request with ID 5e41fc3a for model gpt2medium-355m received
+2024-09-17 11:29:12,253 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:29:13,542 Processed batch: ['03a825f7'] with model gpt2medium-355m in 2.4547 seconds
+2024-09-17 11:29:13,543 Latency for request 03a825f7 with model gpt2medium-355m: 2.6156 seconds
+2024-09-17 11:29:13,546 127.0.0.1 - - [17/Sep/2024 11:29:13] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:29:13,546 Next: call load_model for gpt2medium-355m
+2024-09-17 11:29:13,546 Model gpt2medium-355m already loaded
+2024-09-17 11:29:13,546 Batch processing started for model gpt2medium-355m
+2024-09-17 11:29:14,507 Request with ID 93d4ee40 for model gpt2-124m received
+2024-09-17 11:29:14,508 Batch size condition met for model gpt2-124m
+2024-09-17 11:29:15,694 Processed batch: ['5e41fc3a'] with model gpt2medium-355m in 2.1485 seconds
+2024-09-17 11:29:15,695 Latency for request 5e41fc3a with model gpt2medium-355m: 3.4421 seconds
+2024-09-17 11:29:15,695 127.0.0.1 - - [17/Sep/2024 11:29:15] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:29:15,695 Next: call load_model for gpt2-124m
+2024-09-17 11:29:15,704 Unloaded previous model
+2024-09-17 11:29:15,765 Loaded model gpt2-124m
+2024-09-17 11:29:15,765 Batch processing started for model gpt2-124m
+2024-09-17 11:29:16,834 Request with ID ee006a01 for model distilgpt2-124m received
+2024-09-17 11:29:16,834 Batch size condition met for model distilgpt2-124m
+2024-09-17 11:29:17,371 Processed batch: ['93d4ee40'] with model gpt2-124m in 1.6056 seconds
+2024-09-17 11:29:17,371 Latency for request 93d4ee40 with model gpt2-124m: 2.8637 seconds
+2024-09-17 11:29:17,372 127.0.0.1 - - [17/Sep/2024 11:29:17] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:29:17,372 Next: call load_model for distilgpt2-124m
+2024-09-17 11:29:17,380 Unloaded previous model
+2024-09-17 11:29:17,427 Loaded model distilgpt2-124m
+2024-09-17 11:29:17,427 Batch processing started for model distilgpt2-124m
+2024-09-17 11:29:18,269 Request with ID 0ae91e6f for model gpt2-124m received
+2024-09-17 11:29:18,269 Batch size condition met for model gpt2-124m
+2024-09-17 11:29:18,554 Processed batch: ['ee006a01'] with model distilgpt2-124m in 1.1275 seconds
+2024-09-17 11:29:18,554 Latency for request ee006a01 with model distilgpt2-124m: 1.7207 seconds
+2024-09-17 11:29:18,555 127.0.0.1 - - [17/Sep/2024 11:29:18] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:29:18,555 Next: call load_model for gpt2-124m
+2024-09-17 11:29:18,561 Unloaded previous model
+2024-09-17 11:29:18,618 Loaded model gpt2-124m
+2024-09-17 11:29:18,618 Batch processing started for model gpt2-124m
+2024-09-17 11:29:19,437 Processed batch: ['0ae91e6f'] with model gpt2-124m in 0.8189 seconds
+2024-09-17 11:29:19,437 Latency for request 0ae91e6f with model gpt2-124m: 1.1681 seconds
+2024-09-17 11:29:19,438 127.0.0.1 - - [17/Sep/2024 11:29:19] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:29:20,457 Request with ID cd23401f for model gpt2medium-355m received
+2024-09-17 11:29:20,457 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:29:20,457 Next: call load_model for gpt2medium-355m
+2024-09-17 11:29:20,480 Unloaded previous model
+2024-09-17 11:29:20,610 Loaded model gpt2medium-355m
+2024-09-17 11:29:20,610 Batch processing started for model gpt2medium-355m
+2024-09-17 11:29:20,929 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/Documents/SINCERE/api_scheduler_experiments.py", line 359, in inference
+    if model_alias=="Stop" and inference_flag == False and remaining_requests==0:
+                               ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'inference_flag' where it is not associated with a value
+2024-09-17 11:29:20,932 127.0.0.1 - - [17/Sep/2024 11:29:20] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-17 11:29:22,963 Processed batch: ['cd23401f'] with model gpt2medium-355m in 2.3526 seconds
+2024-09-17 11:29:22,963 Latency for request cd23401f with model gpt2medium-355m: 2.5063 seconds
+2024-09-17 11:29:22,964 127.0.0.1 - - [17/Sep/2024 11:29:22] "POST /inference HTTP/1.1" 200 -

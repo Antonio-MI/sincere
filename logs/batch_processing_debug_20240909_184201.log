@@ -1,7 +1,0 @@
-2024-09-09 18:42:01,786  * Debugger is active!
-2024-09-09 18:42:01,798  * Debugger PIN: 128-860-637
-2024-09-09 18:42:12,482 127.0.0.1 - - [09/Sep/2024 18:42:12] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
-2024-09-09 18:42:14,962 127.0.0.1 - - [09/Sep/2024 18:42:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
-2024-09-09 18:42:15,957 127.0.0.1 - - [09/Sep/2024 18:42:15] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
-2024-09-09 18:42:16,138 127.0.0.1 - - [09/Sep/2024 18:42:16] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
-2024-09-09 18:43:01,727  * Detected change in '/Users/amartinezi/Documents/SINCERE/api_scheduler.py', reloading

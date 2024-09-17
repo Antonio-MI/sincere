@@ -1,0 +1,114 @@
+2024-09-17 11:56:45,728 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-17 11:56:45,728 [33mPress CTRL+C to quit[0m
+2024-09-17 11:56:50,245 Request with ID fd082a11 for model gpt2medium-355m received
+2024-09-17 11:56:50,245 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:56:50,245 Next: call load_model for gpt2medium-355m
+2024-09-17 11:56:50,354 Loaded model gpt2medium-355m
+2024-09-17 11:56:50,354 Batch processing started for model gpt2medium-355m
+2024-09-17 11:56:51,571 Request with ID 97e7eda5 for model gpt2medium-355m received
+2024-09-17 11:56:51,571 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:56:52,143 Processed batch: ['fd082a11'] with model gpt2medium-355m in 1.7889 seconds
+2024-09-17 11:56:52,143 Latency for request fd082a11 with model gpt2medium-355m: 1.8987 seconds
+2024-09-17 11:56:52,146 127.0.0.1 - - [17/Sep/2024 11:56:52] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:56:52,146 Next: call load_model for gpt2medium-355m
+2024-09-17 11:56:52,146 Model gpt2medium-355m already loaded
+2024-09-17 11:56:52,147 Batch processing started for model gpt2medium-355m
+2024-09-17 11:56:52,592 Processed batch: ['97e7eda5'] with model gpt2medium-355m in 0.4456 seconds
+2024-09-17 11:56:52,592 Latency for request 97e7eda5 with model gpt2medium-355m: 1.0211 seconds
+2024-09-17 11:56:52,593 127.0.0.1 - - [17/Sep/2024 11:56:52] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:56:53,830 Request with ID 6ae02dfb for model gpt2-124m received
+2024-09-17 11:56:53,830 Batch size condition met for model gpt2-124m
+2024-09-17 11:56:53,831 Next: call load_model for gpt2-124m
+2024-09-17 11:56:53,862 Unloaded previous model
+2024-09-17 11:56:53,932 Loaded model gpt2-124m
+2024-09-17 11:56:53,932 Batch processing started for model gpt2-124m
+2024-09-17 11:56:54,667 Processed batch: ['6ae02dfb'] with model gpt2-124m in 0.7356 seconds
+2024-09-17 11:56:54,668 Latency for request 6ae02dfb with model gpt2-124m: 0.8375 seconds
+2024-09-17 11:56:54,668 127.0.0.1 - - [17/Sep/2024 11:56:54] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:56:56,157 Request with ID de7fb51a for model distilgpt2-124m received
+2024-09-17 11:56:56,158 Batch size condition met for model distilgpt2-124m
+2024-09-17 11:56:56,158 Next: call load_model for distilgpt2-124m
+2024-09-17 11:56:56,181 Unloaded previous model
+2024-09-17 11:56:56,244 Loaded model distilgpt2-124m
+2024-09-17 11:56:56,244 Batch processing started for model distilgpt2-124m
+2024-09-17 11:56:56,789 Processed batch: ['de7fb51a'] with model distilgpt2-124m in 0.5446 seconds
+2024-09-17 11:56:56,789 Latency for request de7fb51a with model distilgpt2-124m: 0.6313 seconds
+2024-09-17 11:56:56,789 127.0.0.1 - - [17/Sep/2024 11:56:56] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:56:57,589 Request with ID 452fc6c2 for model gpt2-124m received
+2024-09-17 11:56:57,589 Batch size condition met for model gpt2-124m
+2024-09-17 11:56:57,589 Next: call load_model for gpt2-124m
+2024-09-17 11:56:57,595 Unloaded previous model
+2024-09-17 11:56:57,655 Loaded model gpt2-124m
+2024-09-17 11:56:57,655 Batch processing started for model gpt2-124m
+2024-09-17 11:56:58,455 Processed batch: ['452fc6c2'] with model gpt2-124m in 0.8002 seconds
+2024-09-17 11:56:58,456 Latency for request 452fc6c2 with model gpt2-124m: 0.8664 seconds
+2024-09-17 11:56:58,456 127.0.0.1 - - [17/Sep/2024 11:56:58] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:56:59,773 Request with ID b05dea2e for model gpt2medium-355m received
+2024-09-17 11:56:59,773 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:56:59,773 Next: call load_model for gpt2medium-355m
+2024-09-17 11:56:59,800 Unloaded previous model
+2024-09-17 11:56:59,927 Loaded model gpt2medium-355m
+2024-09-17 11:56:59,928 Batch processing started for model gpt2medium-355m
+2024-09-17 11:57:02,046 Request with ID 495f9316 for model gpt2medium-355m received
+2024-09-17 11:57:02,046 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:57:02,152 Processed batch: ['b05dea2e'] with model gpt2medium-355m in 2.2250 seconds
+2024-09-17 11:57:02,153 Latency for request b05dea2e with model gpt2medium-355m: 2.3796 seconds
+2024-09-17 11:57:02,153 127.0.0.1 - - [17/Sep/2024 11:57:02] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:02,153 Next: call load_model for gpt2medium-355m
+2024-09-17 11:57:02,153 Model gpt2medium-355m already loaded
+2024-09-17 11:57:02,153 Batch processing started for model gpt2medium-355m
+2024-09-17 11:57:04,229 Request with ID 74f4e7e1 for model gpt2-124m received
+2024-09-17 11:57:04,229 Batch size condition met for model gpt2-124m
+2024-09-17 11:57:04,239 Processed batch: ['495f9316'] with model gpt2medium-355m in 2.0859 seconds
+2024-09-17 11:57:04,239 Latency for request 495f9316 with model gpt2medium-355m: 2.1938 seconds
+2024-09-17 11:57:04,240 127.0.0.1 - - [17/Sep/2024 11:57:04] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:04,240 Next: call load_model for gpt2-124m
+2024-09-17 11:57:04,252 Unloaded previous model
+2024-09-17 11:57:04,316 Loaded model gpt2-124m
+2024-09-17 11:57:04,316 Batch processing started for model gpt2-124m
+2024-09-17 11:57:04,927 Request with ID 7d4fdeb3 for model gpt2-124m received
+2024-09-17 11:57:04,927 Batch size condition met for model gpt2-124m
+2024-09-17 11:57:05,196 Processed batch: ['74f4e7e1'] with model gpt2-124m in 0.8804 seconds
+2024-09-17 11:57:05,197 Latency for request 74f4e7e1 with model gpt2-124m: 0.9672 seconds
+2024-09-17 11:57:05,197 127.0.0.1 - - [17/Sep/2024 11:57:05] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:05,197 Next: call load_model for gpt2-124m
+2024-09-17 11:57:05,197 Model gpt2-124m already loaded
+2024-09-17 11:57:05,197 Batch processing started for model gpt2-124m
+2024-09-17 11:57:05,586 Request with ID 5d5a8eab for model distilgpt2-124m received
+2024-09-17 11:57:05,586 Batch size condition met for model distilgpt2-124m
+2024-09-17 11:57:06,020 Processed batch: ['7d4fdeb3'] with model gpt2-124m in 0.8223 seconds
+2024-09-17 11:57:06,020 Latency for request 7d4fdeb3 with model gpt2-124m: 1.0931 seconds
+2024-09-17 11:57:06,021 127.0.0.1 - - [17/Sep/2024 11:57:06] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:06,021 Next: call load_model for distilgpt2-124m
+2024-09-17 11:57:06,029 Unloaded previous model
+2024-09-17 11:57:06,079 Loaded model distilgpt2-124m
+2024-09-17 11:57:06,079 Batch processing started for model distilgpt2-124m
+2024-09-17 11:57:06,402 Request with ID 1e8c0646 for model gpt2medium-355m received
+2024-09-17 11:57:06,402 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:57:06,686 Processed batch: ['5d5a8eab'] with model distilgpt2-124m in 0.6070 seconds
+2024-09-17 11:57:06,686 Latency for request 5d5a8eab with model distilgpt2-124m: 1.0997 seconds
+2024-09-17 11:57:06,687 127.0.0.1 - - [17/Sep/2024 11:57:06] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:06,687 Next: call load_model for gpt2medium-355m
+2024-09-17 11:57:06,693 Unloaded previous model
+2024-09-17 11:57:06,862 Loaded model gpt2medium-355m
+2024-09-17 11:57:06,863 Batch processing started for model gpt2medium-355m
+2024-09-17 11:57:08,011 Request with ID 9b8f5010 for model distilgpt2-124m received
+2024-09-17 11:57:08,011 Batch size condition met for model distilgpt2-124m
+2024-09-17 11:57:09,279 Processed batch: ['1e8c0646'] with model gpt2medium-355m in 2.4169 seconds
+2024-09-17 11:57:09,280 Latency for request 1e8c0646 with model gpt2medium-355m: 2.8773 seconds
+2024-09-17 11:57:09,281 127.0.0.1 - - [17/Sep/2024 11:57:09] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:09,281 Next: call load_model for distilgpt2-124m
+2024-09-17 11:57:09,291 Unloaded previous model
+2024-09-17 11:57:09,347 Loaded model distilgpt2-124m
+2024-09-17 11:57:09,347 Batch processing started for model distilgpt2-124m
+2024-09-17 11:57:09,919 Processed batch: ['9b8f5010'] with model distilgpt2-124m in 0.5719 seconds
+2024-09-17 11:57:09,919 Latency for request 9b8f5010 with model distilgpt2-124m: 1.9087 seconds
+2024-09-17 11:57:09,920 127.0.0.1 - - [17/Sep/2024 11:57:09] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:57:10,247 Total time: 19.6756 seconds
+2024-09-17 11:57:10,247 Total inference time: 13.9242 seconds
+2024-09-17 11:57:10,247 Inference time as percentage of total time: 70.77%
+2024-09-17 11:57:10,247 END
+2024-09-17 11:57:10,247 127.0.0.1 - - [17/Sep/2024 11:57:10] "POST /inference HTTP/1.1" 200 -

@@ -12,7 +12,7 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 30  # seconds
+run_duration = 20  # seconds
 distribution = "gamma" 
 
 model_list = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"]
@@ -92,6 +92,12 @@ async def automated_calls(workloads, run_duration):
             # Adjust sleep time if it exceeds remaining time
             sleep_time = min(interval, remaining_time)
             await asyncio.sleep(sleep_time)
+
+        # Send one last request with the fixed model_alias after the loop finishes
+        final_workload = np.random.choice(workloads)
+        final_workload['model_alias'] = "Stop"
+        print(f"Sending final Stop order")
+        await send_request(session, final_workload)
 
 if __name__ == "__main__":
     try:

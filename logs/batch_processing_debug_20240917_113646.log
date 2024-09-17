@@ -1,0 +1,112 @@
+2024-09-17 11:36:46,402 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-17 11:36:46,402 [33mPress CTRL+C to quit[0m
+2024-09-17 11:36:48,361 Request with ID f1741d89 for model gpt2medium-355m received
+2024-09-17 11:36:48,362 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:36:48,362 Next: call load_model for gpt2medium-355m
+2024-09-17 11:36:48,490 Loaded model gpt2medium-355m
+2024-09-17 11:36:48,490 Batch processing started for model gpt2medium-355m
+2024-09-17 11:36:49,688 Request with ID a3815fbc for model gpt2medium-355m received
+2024-09-17 11:36:49,688 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:36:50,864 Processed batch: ['f1741d89'] with model gpt2medium-355m in 2.3739 seconds
+2024-09-17 11:36:50,864 Latency for request f1741d89 with model gpt2medium-355m: 2.5028 seconds
+2024-09-17 11:36:50,866 127.0.0.1 - - [17/Sep/2024 11:36:50] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:36:50,866 Next: call load_model for gpt2medium-355m
+2024-09-17 11:36:50,866 Model gpt2medium-355m already loaded
+2024-09-17 11:36:50,866 Batch processing started for model gpt2medium-355m
+2024-09-17 11:36:51,943 Request with ID b3f5aef1 for model gpt2-124m received
+2024-09-17 11:36:51,943 Batch size condition met for model gpt2-124m
+2024-09-17 11:36:53,296 Processed batch: ['a3815fbc'] with model gpt2medium-355m in 2.4298 seconds
+2024-09-17 11:36:53,296 Latency for request a3815fbc with model gpt2medium-355m: 3.6086 seconds
+2024-09-17 11:36:53,297 127.0.0.1 - - [17/Sep/2024 11:36:53] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:36:53,298 Next: call load_model for gpt2-124m
+2024-09-17 11:36:53,307 Unloaded previous model
+2024-09-17 11:36:53,392 Loaded model gpt2-124m
+2024-09-17 11:36:53,392 Batch processing started for model gpt2-124m
+2024-09-17 11:36:54,204 Processed batch: ['b3f5aef1'] with model gpt2-124m in 0.8118 seconds
+2024-09-17 11:36:54,204 Latency for request b3f5aef1 with model gpt2-124m: 2.2612 seconds
+2024-09-17 11:36:54,205 127.0.0.1 - - [17/Sep/2024 11:36:54] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:36:54,268 Request with ID 725a63c8 for model distilgpt2-124m received
+2024-09-17 11:36:54,268 Batch size condition met for model distilgpt2-124m
+2024-09-17 11:36:54,268 Next: call load_model for distilgpt2-124m
+2024-09-17 11:36:54,274 Unloaded previous model
+2024-09-17 11:36:54,322 Loaded model distilgpt2-124m
+2024-09-17 11:36:54,322 Batch processing started for model distilgpt2-124m
+2024-09-17 11:36:54,748 Processed batch: ['725a63c8'] with model distilgpt2-124m in 0.4256 seconds
+2024-09-17 11:36:54,748 Latency for request 725a63c8 with model distilgpt2-124m: 0.4799 seconds
+2024-09-17 11:36:54,749 127.0.0.1 - - [17/Sep/2024 11:36:54] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:36:55,708 Request with ID 44e6810e for model gpt2-124m received
+2024-09-17 11:36:55,708 Batch size condition met for model gpt2-124m
+2024-09-17 11:36:55,708 Next: call load_model for gpt2-124m
+2024-09-17 11:36:55,731 Unloaded previous model
+2024-09-17 11:36:55,803 Loaded model gpt2-124m
+2024-09-17 11:36:55,803 Batch processing started for model gpt2-124m
+2024-09-17 11:36:56,618 Processed batch: ['44e6810e'] with model gpt2-124m in 0.8150 seconds
+2024-09-17 11:36:56,618 Latency for request 44e6810e with model gpt2-124m: 0.9107 seconds
+2024-09-17 11:36:56,619 127.0.0.1 - - [17/Sep/2024 11:36:56] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:36:57,888 Request with ID 6fb47490 for model gpt2medium-355m received
+2024-09-17 11:36:57,888 Batch size condition met for model gpt2medium-355m
+2024-09-17 11:36:57,888 Next: call load_model for gpt2medium-355m
+2024-09-17 11:36:57,917 Unloaded previous model
+2024-09-17 11:36:58,051 Loaded model gpt2medium-355m
+2024-09-17 11:36:58,051 Batch processing started for model gpt2medium-355m
+2024-09-17 11:36:58,362 Total time: 1726484600.9652 seconds
+2024-09-17 11:36:58,362 Total inference time: 6.8560 seconds
+2024-09-17 11:36:58,362 Inference time as percentage of total time: 0.00%
+2024-09-17 11:36:58,362 END
+2024-09-17 11:36:58,362 Request with ID ef81ce8b for model Stop received
+2024-09-17 11:36:58,362 Batch size condition met for model Stop
+2024-09-17 11:37:00,432 Processed batch: ['6fb47490'] with model gpt2medium-355m in 2.3808 seconds
+2024-09-17 11:37:00,432 Latency for request 6fb47490 with model gpt2medium-355m: 2.5439 seconds
+2024-09-17 11:37:00,433 127.0.0.1 - - [17/Sep/2024 11:37:00] "POST /inference HTTP/1.1" 200 -
+2024-09-17 11:37:00,433 Next: call load_model for Stop
+2024-09-17 11:37:00,443 Unloaded previous model
+2024-09-17 11:37:00,443 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/transformers/utils/hub.py", line 402, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './models/Stop'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/Documents/SINCERE/api_scheduler_experiments.py", line 471, in inference
+    completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/Documents/SINCERE/api_scheduler_experiments.py", line 213, in process_batch
+    load_model(model_alias)
+  File "/Users/amartinezi/Documents/SINCERE/api_scheduler_experiments.py", line 95, in load_model
+    tokenizer = AutoTokenizer.from_pretrained(model_dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 834, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 666, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/Users/amartinezi/miniconda3/envs/confidentialinference/lib/python3.12/site-packages/transformers/utils/hub.py", line 466, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: './models/Stop'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2024-09-17 11:37:00,448 127.0.0.1 - - [17/Sep/2024 11:37:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -

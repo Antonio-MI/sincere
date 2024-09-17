@@ -17,7 +17,7 @@ api_url = "http://127.0.0.1:5000/inference"
 workload_folder = "./workloads"
 
 # List of batch sizes to profile
-batch_sizes = [1, 2, 3, 4, 6, 7, 8, 11, 13, 16, 19, 23, 29, 32, 37, 47, 51, 64, 71, 83, 91, 100, 112, 128, 144, 256, 333, 512, 726, 1024, 2048, 4096, 8192, 16384, 32768] 
+batch_sizes = [1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 17, 19, 23, 29, 31, 32, 37, 41, 43, 47, 53, 59, 61, 64, 71, 73, 83, 91, 128, 144, 256, 512, 1024, 2048] #, 4096, 8192, 16384, 32768] 
 
 # List of models to profile
 models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]  # Add more models as needed
