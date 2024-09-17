@@ -149,7 +149,7 @@ def save_measurements(request_id, model_alias, batch_size, latency, throughput):
 def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, throughput, sys_info):
     csv_filename = f"measurements_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
-    df0 = {
+    data = {
         "request_id": request_id,
         "model": model_alias,
         "batch_size": batch_size,
@@ -158,14 +158,12 @@ def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, 
         "sys_info": sys_info
     }
 
-    sys_info_columns = {
-            key: [status[key] for status in df0["sys_info"]]
-            for key in df0["sys_info"].keys()
-        }
-    data = pd.concat([df0, pd.DataFrame(sys_info_columns)], axis=1)
-    data = data.drop("sys_info", axis=1)
-
+    # Update the data dictionary with the sys_info entries
+    data.update(sys_info)
+    
+    # Convert the combined data into a DataFrame
     df = pd.DataFrame([data])
+
     file_exists = os.path.isfile(csv_path)
     if file_exists:
         df.to_csv(csv_path, mode="a", header=False, index=False)
