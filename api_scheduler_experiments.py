@@ -29,9 +29,6 @@ machine_name = platform.node()
 # Folder containing models
 base_dir = "./models"
 
-# Select device, cpu for now
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-logging.debug(f"Using device: {device}") # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -73,12 +70,12 @@ inference_flag = False
 
 last_request_time = None
 
-# Initialize the GPU monitoring
-monitoring = False
-if device == "cuda":
-    monitoring == True
-    logging.debug(f"Monitoring status set to {monitoring}")
-    monitor = Monitor(cuda_enabled=True)
+# # Initialize the GPU monitoring
+# monitoring = False
+# if device == "cuda":
+#     monitoring == True
+#     logging.debug(f"Monitoring status set to {monitoring}")
+#     monitor = Monitor(cuda_enabled=True)
 
 
 # Function to load models
@@ -516,6 +513,18 @@ if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
     # threading.Thread(target=background_batch_processor, daemon=True).start()
+
+    # Select device, cpu for now
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    logging.debug(f"Using device: {device}") # Check with nvidia-smi
+
+    # Initialize the GPU monitoring
+    monitoring = False
+    if device == "cuda":
+        monitoring == True
+        logging.debug(f"Monitoring status set to {monitoring}")
+        monitor = Monitor(cuda_enabled=True)
+
 
     # Start the Flask app
     app.run(host='0.0.0.0', port=5000, debug=False)
