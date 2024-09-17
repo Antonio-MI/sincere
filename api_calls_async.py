@@ -15,7 +15,7 @@ random.seed(42)
 run_duration = 20  # seconds
 distribution = "gamma" 
 
-model_list = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"]
+model_list = ["granite-7b", "gemma-7b", "llama3-8b"]
 
 # Define the parameters for the Gamma distribution
 shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution

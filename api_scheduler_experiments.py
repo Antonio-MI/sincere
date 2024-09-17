@@ -50,7 +50,7 @@ if mode == "FCFS":
 # batch_time_limit = 15  # Seconds
 
 # List of allowed models
-allowed_models = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop"]#["granite-7b", "gemma-7b", "llama3-8b"]
+allowed_models = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
 
 # Lock to not process another batch until the current one has finished
 batch_processing_lock = threading.Lock()
