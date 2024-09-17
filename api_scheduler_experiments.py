@@ -211,7 +211,7 @@ total_inference_time = 0  # Global variable to track total inference time
 
 
 def process_batch(model_alias, condition, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
 
     logging.debug(f"{condition} condition met for model {model_alias}")
 
