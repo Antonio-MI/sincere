@@ -94,7 +94,7 @@ def load_model(model_alias):
     if loaded_models:
         for old_model_alias in list(loaded_models.keys()):
             del loaded_models[old_model_alias]
-            if device=="cuda": 
+            if device.type=="cuda": 
                 torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
         logging.debug(f"Unloaded previous model")
 
@@ -138,8 +138,6 @@ def save_measurements(request_id, model_alias, batch_size, latency, throughput):
         "batch_size": batch_size,
         "latency": latency,
         "throughput": throughput
-        
-        
     }
     df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
@@ -169,7 +167,7 @@ def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, 
     # data = pd.concat([df0, pd.DataFrame(sys_info_columns)], axis=1)
     # data = data.drop("sys_info", axis=1)
 
-    df = pd.DataFrame([datadf0])
+    df = pd.DataFrame([df0])
     file_exists = os.path.isfile(csv_path)
     if file_exists:
         df.to_csv(csv_path, mode="a", header=False, index=False)
