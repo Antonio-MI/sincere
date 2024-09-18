@@ -1,0 +1,1244 @@
+2024-09-17 14:04:40,043 Using device: cuda
+2024-09-17 14:04:40,044 Scheduling mode set as FCFS
+2024-09-17 14:04:40,044 Monitoring status set to True
+2024-09-17 14:04:55,119 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-17 14:04:55,119 [33mPress CTRL+C to quit[0m
+2024-09-17 14:04:59,222 Request with ID cee53f85 for model llama3-8b received
+2024-09-17 14:04:59,223 Batch size condition met for model llama3-8b
+2024-09-17 14:04:59,223 Next: call load_model for llama3-8b
+2024-09-17 14:05:00,615 Request with ID 7428076c for model llama3-8b received
+2024-09-17 14:05:00,615 Batch size condition met for model llama3-8b
+2024-09-17 14:05:02,809 Request with ID 08ef24f4 for model granite-7b received
+2024-09-17 14:05:02,809 Batch size condition met for model granite-7b
+2024-09-17 14:05:05,137 Request with ID 021c82c1 for model gemma-7b received
+2024-09-17 14:05:05,138 Batch size condition met for model gemma-7b
+2024-09-17 14:05:06,574 Request with ID 2c44bfd3 for model granite-7b received
+2024-09-17 14:05:06,574 Batch size condition met for model granite-7b
+2024-09-17 14:05:08,757 Request with ID 4368f3d0 for model llama3-8b received
+2024-09-17 14:05:08,757 Batch size condition met for model llama3-8b
+2024-09-17 14:05:11,034 Request with ID efc5dc72 for model llama3-8b received
+2024-09-17 14:05:11,035 Batch size condition met for model llama3-8b
+2024-09-17 14:05:13,221 Request with ID 3366ba6c for model granite-7b received
+2024-09-17 14:05:13,221 Batch size condition met for model granite-7b
+2024-09-17 14:05:13,920 Request with ID 25b07e59 for model granite-7b received
+2024-09-17 14:05:13,920 Batch size condition met for model granite-7b
+2024-09-17 14:05:14,580 Request with ID 0bc87751 for model gemma-7b received
+2024-09-17 14:05:14,580 Batch size condition met for model gemma-7b
+2024-09-17 14:05:15,396 Request with ID f87d5269 for model llama3-8b received
+2024-09-17 14:05:15,396 Batch size condition met for model llama3-8b
+2024-09-17 14:05:17,007 Request with ID 7d455254 for model gemma-7b received
+2024-09-17 14:05:17,008 Batch size condition met for model gemma-7b
+2024-09-17 14:05:18,544 Loaded model llama3-8b
+2024-09-17 14:05:18,547 Batch processing started for model llama3-8b
+2024-09-17 14:05:19,340 Request with ID 4d2c3014 for model gemma-7b received
+2024-09-17 14:05:19,340 Batch size condition met for model gemma-7b
+2024-09-17 14:05:19,563 Request with ID eff6091a for model llama3-8b received
+2024-09-17 14:05:19,563 Batch size condition met for model llama3-8b
+2024-09-17 14:05:20,191 Request with ID a08a358a for model gemma-7b received
+2024-09-17 14:05:20,192 Batch size condition met for model gemma-7b
+2024-09-17 14:05:21,121 Processed batch: ['cee53f85'] with model llama3-8b in 2.5746 seconds
+2024-09-17 14:05:21,121 Saving sys info
+2024-09-17 14:05:21,161 Latency for request cee53f85 with model llama3-8b: 21.8990 seconds
+2024-09-17 14:05:21,161 Saving results with gpu monitoring
+2024-09-17 14:05:21,167 127.0.0.1 - - [17/Sep/2024 14:05:21] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:05:21,168 Next: call load_model for llama3-8b
+2024-09-17 14:05:21,168 Model llama3-8b already loaded
+2024-09-17 14:05:21,173 Batch processing started for model llama3-8b
+2024-09-17 14:05:21,564 Request with ID 979ba958 for model gemma-7b received
+2024-09-17 14:05:21,564 Batch size condition met for model gemma-7b
+2024-09-17 14:05:22,293 Request with ID 64e6a54c for model gemma-7b received
+2024-09-17 14:05:22,294 Batch size condition met for model gemma-7b
+2024-09-17 14:05:22,632 Request with ID c30ee098 for model gemma-7b received
+2024-09-17 14:05:22,632 Batch size condition met for model gemma-7b
+2024-09-17 14:05:22,823 Request with ID f2e10f9b for model granite-7b received
+2024-09-17 14:05:22,823 Batch size condition met for model granite-7b
+2024-09-17 14:05:23,129 Processed batch: ['eff6091a'] with model llama3-8b in 1.9554 seconds
+2024-09-17 14:05:23,129 Saving sys info
+2024-09-17 14:05:23,160 Latency for request eff6091a with model llama3-8b: 3.5660 seconds
+2024-09-17 14:05:23,160 Saving results with gpu monitoring
+2024-09-17 14:05:23,164 127.0.0.1 - - [17/Sep/2024 14:05:23] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:05:23,164 Next: call load_model for granite-7b
+2024-09-17 14:05:23,254 Unloaded previous model
+2024-09-17 14:05:24,232 Request with ID a91fc8af for model granite-7b received
+2024-09-17 14:05:24,253 Batch size condition met for model granite-7b
+2024-09-17 14:05:25,488 Request with ID ed310ba4 for model granite-7b received
+2024-09-17 14:05:25,488 Batch size condition met for model granite-7b
+2024-09-17 14:05:27,039 Request with ID 01aae8b0 for model llama3-8b received
+2024-09-17 14:05:27,040 Batch size condition met for model llama3-8b
+2024-09-17 14:05:27,771 Request with ID 4de86267 for model llama3-8b received
+2024-09-17 14:05:27,771 Batch size condition met for model llama3-8b
+2024-09-17 14:05:29,609 Request with ID 3fa45470 for model llama3-8b received
+2024-09-17 14:05:29,609 Batch size condition met for model llama3-8b
+2024-09-17 14:05:29,785 Request with ID 5ee60404 for model llama3-8b received
+2024-09-17 14:05:29,785 Batch size condition met for model llama3-8b
+2024-09-17 14:05:31,104 Request with ID bdac7e0a for model llama3-8b received
+2024-09-17 14:05:31,105 Batch size condition met for model llama3-8b
+2024-09-17 14:05:31,602 Request with ID ed691e1e for model llama3-8b received
+2024-09-17 14:05:31,603 Batch size condition met for model llama3-8b
+2024-09-17 14:05:32,671 Request with ID d6a403c7 for model gemma-7b received
+2024-09-17 14:05:32,672 Batch size condition met for model gemma-7b
+2024-09-17 14:05:33,716 Request with ID ac7d538a for model granite-7b received
+2024-09-17 14:05:33,716 Batch size condition met for model granite-7b
+2024-09-17 14:05:34,047 Request with ID 70ed8e40 for model llama3-8b received
+2024-09-17 14:05:34,048 Batch size condition met for model llama3-8b
+2024-09-17 14:05:35,252 Request with ID 0bf52a22 for model gemma-7b received
+2024-09-17 14:05:35,252 Batch size condition met for model gemma-7b
+2024-09-17 14:05:37,147 Request with ID 8e68009f for model gemma-7b received
+2024-09-17 14:05:37,147 Batch size condition met for model gemma-7b
+2024-09-17 14:05:37,726 Request with ID b54ce991 for model granite-7b received
+2024-09-17 14:05:37,727 Batch size condition met for model granite-7b
+2024-09-17 14:05:38,117 Request with ID a1e9ae32 for model granite-7b received
+2024-09-17 14:05:38,117 Batch size condition met for model granite-7b
+2024-09-17 14:05:38,507 Request with ID 084c6cfa for model granite-7b received
+2024-09-17 14:05:38,507 Batch size condition met for model granite-7b
+2024-09-17 14:05:38,791 Loaded model granite-7b
+2024-09-17 14:05:38,793 Batch processing started for model granite-7b
+2024-09-17 14:05:39,056 Request with ID ac6c6e56 for model llama3-8b received
+2024-09-17 14:05:39,056 Batch size condition met for model llama3-8b
+2024-09-17 14:05:39,617 Request with ID 1180fa2a for model gemma-7b received
+2024-09-17 14:05:39,617 Batch size condition met for model gemma-7b
+2024-09-17 14:05:40,136 Request with ID 960804bc for model gemma-7b received
+2024-09-17 14:05:40,136 Batch size condition met for model gemma-7b
+2024-09-17 14:05:40,401 Processed batch: ['f2e10f9b'] with model granite-7b in 1.6079 seconds
+2024-09-17 14:05:40,402 Saving sys info
+2024-09-17 14:05:40,436 Latency for request f2e10f9b with model granite-7b: 17.5787 seconds
+2024-09-17 14:05:40,436 Saving results with gpu monitoring
+2024-09-17 14:05:40,439 127.0.0.1 - - [17/Sep/2024 14:05:40] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:05:40,440 Next: call load_model for gemma-7b
+2024-09-17 14:05:40,516 Unloaded previous model
+2024-09-17 14:05:41,976 Request with ID 3620adcd for model granite-7b received
+2024-09-17 14:05:41,980 Batch size condition met for model granite-7b
+2024-09-17 14:05:43,559 Request with ID e0066e30 for model llama3-8b received
+2024-09-17 14:05:43,559 Batch size condition met for model llama3-8b
+2024-09-17 14:05:44,743 Request with ID 35d20a99 for model granite-7b received
+2024-09-17 14:05:44,744 Batch size condition met for model granite-7b
+2024-09-17 14:05:45,422 Request with ID b05f6502 for model gemma-7b received
+2024-09-17 14:05:45,422 Batch size condition met for model gemma-7b
+2024-09-17 14:05:46,857 Request with ID 9ae189b3 for model granite-7b received
+2024-09-17 14:05:46,858 Batch size condition met for model granite-7b
+2024-09-17 14:05:47,149 Request with ID 20e5f686 for model gemma-7b received
+2024-09-17 14:05:47,150 Batch size condition met for model gemma-7b
+2024-09-17 14:05:47,536 Request with ID e15d2566 for model llama3-8b received
+2024-09-17 14:05:47,537 Batch size condition met for model llama3-8b
+2024-09-17 14:05:48,421 Request with ID 5da9b5b9 for model llama3-8b received
+2024-09-17 14:05:48,422 Batch size condition met for model llama3-8b
+2024-09-17 14:05:49,813 Request with ID 0280d863 for model granite-7b received
+2024-09-17 14:05:49,814 Batch size condition met for model granite-7b
+2024-09-17 14:05:50,172 Request with ID 1b3fe52a for model llama3-8b received
+2024-09-17 14:05:50,172 Batch size condition met for model llama3-8b
+2024-09-17 14:05:50,597 Request with ID 37aa5b05 for model llama3-8b received
+2024-09-17 14:05:50,598 Batch size condition met for model llama3-8b
+2024-09-17 14:05:51,241 Request with ID b221d5d2 for model granite-7b received
+2024-09-17 14:05:51,241 Batch size condition met for model granite-7b
+2024-09-17 14:05:52,158 Request with ID 6d2733ad for model granite-7b received
+2024-09-17 14:05:52,158 Batch size condition met for model granite-7b
+2024-09-17 14:05:52,901 Request with ID 09af53d9 for model llama3-8b received
+2024-09-17 14:05:52,901 Batch size condition met for model llama3-8b
+2024-09-17 14:05:53,859 Request with ID abc07df4 for model granite-7b received
+2024-09-17 14:05:53,860 Batch size condition met for model granite-7b
+2024-09-17 14:05:54,328 Request with ID 19aa6214 for model gemma-7b received
+2024-09-17 14:05:54,329 Batch size condition met for model gemma-7b
+2024-09-17 14:05:55,323 Request with ID bcb94348 for model llama3-8b received
+2024-09-17 14:05:55,323 Batch size condition met for model llama3-8b
+2024-09-17 14:05:56,069 Request with ID b76eedde for model granite-7b received
+2024-09-17 14:05:56,069 Batch size condition met for model granite-7b
+2024-09-17 14:05:56,176 Request with ID 3bafe511 for model granite-7b received
+2024-09-17 14:05:56,177 Batch size condition met for model granite-7b
+2024-09-17 14:05:56,445 Request with ID 1966d73e for model llama3-8b received
+2024-09-17 14:05:56,445 Batch size condition met for model llama3-8b
+2024-09-17 14:05:57,234 Request with ID 29a0fa0d for model granite-7b received
+2024-09-17 14:05:57,234 Batch size condition met for model granite-7b
+2024-09-17 14:05:58,550 Request with ID 823cbb6e for model gemma-7b received
+2024-09-17 14:05:58,550 Batch size condition met for model gemma-7b
+2024-09-17 14:06:02,215 Loaded model gemma-7b
+2024-09-17 14:06:02,217 Batch processing started for model gemma-7b
+2024-09-17 14:06:03,338 Request with ID 205a04e2 for model gemma-7b received
+2024-09-17 14:06:03,339 Batch size condition met for model gemma-7b
+2024-09-17 14:06:04,042 Processed batch: ['960804bc'] with model gemma-7b in 1.8251 seconds
+2024-09-17 14:06:04,043 Saving sys info
+2024-09-17 14:06:04,076 Latency for request 960804bc with model gemma-7b: 23.9065 seconds
+2024-09-17 14:06:04,076 Saving results with gpu monitoring
+2024-09-17 14:06:04,080 127.0.0.1 - - [17/Sep/2024 14:06:04] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:04,080 Next: call load_model for granite-7b
+2024-09-17 14:06:04,188 Unloaded previous model
+2024-09-17 14:06:04,196 Request with ID 84d5d824 for model granite-7b received
+2024-09-17 14:06:04,238 Batch size condition met for model granite-7b
+2024-09-17 14:06:05,620 Request with ID 57293a27 for model llama3-8b received
+2024-09-17 14:06:05,621 Batch size condition met for model llama3-8b
+2024-09-17 14:06:07,823 Request with ID 96729358 for model gemma-7b received
+2024-09-17 14:06:07,823 Batch size condition met for model gemma-7b
+2024-09-17 14:06:08,943 Request with ID 6dd92a40 for model granite-7b received
+2024-09-17 14:06:08,943 Batch size condition met for model granite-7b
+2024-09-17 14:06:09,699 Request with ID 00bb3bb3 for model llama3-8b received
+2024-09-17 14:06:09,699 Batch size condition met for model llama3-8b
+2024-09-17 14:06:10,776 Request with ID 6a635099 for model llama3-8b received
+2024-09-17 14:06:10,776 Batch size condition met for model llama3-8b
+2024-09-17 14:06:11,136 Request with ID cd0890e7 for model gemma-7b received
+2024-09-17 14:06:11,136 Batch size condition met for model gemma-7b
+2024-09-17 14:06:11,642 Request with ID a52faa6b for model gemma-7b received
+2024-09-17 14:06:11,643 Batch size condition met for model gemma-7b
+2024-09-17 14:06:12,956 Request with ID e4a7b27a for model gemma-7b received
+2024-09-17 14:06:12,956 Batch size condition met for model gemma-7b
+2024-09-17 14:06:15,525 Request with ID b0f787a3 for model gemma-7b received
+2024-09-17 14:06:15,526 Batch size condition met for model gemma-7b
+2024-09-17 14:06:15,674 Loaded model granite-7b
+2024-09-17 14:06:15,677 Batch processing started for model granite-7b
+2024-09-17 14:06:17,061 Request with ID 07f714e8 for model gemma-7b received
+2024-09-17 14:06:17,061 Batch size condition met for model gemma-7b
+2024-09-17 14:06:17,300 Processed batch: ['29a0fa0d'] with model granite-7b in 1.6230 seconds
+2024-09-17 14:06:17,300 Saving sys info
+2024-09-17 14:06:17,335 Latency for request 29a0fa0d with model granite-7b: 20.0662 seconds
+2024-09-17 14:06:17,335 Saving results with gpu monitoring
+2024-09-17 14:06:17,338 127.0.0.1 - - [17/Sep/2024 14:06:17] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:17,339 Next: call load_model for llama3-8b
+2024-09-17 14:06:17,414 Unloaded previous model
+2024-09-17 14:06:18,995 Request with ID e54af208 for model gemma-7b received
+2024-09-17 14:06:18,995 Batch size condition met for model gemma-7b
+2024-09-17 14:06:20,007 Request with ID e3a4c3d7 for model gemma-7b received
+2024-09-17 14:06:20,007 Batch size condition met for model gemma-7b
+2024-09-17 14:06:20,298 Request with ID 2c62b9ae for model gemma-7b received
+2024-09-17 14:06:20,298 Batch size condition met for model gemma-7b
+2024-09-17 14:06:20,490 Request with ID 694d9dc4 for model gemma-7b received
+2024-09-17 14:06:20,491 Batch size condition met for model gemma-7b
+2024-09-17 14:06:21,852 Request with ID 2510ef33 for model gemma-7b received
+2024-09-17 14:06:21,852 Batch size condition met for model gemma-7b
+2024-09-17 14:06:22,020 Request with ID 645d5802 for model llama3-8b received
+2024-09-17 14:06:22,020 Batch size condition met for model llama3-8b
+2024-09-17 14:06:22,899 Request with ID 9fd70e44 for model llama3-8b received
+2024-09-17 14:06:22,899 Batch size condition met for model llama3-8b
+2024-09-17 14:06:23,215 Request with ID cad8cb03 for model gemma-7b received
+2024-09-17 14:06:23,215 Batch size condition met for model gemma-7b
+2024-09-17 14:06:26,340 Request with ID ec2c8cbc for model gemma-7b received
+2024-09-17 14:06:26,340 Batch size condition met for model gemma-7b
+2024-09-17 14:06:27,656 Request with ID 6dc70411 for model llama3-8b received
+2024-09-17 14:06:27,656 Batch size condition met for model llama3-8b
+2024-09-17 14:06:28,133 Request with ID a464ac69 for model gemma-7b received
+2024-09-17 14:06:28,133 Batch size condition met for model gemma-7b
+2024-09-17 14:06:29,705 Request with ID 24dee8f8 for model gemma-7b received
+2024-09-17 14:06:29,705 Batch size condition met for model gemma-7b
+2024-09-17 14:06:30,857 Request with ID b54b0f6d for model gemma-7b received
+2024-09-17 14:06:30,857 Batch size condition met for model gemma-7b
+2024-09-17 14:06:32,385 Request with ID b7f93bcc for model gemma-7b received
+2024-09-17 14:06:32,386 Batch size condition met for model gemma-7b
+2024-09-17 14:06:33,344 Request with ID c93b73ba for model llama3-8b received
+2024-09-17 14:06:33,345 Batch size condition met for model llama3-8b
+2024-09-17 14:06:34,613 Request with ID 62e1b03a for model llama3-8b received
+2024-09-17 14:06:34,613 Batch size condition met for model llama3-8b
+2024-09-17 14:06:35,304 Request with ID 186bd4bd for model granite-7b received
+2024-09-17 14:06:35,305 Batch size condition met for model granite-7b
+2024-09-17 14:06:37,248 Loaded model llama3-8b
+2024-09-17 14:06:37,251 Batch processing started for model llama3-8b
+2024-09-17 14:06:38,026 Request with ID 4bc8de19 for model llama3-8b received
+2024-09-17 14:06:38,026 Batch size condition met for model llama3-8b
+2024-09-17 14:06:38,669 Request with ID 5b5d650b for model granite-7b received
+2024-09-17 14:06:38,669 Batch size condition met for model granite-7b
+2024-09-17 14:06:39,118 Processed batch: ['6a635099'] with model llama3-8b in 1.8670 seconds
+2024-09-17 14:06:39,118 Saving sys info
+2024-09-17 14:06:39,155 Latency for request 6a635099 with model llama3-8b: 28.3428 seconds
+2024-09-17 14:06:39,155 Saving results with gpu monitoring
+2024-09-17 14:06:39,159 127.0.0.1 - - [17/Sep/2024 14:06:39] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:39,159 Next: call load_model for llama3-8b
+2024-09-17 14:06:39,160 Model llama3-8b already loaded
+2024-09-17 14:06:39,165 Batch processing started for model llama3-8b
+2024-09-17 14:06:39,892 Request with ID 10fca5bc for model llama3-8b received
+2024-09-17 14:06:39,892 Batch size condition met for model llama3-8b
+2024-09-17 14:06:41,021 Processed batch: ['4bc8de19'] with model llama3-8b in 1.8557 seconds
+2024-09-17 14:06:41,021 Saving sys info
+2024-09-17 14:06:41,056 Latency for request 4bc8de19 with model llama3-8b: 2.9950 seconds
+2024-09-17 14:06:41,056 Saving results with gpu monitoring
+2024-09-17 14:06:41,059 127.0.0.1 - - [17/Sep/2024 14:06:41] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:41,059 Next: call load_model for granite-7b
+2024-09-17 14:06:41,148 Unloaded previous model
+2024-09-17 14:06:41,754 Request with ID 0dafbf68 for model granite-7b received
+2024-09-17 14:06:41,858 Batch size condition met for model granite-7b
+2024-09-17 14:06:42,965 Request with ID e7fdb6a5 for model llama3-8b received
+2024-09-17 14:06:42,965 Batch size condition met for model llama3-8b
+2024-09-17 14:06:44,167 Request with ID cd6f900c for model granite-7b received
+2024-09-17 14:06:44,168 Batch size condition met for model granite-7b
+2024-09-17 14:06:45,893 Request with ID 2f9d3f21 for model llama3-8b received
+2024-09-17 14:06:45,894 Batch size condition met for model llama3-8b
+2024-09-17 14:06:47,803 Request with ID 7b330e75 for model gemma-7b received
+2024-09-17 14:06:47,803 Batch size condition met for model gemma-7b
+2024-09-17 14:06:48,051 Request with ID 26f0a5c8 for model llama3-8b received
+2024-09-17 14:06:48,051 Batch size condition met for model llama3-8b
+2024-09-17 14:06:49,138 Request with ID 408291cd for model granite-7b received
+2024-09-17 14:06:49,138 Batch size condition met for model granite-7b
+2024-09-17 14:06:49,601 Request with ID 697853c3 for model gemma-7b received
+2024-09-17 14:06:49,601 Batch size condition met for model gemma-7b
+2024-09-17 14:06:52,047 Loaded model granite-7b
+2024-09-17 14:06:52,050 Batch processing started for model granite-7b
+2024-09-17 14:06:52,058 Request with ID b640c8c3 for model gemma-7b received
+2024-09-17 14:06:52,058 Batch size condition met for model gemma-7b
+2024-09-17 14:06:52,174 Request with ID 3dc867f7 for model llama3-8b received
+2024-09-17 14:06:52,174 Batch size condition met for model llama3-8b
+2024-09-17 14:06:53,642 Processed batch: ['5b5d650b'] with model granite-7b in 1.5915 seconds
+2024-09-17 14:06:53,642 Saving sys info
+2024-09-17 14:06:53,676 Latency for request 5b5d650b with model granite-7b: 14.9728 seconds
+2024-09-17 14:06:53,676 Saving results with gpu monitoring
+2024-09-17 14:06:53,679 127.0.0.1 - - [17/Sep/2024 14:06:53] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:53,679 Next: call load_model for granite-7b
+2024-09-17 14:06:53,679 Model granite-7b already loaded
+2024-09-17 14:06:53,685 Batch processing started for model granite-7b
+2024-09-17 14:06:54,467 Request with ID 04c007b8 for model gemma-7b received
+2024-09-17 14:06:54,467 Batch size condition met for model gemma-7b
+2024-09-17 14:06:55,050 Request with ID 1297be3f for model granite-7b received
+2024-09-17 14:06:55,051 Batch size condition met for model granite-7b
+2024-09-17 14:06:55,301 Processed batch: ['408291cd'] with model granite-7b in 1.6158 seconds
+2024-09-17 14:06:55,301 Saving sys info
+2024-09-17 14:06:55,335 Latency for request 408291cd with model granite-7b: 6.1629 seconds
+2024-09-17 14:06:55,335 Saving results with gpu monitoring
+2024-09-17 14:06:55,338 127.0.0.1 - - [17/Sep/2024 14:06:55] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:06:55,338 Next: call load_model for gemma-7b
+2024-09-17 14:06:55,413 Unloaded previous model
+2024-09-17 14:06:56,421 Request with ID 6d812817 for model granite-7b received
+2024-09-17 14:06:56,428 Batch size condition met for model granite-7b
+2024-09-17 14:06:57,187 Request with ID f9b193be for model granite-7b received
+2024-09-17 14:06:57,187 Batch size condition met for model granite-7b
+2024-09-17 14:06:58,121 Request with ID b189a102 for model gemma-7b received
+2024-09-17 14:06:58,121 Batch size condition met for model gemma-7b
+2024-09-17 14:06:58,875 Request with ID cb188d9d for model granite-7b received
+2024-09-17 14:06:58,875 Batch size condition met for model granite-7b
+2024-09-17 14:06:59,214 Request with ID e897c821 for model granite-7b received
+2024-09-17 14:06:59,214 Batch size condition met for model granite-7b
+2024-09-17 14:06:59,486 Request with ID 64afc9eb for model gemma-7b received
+2024-09-17 14:06:59,486 Batch size condition met for model gemma-7b
+2024-09-17 14:07:00,371 Request with ID 388e21b3 for model granite-7b received
+2024-09-17 14:07:00,372 Batch size condition met for model granite-7b
+2024-09-17 14:07:00,841 Request with ID 79e5aaf7 for model granite-7b received
+2024-09-17 14:07:00,842 Batch size condition met for model granite-7b
+2024-09-17 14:07:02,140 Request with ID e7ee11a2 for model gemma-7b received
+2024-09-17 14:07:02,140 Batch size condition met for model gemma-7b
+2024-09-17 14:07:04,194 Request with ID cf6d9eaf for model gemma-7b received
+2024-09-17 14:07:04,195 Batch size condition met for model gemma-7b
+2024-09-17 14:07:04,369 Request with ID 8ee49cd9 for model granite-7b received
+2024-09-17 14:07:04,369 Batch size condition met for model granite-7b
+2024-09-17 14:07:05,256 Request with ID 02870bdc for model llama3-8b received
+2024-09-17 14:07:05,256 Batch size condition met for model llama3-8b
+2024-09-17 14:07:06,217 Request with ID 310f565f for model granite-7b received
+2024-09-17 14:07:06,218 Batch size condition met for model granite-7b
+2024-09-17 14:07:07,709 Request with ID bf59234e for model gemma-7b received
+2024-09-17 14:07:07,710 Batch size condition met for model gemma-7b
+2024-09-17 14:07:08,364 Request with ID e043739e for model granite-7b received
+2024-09-17 14:07:08,364 Batch size condition met for model granite-7b
+2024-09-17 14:07:09,195 Request with ID e5c3029d for model granite-7b received
+2024-09-17 14:07:09,196 Batch size condition met for model granite-7b
+2024-09-17 14:07:09,501 Request with ID ddd2c32c for model granite-7b received
+2024-09-17 14:07:09,502 Batch size condition met for model granite-7b
+2024-09-17 14:07:10,997 Request with ID ea214f1a for model gemma-7b received
+2024-09-17 14:07:10,997 Batch size condition met for model gemma-7b
+2024-09-17 14:07:12,988 Request with ID 3ff3d625 for model llama3-8b received
+2024-09-17 14:07:12,988 Batch size condition met for model llama3-8b
+2024-09-17 14:07:13,652 Request with ID 3cba6041 for model granite-7b received
+2024-09-17 14:07:13,652 Batch size condition met for model granite-7b
+2024-09-17 14:07:15,160 Request with ID 9b480298 for model granite-7b received
+2024-09-17 14:07:15,160 Batch size condition met for model granite-7b
+2024-09-17 14:07:15,478 Request with ID cdd48171 for model llama3-8b received
+2024-09-17 14:07:15,479 Batch size condition met for model llama3-8b
+2024-09-17 14:07:17,004 Loaded model gemma-7b
+2024-09-17 14:07:17,007 Batch processing started for model gemma-7b
+2024-09-17 14:07:17,112 Processed batch: ['04c007b8'] with model gemma-7b in 0.1050 seconds
+2024-09-17 14:07:17,112 Saving sys info
+2024-09-17 14:07:17,164 Latency for request 04c007b8 with model gemma-7b: 22.6450 seconds
+2024-09-17 14:07:17,164 Saving results with gpu monitoring
+2024-09-17 14:07:17,170 127.0.0.1 - - [17/Sep/2024 14:07:17] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:07:17,170 Next: call load_model for llama3-8b
+2024-09-17 14:07:17,272 Unloaded previous model
+2024-09-17 14:07:17,682 Request with ID 62a18cac for model gemma-7b received
+2024-09-17 14:07:17,695 Batch size condition met for model gemma-7b
+2024-09-17 14:07:18,146 Request with ID 267302db for model granite-7b received
+2024-09-17 14:07:18,153 Batch size condition met for model granite-7b
+2024-09-17 14:07:18,502 Request with ID 937bb1e2 for model granite-7b received
+2024-09-17 14:07:18,503 Batch size condition met for model granite-7b
+2024-09-17 14:07:18,996 Request with ID bd503d02 for model gemma-7b received
+2024-09-17 14:07:18,996 Batch size condition met for model gemma-7b
+2024-09-17 14:07:21,585 Request with ID 95aaa5df for model llama3-8b received
+2024-09-17 14:07:21,586 Batch size condition met for model llama3-8b
+2024-09-17 14:07:21,712 Request with ID c97b2e57 for model llama3-8b received
+2024-09-17 14:07:21,713 Batch size condition met for model llama3-8b
+2024-09-17 14:07:23,124 Request with ID 22ad05d6 for model gemma-7b received
+2024-09-17 14:07:23,125 Batch size condition met for model gemma-7b
+2024-09-17 14:07:25,324 Request with ID f9856e36 for model llama3-8b received
+2024-09-17 14:07:25,324 Batch size condition met for model llama3-8b
+2024-09-17 14:07:27,428 Request with ID 4230db0f for model granite-7b received
+2024-09-17 14:07:27,428 Batch size condition met for model granite-7b
+2024-09-17 14:07:28,007 Request with ID ad42d906 for model granite-7b received
+2024-09-17 14:07:28,007 Batch size condition met for model granite-7b
+2024-09-17 14:07:28,772 Request with ID 0e42f942 for model granite-7b received
+2024-09-17 14:07:28,772 Batch size condition met for model granite-7b
+2024-09-17 14:07:30,689 Request with ID efb101ad for model granite-7b received
+2024-09-17 14:07:30,689 Batch size condition met for model granite-7b
+2024-09-17 14:07:33,094 Request with ID 2f550dc7 for model gemma-7b received
+2024-09-17 14:07:33,095 Batch size condition met for model gemma-7b
+2024-09-17 14:07:34,082 Request with ID d86335e4 for model granite-7b received
+2024-09-17 14:07:34,082 Batch size condition met for model granite-7b
+2024-09-17 14:07:34,997 Request with ID 8602a914 for model gemma-7b received
+2024-09-17 14:07:34,998 Batch size condition met for model gemma-7b
+2024-09-17 14:07:36,212 Request with ID fd7f839c for model gemma-7b received
+2024-09-17 14:07:36,212 Batch size condition met for model gemma-7b
+2024-09-17 14:07:36,886 Request with ID 02f4ea33 for model gemma-7b received
+2024-09-17 14:07:36,887 Batch size condition met for model gemma-7b
+2024-09-17 14:07:37,696 Loaded model llama3-8b
+2024-09-17 14:07:37,700 Batch processing started for model llama3-8b
+2024-09-17 14:07:38,019 Request with ID e7fa4c9e for model granite-7b received
+2024-09-17 14:07:38,019 Batch size condition met for model granite-7b
+2024-09-17 14:07:39,525 Processed batch: ['cdd48171'] with model llama3-8b in 1.8251 seconds
+2024-09-17 14:07:39,525 Saving sys info
+2024-09-17 14:07:39,556 Latency for request cdd48171 with model llama3-8b: 24.0462 seconds
+2024-09-17 14:07:39,556 Saving results with gpu monitoring
+2024-09-17 14:07:39,559 127.0.0.1 - - [17/Sep/2024 14:07:39] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:07:39,559 Next: call load_model for gemma-7b
+2024-09-17 14:07:39,649 Unloaded previous model
+2024-09-17 14:07:40,165 Request with ID 375e3880 for model llama3-8b received
+2024-09-17 14:07:40,166 Batch size condition met for model llama3-8b
+2024-09-17 14:07:41,073 Request with ID 91645d98 for model gemma-7b received
+2024-09-17 14:07:41,073 Batch size condition met for model gemma-7b
+2024-09-17 14:07:42,520 Request with ID e8c3ae0e for model llama3-8b received
+2024-09-17 14:07:42,521 Batch size condition met for model llama3-8b
+2024-09-17 14:07:43,528 Request with ID f03651e7 for model gemma-7b received
+2024-09-17 14:07:43,529 Batch size condition met for model gemma-7b
+2024-09-17 14:07:44,105 Request with ID d6fd8f55 for model granite-7b received
+2024-09-17 14:07:44,105 Batch size condition met for model granite-7b
+2024-09-17 14:07:44,821 Request with ID 73310a35 for model granite-7b received
+2024-09-17 14:07:44,821 Batch size condition met for model granite-7b
+2024-09-17 14:07:46,950 Request with ID ab96ddf8 for model gemma-7b received
+2024-09-17 14:07:46,951 Batch size condition met for model gemma-7b
+2024-09-17 14:07:48,741 Request with ID b462ced8 for model llama3-8b received
+2024-09-17 14:07:48,741 Batch size condition met for model llama3-8b
+2024-09-17 14:07:48,950 Request with ID 493fb91a for model llama3-8b received
+2024-09-17 14:07:48,950 Batch size condition met for model llama3-8b
+2024-09-17 14:07:50,045 Request with ID a234a47d for model granite-7b received
+2024-09-17 14:07:50,045 Batch size condition met for model granite-7b
+2024-09-17 14:07:50,409 Request with ID 5c9d1d06 for model granite-7b received
+2024-09-17 14:07:50,409 Batch size condition met for model granite-7b
+2024-09-17 14:07:51,294 Request with ID 4200ffac for model gemma-7b received
+2024-09-17 14:07:51,294 Batch size condition met for model gemma-7b
+2024-09-17 14:07:52,379 Request with ID 3d1dba1b for model gemma-7b received
+2024-09-17 14:07:52,379 Batch size condition met for model gemma-7b
+2024-09-17 14:07:53,146 Request with ID 081bacf7 for model gemma-7b received
+2024-09-17 14:07:53,147 Batch size condition met for model gemma-7b
+2024-09-17 14:07:53,476 Request with ID 24ab5a51 for model granite-7b received
+2024-09-17 14:07:53,477 Batch size condition met for model granite-7b
+2024-09-17 14:07:54,394 Request with ID 5f967abc for model granite-7b received
+2024-09-17 14:07:54,394 Batch size condition met for model granite-7b
+2024-09-17 14:07:55,244 Loaded model gemma-7b
+2024-09-17 14:07:55,246 Batch processing started for model gemma-7b
+2024-09-17 14:07:57,081 Processed batch: ['02f4ea33'] with model gemma-7b in 1.8345 seconds
+2024-09-17 14:07:57,081 Saving sys info
+2024-09-17 14:07:57,116 Latency for request 02f4ea33 with model gemma-7b: 20.1945 seconds
+2024-09-17 14:07:57,116 Saving results with gpu monitoring
+2024-09-17 14:07:57,119 127.0.0.1 - - [17/Sep/2024 14:07:57] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:07:57,119 Next: call load_model for gemma-7b
+2024-09-17 14:07:57,119 Model gemma-7b already loaded
+2024-09-17 14:07:57,124 Batch processing started for model gemma-7b
+2024-09-17 14:07:57,262 Request with ID e3542451 for model granite-7b received
+2024-09-17 14:07:57,262 Batch size condition met for model granite-7b
+2024-09-17 14:07:58,220 Request with ID c92edfc5 for model gemma-7b received
+2024-09-17 14:07:58,220 Batch size condition met for model gemma-7b
+2024-09-17 14:07:58,976 Processed batch: ['081bacf7'] with model gemma-7b in 1.8522 seconds
+2024-09-17 14:07:58,977 Saving sys info
+2024-09-17 14:07:59,014 Latency for request 081bacf7 with model gemma-7b: 5.8300 seconds
+2024-09-17 14:07:59,014 Saving results with gpu monitoring
+2024-09-17 14:07:59,017 127.0.0.1 - - [17/Sep/2024 14:07:59] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:07:59,017 Next: call load_model for llama3-8b
+2024-09-17 14:07:59,124 Unloaded previous model
+2024-09-17 14:07:59,126 Request with ID c0263f17 for model llama3-8b received
+2024-09-17 14:07:59,127 Batch size condition met for model llama3-8b
+2024-09-17 14:07:59,317 Waiting for running processes to finish
+2024-09-17 14:07:59,466 Waiting for running processes to finish
+2024-09-17 14:07:59,580 Waiting for running processes to finish
+2024-09-17 14:07:59,708 Waiting for running processes to finish
+2024-09-17 14:07:59,836 Waiting for running processes to finish
+2024-09-17 14:07:59,960 Waiting for running processes to finish
+2024-09-17 14:08:00,072 Waiting for running processes to finish
+2024-09-17 14:08:00,173 Waiting for running processes to finish
+2024-09-17 14:08:00,274 Waiting for running processes to finish
+2024-09-17 14:08:00,375 Waiting for running processes to finish
+2024-09-17 14:08:00,475 Waiting for running processes to finish
+2024-09-17 14:08:00,576 Waiting for running processes to finish
+2024-09-17 14:08:00,677 Waiting for running processes to finish
+2024-09-17 14:08:00,777 Waiting for running processes to finish
+2024-09-17 14:08:00,878 Waiting for running processes to finish
+2024-09-17 14:08:00,979 Waiting for running processes to finish
+2024-09-17 14:08:01,080 Waiting for running processes to finish
+2024-09-17 14:08:01,180 Waiting for running processes to finish
+2024-09-17 14:08:01,281 Waiting for running processes to finish
+2024-09-17 14:08:01,382 Waiting for running processes to finish
+2024-09-17 14:08:01,482 Waiting for running processes to finish
+2024-09-17 14:08:01,583 Waiting for running processes to finish
+2024-09-17 14:08:01,684 Waiting for running processes to finish
+2024-09-17 14:08:01,784 Waiting for running processes to finish
+2024-09-17 14:08:01,951 Waiting for running processes to finish
+2024-09-17 14:08:02,052 Waiting for running processes to finish
+2024-09-17 14:08:02,152 Waiting for running processes to finish
+2024-09-17 14:08:02,253 Waiting for running processes to finish
+2024-09-17 14:08:02,354 Waiting for running processes to finish
+2024-09-17 14:08:02,454 Waiting for running processes to finish
+2024-09-17 14:08:02,555 Waiting for running processes to finish
+2024-09-17 14:08:02,656 Waiting for running processes to finish
+2024-09-17 14:08:02,757 Waiting for running processes to finish
+2024-09-17 14:08:02,857 Waiting for running processes to finish
+2024-09-17 14:08:02,958 Waiting for running processes to finish
+2024-09-17 14:08:03,059 Waiting for running processes to finish
+2024-09-17 14:08:03,159 Waiting for running processes to finish
+2024-09-17 14:08:03,260 Waiting for running processes to finish
+2024-09-17 14:08:03,361 Waiting for running processes to finish
+2024-09-17 14:08:03,461 Waiting for running processes to finish
+2024-09-17 14:08:03,562 Waiting for running processes to finish
+2024-09-17 14:08:03,694 Waiting for running processes to finish
+2024-09-17 14:08:03,795 Waiting for running processes to finish
+2024-09-17 14:08:03,896 Waiting for running processes to finish
+2024-09-17 14:08:03,996 Waiting for running processes to finish
+2024-09-17 14:08:04,097 Waiting for running processes to finish
+2024-09-17 14:08:04,198 Waiting for running processes to finish
+2024-09-17 14:08:04,298 Waiting for running processes to finish
+2024-09-17 14:08:04,399 Waiting for running processes to finish
+2024-09-17 14:08:04,500 Waiting for running processes to finish
+2024-09-17 14:08:04,600 Waiting for running processes to finish
+2024-09-17 14:08:04,701 Waiting for running processes to finish
+2024-09-17 14:08:04,802 Waiting for running processes to finish
+2024-09-17 14:08:04,902 Waiting for running processes to finish
+2024-09-17 14:08:05,003 Waiting for running processes to finish
+2024-09-17 14:08:05,104 Waiting for running processes to finish
+2024-09-17 14:08:05,205 Waiting for running processes to finish
+2024-09-17 14:08:05,305 Waiting for running processes to finish
+2024-09-17 14:08:05,459 Waiting for running processes to finish
+2024-09-17 14:08:05,560 Waiting for running processes to finish
+2024-09-17 14:08:05,661 Waiting for running processes to finish
+2024-09-17 14:08:05,762 Waiting for running processes to finish
+2024-09-17 14:08:05,862 Waiting for running processes to finish
+2024-09-17 14:08:05,963 Waiting for running processes to finish
+2024-09-17 14:08:06,064 Waiting for running processes to finish
+2024-09-17 14:08:06,164 Waiting for running processes to finish
+2024-09-17 14:08:06,265 Waiting for running processes to finish
+2024-09-17 14:08:06,366 Waiting for running processes to finish
+2024-09-17 14:08:06,466 Waiting for running processes to finish
+2024-09-17 14:08:06,567 Waiting for running processes to finish
+2024-09-17 14:08:06,668 Waiting for running processes to finish
+2024-09-17 14:08:06,768 Waiting for running processes to finish
+2024-09-17 14:08:06,869 Waiting for running processes to finish
+2024-09-17 14:08:06,970 Waiting for running processes to finish
+2024-09-17 14:08:07,070 Waiting for running processes to finish
+2024-09-17 14:08:07,273 Waiting for running processes to finish
+2024-09-17 14:08:07,374 Waiting for running processes to finish
+2024-09-17 14:08:07,474 Waiting for running processes to finish
+2024-09-17 14:08:07,575 Waiting for running processes to finish
+2024-09-17 14:08:07,676 Waiting for running processes to finish
+2024-09-17 14:08:07,776 Waiting for running processes to finish
+2024-09-17 14:08:07,877 Waiting for running processes to finish
+2024-09-17 14:08:07,978 Waiting for running processes to finish
+2024-09-17 14:08:08,078 Waiting for running processes to finish
+2024-09-17 14:08:08,179 Waiting for running processes to finish
+2024-09-17 14:08:08,280 Waiting for running processes to finish
+2024-09-17 14:08:08,380 Waiting for running processes to finish
+2024-09-17 14:08:08,481 Waiting for running processes to finish
+2024-09-17 14:08:08,582 Waiting for running processes to finish
+2024-09-17 14:08:08,682 Waiting for running processes to finish
+2024-09-17 14:08:08,783 Waiting for running processes to finish
+2024-09-17 14:08:08,884 Waiting for running processes to finish
+2024-09-17 14:08:09,096 Waiting for running processes to finish
+2024-09-17 14:08:09,197 Waiting for running processes to finish
+2024-09-17 14:08:09,298 Waiting for running processes to finish
+2024-09-17 14:08:09,398 Waiting for running processes to finish
+2024-09-17 14:08:09,499 Waiting for running processes to finish
+2024-09-17 14:08:09,600 Waiting for running processes to finish
+2024-09-17 14:08:09,700 Waiting for running processes to finish
+2024-09-17 14:08:09,801 Waiting for running processes to finish
+2024-09-17 14:08:09,902 Waiting for running processes to finish
+2024-09-17 14:08:10,002 Waiting for running processes to finish
+2024-09-17 14:08:10,103 Waiting for running processes to finish
+2024-09-17 14:08:10,204 Waiting for running processes to finish
+2024-09-17 14:08:10,304 Waiting for running processes to finish
+2024-09-17 14:08:10,405 Waiting for running processes to finish
+2024-09-17 14:08:10,506 Waiting for running processes to finish
+2024-09-17 14:08:10,606 Waiting for running processes to finish
+2024-09-17 14:08:10,707 Waiting for running processes to finish
+2024-09-17 14:08:10,875 Waiting for running processes to finish
+2024-09-17 14:08:10,976 Waiting for running processes to finish
+2024-09-17 14:08:11,076 Waiting for running processes to finish
+2024-09-17 14:08:11,177 Waiting for running processes to finish
+2024-09-17 14:08:11,278 Waiting for running processes to finish
+2024-09-17 14:08:11,378 Waiting for running processes to finish
+2024-09-17 14:08:11,479 Waiting for running processes to finish
+2024-09-17 14:08:11,580 Waiting for running processes to finish
+2024-09-17 14:08:11,681 Waiting for running processes to finish
+2024-09-17 14:08:11,833 Waiting for running processes to finish
+2024-09-17 14:08:11,833 Loaded model llama3-8b
+2024-09-17 14:08:11,836 Batch processing started for model llama3-8b
+2024-09-17 14:08:11,934 Waiting for running processes to finish
+2024-09-17 14:08:12,035 Waiting for running processes to finish
+2024-09-17 14:08:12,136 Waiting for running processes to finish
+2024-09-17 14:08:12,236 Waiting for running processes to finish
+2024-09-17 14:08:12,337 Waiting for running processes to finish
+2024-09-17 14:08:12,438 Waiting for running processes to finish
+2024-09-17 14:08:12,538 Waiting for running processes to finish
+2024-09-17 14:08:12,639 Waiting for running processes to finish
+2024-09-17 14:08:12,740 Waiting for running processes to finish
+2024-09-17 14:08:12,841 Waiting for running processes to finish
+2024-09-17 14:08:12,941 Waiting for running processes to finish
+2024-09-17 14:08:13,042 Waiting for running processes to finish
+2024-09-17 14:08:13,143 Waiting for running processes to finish
+2024-09-17 14:08:13,244 Waiting for running processes to finish
+2024-09-17 14:08:13,344 Waiting for running processes to finish
+2024-09-17 14:08:13,445 Waiting for running processes to finish
+2024-09-17 14:08:13,546 Waiting for running processes to finish
+2024-09-17 14:08:13,647 Waiting for running processes to finish
+2024-09-17 14:08:13,697 Processed batch: ['493fb91a'] with model llama3-8b in 1.8610 seconds
+2024-09-17 14:08:13,698 Saving sys info
+2024-09-17 14:08:13,733 Latency for request 493fb91a with model llama3-8b: 24.7478 seconds
+2024-09-17 14:08:13,733 Saving results with gpu monitoring
+2024-09-17 14:08:13,736 127.0.0.1 - - [17/Sep/2024 14:08:13] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:13,736 Next: call load_model for gemma-7b
+2024-09-17 14:08:13,759 Waiting for running processes to finish
+2024-09-17 14:08:13,829 Unloaded previous model
+2024-09-17 14:08:14,322 Waiting for running processes to finish
+2024-09-17 14:08:14,461 Waiting for running processes to finish
+2024-09-17 14:08:14,566 Waiting for running processes to finish
+2024-09-17 14:08:14,795 Waiting for running processes to finish
+2024-09-17 14:08:14,911 Waiting for running processes to finish
+2024-09-17 14:08:15,024 Waiting for running processes to finish
+2024-09-17 14:08:15,207 Waiting for running processes to finish
+2024-09-17 14:08:15,308 Waiting for running processes to finish
+2024-09-17 14:08:15,409 Waiting for running processes to finish
+2024-09-17 14:08:15,509 Waiting for running processes to finish
+2024-09-17 14:08:15,610 Waiting for running processes to finish
+2024-09-17 14:08:15,711 Waiting for running processes to finish
+2024-09-17 14:08:15,811 Waiting for running processes to finish
+2024-09-17 14:08:15,912 Waiting for running processes to finish
+2024-09-17 14:08:16,013 Waiting for running processes to finish
+2024-09-17 14:08:16,113 Waiting for running processes to finish
+2024-09-17 14:08:16,214 Waiting for running processes to finish
+2024-09-17 14:08:16,315 Waiting for running processes to finish
+2024-09-17 14:08:16,415 Waiting for running processes to finish
+2024-09-17 14:08:16,516 Waiting for running processes to finish
+2024-09-17 14:08:16,617 Waiting for running processes to finish
+2024-09-17 14:08:16,717 Waiting for running processes to finish
+2024-09-17 14:08:16,893 Waiting for running processes to finish
+2024-09-17 14:08:16,994 Waiting for running processes to finish
+2024-09-17 14:08:17,094 Waiting for running processes to finish
+2024-09-17 14:08:17,195 Waiting for running processes to finish
+2024-09-17 14:08:17,296 Waiting for running processes to finish
+2024-09-17 14:08:17,397 Waiting for running processes to finish
+2024-09-17 14:08:17,497 Waiting for running processes to finish
+2024-09-17 14:08:17,598 Waiting for running processes to finish
+2024-09-17 14:08:17,699 Waiting for running processes to finish
+2024-09-17 14:08:17,799 Waiting for running processes to finish
+2024-09-17 14:08:17,900 Waiting for running processes to finish
+2024-09-17 14:08:18,001 Waiting for running processes to finish
+2024-09-17 14:08:18,101 Waiting for running processes to finish
+2024-09-17 14:08:18,202 Waiting for running processes to finish
+2024-09-17 14:08:18,303 Waiting for running processes to finish
+2024-09-17 14:08:18,403 Waiting for running processes to finish
+2024-09-17 14:08:18,615 Waiting for running processes to finish
+2024-09-17 14:08:18,716 Waiting for running processes to finish
+2024-09-17 14:08:18,816 Waiting for running processes to finish
+2024-09-17 14:08:18,917 Waiting for running processes to finish
+2024-09-17 14:08:19,018 Waiting for running processes to finish
+2024-09-17 14:08:19,119 Waiting for running processes to finish
+2024-09-17 14:08:19,219 Waiting for running processes to finish
+2024-09-17 14:08:19,320 Waiting for running processes to finish
+2024-09-17 14:08:19,421 Waiting for running processes to finish
+2024-09-17 14:08:19,521 Waiting for running processes to finish
+2024-09-17 14:08:19,622 Waiting for running processes to finish
+2024-09-17 14:08:19,723 Waiting for running processes to finish
+2024-09-17 14:08:19,824 Waiting for running processes to finish
+2024-09-17 14:08:19,924 Waiting for running processes to finish
+2024-09-17 14:08:20,025 Waiting for running processes to finish
+2024-09-17 14:08:20,126 Waiting for running processes to finish
+2024-09-17 14:08:20,226 Waiting for running processes to finish
+2024-09-17 14:08:20,363 Waiting for running processes to finish
+2024-09-17 14:08:20,464 Waiting for running processes to finish
+2024-09-17 14:08:20,564 Waiting for running processes to finish
+2024-09-17 14:08:20,665 Waiting for running processes to finish
+2024-09-17 14:08:20,766 Waiting for running processes to finish
+2024-09-17 14:08:20,866 Waiting for running processes to finish
+2024-09-17 14:08:20,967 Waiting for running processes to finish
+2024-09-17 14:08:21,068 Waiting for running processes to finish
+2024-09-17 14:08:21,168 Waiting for running processes to finish
+2024-09-17 14:08:21,269 Waiting for running processes to finish
+2024-09-17 14:08:21,370 Waiting for running processes to finish
+2024-09-17 14:08:21,471 Waiting for running processes to finish
+2024-09-17 14:08:21,571 Waiting for running processes to finish
+2024-09-17 14:08:21,672 Waiting for running processes to finish
+2024-09-17 14:08:21,773 Waiting for running processes to finish
+2024-09-17 14:08:21,873 Waiting for running processes to finish
+2024-09-17 14:08:21,974 Waiting for running processes to finish
+2024-09-17 14:08:22,075 Waiting for running processes to finish
+2024-09-17 14:08:22,175 Waiting for running processes to finish
+2024-09-17 14:08:22,360 Waiting for running processes to finish
+2024-09-17 14:08:22,461 Waiting for running processes to finish
+2024-09-17 14:08:22,561 Waiting for running processes to finish
+2024-09-17 14:08:22,662 Waiting for running processes to finish
+2024-09-17 14:08:22,763 Waiting for running processes to finish
+2024-09-17 14:08:22,863 Waiting for running processes to finish
+2024-09-17 14:08:22,964 Waiting for running processes to finish
+2024-09-17 14:08:23,065 Waiting for running processes to finish
+2024-09-17 14:08:23,165 Waiting for running processes to finish
+2024-09-17 14:08:23,266 Waiting for running processes to finish
+2024-09-17 14:08:23,367 Waiting for running processes to finish
+2024-09-17 14:08:23,468 Waiting for running processes to finish
+2024-09-17 14:08:23,568 Waiting for running processes to finish
+2024-09-17 14:08:23,669 Waiting for running processes to finish
+2024-09-17 14:08:23,770 Waiting for running processes to finish
+2024-09-17 14:08:23,870 Waiting for running processes to finish
+2024-09-17 14:08:23,971 Waiting for running processes to finish
+2024-09-17 14:08:24,072 Waiting for running processes to finish
+2024-09-17 14:08:24,173 Waiting for running processes to finish
+2024-09-17 14:08:24,392 Waiting for running processes to finish
+2024-09-17 14:08:24,493 Waiting for running processes to finish
+2024-09-17 14:08:24,594 Waiting for running processes to finish
+2024-09-17 14:08:24,694 Waiting for running processes to finish
+2024-09-17 14:08:24,795 Waiting for running processes to finish
+2024-09-17 14:08:24,896 Waiting for running processes to finish
+2024-09-17 14:08:24,996 Waiting for running processes to finish
+2024-09-17 14:08:25,097 Waiting for running processes to finish
+2024-09-17 14:08:25,198 Waiting for running processes to finish
+2024-09-17 14:08:25,299 Waiting for running processes to finish
+2024-09-17 14:08:25,399 Waiting for running processes to finish
+2024-09-17 14:08:25,500 Waiting for running processes to finish
+2024-09-17 14:08:25,601 Waiting for running processes to finish
+2024-09-17 14:08:25,701 Waiting for running processes to finish
+2024-09-17 14:08:25,802 Waiting for running processes to finish
+2024-09-17 14:08:25,903 Waiting for running processes to finish
+2024-09-17 14:08:26,003 Waiting for running processes to finish
+2024-09-17 14:08:26,104 Waiting for running processes to finish
+2024-09-17 14:08:26,205 Waiting for running processes to finish
+2024-09-17 14:08:26,306 Waiting for running processes to finish
+2024-09-17 14:08:26,406 Waiting for running processes to finish
+2024-09-17 14:08:26,558 Waiting for running processes to finish
+2024-09-17 14:08:26,658 Waiting for running processes to finish
+2024-09-17 14:08:26,759 Waiting for running processes to finish
+2024-09-17 14:08:26,860 Waiting for running processes to finish
+2024-09-17 14:08:26,961 Waiting for running processes to finish
+2024-09-17 14:08:27,061 Waiting for running processes to finish
+2024-09-17 14:08:27,162 Waiting for running processes to finish
+2024-09-17 14:08:27,263 Waiting for running processes to finish
+2024-09-17 14:08:27,363 Waiting for running processes to finish
+2024-09-17 14:08:27,464 Waiting for running processes to finish
+2024-09-17 14:08:27,565 Waiting for running processes to finish
+2024-09-17 14:08:27,666 Waiting for running processes to finish
+2024-09-17 14:08:27,766 Waiting for running processes to finish
+2024-09-17 14:08:27,867 Waiting for running processes to finish
+2024-09-17 14:08:27,968 Waiting for running processes to finish
+2024-09-17 14:08:28,069 Waiting for running processes to finish
+2024-09-17 14:08:28,169 Waiting for running processes to finish
+2024-09-17 14:08:28,270 Waiting for running processes to finish
+2024-09-17 14:08:28,371 Waiting for running processes to finish
+2024-09-17 14:08:28,471 Waiting for running processes to finish
+2024-09-17 14:08:28,572 Waiting for running processes to finish
+2024-09-17 14:08:28,673 Waiting for running processes to finish
+2024-09-17 14:08:28,774 Waiting for running processes to finish
+2024-09-17 14:08:28,875 Waiting for running processes to finish
+2024-09-17 14:08:28,975 Waiting for running processes to finish
+2024-09-17 14:08:29,076 Waiting for running processes to finish
+2024-09-17 14:08:29,200 Waiting for running processes to finish
+2024-09-17 14:08:29,301 Waiting for running processes to finish
+2024-09-17 14:08:29,402 Waiting for running processes to finish
+2024-09-17 14:08:29,503 Waiting for running processes to finish
+2024-09-17 14:08:29,562 Loaded model gemma-7b
+2024-09-17 14:08:29,564 Batch processing started for model gemma-7b
+2024-09-17 14:08:29,603 Waiting for running processes to finish
+2024-09-17 14:08:29,704 Waiting for running processes to finish
+2024-09-17 14:08:29,805 Waiting for running processes to finish
+2024-09-17 14:08:29,906 Waiting for running processes to finish
+2024-09-17 14:08:30,006 Waiting for running processes to finish
+2024-09-17 14:08:30,107 Waiting for running processes to finish
+2024-09-17 14:08:30,208 Waiting for running processes to finish
+2024-09-17 14:08:30,309 Waiting for running processes to finish
+2024-09-17 14:08:30,410 Waiting for running processes to finish
+2024-09-17 14:08:30,510 Waiting for running processes to finish
+2024-09-17 14:08:30,611 Waiting for running processes to finish
+2024-09-17 14:08:30,712 Waiting for running processes to finish
+2024-09-17 14:08:30,813 Waiting for running processes to finish
+2024-09-17 14:08:30,913 Waiting for running processes to finish
+2024-09-17 14:08:31,014 Waiting for running processes to finish
+2024-09-17 14:08:31,115 Waiting for running processes to finish
+2024-09-17 14:08:31,216 Waiting for running processes to finish
+2024-09-17 14:08:31,316 Waiting for running processes to finish
+2024-09-17 14:08:31,399 Processed batch: ['c92edfc5'] with model gemma-7b in 1.8354 seconds
+2024-09-17 14:08:31,400 Saving sys info
+2024-09-17 14:08:31,417 Waiting for running processes to finish
+2024-09-17 14:08:31,434 Latency for request c92edfc5 with model gemma-7b: 33.1798 seconds
+2024-09-17 14:08:31,434 Saving results with gpu monitoring
+2024-09-17 14:08:31,439 127.0.0.1 - - [17/Sep/2024 14:08:31] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:31,440 No batch to process for model gemma-7b
+2024-09-17 14:08:31,440 127.0.0.1 - - [17/Sep/2024 14:08:31] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:31,441 No batch to process for model gemma-7b
+2024-09-17 14:08:31,442 127.0.0.1 - - [17/Sep/2024 14:08:31] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:31,442 No batch to process for model gemma-7b
+2024-09-17 14:08:31,442 127.0.0.1 - - [17/Sep/2024 14:08:31] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:31,443 Next: call load_model for granite-7b
+2024-09-17 14:08:31,517 Unloaded previous model
+2024-09-17 14:08:31,518 Waiting for running processes to finish
+2024-09-17 14:08:31,648 Waiting for running processes to finish
+2024-09-17 14:08:31,792 Waiting for running processes to finish
+2024-09-17 14:08:31,985 Waiting for running processes to finish
+2024-09-17 14:08:32,167 Waiting for running processes to finish
+2024-09-17 14:08:32,358 Waiting for running processes to finish
+2024-09-17 14:08:32,543 Waiting for running processes to finish
+2024-09-17 14:08:32,688 Waiting for running processes to finish
+2024-09-17 14:08:32,789 Waiting for running processes to finish
+2024-09-17 14:08:32,889 Waiting for running processes to finish
+2024-09-17 14:08:32,990 Waiting for running processes to finish
+2024-09-17 14:08:33,091 Waiting for running processes to finish
+2024-09-17 14:08:33,191 Waiting for running processes to finish
+2024-09-17 14:08:33,292 Waiting for running processes to finish
+2024-09-17 14:08:33,393 Waiting for running processes to finish
+2024-09-17 14:08:33,494 Waiting for running processes to finish
+2024-09-17 14:08:33,594 Waiting for running processes to finish
+2024-09-17 14:08:33,695 Waiting for running processes to finish
+2024-09-17 14:08:33,796 Waiting for running processes to finish
+2024-09-17 14:08:33,896 Waiting for running processes to finish
+2024-09-17 14:08:33,997 Waiting for running processes to finish
+2024-09-17 14:08:34,098 Waiting for running processes to finish
+2024-09-17 14:08:34,199 Waiting for running processes to finish
+2024-09-17 14:08:34,299 Waiting for running processes to finish
+2024-09-17 14:08:34,400 Waiting for running processes to finish
+2024-09-17 14:08:34,501 Waiting for running processes to finish
+2024-09-17 14:08:34,601 Waiting for running processes to finish
+2024-09-17 14:08:34,702 Waiting for running processes to finish
+2024-09-17 14:08:34,803 Waiting for running processes to finish
+2024-09-17 14:08:34,903 Waiting for running processes to finish
+2024-09-17 14:08:35,004 Waiting for running processes to finish
+2024-09-17 14:08:35,207 Waiting for running processes to finish
+2024-09-17 14:08:35,308 Waiting for running processes to finish
+2024-09-17 14:08:35,408 Waiting for running processes to finish
+2024-09-17 14:08:35,509 Waiting for running processes to finish
+2024-09-17 14:08:35,610 Waiting for running processes to finish
+2024-09-17 14:08:35,710 Waiting for running processes to finish
+2024-09-17 14:08:35,811 Waiting for running processes to finish
+2024-09-17 14:08:35,912 Waiting for running processes to finish
+2024-09-17 14:08:36,013 Waiting for running processes to finish
+2024-09-17 14:08:36,113 Waiting for running processes to finish
+2024-09-17 14:08:36,214 Waiting for running processes to finish
+2024-09-17 14:08:36,315 Waiting for running processes to finish
+2024-09-17 14:08:36,415 Waiting for running processes to finish
+2024-09-17 14:08:36,516 Waiting for running processes to finish
+2024-09-17 14:08:36,617 Waiting for running processes to finish
+2024-09-17 14:08:36,718 Waiting for running processes to finish
+2024-09-17 14:08:36,818 Waiting for running processes to finish
+2024-09-17 14:08:36,919 Waiting for running processes to finish
+2024-09-17 14:08:37,020 Waiting for running processes to finish
+2024-09-17 14:08:37,121 Waiting for running processes to finish
+2024-09-17 14:08:37,221 Waiting for running processes to finish
+2024-09-17 14:08:37,322 Waiting for running processes to finish
+2024-09-17 14:08:37,423 Waiting for running processes to finish
+2024-09-17 14:08:37,650 Waiting for running processes to finish
+2024-09-17 14:08:37,750 Waiting for running processes to finish
+2024-09-17 14:08:37,851 Waiting for running processes to finish
+2024-09-17 14:08:37,952 Waiting for running processes to finish
+2024-09-17 14:08:38,053 Waiting for running processes to finish
+2024-09-17 14:08:38,153 Waiting for running processes to finish
+2024-09-17 14:08:38,254 Waiting for running processes to finish
+2024-09-17 14:08:38,355 Waiting for running processes to finish
+2024-09-17 14:08:38,455 Waiting for running processes to finish
+2024-09-17 14:08:38,556 Waiting for running processes to finish
+2024-09-17 14:08:38,657 Waiting for running processes to finish
+2024-09-17 14:08:38,758 Waiting for running processes to finish
+2024-09-17 14:08:38,858 Waiting for running processes to finish
+2024-09-17 14:08:38,959 Waiting for running processes to finish
+2024-09-17 14:08:39,060 Waiting for running processes to finish
+2024-09-17 14:08:39,161 Waiting for running processes to finish
+2024-09-17 14:08:39,261 Waiting for running processes to finish
+2024-09-17 14:08:39,362 Waiting for running processes to finish
+2024-09-17 14:08:39,463 Waiting for running processes to finish
+2024-09-17 14:08:39,563 Waiting for running processes to finish
+2024-09-17 14:08:39,664 Waiting for running processes to finish
+2024-09-17 14:08:39,765 Waiting for running processes to finish
+2024-09-17 14:08:39,866 Waiting for running processes to finish
+2024-09-17 14:08:40,088 Waiting for running processes to finish
+2024-09-17 14:08:40,189 Waiting for running processes to finish
+2024-09-17 14:08:40,289 Waiting for running processes to finish
+2024-09-17 14:08:40,390 Waiting for running processes to finish
+2024-09-17 14:08:40,491 Waiting for running processes to finish
+2024-09-17 14:08:40,592 Waiting for running processes to finish
+2024-09-17 14:08:40,692 Waiting for running processes to finish
+2024-09-17 14:08:40,793 Waiting for running processes to finish
+2024-09-17 14:08:40,894 Waiting for running processes to finish
+2024-09-17 14:08:40,994 Waiting for running processes to finish
+2024-09-17 14:08:41,095 Waiting for running processes to finish
+2024-09-17 14:08:41,196 Waiting for running processes to finish
+2024-09-17 14:08:41,297 Waiting for running processes to finish
+2024-09-17 14:08:41,397 Waiting for running processes to finish
+2024-09-17 14:08:41,498 Waiting for running processes to finish
+2024-09-17 14:08:41,599 Waiting for running processes to finish
+2024-09-17 14:08:41,699 Waiting for running processes to finish
+2024-09-17 14:08:41,800 Waiting for running processes to finish
+2024-09-17 14:08:41,901 Waiting for running processes to finish
+2024-09-17 14:08:42,001 Waiting for running processes to finish
+2024-09-17 14:08:42,102 Waiting for running processes to finish
+2024-09-17 14:08:42,203 Waiting for running processes to finish
+2024-09-17 14:08:42,303 Waiting for running processes to finish
+2024-09-17 14:08:42,404 Waiting for running processes to finish
+2024-09-17 14:08:42,591 Waiting for running processes to finish
+2024-09-17 14:08:42,691 Waiting for running processes to finish
+2024-09-17 14:08:42,792 Waiting for running processes to finish
+2024-09-17 14:08:42,893 Waiting for running processes to finish
+2024-09-17 14:08:42,994 Waiting for running processes to finish
+2024-09-17 14:08:43,094 Waiting for running processes to finish
+2024-09-17 14:08:43,195 Waiting for running processes to finish
+2024-09-17 14:08:43,296 Waiting for running processes to finish
+2024-09-17 14:08:43,397 Waiting for running processes to finish
+2024-09-17 14:08:43,497 Waiting for running processes to finish
+2024-09-17 14:08:43,598 Waiting for running processes to finish
+2024-09-17 14:08:43,699 Waiting for running processes to finish
+2024-09-17 14:08:43,799 Waiting for running processes to finish
+2024-09-17 14:08:43,900 Waiting for running processes to finish
+2024-09-17 14:08:44,001 Waiting for running processes to finish
+2024-09-17 14:08:44,101 Waiting for running processes to finish
+2024-09-17 14:08:44,202 Waiting for running processes to finish
+2024-09-17 14:08:44,303 Waiting for running processes to finish
+2024-09-17 14:08:44,404 Waiting for running processes to finish
+2024-09-17 14:08:44,504 Waiting for running processes to finish
+2024-09-17 14:08:44,605 Waiting for running processes to finish
+2024-09-17 14:08:44,706 Waiting for running processes to finish
+2024-09-17 14:08:44,807 Waiting for running processes to finish
+2024-09-17 14:08:44,908 Waiting for running processes to finish
+2024-09-17 14:08:45,008 Waiting for running processes to finish
+2024-09-17 14:08:45,109 Waiting for running processes to finish
+2024-09-17 14:08:45,210 Waiting for running processes to finish
+2024-09-17 14:08:45,311 Waiting for running processes to finish
+2024-09-17 14:08:45,523 Waiting for running processes to finish
+2024-09-17 14:08:45,624 Waiting for running processes to finish
+2024-09-17 14:08:45,725 Waiting for running processes to finish
+2024-09-17 14:08:45,825 Waiting for running processes to finish
+2024-09-17 14:08:45,926 Waiting for running processes to finish
+2024-09-17 14:08:46,027 Waiting for running processes to finish
+2024-09-17 14:08:46,128 Waiting for running processes to finish
+2024-09-17 14:08:46,228 Waiting for running processes to finish
+2024-09-17 14:08:46,329 Waiting for running processes to finish
+2024-09-17 14:08:46,430 Waiting for running processes to finish
+2024-09-17 14:08:46,530 Waiting for running processes to finish
+2024-09-17 14:08:46,631 Waiting for running processes to finish
+2024-09-17 14:08:46,732 Waiting for running processes to finish
+2024-09-17 14:08:46,833 Waiting for running processes to finish
+2024-09-17 14:08:46,934 Waiting for running processes to finish
+2024-09-17 14:08:47,034 Waiting for running processes to finish
+2024-09-17 14:08:47,135 Waiting for running processes to finish
+2024-09-17 14:08:47,274 Waiting for running processes to finish
+2024-09-17 14:08:47,274 Loaded model granite-7b
+2024-09-17 14:08:47,278 Batch processing started for model granite-7b
+2024-09-17 14:08:47,375 Waiting for running processes to finish
+2024-09-17 14:08:47,476 Waiting for running processes to finish
+2024-09-17 14:08:47,577 Waiting for running processes to finish
+2024-09-17 14:08:47,677 Waiting for running processes to finish
+2024-09-17 14:08:47,778 Waiting for running processes to finish
+2024-09-17 14:08:47,879 Waiting for running processes to finish
+2024-09-17 14:08:47,980 Waiting for running processes to finish
+2024-09-17 14:08:48,081 Waiting for running processes to finish
+2024-09-17 14:08:48,181 Waiting for running processes to finish
+2024-09-17 14:08:48,282 Waiting for running processes to finish
+2024-09-17 14:08:48,383 Waiting for running processes to finish
+2024-09-17 14:08:48,484 Waiting for running processes to finish
+2024-09-17 14:08:48,584 Waiting for running processes to finish
+2024-09-17 14:08:48,685 Waiting for running processes to finish
+2024-09-17 14:08:48,786 Waiting for running processes to finish
+2024-09-17 14:08:48,873 Processed batch: ['e3542451'] with model granite-7b in 1.5957 seconds
+2024-09-17 14:08:48,873 Saving sys info
+2024-09-17 14:08:48,887 Waiting for running processes to finish
+2024-09-17 14:08:48,909 Latency for request e3542451 with model granite-7b: 51.6116 seconds
+2024-09-17 14:08:48,909 Saving results with gpu monitoring
+2024-09-17 14:08:48,912 127.0.0.1 - - [17/Sep/2024 14:08:48] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:48,912 No batch to process for model granite-7b
+2024-09-17 14:08:48,913 127.0.0.1 - - [17/Sep/2024 14:08:48] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:48,914 No batch to process for model granite-7b
+2024-09-17 14:08:48,915 127.0.0.1 - - [17/Sep/2024 14:08:48] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:08:48,915 Next: call load_model for llama3-8b
+2024-09-17 14:08:48,991 Unloaded previous model
+2024-09-17 14:08:48,991 Waiting for running processes to finish
+2024-09-17 14:08:49,204 Total time: 229.6898 seconds
+2024-09-17 14:08:49,206 Total inference time: 27.4248 seconds
+2024-09-17 14:08:49,206 Inference time as percentage of total time: 11.94%
+2024-09-17 14:08:49,206 END
+2024-09-17 14:08:49,207 127.0.0.1 - - [17/Sep/2024 14:08:49] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:09,194 Loaded model llama3-8b
+2024-09-17 14:09:09,198 Batch processing started for model llama3-8b
+2024-09-17 14:09:11,059 Processed batch: ['c0263f17'] with model llama3-8b in 1.8611 seconds
+2024-09-17 14:09:11,059 Saving sys info
+2024-09-17 14:09:11,094 Latency for request c0263f17 with model llama3-8b: 71.9330 seconds
+2024-09-17 14:09:11,094 Saving results with gpu monitoring
+2024-09-17 14:09:11,099 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,100 No batch to process for model llama3-8b
+2024-09-17 14:09:11,100 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,101 No batch to process for model llama3-8b
+2024-09-17 14:09:11,102 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,103 No batch to process for model llama3-8b
+2024-09-17 14:09:11,103 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,104 No batch to process for model llama3-8b
+2024-09-17 14:09:11,104 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,105 No batch to process for model llama3-8b
+2024-09-17 14:09:11,105 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,105 No batch to process for model gemma-7b
+2024-09-17 14:09:11,106 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,106 No batch to process for model granite-7b
+2024-09-17 14:09:11,106 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,108 No batch to process for model llama3-8b
+2024-09-17 14:09:11,109 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,109 No batch to process for model gemma-7b
+2024-09-17 14:09:11,109 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,109 No batch to process for model gemma-7b
+2024-09-17 14:09:11,110 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,110 No batch to process for model granite-7b
+2024-09-17 14:09:11,111 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,111 No batch to process for model granite-7b
+2024-09-17 14:09:11,111 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,112 No batch to process for model granite-7b
+2024-09-17 14:09:11,113 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,113 No batch to process for model llama3-8b
+2024-09-17 14:09:11,113 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,114 No batch to process for model gemma-7b
+2024-09-17 14:09:11,114 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,115 No batch to process for model gemma-7b
+2024-09-17 14:09:11,116 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,116 No batch to process for model granite-7b
+2024-09-17 14:09:11,117 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,117 No batch to process for model llama3-8b
+2024-09-17 14:09:11,117 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,118 No batch to process for model granite-7b
+2024-09-17 14:09:11,118 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,119 No batch to process for model gemma-7b
+2024-09-17 14:09:11,119 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,119 No batch to process for model granite-7b
+2024-09-17 14:09:11,120 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,120 No batch to process for model gemma-7b
+2024-09-17 14:09:11,121 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,121 No batch to process for model llama3-8b
+2024-09-17 14:09:11,122 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,122 No batch to process for model llama3-8b
+2024-09-17 14:09:11,123 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,124 No batch to process for model granite-7b
+2024-09-17 14:09:11,124 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,124 No batch to process for model llama3-8b
+2024-09-17 14:09:11,125 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,125 No batch to process for model llama3-8b
+2024-09-17 14:09:11,126 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,126 No batch to process for model granite-7b
+2024-09-17 14:09:11,127 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,127 No batch to process for model granite-7b
+2024-09-17 14:09:11,128 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,128 No batch to process for model llama3-8b
+2024-09-17 14:09:11,129 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,129 No batch to process for model granite-7b
+2024-09-17 14:09:11,130 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,130 No batch to process for model gemma-7b
+2024-09-17 14:09:11,131 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,131 No batch to process for model llama3-8b
+2024-09-17 14:09:11,132 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,132 No batch to process for model granite-7b
+2024-09-17 14:09:11,133 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,133 No batch to process for model granite-7b
+2024-09-17 14:09:11,134 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,134 No batch to process for model llama3-8b
+2024-09-17 14:09:11,135 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,135 No batch to process for model granite-7b
+2024-09-17 14:09:11,136 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,136 No batch to process for model gemma-7b
+2024-09-17 14:09:11,137 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,137 No batch to process for model gemma-7b
+2024-09-17 14:09:11,138 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,138 No batch to process for model granite-7b
+2024-09-17 14:09:11,138 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,138 No batch to process for model llama3-8b
+2024-09-17 14:09:11,139 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,140 No batch to process for model gemma-7b
+2024-09-17 14:09:11,141 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,141 No batch to process for model granite-7b
+2024-09-17 14:09:11,141 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,142 No batch to process for model llama3-8b
+2024-09-17 14:09:11,142 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,143 No batch to process for model llama3-8b
+2024-09-17 14:09:11,143 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,143 No batch to process for model gemma-7b
+2024-09-17 14:09:11,144 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,144 No batch to process for model gemma-7b
+2024-09-17 14:09:11,144 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,144 No batch to process for model gemma-7b
+2024-09-17 14:09:11,145 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,145 No batch to process for model gemma-7b
+2024-09-17 14:09:11,145 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,146 No batch to process for model gemma-7b
+2024-09-17 14:09:11,146 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,147 No batch to process for model gemma-7b
+2024-09-17 14:09:11,148 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,148 No batch to process for model gemma-7b
+2024-09-17 14:09:11,148 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,148 No batch to process for model gemma-7b
+2024-09-17 14:09:11,149 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,149 No batch to process for model gemma-7b
+2024-09-17 14:09:11,150 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,150 No batch to process for model gemma-7b
+2024-09-17 14:09:11,150 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,151 No batch to process for model llama3-8b
+2024-09-17 14:09:11,152 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,152 No batch to process for model llama3-8b
+2024-09-17 14:09:11,152 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,153 No batch to process for model gemma-7b
+2024-09-17 14:09:11,153 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,153 No batch to process for model gemma-7b
+2024-09-17 14:09:11,154 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,155 No batch to process for model llama3-8b
+2024-09-17 14:09:11,155 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,155 No batch to process for model gemma-7b
+2024-09-17 14:09:11,156 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,156 No batch to process for model gemma-7b
+2024-09-17 14:09:11,157 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,157 No batch to process for model gemma-7b
+2024-09-17 14:09:11,158 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,158 No batch to process for model gemma-7b
+2024-09-17 14:09:11,159 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,159 No batch to process for model llama3-8b
+2024-09-17 14:09:11,159 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,160 No batch to process for model llama3-8b
+2024-09-17 14:09:11,160 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,160 No batch to process for model granite-7b
+2024-09-17 14:09:11,160 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,161 No batch to process for model llama3-8b
+2024-09-17 14:09:11,162 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,162 No batch to process for model granite-7b
+2024-09-17 14:09:11,163 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,163 No batch to process for model llama3-8b
+2024-09-17 14:09:11,163 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,164 No batch to process for model granite-7b
+2024-09-17 14:09:11,164 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,165 No batch to process for model llama3-8b
+2024-09-17 14:09:11,165 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,165 No batch to process for model granite-7b
+2024-09-17 14:09:11,166 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,167 No batch to process for model llama3-8b
+2024-09-17 14:09:11,168 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,168 No batch to process for model gemma-7b
+2024-09-17 14:09:11,169 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,169 No batch to process for model llama3-8b
+2024-09-17 14:09:11,169 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,170 No batch to process for model granite-7b
+2024-09-17 14:09:11,171 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,171 No batch to process for model gemma-7b
+2024-09-17 14:09:11,172 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,172 No batch to process for model gemma-7b
+2024-09-17 14:09:11,173 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,173 No batch to process for model llama3-8b
+2024-09-17 14:09:11,174 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,174 No batch to process for model gemma-7b
+2024-09-17 14:09:11,175 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,175 No batch to process for model granite-7b
+2024-09-17 14:09:11,176 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,176 No batch to process for model granite-7b
+2024-09-17 14:09:11,177 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,177 No batch to process for model granite-7b
+2024-09-17 14:09:11,178 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,178 No batch to process for model gemma-7b
+2024-09-17 14:09:11,179 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,179 No batch to process for model granite-7b
+2024-09-17 14:09:11,180 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,180 No batch to process for model granite-7b
+2024-09-17 14:09:11,181 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,181 No batch to process for model gemma-7b
+2024-09-17 14:09:11,181 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,182 No batch to process for model granite-7b
+2024-09-17 14:09:11,182 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,183 No batch to process for model granite-7b
+2024-09-17 14:09:11,184 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,184 No batch to process for model gemma-7b
+2024-09-17 14:09:11,185 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,185 No batch to process for model gemma-7b
+2024-09-17 14:09:11,185 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,186 No batch to process for model granite-7b
+2024-09-17 14:09:11,186 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,186 No batch to process for model llama3-8b
+2024-09-17 14:09:11,187 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,187 No batch to process for model granite-7b
+2024-09-17 14:09:11,188 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,188 No batch to process for model gemma-7b
+2024-09-17 14:09:11,189 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,190 No batch to process for model granite-7b
+2024-09-17 14:09:11,190 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,190 No batch to process for model granite-7b
+2024-09-17 14:09:11,191 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,192 No batch to process for model granite-7b
+2024-09-17 14:09:11,192 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,193 No batch to process for model gemma-7b
+2024-09-17 14:09:11,193 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,193 No batch to process for model llama3-8b
+2024-09-17 14:09:11,194 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,194 No batch to process for model granite-7b
+2024-09-17 14:09:11,195 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,196 No batch to process for model granite-7b
+2024-09-17 14:09:11,196 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,197 No batch to process for model llama3-8b
+2024-09-17 14:09:11,197 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,198 No batch to process for model gemma-7b
+2024-09-17 14:09:11,198 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,199 No batch to process for model granite-7b
+2024-09-17 14:09:11,199 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,200 No batch to process for model granite-7b
+2024-09-17 14:09:11,201 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,201 No batch to process for model gemma-7b
+2024-09-17 14:09:11,201 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,202 No batch to process for model llama3-8b
+2024-09-17 14:09:11,202 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,202 No batch to process for model llama3-8b
+2024-09-17 14:09:11,203 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,203 No batch to process for model gemma-7b
+2024-09-17 14:09:11,205 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,205 No batch to process for model llama3-8b
+2024-09-17 14:09:11,206 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,206 No batch to process for model granite-7b
+2024-09-17 14:09:11,206 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,207 No batch to process for model granite-7b
+2024-09-17 14:09:11,207 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,208 No batch to process for model granite-7b
+2024-09-17 14:09:11,208 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,208 No batch to process for model granite-7b
+2024-09-17 14:09:11,210 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,210 No batch to process for model gemma-7b
+2024-09-17 14:09:11,211 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,211 No batch to process for model granite-7b
+2024-09-17 14:09:11,212 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,212 No batch to process for model gemma-7b
+2024-09-17 14:09:11,212 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,213 No batch to process for model gemma-7b
+2024-09-17 14:09:11,213 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,213 No batch to process for model gemma-7b
+2024-09-17 14:09:11,214 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,214 No batch to process for model granite-7b
+2024-09-17 14:09:11,215 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,215 No batch to process for model llama3-8b
+2024-09-17 14:09:11,216 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,217 No batch to process for model gemma-7b
+2024-09-17 14:09:11,217 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,218 No batch to process for model llama3-8b
+2024-09-17 14:09:11,218 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,219 No batch to process for model gemma-7b
+2024-09-17 14:09:11,219 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,220 No batch to process for model granite-7b
+2024-09-17 14:09:11,221 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,221 No batch to process for model granite-7b
+2024-09-17 14:09:11,221 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,222 No batch to process for model gemma-7b
+2024-09-17 14:09:11,223 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,223 No batch to process for model llama3-8b
+2024-09-17 14:09:11,224 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,224 No batch to process for model llama3-8b
+2024-09-17 14:09:11,225 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,225 No batch to process for model granite-7b
+2024-09-17 14:09:11,225 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,226 No batch to process for model granite-7b
+2024-09-17 14:09:11,226 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,227 No batch to process for model gemma-7b
+2024-09-17 14:09:11,227 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,228 No batch to process for model gemma-7b
+2024-09-17 14:09:11,228 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,228 No batch to process for model gemma-7b
+2024-09-17 14:09:11,229 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,230 No batch to process for model granite-7b
+2024-09-17 14:09:11,231 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,231 No batch to process for model granite-7b
+2024-09-17 14:09:11,231 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,232 No batch to process for model granite-7b
+2024-09-17 14:09:11,232 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,233 No batch to process for model gemma-7b
+2024-09-17 14:09:11,233 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
+2024-09-17 14:09:11,233 No batch to process for model llama3-8b
+2024-09-17 14:09:11,234 127.0.0.1 - - [17/Sep/2024 14:09:11] "POST /inference HTTP/1.1" 200 -
