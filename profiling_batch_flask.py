@@ -7,15 +7,24 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import time
 import pandas as pd
 import platform
+import logging
+from monitor import Monitor
+import threading
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 
 # Folder containing models
 base_dir = "./models"
 
+# Ensure that the logs directory exists
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+logging.basicConfig(filename=f"logs/batch_processing_debug_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+
 # Select device, cpu for now
-device = "cuda"
-print(device)  # Check with nvidia-smi
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+logging.debug(f"Using device: {device}") # Check with nvidia-smi
 
 # Save machine name to identify csv
 machine_name = platform.node()
@@ -30,6 +39,25 @@ running_request_batches = {}
 # List of allowed models
 allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m", "granite-7b", "gemma-7b", "llama3-8b"]
 
+# Lock to not process another batch until the current one has finished
+batch_processing_lock = threading.Lock()
+
+# To measure device's time doing inference vs idle
+first_request_time = None  # Time when the first request is received
+last_request_time = None  # Time when the last batch is processed
+total_inference_time = 0  # Global variable to track total inference time
+
+# Flag for log inference % only once
+inference_flag = False
+
+# Initialize the GPU monitoring
+monitoring = False
+if device.type == "cuda":
+    monitoring = True
+    logging.debug(f"Monitoring status set to {monitoring}")
+    monitor = Monitor(cuda_enabled=True)
+
+
 # Function to load models
 def load_model(model_alias):
     global loaded_models
@@ -42,7 +70,7 @@ def load_model(model_alias):
     if loaded_models:
         for old_model_alias in list(loaded_models.keys()):
             del loaded_models[old_model_alias]
-            if device == "cuda":
+            if device.type == "cuda":
                 torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
         print(f"Unloaded previous model")
 
@@ -63,72 +91,139 @@ def create_batch_generator(batch):
     for request_data in batch:
         yield request_data['prompt']
 
+
 def process_batch(model_alias, batch_size):
-    global incoming_request_batches, running_request_batches
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
 
-    if running_request_batches.get(model_alias):
-        batch = list(running_request_batches[model_alias].queue)
-        running_request_batches[model_alias].queue.clear()  # Clear the running queue after copying
-        if not batch:
-            print(f"No batch to process for model {model_alias}")
-            return
+    with batch_processing_lock:
 
-        print(f"Loading model {model_alias}")
-        load_model(model_alias)
+        if running_request_batches.get(model_alias):
+            batch = list(running_request_batches[model_alias].queue)
+            running_request_batches[model_alias].queue.clear()  # Clear the running queue after copying
+            if not batch:
+                print(f"No batch to process for model {model_alias}")
+                return
 
-        # Create a generator for batching
-        batch_generator = create_batch_generator(batch)
+            print(f"Loading model {model_alias}")
+            load_model(model_alias)
 
-        try:
-            # Perform inference using the pipeline
-            pipe = pipeline(
-                "text-generation",
-                model=loaded_models[model_alias]["model"],
-                tokenizer=loaded_models[model_alias]["tokenizer"],
-                device=device,
-                torch_dtype=torch.float16
-            )
+            # Create a generator for batching
+            batch_generator = create_batch_generator(batch)
 
-            start_time = time.perf_counter()
-            responses = {}
-            for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
-                try:
-                    generated_text = output[0]['generated_text']
-                    request_id = batch[i]['id']
-                    responses[request_id] = generated_text
-                except IndexError:
-                    print(f"IndexError: Output index {i} is out of range.")
-                    continue  # Skip this entry if an error occurs
-                except Exception as e:
-                    print(f"Error processing response: {e}")
-                    continue  # Handle unexpected errors gracefully
+            current_batch_size = len(batch)
 
-            end_time = time.perf_counter()
-            elapsed_time = end_time - start_time
-            print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {elapsed_time:.4f} seconds")
+            try:
+                # Perform inference using the pipeline
+                pipe = pipeline(
+                    "text-generation",
+                    model=loaded_models[model_alias]["model"],
+                    tokenizer=loaded_models[model_alias]["tokenizer"],
+                    device=device,
+                    torch_dtype=torch.float16
+                )
 
-            # Save the result to a CSV file
-            save_profiling_result(model_alias, batch_size, elapsed_time)
-            
-        except RuntimeError as e:
-            if "out of memory" in str(e).lower():
-                print(f"Out of GPU memory. Error: {e}")
-                torch.cuda.empty_cache()  # Clear GPU memory
-                print(f"GPU memory cleared after OOM error.")
-                elapsed_time = "None"
-                save_profiling_result(model_alias, batch_size, elapsed_time)
-                return None, f"Out of memory error while processing batch for {model_alias}"
-            else:
-                print(f"Unexpected runtime error: {e}")
-                elapsed_time = "None"
-                save_profiling_result(model_alias, batch_size, elapsed_time)
-                return None, f"Unexpected error while processing batch for {model_alias}"
+                start_time = time.perf_counter()
+                responses = {}
+                for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
+                    try:
+                        generated_text = output[0]['generated_text']
+                        request_id = batch[i]['id']
+                        responses[request_id] = generated_text
+                    except IndexError:
+                        print(f"IndexError: Output index {i} is out of range.")
+                        continue  # Skip this entry if an error occurs
+                    except Exception as e:
+                        print(f"Error processing response: {e}")
+                        continue  # Handle unexpected errors gracefully
+
+                end_time = time.perf_counter()
+                
+                print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {elapsed_time:.4f} seconds")
+
+                if monitoring == True:
+                    logging.debug("Saving sys info")
+                    sys_info = monitor.get_sys_info()
+
+                batch_inference_time = round(end_time - start_time,3)
+                # Add the batch inference time to the total inference time
+                total_inference_time += batch_inference_time
+
+                # Calculate latency for each request
+                for request in batch:
+                    request_id = request['id']
+                    request_time = request['request_time']
+                    latency = round(end_time - request_time,3)  # Time since the request was received until the batch was processed
+                    logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")
+
+                    # Save the latency result to a CSV file
+                    if monitoring == True:
+                        logging.debug("Saving results with gpu monitoring")
+                        save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                    # else:
+                    #     logging.debug("Saving results without gpu monitoring")
+                    #     save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
+
+                # Reset the timer for the next batch
+                batch_timers[model_alias] = None
+
+                last_batch_processed_time = time.time()
+
+
+                # Save the result to a CSV file
+                #save_profiling_result(model_alias, batch_size, elapsed_time)
+                
+            except RuntimeError as e:
+                if "out of memory" in str(e).lower():
+                    print(f"Out of GPU memory. Error: {e}")
+                    torch.cuda.empty_cache()  # Clear GPU memory
+                    print(f"GPU memory cleared after OOM error.")
+                    latency = "None"
+                    batch_inference_time = "None"
+                    sys_info = "None"
+                    save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                    return None, f"Out of memory error while processing batch for {model_alias}"
+                else:
+                    print(f"Unexpected runtime error: {e}")
+                    torch.cuda.empty_cache()
+                    elapsed_time = "None"
+                    latency = "None"
+                    batch_inference_time = "None"
+                    sys_info = "None"
+                    save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                    
+                    # save_profiling_result(model_alias, batch_size, elapsed_time)
+                    return None, f"Unexpected error while processing batch for {model_alias}"
 
 
         # Clean cache after processing
         torch.cuda.empty_cache()
 
         return list(responses.keys()), None
+
+def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, sys_info):
+    csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
+    csv_path = os.path.join("outputs", csv_filename)
+    data = {
+        # "request_id": request_id,
+        # "arrival time": time.strftime("%Y-%m-%d %H:%M:%S", request_time),
+        # "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        "model": model_alias,
+        "batch_size": batch_size,
+        "latency (s)": latency,
+        "processing time (s)": batch_inference_time,
+        "throughput (qps)": "None" if batch_inference_time=="None" else round(batch_size/batch_inference_time, 2)
+    }
+    # Update the data dictionary with the sys_info entries
+    data.update(sys_info)
+    
+    # Convert the combined data into a DataFrame
+    df = pd.DataFrame([data])
+
+    file_exists = os.path.isfile(csv_path)
+    if file_exists:
+        df.to_csv(csv_path, mode="a", header=False, index=False)
+    else:
+        df.to_csv(csv_path, index=False)
 
 def save_profiling_result(model_alias, batch_size, processing_time):
     csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
@@ -137,7 +232,7 @@ def save_profiling_result(model_alias, batch_size, processing_time):
         "model_alias": model_alias,
         "batch_size": batch_size,
         "processing_time": processing_time,
-        "throughput": "None" if processing_time=="None" else round(batch_size/processing_time, 2)
+        
     }
     df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)

@@ -12,10 +12,10 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 60  # seconds
+run_duration = 10  # seconds
 distribution = "gamma" 
 
-model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] #
+model_list = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] #["granite-7b", "gemma-7b", "llama3-8b"] 
 
 # Define the parameters for the Gamma distribution
 rate = 10

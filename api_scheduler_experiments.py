@@ -15,7 +15,6 @@ from monitor import Monitor
 
 mode = "batchedFCFS" #"FCFS"
 
-
 # Ensure that the logs directory exists
 if not os.path.exists("logs"):
     os.makedirs("logs")
@@ -49,7 +48,7 @@ if mode == "FCFS":
 
 if mode == "batchedFCFS":
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = [16]
+    allowed_batch_sizes = [4]
 
 # Time constraint for batch processing
 # batch_time_limit = 15  # Seconds
@@ -134,12 +133,13 @@ def create_batch_generator(batch):
 #     return processing_times.get((model_alias, batch_size), batch_time_limit), processing_times_std.get((model_alias, batch_size), batch_time_limit)  # Default to batch_time_limit if not found
 
 
-def save_measurements(request_id, model_alias, batch_size, latency, batch_inference_time, throughput):
+def save_measurements(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput):
     csv_filename = f"measurements_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
-        "timestamp": time.strftime("%Y%m%d_%H%M%S", time.localtime()),
+        "arrival time": time.strftime("%Y-%m-%d %H:%M:%S", request_time),
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
         "model": model_alias,
         "batch_size": batch_size,
         "latency (s)": latency,
@@ -153,11 +153,12 @@ def save_measurements(request_id, model_alias, batch_size, latency, batch_infere
     else:
         df.to_csv(csv_path, index=False)
 
-def save_measurements_and_monitor(request_id, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info):
+def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info):
     csv_filename = f"measurements_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
+        "arrival time": time.strftime("%Y-%m-%d %H:%M:%S", request_time),
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
         "model": model_alias,
         "batch_size": batch_size,
@@ -263,7 +264,7 @@ def process_batch(model_alias, condition, batch_size):
                 logging.debug("Saving sys info")
                 sys_info = monitor.get_sys_info()
 
-            batch_inference_time = end_time - start_time
+            batch_inference_time = round(end_time - start_time,3)
             # Add the batch inference time to the total inference time
             total_inference_time += batch_inference_time
 
@@ -273,16 +274,16 @@ def process_batch(model_alias, condition, batch_size):
             for request in batch:
                 request_id = request['id']
                 request_time = request['request_time']
-                latency = end_time - request_time  # Time since the request was received until the batch was processed
+                latency = round(end_time - request_time,3)  # Time since the request was received until the batch was processed
                 logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")
 
                 # Save the latency result to a CSV file
                 if monitoring == True:
                     logging.debug("Saving results with gpu monitoring")
-                    save_measurements_and_monitor(request_id, model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, sys_info)
+                    save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, sys_info)
                 else:
                     logging.debug("Saving results without gpu monitoring")
-                    save_measurements(request_id, model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
+                    save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
 
             # Reset the timer for the next batch
             batch_timers[model_alias] = None
@@ -375,8 +376,9 @@ def inference():
     model_alias = request.json.get('model_alias')
     prompt = request.json.get('prompt')
     request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
-    request_time = time.perf_counter()  # Time when the request was received
-    
+    request_time = time.perf_counter()  # Time when the request was received to compute
+    arrival_time = time.localtime() # To save in the csv
+
     # To finish inference and save time
     remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
     if model_alias=="Stop" and inference_flag == False:
@@ -384,6 +386,7 @@ def inference():
             remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
             logging.debug("Waiting for running processes to finish")
             time.sleep(1)
+        time.sleep(1)
         # Log the total time and the percentage of inference time
         total_time = last_batch_processed_time - first_request_time
         inference_percentage = (total_inference_time / total_time) * 100
@@ -427,7 +430,8 @@ def inference():
         'id': request_id,
         'model_alias': model_alias,
         'prompt': prompt,
-        'request_time': request_time
+        'request_time': request_time,
+        'arrival_time': arrival_time
     }
     
     incoming_request_batches[model_alias].put(request_data)
