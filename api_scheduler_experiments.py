@@ -49,7 +49,7 @@ if mode == "FCFS":
 
 if mode == "batchedFCFS":
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = [64]
+    allowed_batch_sizes = [16]
 
 # Time constraint for batch processing
 # batch_time_limit = 15  # Seconds
