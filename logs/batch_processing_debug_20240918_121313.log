@@ -1,0 +1,633 @@
+2024-09-18 12:13:13,292 Using device: cpu
+2024-09-18 12:13:13,292 Scheduling mode set as batchedFCFS
+2024-09-18 12:13:13,319 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.212:5000
+2024-09-18 12:13:13,319 [33mPress CTRL+C to quit[0m
+2024-09-18 12:13:17,630 Request with ID 52c8741d for model gpt2medium-355m received
+2024-09-18 12:13:17,631 127.0.0.1 - - [18/Sep/2024 12:13:17] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:17,764 Request with ID 1b32accb for model distilgpt2-124m received
+2024-09-18 12:13:17,764 127.0.0.1 - - [18/Sep/2024 12:13:17] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:17,781 Request with ID b4b99d27 for model gpt2medium-355m received
+2024-09-18 12:13:17,781 127.0.0.1 - - [18/Sep/2024 12:13:17] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:17,988 Request with ID 86fe5188 for model distilgpt2-124m received
+2024-09-18 12:13:17,989 127.0.0.1 - - [18/Sep/2024 12:13:17] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:17,994 Request with ID 82b35ea7 for model distilgpt2-124m received
+2024-09-18 12:13:17,994 127.0.0.1 - - [18/Sep/2024 12:13:17] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,020 Request with ID ae334e98 for model gpt2-124m received
+2024-09-18 12:13:18,020 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,119 Request with ID aa080023 for model gpt2-124m received
+2024-09-18 12:13:18,119 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,178 Request with ID ba243ad4 for model gpt2medium-355m received
+2024-09-18 12:13:18,179 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,231 Request with ID cf4ee5c7 for model gpt2medium-355m received
+2024-09-18 12:13:18,232 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,294 Request with ID ee799752 for model gpt2medium-355m received
+2024-09-18 12:13:18,295 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,705 Request with ID c1d8f9e4 for model gpt2medium-355m received
+2024-09-18 12:13:18,706 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,904 Request with ID dc2083a9 for model gpt2-124m received
+2024-09-18 12:13:18,905 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:18,967 Request with ID ebe65b9b for model gpt2-124m received
+2024-09-18 12:13:18,968 127.0.0.1 - - [18/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,306 Request with ID 12697047 for model distilgpt2-124m received
+2024-09-18 12:13:19,307 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,345 Request with ID 910f921f for model gpt2medium-355m received
+2024-09-18 12:13:19,346 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,462 Request with ID c019b233 for model gpt2medium-355m received
+2024-09-18 12:13:19,463 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,482 Request with ID 5d282ceb for model distilgpt2-124m received
+2024-09-18 12:13:19,483 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,593 Request with ID 0d379aeb for model distilgpt2-124m received
+2024-09-18 12:13:19,594 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,620 Request with ID ff937428 for model gpt2medium-355m received
+2024-09-18 12:13:19,620 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,804 Request with ID b4f228bd for model distilgpt2-124m received
+2024-09-18 12:13:19,805 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,858 Request with ID f420ed2b for model distilgpt2-124m received
+2024-09-18 12:13:19,858 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:19,991 Request with ID 8025e060 for model distilgpt2-124m received
+2024-09-18 12:13:19,991 127.0.0.1 - - [18/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,015 Request with ID 07df61f5 for model distilgpt2-124m received
+2024-09-18 12:13:20,016 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,057 Request with ID 3e1a2bdf for model gpt2medium-355m received
+2024-09-18 12:13:20,058 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,235 Request with ID 89c529fe for model gpt2-124m received
+2024-09-18 12:13:20,236 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,251 Request with ID 1c5745ee for model gpt2-124m received
+2024-09-18 12:13:20,251 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,258 Request with ID a728a488 for model gpt2-124m received
+2024-09-18 12:13:20,258 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,282 Request with ID 95f4659f for model gpt2medium-355m received
+2024-09-18 12:13:20,283 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,455 Request with ID 4444ef8a for model gpt2medium-355m received
+2024-09-18 12:13:20,456 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,613 Request with ID 4915286a for model gpt2-124m received
+2024-09-18 12:13:20,614 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:20,874 Request with ID 4cb14a59 for model gpt2medium-355m received
+2024-09-18 12:13:20,874 127.0.0.1 - - [18/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,064 Request with ID 646ff467 for model distilgpt2-124m received
+2024-09-18 12:13:21,064 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,075 Request with ID eeddaf2d for model gpt2medium-355m received
+2024-09-18 12:13:21,075 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,191 Request with ID 3dd935b1 for model gpt2medium-355m received
+2024-09-18 12:13:21,192 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,282 Request with ID 592fa9fe for model gpt2-124m received
+2024-09-18 12:13:21,283 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,333 Request with ID 6218e5be for model gpt2medium-355m received
+2024-09-18 12:13:21,333 Batch size condition met for model gpt2medium-355m
+2024-09-18 12:13:21,333 Next: call load_model for gpt2medium-355m
+2024-09-18 12:13:21,475 Request with ID 67e3ed5a for model gpt2medium-355m received
+2024-09-18 12:13:21,475 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,493 Loaded model gpt2medium-355m
+2024-09-18 12:13:21,493 Batch processing started for model gpt2medium-355m
+2024-09-18 12:13:21,506 Request with ID 92f6ce27 for model gpt2medium-355m received
+2024-09-18 12:13:21,506 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,562 Request with ID 64be796d for model gpt2medium-355m received
+2024-09-18 12:13:21,562 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,565 Request with ID 4e91e742 for model gpt2-124m received
+2024-09-18 12:13:21,565 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,638 Request with ID 5c6e9a65 for model gpt2-124m received
+2024-09-18 12:13:21,638 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,668 Request with ID 86225651 for model gpt2medium-355m received
+2024-09-18 12:13:21,668 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,692 Request with ID 32cee2c8 for model gpt2medium-355m received
+2024-09-18 12:13:21,693 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,728 Request with ID af9d0e16 for model distilgpt2-124m received
+2024-09-18 12:13:21,728 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,827 Request with ID c0b78aae for model gpt2-124m received
+2024-09-18 12:13:21,827 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:21,840 Request with ID 3a0de578 for model distilgpt2-124m received
+2024-09-18 12:13:21,840 127.0.0.1 - - [18/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,056 Request with ID cf061bd0 for model distilgpt2-124m received
+2024-09-18 12:13:22,056 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,071 Request with ID 84665441 for model gpt2medium-355m received
+2024-09-18 12:13:22,071 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,308 Request with ID 21e20841 for model gpt2-124m received
+2024-09-18 12:13:22,308 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,414 Request with ID b95de95b for model gpt2-124m received
+2024-09-18 12:13:22,414 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,451 Request with ID 32714bad for model gpt2medium-355m received
+2024-09-18 12:13:22,451 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,508 Request with ID bdc75ed8 for model gpt2medium-355m received
+2024-09-18 12:13:22,509 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,528 Request with ID aacbf594 for model gpt2-124m received
+2024-09-18 12:13:22,528 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,579 Request with ID 47b8e3b6 for model gpt2-124m received
+2024-09-18 12:13:22,579 Batch size condition met for model gpt2-124m
+2024-09-18 12:13:22,610 Request with ID a3792a3a for model distilgpt2-124m received
+2024-09-18 12:13:22,610 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:22,731 Request with ID 178ecdea for model gpt2-124m received
+2024-09-18 12:13:22,731 127.0.0.1 - - [18/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:23,341 Request with ID c223fe91 for model gpt2-124m received
+2024-09-18 12:13:23,341 127.0.0.1 - - [18/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:23,718 Request with ID 8c4fc977 for model gpt2medium-355m received
+2024-09-18 12:13:23,718 127.0.0.1 - - [18/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:23,752 Request with ID 74de5f92 for model distilgpt2-124m received
+2024-09-18 12:13:23,752 Batch size condition met for model distilgpt2-124m
+2024-09-18 12:13:23,830 Request with ID 80621a21 for model distilgpt2-124m received
+2024-09-18 12:13:23,830 127.0.0.1 - - [18/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:23,858 Request with ID d82f4f59 for model gpt2medium-355m received
+2024-09-18 12:13:23,858 127.0.0.1 - - [18/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,005 Request with ID b3686645 for model gpt2-124m received
+2024-09-18 12:13:24,005 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,135 Request with ID 0d6ceecd for model distilgpt2-124m received
+2024-09-18 12:13:24,135 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,212 Request with ID 0e50e574 for model gpt2-124m received
+2024-09-18 12:13:24,213 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,253 Request with ID b1237268 for model gpt2medium-355m received
+2024-09-18 12:13:24,253 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,279 Request with ID ef745d00 for model gpt2medium-355m received
+2024-09-18 12:13:24,279 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,446 Request with ID 5ab07f4e for model gpt2-124m received
+2024-09-18 12:13:24,446 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,565 Request with ID a8802552 for model gpt2medium-355m received
+2024-09-18 12:13:24,565 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,842 Request with ID 312024f4 for model gpt2medium-355m received
+2024-09-18 12:13:24,842 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,885 Request with ID e11d374e for model gpt2medium-355m received
+2024-09-18 12:13:24,886 127.0.0.1 - - [18/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:24,966 Request with ID e5e06a08 for model gpt2medium-355m received
+2024-09-18 12:13:24,967 Batch size condition met for model gpt2medium-355m
+2024-09-18 12:13:25,074 Request with ID e6c50a9d for model gpt2-124m received
+2024-09-18 12:13:25,074 127.0.0.1 - - [18/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:25,149 Request with ID a28a0c26 for model distilgpt2-124m received
+2024-09-18 12:13:25,149 127.0.0.1 - - [18/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:25,709 Request with ID c7088d19 for model gpt2-124m received
+2024-09-18 12:13:25,709 127.0.0.1 - - [18/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:25,925 Request with ID 23e0e1fc for model gpt2-124m received
+2024-09-18 12:13:25,926 127.0.0.1 - - [18/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:25,970 Request with ID 789a2ac2 for model distilgpt2-124m received
+2024-09-18 12:13:25,970 127.0.0.1 - - [18/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:26,122 Request with ID 1682fbfa for model gpt2medium-355m received
+2024-09-18 12:13:26,122 127.0.0.1 - - [18/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:26,398 Request with ID ac5c47de for model distilgpt2-124m received
+2024-09-18 12:13:26,398 127.0.0.1 - - [18/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:26,510 Request with ID 218db672 for model gpt2medium-355m received
+2024-09-18 12:13:26,510 127.0.0.1 - - [18/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:26,559 Request with ID eede529a for model gpt2medium-355m received
+2024-09-18 12:13:26,559 127.0.0.1 - - [18/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:26,923 Request with ID 2a06aaa7 for model distilgpt2-124m received
+2024-09-18 12:13:26,923 127.0.0.1 - - [18/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,004 Request with ID dd56aab9 for model gpt2-124m received
+2024-09-18 12:13:27,004 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,025 Request with ID 7533b970 for model gpt2-124m received
+2024-09-18 12:13:27,025 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,094 Request with ID 2b9d5a2b for model gpt2medium-355m received
+2024-09-18 12:13:27,094 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,223 Request with ID 733f7d7b for model gpt2-124m received
+2024-09-18 12:13:27,223 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,302 Request with ID a1131b08 for model gpt2medium-355m received
+2024-09-18 12:13:27,302 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,405 Request with ID cfc658c4 for model distilgpt2-124m received
+2024-09-18 12:13:27,406 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,495 Request with ID f54f200f for model distilgpt2-124m received
+2024-09-18 12:13:27,495 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,734 Request with ID 695a15e5 for model distilgpt2-124m received
+2024-09-18 12:13:27,734 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,778 Request with ID 84e90651 for model gpt2-124m received
+2024-09-18 12:13:27,779 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,801 Request with ID c4532ed8 for model gpt2medium-355m received
+2024-09-18 12:13:27,801 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,888 Request with ID f8e12717 for model gpt2-124m received
+2024-09-18 12:13:27,888 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:27,892 Request with ID 7353a04d for model distilgpt2-124m received
+2024-09-18 12:13:27,893 127.0.0.1 - - [18/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,201 Request with ID e01aa447 for model gpt2-124m received
+2024-09-18 12:13:28,201 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,509 Request with ID 753e8fc9 for model gpt2-124m received
+2024-09-18 12:13:28,509 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,595 Request with ID 63eab43f for model gpt2-124m received
+2024-09-18 12:13:28,596 Batch size condition met for model gpt2-124m
+2024-09-18 12:13:28,604 Request with ID 9167b8f3 for model gpt2medium-355m received
+2024-09-18 12:13:28,604 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,636 Request with ID efcb0147 for model distilgpt2-124m received
+2024-09-18 12:13:28,636 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,719 Request with ID 38a77929 for model distilgpt2-124m received
+2024-09-18 12:13:28,719 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,840 Request with ID 4df2c44c for model distilgpt2-124m received
+2024-09-18 12:13:28,840 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,852 Request with ID faee50a3 for model distilgpt2-124m received
+2024-09-18 12:13:28,852 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:28,883 Request with ID 671ecab3 for model distilgpt2-124m received
+2024-09-18 12:13:28,883 127.0.0.1 - - [18/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,018 Request with ID 2a7263bd for model gpt2medium-355m received
+2024-09-18 12:13:29,019 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,055 Request with ID f6691567 for model gpt2medium-355m received
+2024-09-18 12:13:29,055 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,086 Request with ID a3170a80 for model distilgpt2-124m received
+2024-09-18 12:13:29,086 Request with ID a1193092 for model gpt2-124m received
+2024-09-18 12:13:29,086 Batch size condition met for model distilgpt2-124m
+2024-09-18 12:13:29,086 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,109 Request with ID ceb6b080 for model distilgpt2-124m received
+2024-09-18 12:13:29,109 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,331 Request with ID 11144531 for model distilgpt2-124m received
+2024-09-18 12:13:29,332 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,343 Request with ID 8e199618 for model distilgpt2-124m received
+2024-09-18 12:13:29,343 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,384 Request with ID 97351f14 for model distilgpt2-124m received
+2024-09-18 12:13:29,385 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,419 Request with ID e5851abf for model distilgpt2-124m received
+2024-09-18 12:13:29,419 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,593 Request with ID 47b111c7 for model gpt2medium-355m received
+2024-09-18 12:13:29,593 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,608 Request with ID d0a11f77 for model gpt2-124m received
+2024-09-18 12:13:29,609 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,670 Request with ID ad018d68 for model gpt2-124m received
+2024-09-18 12:13:29,670 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,693 Request with ID b85fa9d8 for model gpt2medium-355m received
+2024-09-18 12:13:29,693 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,797 Request with ID 686202e5 for model distilgpt2-124m received
+2024-09-18 12:13:29,797 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:29,870 Request with ID 3d4e4a2e for model gpt2medium-355m received
+2024-09-18 12:13:29,871 127.0.0.1 - - [18/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,030 Request with ID b5b26b81 for model gpt2medium-355m received
+2024-09-18 12:13:30,030 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,089 Request with ID 0f99eafc for model distilgpt2-124m received
+2024-09-18 12:13:30,089 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,093 Request with ID 7f881016 for model distilgpt2-124m received
+2024-09-18 12:13:30,093 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,275 Request with ID 52b35fc9 for model gpt2-124m received
+2024-09-18 12:13:30,275 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,281 Request with ID 4985294e for model gpt2-124m received
+2024-09-18 12:13:30,282 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,341 Request with ID f7ce942c for model distilgpt2-124m received
+2024-09-18 12:13:30,341 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,352 Request with ID a3a1d26a for model gpt2-124m received
+2024-09-18 12:13:30,352 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,387 Request with ID 29e9c6f2 for model gpt2medium-355m received
+2024-09-18 12:13:30,388 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,495 Request with ID f50cc8b6 for model distilgpt2-124m received
+2024-09-18 12:13:30,495 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,627 Request with ID 9eec4746 for model gpt2medium-355m received
+2024-09-18 12:13:30,627 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,771 Request with ID cab0981c for model gpt2-124m received
+2024-09-18 12:13:30,771 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:30,781 Request with ID 599269d5 for model distilgpt2-124m received
+2024-09-18 12:13:30,782 127.0.0.1 - - [18/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,171 Request with ID 95e4451f for model distilgpt2-124m received
+2024-09-18 12:13:31,172 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,317 Request with ID 8625fab6 for model gpt2-124m received
+2024-09-18 12:13:31,317 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,381 Request with ID 23aa9662 for model gpt2medium-355m received
+2024-09-18 12:13:31,381 Batch size condition met for model gpt2medium-355m
+2024-09-18 12:13:31,387 Request with ID 4d30107d for model gpt2-124m received
+2024-09-18 12:13:31,387 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,607 Request with ID c54c2d19 for model gpt2-124m received
+2024-09-18 12:13:31,607 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,685 Request with ID d330ad7c for model gpt2medium-355m received
+2024-09-18 12:13:31,685 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:31,976 Request with ID b9056025 for model gpt2medium-355m received
+2024-09-18 12:13:31,976 127.0.0.1 - - [18/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,138 Request with ID 435a62cf for model distilgpt2-124m received
+2024-09-18 12:13:32,138 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,225 Request with ID 21bfe951 for model gpt2-124m received
+2024-09-18 12:13:32,225 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,393 Request with ID daee0d42 for model gpt2medium-355m received
+2024-09-18 12:13:32,393 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,566 Request with ID caedae6e for model distilgpt2-124m received
+2024-09-18 12:13:32,566 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,591 Request with ID e0b03a9e for model gpt2-124m received
+2024-09-18 12:13:32,591 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,616 Request with ID 27017ccd for model gpt2medium-355m received
+2024-09-18 12:13:32,617 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,659 Request with ID 54ef4539 for model gpt2-124m received
+2024-09-18 12:13:32,659 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:32,847 Request with ID 9ff14944 for model distilgpt2-124m received
+2024-09-18 12:13:32,847 127.0.0.1 - - [18/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:33,016 Request with ID 74619bfd for model gpt2medium-355m received
+2024-09-18 12:13:33,016 127.0.0.1 - - [18/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:33,030 Request with ID c1f59964 for model gpt2-124m received
+2024-09-18 12:13:33,030 127.0.0.1 - - [18/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:33,308 Request with ID f95ed707 for model gpt2-124m received
+2024-09-18 12:13:33,308 127.0.0.1 - - [18/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:33,651 Request with ID bca73fac for model distilgpt2-124m received
+2024-09-18 12:13:33,651 Batch size condition met for model distilgpt2-124m
+2024-09-18 12:13:33,708 Request with ID 56c6f71d for model distilgpt2-124m received
+2024-09-18 12:13:33,709 127.0.0.1 - - [18/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:33,739 Request with ID a81389f2 for model gpt2medium-355m received
+2024-09-18 12:13:33,739 127.0.0.1 - - [18/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,008 Request with ID 77383eda for model gpt2-124m received
+2024-09-18 12:13:34,008 Batch size condition met for model gpt2-124m
+2024-09-18 12:13:34,122 Request with ID 38979b93 for model distilgpt2-124m received
+2024-09-18 12:13:34,122 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,357 Request with ID aeae386e for model gpt2-124m received
+2024-09-18 12:13:34,357 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,397 Request with ID a060abf7 for model gpt2medium-355m received
+2024-09-18 12:13:34,397 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,447 Request with ID d7620eb8 for model gpt2-124m received
+2024-09-18 12:13:34,447 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,684 Request with ID 770a9c22 for model gpt2-124m received
+2024-09-18 12:13:34,684 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:34,724 Request with ID b4dd953e for model gpt2medium-355m received
+2024-09-18 12:13:34,724 127.0.0.1 - - [18/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:35,026 Request with ID 5e53f280 for model distilgpt2-124m received
+2024-09-18 12:13:35,026 127.0.0.1 - - [18/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:35,128 Request with ID 21c886f5 for model gpt2-124m received
+2024-09-18 12:13:35,128 127.0.0.1 - - [18/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:35,163 Request with ID 016ec268 for model gpt2-124m received
+2024-09-18 12:13:35,164 127.0.0.1 - - [18/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:35,322 Request with ID b592c51b for model gpt2-124m received
+2024-09-18 12:13:35,322 127.0.0.1 - - [18/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:35,591 Request with ID a2de6d37 for model gpt2medium-355m received
+2024-09-18 12:13:35,591 127.0.0.1 - - [18/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,142 Request with ID 258bb5f6 for model gpt2-124m received
+2024-09-18 12:13:36,142 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,277 Request with ID c56d2bf0 for model gpt2medium-355m received
+2024-09-18 12:13:36,277 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,402 Request with ID 42b52b6d for model gpt2-124m received
+2024-09-18 12:13:36,402 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,545 Request with ID cc60a455 for model distilgpt2-124m received
+2024-09-18 12:13:36,545 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,667 Request with ID 35177d84 for model distilgpt2-124m received
+2024-09-18 12:13:36,667 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,680 Processed batch: ['52c8741d', 'b4b99d27', 'ba243ad4', 'cf4ee5c7', 'ee799752', 'c1d8f9e4', '910f921f', 'c019b233', 'ff937428', '3e1a2bdf', '95f4659f', '4444ef8a', '4cb14a59', 'eeddaf2d', '3dd935b1', '6218e5be'] with model gpt2medium-355m in 15.1869 seconds
+2024-09-18 12:13:36,680 Latency for request 52c8741d with model gpt2medium-355m: 19.0500 seconds
+2024-09-18 12:13:36,680 Saving results without gpu monitoring
+2024-09-18 12:13:36,685 Latency for request b4b99d27 with model gpt2medium-355m: 18.8994 seconds
+2024-09-18 12:13:36,685 Saving results without gpu monitoring
+2024-09-18 12:13:36,685 Latency for request ba243ad4 with model gpt2medium-355m: 18.5024 seconds
+2024-09-18 12:13:36,685 Saving results without gpu monitoring
+2024-09-18 12:13:36,686 Latency for request cf4ee5c7 with model gpt2medium-355m: 18.4489 seconds
+2024-09-18 12:13:36,686 Saving results without gpu monitoring
+2024-09-18 12:13:36,686 Latency for request ee799752 with model gpt2medium-355m: 18.3864 seconds
+2024-09-18 12:13:36,686 Saving results without gpu monitoring
+2024-09-18 12:13:36,686 Latency for request c1d8f9e4 with model gpt2medium-355m: 17.9753 seconds
+2024-09-18 12:13:36,686 Saving results without gpu monitoring
+2024-09-18 12:13:36,686 Latency for request 910f921f with model gpt2medium-355m: 17.3350 seconds
+2024-09-18 12:13:36,686 Saving results without gpu monitoring
+2024-09-18 12:13:36,687 Latency for request c019b233 with model gpt2medium-355m: 17.2184 seconds
+2024-09-18 12:13:36,687 Saving results without gpu monitoring
+2024-09-18 12:13:36,687 Latency for request ff937428 with model gpt2medium-355m: 17.0606 seconds
+2024-09-18 12:13:36,687 Saving results without gpu monitoring
+2024-09-18 12:13:36,687 Latency for request 3e1a2bdf with model gpt2medium-355m: 16.6234 seconds
+2024-09-18 12:13:36,687 Saving results without gpu monitoring
+2024-09-18 12:13:36,687 Latency for request 95f4659f with model gpt2medium-355m: 16.3980 seconds
+2024-09-18 12:13:36,687 Saving results without gpu monitoring
+2024-09-18 12:13:36,688 Latency for request 4444ef8a with model gpt2medium-355m: 16.2254 seconds
+2024-09-18 12:13:36,688 Saving results without gpu monitoring
+2024-09-18 12:13:36,688 Latency for request 4cb14a59 with model gpt2medium-355m: 15.8068 seconds
+2024-09-18 12:13:36,688 Saving results without gpu monitoring
+2024-09-18 12:13:36,688 Latency for request eeddaf2d with model gpt2medium-355m: 15.6058 seconds
+2024-09-18 12:13:36,688 Saving results without gpu monitoring
+2024-09-18 12:13:36,688 Latency for request 3dd935b1 with model gpt2medium-355m: 15.4897 seconds
+2024-09-18 12:13:36,688 Saving results without gpu monitoring
+2024-09-18 12:13:36,688 Latency for request 6218e5be with model gpt2medium-355m: 15.3476 seconds
+2024-09-18 12:13:36,688 Saving results without gpu monitoring
+2024-09-18 12:13:36,689 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,689 Next: call load_model for gpt2-124m
+2024-09-18 12:13:36,698 Unloaded previous model
+2024-09-18 12:13:36,759 Loaded model gpt2-124m
+2024-09-18 12:13:36,759 Batch processing started for model gpt2-124m
+2024-09-18 12:13:36,891 Request with ID 99aa6e8f for model gpt2-124m received
+2024-09-18 12:13:36,891 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:36,963 Request with ID 0d231eb0 for model gpt2medium-355m received
+2024-09-18 12:13:36,964 127.0.0.1 - - [18/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:37,051 Request with ID 3b53536f for model gpt2-124m received
+2024-09-18 12:13:37,051 127.0.0.1 - - [18/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:37,265 Request with ID 36b6c019 for model gpt2medium-355m received
+2024-09-18 12:13:37,265 127.0.0.1 - - [18/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:37,505 Request with ID 27486339 for model distilgpt2-124m received
+2024-09-18 12:13:37,505 127.0.0.1 - - [18/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:37,629 Request with ID 758942e3 for model gpt2-124m received
+2024-09-18 12:13:37,629 127.0.0.1 - - [18/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:37,629 Waiting for running processes to finish
+2024-09-18 12:13:38,631 Waiting for running processes to finish
+2024-09-18 12:13:39,636 Waiting for running processes to finish
+2024-09-18 12:13:40,641 Waiting for running processes to finish
+2024-09-18 12:13:41,644 Waiting for running processes to finish
+2024-09-18 12:13:41,840 Processed batch: ['a1193092', 'd0a11f77', 'ad018d68', '52b35fc9', '4985294e', 'a3a1d26a', 'cab0981c', '8625fab6', '4d30107d', 'c54c2d19', '21bfe951', 'e0b03a9e', '54ef4539', 'c1f59964', 'f95ed707', '77383eda'] with model gpt2-124m in 5.0816 seconds
+2024-09-18 12:13:41,841 Latency for request a1193092 with model gpt2-124m: 12.7544 seconds
+2024-09-18 12:13:41,841 Saving results without gpu monitoring
+2024-09-18 12:13:41,842 Latency for request d0a11f77 with model gpt2-124m: 12.2325 seconds
+2024-09-18 12:13:41,842 Saving results without gpu monitoring
+2024-09-18 12:13:41,842 Latency for request ad018d68 with model gpt2-124m: 12.1706 seconds
+2024-09-18 12:13:41,842 Saving results without gpu monitoring
+2024-09-18 12:13:41,842 Latency for request 52b35fc9 with model gpt2-124m: 11.5659 seconds
+2024-09-18 12:13:41,842 Saving results without gpu monitoring
+2024-09-18 12:13:41,843 Latency for request 4985294e with model gpt2-124m: 11.5592 seconds
+2024-09-18 12:13:41,843 Saving results without gpu monitoring
+2024-09-18 12:13:41,843 Latency for request a3a1d26a with model gpt2-124m: 11.4886 seconds
+2024-09-18 12:13:41,843 Saving results without gpu monitoring
+2024-09-18 12:13:41,843 Latency for request cab0981c with model gpt2-124m: 11.0694 seconds
+2024-09-18 12:13:41,843 Saving results without gpu monitoring
+2024-09-18 12:13:41,843 Latency for request 8625fab6 with model gpt2-124m: 10.5234 seconds
+2024-09-18 12:13:41,843 Saving results without gpu monitoring
+2024-09-18 12:13:41,844 Latency for request 4d30107d with model gpt2-124m: 10.4540 seconds
+2024-09-18 12:13:41,844 Saving results without gpu monitoring
+2024-09-18 12:13:41,844 Latency for request c54c2d19 with model gpt2-124m: 10.2335 seconds
+2024-09-18 12:13:41,844 Saving results without gpu monitoring
+2024-09-18 12:13:41,844 Latency for request 21bfe951 with model gpt2-124m: 9.6158 seconds
+2024-09-18 12:13:41,844 Saving results without gpu monitoring
+2024-09-18 12:13:41,844 Latency for request e0b03a9e with model gpt2-124m: 9.2493 seconds
+2024-09-18 12:13:41,844 Saving results without gpu monitoring
+2024-09-18 12:13:41,845 Latency for request 54ef4539 with model gpt2-124m: 9.1820 seconds
+2024-09-18 12:13:41,845 Saving results without gpu monitoring
+2024-09-18 12:13:41,845 Latency for request c1f59964 with model gpt2-124m: 8.8102 seconds
+2024-09-18 12:13:41,845 Saving results without gpu monitoring
+2024-09-18 12:13:41,845 Latency for request f95ed707 with model gpt2-124m: 8.5323 seconds
+2024-09-18 12:13:41,845 Saving results without gpu monitoring
+2024-09-18 12:13:41,845 Latency for request 77383eda with model gpt2-124m: 7.8330 seconds
+2024-09-18 12:13:41,845 Saving results without gpu monitoring
+2024-09-18 12:13:41,846 127.0.0.1 - - [18/Sep/2024 12:13:41] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:41,846 Next: call load_model for distilgpt2-124m
+2024-09-18 12:13:41,856 Unloaded previous model
+2024-09-18 12:13:41,906 Loaded model distilgpt2-124m
+2024-09-18 12:13:41,906 Batch processing started for model distilgpt2-124m
+2024-09-18 12:13:42,649 Waiting for running processes to finish
+2024-09-18 12:13:43,651 Waiting for running processes to finish
+2024-09-18 12:13:44,655 Waiting for running processes to finish
+2024-09-18 12:13:45,126 Processed batch: ['ceb6b080', '11144531', '8e199618', '97351f14', 'e5851abf', '686202e5', '0f99eafc', '7f881016', 'f7ce942c', 'f50cc8b6', '599269d5', '95e4451f', '435a62cf', 'caedae6e', '9ff14944', 'bca73fac'] with model distilgpt2-124m in 3.2195 seconds
+2024-09-18 12:13:45,126 Latency for request ceb6b080 with model distilgpt2-124m: 16.0169 seconds
+2024-09-18 12:13:45,126 Saving results without gpu monitoring
+2024-09-18 12:13:45,127 Latency for request 11144531 with model distilgpt2-124m: 15.7945 seconds
+2024-09-18 12:13:45,127 Saving results without gpu monitoring
+2024-09-18 12:13:45,127 Latency for request 8e199618 with model distilgpt2-124m: 15.7834 seconds
+2024-09-18 12:13:45,127 Saving results without gpu monitoring
+2024-09-18 12:13:45,128 Latency for request 97351f14 with model distilgpt2-124m: 15.7415 seconds
+2024-09-18 12:13:45,128 Saving results without gpu monitoring
+2024-09-18 12:13:45,128 Latency for request e5851abf with model distilgpt2-124m: 15.7073 seconds
+2024-09-18 12:13:45,128 Saving results without gpu monitoring
+2024-09-18 12:13:45,128 Latency for request 686202e5 with model distilgpt2-124m: 15.3293 seconds
+2024-09-18 12:13:45,128 Saving results without gpu monitoring
+2024-09-18 12:13:45,128 Latency for request 0f99eafc with model distilgpt2-124m: 15.0370 seconds
+2024-09-18 12:13:45,129 Saving results without gpu monitoring
+2024-09-18 12:13:45,129 Latency for request 7f881016 with model distilgpt2-124m: 15.0334 seconds
+2024-09-18 12:13:45,129 Saving results without gpu monitoring
+2024-09-18 12:13:45,129 Latency for request f7ce942c with model distilgpt2-124m: 14.7851 seconds
+2024-09-18 12:13:45,129 Saving results without gpu monitoring
+2024-09-18 12:13:45,129 Latency for request f50cc8b6 with model distilgpt2-124m: 14.6313 seconds
+2024-09-18 12:13:45,129 Saving results without gpu monitoring
+2024-09-18 12:13:45,130 Latency for request 599269d5 with model distilgpt2-124m: 14.3445 seconds
+2024-09-18 12:13:45,130 Saving results without gpu monitoring
+2024-09-18 12:13:45,130 Latency for request 95e4451f with model distilgpt2-124m: 13.9545 seconds
+2024-09-18 12:13:45,130 Saving results without gpu monitoring
+2024-09-18 12:13:45,130 Latency for request 435a62cf with model distilgpt2-124m: 12.9877 seconds
+2024-09-18 12:13:45,130 Saving results without gpu monitoring
+2024-09-18 12:13:45,130 Latency for request caedae6e with model distilgpt2-124m: 12.5603 seconds
+2024-09-18 12:13:45,130 Saving results without gpu monitoring
+2024-09-18 12:13:45,131 Latency for request 9ff14944 with model distilgpt2-124m: 12.2789 seconds
+2024-09-18 12:13:45,131 Saving results without gpu monitoring
+2024-09-18 12:13:45,131 Latency for request bca73fac with model distilgpt2-124m: 11.4747 seconds
+2024-09-18 12:13:45,131 Saving results without gpu monitoring
+2024-09-18 12:13:45,131 127.0.0.1 - - [18/Sep/2024 12:13:45] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:45,131 Next: call load_model for gpt2medium-355m
+2024-09-18 12:13:45,138 Unloaded previous model
+2024-09-18 12:13:45,250 Loaded model gpt2medium-355m
+2024-09-18 12:13:45,250 Batch processing started for model gpt2medium-355m
+2024-09-18 12:13:45,659 Waiting for running processes to finish
+2024-09-18 12:13:46,659 Waiting for running processes to finish
+2024-09-18 12:13:47,661 Waiting for running processes to finish
+2024-09-18 12:13:48,665 Waiting for running processes to finish
+2024-09-18 12:13:49,670 Waiting for running processes to finish
+2024-09-18 12:13:50,675 Waiting for running processes to finish
+2024-09-18 12:13:51,680 Waiting for running processes to finish
+2024-09-18 12:13:52,686 Waiting for running processes to finish
+2024-09-18 12:13:53,690 Waiting for running processes to finish
+2024-09-18 12:13:54,695 Waiting for running processes to finish
+2024-09-18 12:13:55,700 Waiting for running processes to finish
+2024-09-18 12:13:56,706 Waiting for running processes to finish
+2024-09-18 12:13:57,137 Processed batch: ['1682fbfa', '218db672', 'eede529a', '2b9d5a2b', 'a1131b08', 'c4532ed8', '9167b8f3', '2a7263bd', 'f6691567', '47b111c7', 'b85fa9d8', '3d4e4a2e', 'b5b26b81', '29e9c6f2', '9eec4746', '23aa9662'] with model gpt2medium-355m in 11.8875 seconds
+2024-09-18 12:13:57,137 Latency for request 1682fbfa with model gpt2medium-355m: 31.0150 seconds
+2024-09-18 12:13:57,137 Saving results without gpu monitoring
+2024-09-18 12:13:57,139 Latency for request 218db672 with model gpt2medium-355m: 30.6277 seconds
+2024-09-18 12:13:57,139 Saving results without gpu monitoring
+2024-09-18 12:13:57,139 Latency for request eede529a with model gpt2medium-355m: 30.5785 seconds
+2024-09-18 12:13:57,139 Saving results without gpu monitoring
+2024-09-18 12:13:57,139 Latency for request 2b9d5a2b with model gpt2medium-355m: 30.0434 seconds
+2024-09-18 12:13:57,139 Saving results without gpu monitoring
+2024-09-18 12:13:57,140 Latency for request a1131b08 with model gpt2medium-355m: 29.8353 seconds
+2024-09-18 12:13:57,140 Saving results without gpu monitoring
+2024-09-18 12:13:57,140 Latency for request c4532ed8 with model gpt2medium-355m: 29.3364 seconds
+2024-09-18 12:13:57,140 Saving results without gpu monitoring
+2024-09-18 12:13:57,140 Latency for request 9167b8f3 with model gpt2medium-355m: 28.5336 seconds
+2024-09-18 12:13:57,140 Saving results without gpu monitoring
+2024-09-18 12:13:57,141 Latency for request 2a7263bd with model gpt2medium-355m: 28.1190 seconds
+2024-09-18 12:13:57,141 Saving results without gpu monitoring
+2024-09-18 12:13:57,141 Latency for request f6691567 with model gpt2medium-355m: 28.0820 seconds
+2024-09-18 12:13:57,141 Saving results without gpu monitoring
+2024-09-18 12:13:57,141 Latency for request 47b111c7 with model gpt2medium-355m: 27.5444 seconds
+2024-09-18 12:13:57,141 Saving results without gpu monitoring
+2024-09-18 12:13:57,141 Latency for request b85fa9d8 with model gpt2medium-355m: 27.4441 seconds
+2024-09-18 12:13:57,141 Saving results without gpu monitoring
+2024-09-18 12:13:57,142 Latency for request 3d4e4a2e with model gpt2medium-355m: 27.2669 seconds
+2024-09-18 12:13:57,142 Saving results without gpu monitoring
+2024-09-18 12:13:57,142 Latency for request b5b26b81 with model gpt2medium-355m: 27.1074 seconds
+2024-09-18 12:13:57,142 Saving results without gpu monitoring
+2024-09-18 12:13:57,142 Latency for request 29e9c6f2 with model gpt2medium-355m: 26.7500 seconds
+2024-09-18 12:13:57,142 Saving results without gpu monitoring
+2024-09-18 12:13:57,143 Latency for request 9eec4746 with model gpt2medium-355m: 26.5104 seconds
+2024-09-18 12:13:57,143 Saving results without gpu monitoring
+2024-09-18 12:13:57,143 Latency for request 23aa9662 with model gpt2medium-355m: 25.7564 seconds
+2024-09-18 12:13:57,143 Saving results without gpu monitoring
+2024-09-18 12:13:57,143 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,143 No batch to process for model gpt2-124m
+2024-09-18 12:13:57,143 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,143 No batch to process for model distilgpt2-124m
+2024-09-18 12:13:57,144 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,144 No batch to process for model gpt2medium-355m
+2024-09-18 12:13:57,144 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,144 No batch to process for model distilgpt2-124m
+2024-09-18 12:13:57,144 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,144 No batch to process for model gpt2-124m
+2024-09-18 12:13:57,144 127.0.0.1 - - [18/Sep/2024 12:13:57] "POST /inference HTTP/1.1" 200 -
+2024-09-18 12:13:57,710 Waiting for running processes to finish
+2024-09-18 12:13:58,711 Waiting for running processes to finish
+2024-09-18 12:13:59,716 Waiting for running processes to finish
+2024-09-18 12:14:00,722 Waiting for running processes to finish
+2024-09-18 12:14:01,724 Waiting for running processes to finish
+2024-09-18 12:14:02,728 Waiting for running processes to finish
+2024-09-18 12:14:03,730 Waiting for running processes to finish
+2024-09-18 12:14:04,736 Waiting for running processes to finish
+2024-09-18 12:14:05,741 Waiting for running processes to finish
+2024-09-18 12:14:06,747 Waiting for running processes to finish
+2024-09-18 12:14:07,752 Waiting for running processes to finish
+2024-09-18 12:14:08,753 Waiting for running processes to finish
+2024-09-18 12:14:09,759 Waiting for running processes to finish
+2024-09-18 12:14:10,760 Waiting for running processes to finish
+2024-09-18 12:14:11,765 Waiting for running processes to finish
+2024-09-18 12:14:12,771 Waiting for running processes to finish
+2024-09-18 12:14:13,776 Waiting for running processes to finish
+2024-09-18 12:14:14,777 Waiting for running processes to finish
+2024-09-18 12:14:15,781 Waiting for running processes to finish
+2024-09-18 12:14:16,783 Waiting for running processes to finish
+2024-09-18 12:14:17,786 Waiting for running processes to finish
+2024-09-18 12:14:18,792 Waiting for running processes to finish
+2024-09-18 12:14:19,798 Waiting for running processes to finish
+2024-09-18 12:14:20,803 Waiting for running processes to finish
+2024-09-18 12:14:21,804 Waiting for running processes to finish
+2024-09-18 12:14:22,810 Waiting for running processes to finish
+2024-09-18 12:14:23,812 Waiting for running processes to finish
+2024-09-18 12:14:24,818 Waiting for running processes to finish
+2024-09-18 12:14:25,821 Waiting for running processes to finish
+2024-09-18 12:14:26,827 Waiting for running processes to finish
+2024-09-18 12:14:27,832 Waiting for running processes to finish
+2024-09-18 12:14:28,838 Waiting for running processes to finish
+2024-09-18 12:14:29,843 Waiting for running processes to finish
+2024-09-18 12:14:30,849 Waiting for running processes to finish
+2024-09-18 12:14:31,855 Waiting for running processes to finish
+2024-09-18 12:14:32,860 Waiting for running processes to finish
+2024-09-18 12:14:33,862 Waiting for running processes to finish
+2024-09-18 12:14:34,867 Waiting for running processes to finish
+2024-09-18 12:14:35,871 Waiting for running processes to finish
+2024-09-18 12:14:36,877 Waiting for running processes to finish
+2024-09-18 12:14:37,882 Waiting for running processes to finish
+2024-09-18 12:14:38,888 Waiting for running processes to finish
+2024-09-18 12:14:39,891 Waiting for running processes to finish
+2024-09-18 12:14:40,895 Waiting for running processes to finish
+2024-09-18 12:14:41,901 Waiting for running processes to finish
+2024-09-18 12:14:42,906 Waiting for running processes to finish
+2024-09-18 12:14:43,908 Waiting for running processes to finish
+2024-09-18 12:14:44,912 Waiting for running processes to finish
+2024-09-18 12:14:45,916 Waiting for running processes to finish
+2024-09-18 12:14:46,921 Waiting for running processes to finish
+2024-09-18 12:14:47,927 Waiting for running processes to finish
+2024-09-18 12:14:48,929 Waiting for running processes to finish
+2024-09-18 12:14:49,935 Waiting for running processes to finish
+2024-09-18 12:14:50,936 Waiting for running processes to finish
+2024-09-18 12:14:51,938 Waiting for running processes to finish
+2024-09-18 12:14:52,943 Waiting for running processes to finish
+2024-09-18 12:14:53,949 Waiting for running processes to finish
+2024-09-18 12:14:54,953 Waiting for running processes to finish
+2024-09-18 12:14:55,954 Waiting for running processes to finish
+2024-09-18 12:14:56,960 Waiting for running processes to finish
+2024-09-18 12:14:57,963 Waiting for running processes to finish
+2024-09-18 12:14:58,967 Waiting for running processes to finish
+2024-09-18 12:14:59,971 Waiting for running processes to finish
+2024-09-18 12:15:00,976 Waiting for running processes to finish
+2024-09-18 12:15:01,982 Waiting for running processes to finish
+2024-09-18 12:15:02,987 Waiting for running processes to finish
+2024-09-18 12:15:03,993 Waiting for running processes to finish
+2024-09-18 12:15:04,998 Waiting for running processes to finish
+2024-09-18 12:15:06,001 Waiting for running processes to finish
+2024-09-18 12:15:07,007 Waiting for running processes to finish
+2024-09-18 12:15:08,013 Waiting for running processes to finish
+2024-09-18 12:15:09,018 Waiting for running processes to finish
+2024-09-18 12:15:10,021 Waiting for running processes to finish
+2024-09-18 12:15:11,027 Waiting for running processes to finish
+2024-09-18 12:15:12,030 Waiting for running processes to finish
+2024-09-18 12:15:13,035 Waiting for running processes to finish
+2024-09-18 12:15:14,037 Waiting for running processes to finish
+2024-09-18 12:15:15,042 Waiting for running processes to finish
+2024-09-18 12:15:16,048 Waiting for running processes to finish
+2024-09-18 12:15:17,053 Waiting for running processes to finish
+2024-09-18 12:15:18,056 Waiting for running processes to finish
+2024-09-18 12:15:19,061 Waiting for running processes to finish
+2024-09-18 12:15:20,066 Waiting for running processes to finish
+2024-09-18 12:15:21,072 Waiting for running processes to finish
+2024-09-18 12:15:22,076 Waiting for running processes to finish
+2024-09-18 12:15:23,081 Waiting for running processes to finish
+2024-09-18 12:15:24,085 Waiting for running processes to finish
+2024-09-18 12:15:25,090 Waiting for running processes to finish
+2024-09-18 12:15:26,096 Waiting for running processes to finish
+2024-09-18 12:15:27,102 Waiting for running processes to finish
+2024-09-18 12:15:28,106 Waiting for running processes to finish
+2024-09-18 12:15:29,110 Waiting for running processes to finish
+2024-09-18 12:15:30,112 Waiting for running processes to finish
+2024-09-18 12:15:31,117 Waiting for running processes to finish
+2024-09-18 12:15:32,121 Waiting for running processes to finish
+2024-09-18 12:15:33,126 Waiting for running processes to finish
+2024-09-18 12:15:34,132 Waiting for running processes to finish
+2024-09-18 12:15:35,138 Waiting for running processes to finish
+2024-09-18 12:15:36,143 Waiting for running processes to finish

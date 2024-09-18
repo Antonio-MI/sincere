@@ -12,13 +12,14 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 180  # seconds
+run_duration = 60  # seconds
 distribution = "gamma" 
 
-model_list = ["granite-7b", "gemma-7b", "llama3-8b"]
+model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] #
 
 # Define the parameters for the Gamma distribution
-shape, scale = 2.0, 1.0  # Shape (k) and scale (θ) for the Gamma distribution
+rate = 10
+shape, scale = 1.0, 1/rate  # Shape (alpha) and scale (θ) for the Gamma distribution
 
 # Define the API endpoint
 api_url = "http://127.0.0.1:5000/inference"
@@ -84,7 +85,7 @@ async def automated_calls(workloads, run_duration):
             
             # Generate a sleep interval following the Gamma distribution
             if distribution == "gamma":
-                interval = np.random.gamma(shape, scale)/2
+                interval = np.random.gamma(shape, scale)
             else:
                 interval = 1
             print(f"Sleeping for {interval:.2f} seconds")
