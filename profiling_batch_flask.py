@@ -252,6 +252,8 @@ def inference():
         prompt = request.json.get('prompt')
         batch_size = int(request.json.get('batch_size'))  # Get batch size from the request
         request_id = str(uuid.uuid4())[:8]  # Generate a unique request ID
+        request_time = time.perf_counter()
+        arrival_time = time.localtime()
         print(f"Request with ID {request_id} for model {model_alias} and batch size {batch_size} received")
 
         # Check if the model is in the allowed models list
@@ -269,7 +271,9 @@ def inference():
         request_data = {
             'id': request_id,
             'model_alias': model_alias,
-            'prompt': prompt
+            'prompt': prompt,
+            'request_time': request_time,
+            'arrival_time': arrival_time
         }
 
         incoming_request_batches[model_alias].put(request_data)
