@@ -138,7 +138,7 @@ def process_batch(model_alias, batch_size):
 
                 end_time = time.perf_counter()
                 
-                print(f"Processed batch: {list(responses.keys())} with model {model_alias} in {elapsed_time:.4f} seconds")
+                print(f"Processed batch: {list(responses.keys())} with model {model_alias}")
 
                 if monitoring == True:
                     logging.debug("Saving sys info")
@@ -185,7 +185,7 @@ def process_batch(model_alias, batch_size):
                 else:
                     print(f"Unexpected runtime error: {e}")
                     torch.cuda.empty_cache()
-                    elapsed_time = "None"
+                    #elapsed_time = "None"
                     latency = "None"
                     batch_inference_time = "None"
                     sys_info = "None"
