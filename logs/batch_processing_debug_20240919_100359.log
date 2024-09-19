@@ -1,0 +1,353 @@
+2024-09-19 10:03:59,693 Using device: cuda
+2024-09-19 10:03:59,693 Monitoring status set to True
+2024-09-19 10:04:14,771 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-19 10:04:14,771 [33mPress CTRL+C to quit[0m
+2024-09-19 10:04:15,084 127.0.0.1 - - [19/Sep/2024 10:04:15] "GET /health HTTP/1.1" 200 -
+2024-09-19 10:04:26,395 Saving sys info
+2024-09-19 10:04:26,434 Latency for request 752891b0 with model granite-7b: 11.0920 seconds
+2024-09-19 10:04:26,434 Saving results with gpu monitoring
+2024-09-19 10:04:26,439 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:26,440 127.0.0.1 - - [19/Sep/2024 10:04:26] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:28,302 Saving sys info
+2024-09-19 10:04:28,333 Latency for request 44268c5d with model granite-7b: 0.8560 seconds
+2024-09-19 10:04:28,333 Saving results with gpu monitoring
+2024-09-19 10:04:28,336 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:28,336 127.0.0.1 - - [19/Sep/2024 10:04:28] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:30,187 Saving sys info
+2024-09-19 10:04:30,218 Latency for request 62f9bc1d with model granite-7b: 0.8440 seconds
+2024-09-19 10:04:30,218 Saving results with gpu monitoring
+2024-09-19 10:04:30,221 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:30,222 127.0.0.1 - - [19/Sep/2024 10:04:30] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:32,106 Saving sys info
+2024-09-19 10:04:32,136 Latency for request 1a5aef4a with model granite-7b: 0.8780 seconds
+2024-09-19 10:04:32,136 Saving results with gpu monitoring
+2024-09-19 10:04:32,139 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:32,140 127.0.0.1 - - [19/Sep/2024 10:04:32] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:33,988 Saving sys info
+2024-09-19 10:04:34,020 Latency for request 6b98c88e with model granite-7b: 0.8430 seconds
+2024-09-19 10:04:34,020 Saving results with gpu monitoring
+2024-09-19 10:04:34,023 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:34,023 127.0.0.1 - - [19/Sep/2024 10:04:34] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:35,879 Saving sys info
+2024-09-19 10:04:35,910 Latency for request 03fe2e18 with model granite-7b: 0.8500 seconds
+2024-09-19 10:04:35,910 Saving results with gpu monitoring
+2024-09-19 10:04:35,913 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:35,913 127.0.0.1 - - [19/Sep/2024 10:04:35] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:37,767 Saving sys info
+2024-09-19 10:04:37,799 Latency for request 49f62958 with model granite-7b: 0.8480 seconds
+2024-09-19 10:04:37,800 Saving results with gpu monitoring
+2024-09-19 10:04:37,802 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:37,803 127.0.0.1 - - [19/Sep/2024 10:04:37] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:39,654 Saving sys info
+2024-09-19 10:04:39,689 Latency for request e2aaae7b with model granite-7b: 0.8450 seconds
+2024-09-19 10:04:39,689 Saving results with gpu monitoring
+2024-09-19 10:04:39,692 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:39,692 127.0.0.1 - - [19/Sep/2024 10:04:39] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:41,570 Saving sys info
+2024-09-19 10:04:41,605 Latency for request a0106cb0 with model granite-7b: 0.8720 seconds
+2024-09-19 10:04:41,605 Saving results with gpu monitoring
+2024-09-19 10:04:41,608 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:41,608 127.0.0.1 - - [19/Sep/2024 10:04:41] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:43,471 Saving sys info
+2024-09-19 10:04:43,507 Latency for request b6229bf1 with model granite-7b: 0.8570 seconds
+2024-09-19 10:04:43,507 Saving results with gpu monitoring
+2024-09-19 10:04:43,510 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:43,510 127.0.0.1 - - [19/Sep/2024 10:04:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:44,518 127.0.0.1 - - [19/Sep/2024 10:04:44] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:45,389 Saving sys info
+2024-09-19 10:04:45,423 Latency for request f6b0c13c with model granite-7b: 0.8720 seconds
+2024-09-19 10:04:45,423 Saving results with gpu monitoring
+2024-09-19 10:04:45,426 Latency for request 2a646432 with model granite-7b: 0.8720 seconds
+2024-09-19 10:04:45,426 Saving results with gpu monitoring
+2024-09-19 10:04:45,428 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:45,428 127.0.0.1 - - [19/Sep/2024 10:04:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:46,435 127.0.0.1 - - [19/Sep/2024 10:04:46] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:47,296 Saving sys info
+2024-09-19 10:04:47,330 Latency for request 4836b2ec with model granite-7b: 0.8620 seconds
+2024-09-19 10:04:47,330 Saving results with gpu monitoring
+2024-09-19 10:04:47,333 Latency for request 3e0dd358 with model granite-7b: 0.8600 seconds
+2024-09-19 10:04:47,333 Saving results with gpu monitoring
+2024-09-19 10:04:47,335 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:47,335 127.0.0.1 - - [19/Sep/2024 10:04:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:48,342 127.0.0.1 - - [19/Sep/2024 10:04:48] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:49,188 Saving sys info
+2024-09-19 10:04:49,220 Latency for request 170663f0 with model granite-7b: 0.8470 seconds
+2024-09-19 10:04:49,220 Saving results with gpu monitoring
+2024-09-19 10:04:49,223 Latency for request 1e91339f with model granite-7b: 0.8460 seconds
+2024-09-19 10:04:49,223 Saving results with gpu monitoring
+2024-09-19 10:04:49,225 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:49,226 127.0.0.1 - - [19/Sep/2024 10:04:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:50,233 127.0.0.1 - - [19/Sep/2024 10:04:50] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:51,070 Saving sys info
+2024-09-19 10:04:51,105 Latency for request ce579555 with model granite-7b: 0.8380 seconds
+2024-09-19 10:04:51,105 Saving results with gpu monitoring
+2024-09-19 10:04:51,108 Latency for request 2fdff3cd with model granite-7b: 0.8370 seconds
+2024-09-19 10:04:51,108 Saving results with gpu monitoring
+2024-09-19 10:04:51,110 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:51,110 127.0.0.1 - - [19/Sep/2024 10:04:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:52,118 127.0.0.1 - - [19/Sep/2024 10:04:52] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:52,954 Saving sys info
+2024-09-19 10:04:52,989 Latency for request a775a116 with model granite-7b: 0.8370 seconds
+2024-09-19 10:04:52,989 Saving results with gpu monitoring
+2024-09-19 10:04:52,992 Latency for request 007b13a1 with model granite-7b: 0.8370 seconds
+2024-09-19 10:04:52,992 Saving results with gpu monitoring
+2024-09-19 10:04:52,994 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:52,994 127.0.0.1 - - [19/Sep/2024 10:04:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:54,002 127.0.0.1 - - [19/Sep/2024 10:04:54] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:54,846 Saving sys info
+2024-09-19 10:04:54,876 Latency for request 36d35ac7 with model granite-7b: 0.8450 seconds
+2024-09-19 10:04:54,876 Saving results with gpu monitoring
+2024-09-19 10:04:54,879 Latency for request 4e023fa6 with model granite-7b: 0.8430 seconds
+2024-09-19 10:04:54,879 Saving results with gpu monitoring
+2024-09-19 10:04:54,881 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:54,882 127.0.0.1 - - [19/Sep/2024 10:04:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:55,890 127.0.0.1 - - [19/Sep/2024 10:04:55] "POST /inference HTTP/1.1" 200 -
+2024-09-19 10:04:56,740 Saving sys info
+2024-09-19 10:04:56,771 Latency for request 91a32252 with model granite-7b: 0.8510 seconds
+2024-09-19 10:04:56,771 Saving results with gpu monitoring
+2024-09-19 10:04:56,774 Latency for request 6a057101 with model granite-7b: 0.8500 seconds
+2024-09-19 10:04:56,774 Saving results with gpu monitoring
+2024-09-19 10:04:56,776 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 288, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 167, in process_batch
+    batch_timers[model_alias] = None
+NameError: name 'batch_timers' is not defined
+2024-09-19 10:04:56,776 127.0.0.1 - - [19/Sep/2024 10:04:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 10:04:57,783 127.0.0.1 - - [19/Sep/2024 10:04:57] "POST /inference HTTP/1.1" 200 -
