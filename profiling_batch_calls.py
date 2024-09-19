@@ -6,6 +6,9 @@ import json
 import os
 import random
 
+# PARAMS TO GIVE FROM THE SH SCRIPT
+# BATCH SIZES, MODELS TO PROFILE, NUM RUNS PER BATCH SIZE
+
 # Seed for reproducible trials
 np.random.seed(42)
 random.seed(42)

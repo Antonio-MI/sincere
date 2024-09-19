@@ -11,6 +11,9 @@ import logging
 from monitor import Monitor
 import threading
 
+# PARAMS TO RECEIVE FROM THE SH FILE
+# LIST OF ALLOWED MODELS (SHOULD BE EQUAL TO THE LIST OF MODELS TO PROFILE IN THE CALLS)
+
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 
 # Folder containing models
@@ -41,17 +44,6 @@ allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355
 
 # Lock to not process another batch until the current one has finished
 batch_processing_lock = threading.Lock()
-
-# To measure device's time doing inference vs idle
-first_request_time = None  # Time when the first request is received
-last_request_time = None  # Time when the last batch is processed
-total_inference_time = 0  # Global variable to track total inference time
-
-# Flag for log inference % only once
-inference_flag = False
-
-# Timer to track SLA of each batch
-#batch_timers = {}
 
 # Initialize the GPU monitoring
 monitoring = False
@@ -89,6 +81,7 @@ def load_model(model_alias):
 
     loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
 
+
 # Function to generate a dataset for batching
 def create_batch_generator(batch):
     for request_data in batch:
@@ -96,7 +89,7 @@ def create_batch_generator(batch):
 
 
 def process_batch(model_alias, batch_size):
-    global incoming_request_batches, running_request_batches, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
+    global incoming_request_batches, running_request_batches, monitoring, monitor
 
     with batch_processing_lock:
 
@@ -113,6 +106,7 @@ def process_batch(model_alias, batch_size):
             # Create a generator for batching
             batch_generator = create_batch_generator(batch)
 
+            # Save current batch size
             current_batch_size = len(batch)
 
             try:
@@ -127,7 +121,7 @@ def process_batch(model_alias, batch_size):
 
                 start_time = time.perf_counter()
                 responses = {}
-                for i, output in enumerate(pipe(batch_generator, max_new_tokens=32, batch_size=batch_size)):
+                for i, output in enumerate(pipe(batch_generator, max_new_tokens=128, batch_size=batch_size)):
                     try:
                         generated_text = output[0]['generated_text']
                         request_id = batch[i]['id']
@@ -148,8 +142,6 @@ def process_batch(model_alias, batch_size):
                     sys_info = monitor.get_sys_info()
 
                 batch_inference_time = round(end_time - start_time,3)
-                # Add the batch inference time to the total inference time
-                total_inference_time += batch_inference_time
 
                 # Calculate latency for each request
                 for request in batch:
@@ -162,19 +154,7 @@ def process_batch(model_alias, batch_size):
                     if monitoring == True:
                         logging.debug("Saving results with gpu monitoring")
                         save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, sys_info)
-                    # else:
-                    #     logging.debug("Saving results without gpu monitoring")
-                    #     save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
 
-                # Reset the timer for the next batch
-                #batch_timers[model_alias] = None
-
-                last_batch_processed_time = time.time()
-
-
-                # Save the result to a CSV file
-                #save_profiling_result(model_alias, batch_size, elapsed_time)
-                
             except RuntimeError as e:
                 if "out of memory" in str(e).lower():
                     print(f"Out of GPU memory. Error: {e}")
@@ -193,10 +173,7 @@ def process_batch(model_alias, batch_size):
                     batch_inference_time = "None"
                     sys_info = "None"
                     save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
-                    
-                    # save_profiling_result(model_alias, batch_size, elapsed_time)
                     return None, f"Unexpected error while processing batch for {model_alias}"
-
 
         # Clean cache after processing
         torch.cuda.empty_cache()
@@ -207,15 +184,13 @@ def save_measurements_and_monitor(request_id, request_time, model_alias, batch_s
     csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
-        # "request_id": request_id,
-        # "arrival time": time.strftime("%Y-%m-%d %H:%M:%S", request_time),
-        # "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
         "model": model_alias,
         "batch_size": batch_size,
         "latency (s)": latency,
         "processing time (s)": batch_inference_time,
         "throughput (qps)": "None" if batch_inference_time=="None" else round(batch_size/batch_inference_time, 2)
     }
+
     # Update the data dictionary with the sys_info entries
     data.update(sys_info)
     
@@ -234,8 +209,7 @@ def save_profiling_result(model_alias, batch_size, processing_time):
     data = {
         "model_alias": model_alias,
         "batch_size": batch_size,
-        "processing_time": processing_time,
-        
+        "processing_time": processing_time,  
     }
     df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
@@ -243,6 +217,7 @@ def save_profiling_result(model_alias, batch_size, processing_time):
         df.to_csv(csv_path, mode="a", header=False, index=False)
     else:
         df.to_csv(csv_path, index=False)
+
 
 app = Flask(__name__)
 
@@ -309,6 +284,7 @@ def inference():
         else:
             print(f"Runtime error: {e}")
             return jsonify({'error': f"Unexpected error: {e}"}), 500
+
 
 @app.route('/health')
 def health():
