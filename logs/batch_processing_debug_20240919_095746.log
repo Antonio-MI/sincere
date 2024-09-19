@@ -1,0 +1,305 @@
+2024-09-19 09:57:46,118 Using device: cuda
+2024-09-19 09:57:46,118 Monitoring status set to True
+2024-09-19 09:58:01,198 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-19 09:58:01,199 [33mPress CTRL+C to quit[0m
+2024-09-19 09:58:01,461 127.0.0.1 - - [19/Sep/2024 09:58:01] "GET /health HTTP/1.1" 200 -
+2024-09-19 09:58:12,997 Saving sys info
+2024-09-19 09:58:13,035 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:13,036 127.0.0.1 - - [19/Sep/2024 09:58:13] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:14,891 Saving sys info
+2024-09-19 09:58:14,922 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:14,923 127.0.0.1 - - [19/Sep/2024 09:58:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:16,769 Saving sys info
+2024-09-19 09:58:16,800 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:16,801 127.0.0.1 - - [19/Sep/2024 09:58:16] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:18,646 Saving sys info
+2024-09-19 09:58:18,677 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:18,677 127.0.0.1 - - [19/Sep/2024 09:58:18] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:20,519 Saving sys info
+2024-09-19 09:58:20,553 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:20,554 127.0.0.1 - - [19/Sep/2024 09:58:20] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:22,392 Saving sys info
+2024-09-19 09:58:22,423 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:22,423 127.0.0.1 - - [19/Sep/2024 09:58:22] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:24,269 Saving sys info
+2024-09-19 09:58:24,300 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:24,301 127.0.0.1 - - [19/Sep/2024 09:58:24] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:26,146 Saving sys info
+2024-09-19 09:58:26,177 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:26,178 127.0.0.1 - - [19/Sep/2024 09:58:26] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:28,021 Saving sys info
+2024-09-19 09:58:28,054 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:28,054 127.0.0.1 - - [19/Sep/2024 09:58:28] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:29,909 Saving sys info
+2024-09-19 09:58:29,940 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:29,940 127.0.0.1 - - [19/Sep/2024 09:58:29] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:30,948 127.0.0.1 - - [19/Sep/2024 09:58:30] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:31,794 Saving sys info
+2024-09-19 09:58:31,827 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:31,828 127.0.0.1 - - [19/Sep/2024 09:58:31] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:32,836 127.0.0.1 - - [19/Sep/2024 09:58:32] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:33,693 Saving sys info
+2024-09-19 09:58:33,731 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:33,732 127.0.0.1 - - [19/Sep/2024 09:58:33] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:34,740 127.0.0.1 - - [19/Sep/2024 09:58:34] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:35,573 Saving sys info
+2024-09-19 09:58:35,607 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:35,607 127.0.0.1 - - [19/Sep/2024 09:58:35] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:36,616 127.0.0.1 - - [19/Sep/2024 09:58:36] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:37,486 Saving sys info
+2024-09-19 09:58:37,517 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:37,518 127.0.0.1 - - [19/Sep/2024 09:58:37] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:38,525 127.0.0.1 - - [19/Sep/2024 09:58:38] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:39,374 Saving sys info
+2024-09-19 09:58:39,410 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:39,410 127.0.0.1 - - [19/Sep/2024 09:58:39] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:40,418 127.0.0.1 - - [19/Sep/2024 09:58:40] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:41,259 Saving sys info
+2024-09-19 09:58:41,293 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:41,294 127.0.0.1 - - [19/Sep/2024 09:58:41] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:42,302 127.0.0.1 - - [19/Sep/2024 09:58:42] "POST /inference HTTP/1.1" 200 -
+2024-09-19 09:58:43,148 Saving sys info
+2024-09-19 09:58:43,180 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 284, in inference
+    completed_inference_ids, error = process_batch(model_alias, batch_size)
+  File "/home/amartinezi/sincere/profiling_batch_flask.py", line 154, in process_batch
+    request_time = request['request_time']
+KeyError: 'request_time'
+2024-09-19 09:58:43,180 127.0.0.1 - - [19/Sep/2024 09:58:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-19 09:58:44,188 127.0.0.1 - - [19/Sep/2024 09:58:44] "POST /inference HTTP/1.1" 200 -
