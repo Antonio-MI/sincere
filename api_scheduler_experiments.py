@@ -54,16 +54,25 @@ if mode == "batchedFCFS":
 
 if mode == "batchedFCFS+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = [4, 8, 16, 32]
+    allowed_batch_sizes = [4, 8, 16, 32, 64]
 
     # Load model profiling data
-    model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")  
-    #model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
+    # model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")  
+    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
     # Create dictionaries to store loading and unloading times
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
+
+# Strategy with higher batch sizes for each model
+# if mode == "batchedFCFS+SLA":
+#     logging.debug(f"Scheduling mode set as {mode}")
+#     allowed_batch_sizes = [max(llama), max]
+
+# Executing before unloading model if the queue has reached some %
+
+# Keep track of overall throughput
 
 # Time constraint for batch processing - only will be used with SLA, but need to be defined because in inferece() appears as global
 batch_time_limit = 15  # Seconds

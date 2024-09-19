@@ -47,16 +47,20 @@ running_request_batches = {}
 
 if mode == "FCFS":
     logging.debug(f"Scheduling mode set as {mode}")
+    # LOGIC: PROCESS EACH REQUEST AS SOON AS IT ARRIVES
     allowed_batch_sizes = [1]
 
 if mode == "batchedFCFS":
     logging.debug(f"Scheduling mode set as {mode}")
+    # LOGIC: WAITS TO FILL BATCHES OF FIXED SIZE, 
     allowed_batch_sizes = [4]
 
-if mode == "batchedFCFS+SLA":
+if mode == "BestBatch+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
+    # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
+    #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     allowed_batch_sizes = [8, 16, 32, 64]
-
     # Load model profiling data
     #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
     model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
@@ -66,9 +70,33 @@ if mode == "batchedFCFS+SLA":
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
+if mode == "HigherBatch":
+    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        ++ add another one that also accounts for model swapping time
+    logging.debug(f"Scheduling mode set as {mode}")
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+    # Load model profiling data
+    #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
+    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
+    # Create dictionaries to store loading and unloading times
+    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
+    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
+    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
+    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
+
+if mode == "HigherBatch+SLA":
+    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
+    logging.debug(f"Scheduling mode set as {mode}")
+
+if mode == "HigherBatch+SLA+PartialBatch":
+    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
+    logging.debug(f"Scheduling mode set as {mode}")
+
 # Time constraint for batch processing - only will be used with SLA, but need to be defined because in inference() appears as global
-batch_time_limit = 30  # Seconds
-min_batch_time_limit = 3  # Minimum time limit in seconds
+batch_time_limit = 20  # Seconds
+min_batch_time_limit = 5  # Minimum time limit in seconds
 
 # List of allowed models
 allowed_models = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
@@ -199,7 +227,6 @@ def get_optimal_batch_size(model_alias):
     optimal_batch_size = min(allowed_batch_sizes, key=lambda x: abs(x - optimal_batch_size))
     return optimal_batch_size
 
-
 def adjust_batch_time_limit(model_alias):
     # Adjust the batch time limit based on model loading/unloading times and queue size
     queue_size = incoming_request_batches[model_alias].qsize()
@@ -222,11 +249,11 @@ def adjust_batch_time_limit(model_alias):
     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)  # Ensure it's not below minimum
 
     # Further adjust based on queue size
-    if queue_size > 0:
-        # Shorten the time limit when the queue is growing
-        adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.01 + 1), min_batch_time_limit)
-    else:
-        adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
+    # if queue_size > 0:
+    #     # Shorten the time limit when the queue is growing
+    #     adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.01 + 1), min_batch_time_limit)
+    # else:
+    #     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
 
     logging.debug(f"Adjusted batch time limit for {model_alias}: {adjusted_time_limit:.4f} seconds")
     return adjusted_time_limit
@@ -349,7 +376,7 @@ def inference():
         while remaining_requests > 0:
             remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
             logging.debug("Waiting for running processes to finish")
-            time.sleep(1)
+            time.sleep(2)
         time.sleep(1)
         # Log the total time and the percentage of inference time
         total_time = last_batch_processed_time - first_request_time
@@ -388,32 +415,50 @@ def inference():
 
     incoming_request_batches[model_alias].put(request_data)
 
-    # Record arrival time for arrival rate estimation
-    if model_alias not in arrival_times:
-        arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
-    arrival_times[model_alias].append(time.time())
+    if mode == "batchedFCFS+SLA":
+        # Record arrival time for arrival rate estimation
+        if model_alias not in arrival_times:
+            arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
+        arrival_times[model_alias].append(time.time())
 
-    # Start the timer if this is the first request in the batch
-    if batch_timers[model_alias] is None:
-        # Adjust time limit based on queue size
-        adjusted_time_limit = adjust_batch_time_limit(model_alias)
-        batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
-    # Calculate the optimal batch size
-    optimal_batch_size = get_optimal_batch_size(model_alias)
+    if mode == "batchedFCFS+SLA":
+        # Start the timer if this is the first request in the batch
+        if batch_timers[model_alias] is None:
+            # Adjust time limit based on queue size
+            adjusted_time_limit = adjust_batch_time_limit(model_alias)
+            batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
-    # Check if batch size is met
-    if incoming_request_batches[model_alias].qsize() >= optimal_batch_size:
-        logging.debug(f"Moving batch for {model_alias} from incoming to running due to dynamic batch size {optimal_batch_size}")
-        running_request_batches[model_alias] = Queue()
-        while not incoming_request_batches[model_alias].empty():
-            running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-        # Process the batch because the batch size was met
-        completed_inference_ids = process_batch(model_alias, "Dynamic batch size", optimal_batch_size)
 
-        return jsonify({
-            'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+    if mode == "FCFS" or mode == "batchedFCFS":
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
+            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+
+            return jsonify({
+            'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
+
+    if mode == "batchedFCFS+SLA":
+        # Calculate the optimal batch size
+        optimal_batch_size = get_optimal_batch_size(model_alias)
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= optimal_batch_size:
+            logging.debug(f"Moving batch for {model_alias} from incoming to running due to dynamic batch size {optimal_batch_size}")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            completed_inference_ids = process_batch(model_alias, "Dynamic batch size", optimal_batch_size)
+
+            return jsonify({
+                'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+            })
 
     return jsonify({
         'message': f"Request queued with ID {request_id} for model {model_alias}"
