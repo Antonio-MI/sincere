@@ -50,6 +50,9 @@ total_inference_time = 0  # Global variable to track total inference time
 # Flag for log inference % only once
 inference_flag = False
 
+# Timer to track SLA of each batch
+#batch_timers = {}
+
 # Initialize the GPU monitoring
 monitoring = False
 if device.type == "cuda":
@@ -93,7 +96,7 @@ def create_batch_generator(batch):
 
 
 def process_batch(model_alias, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
+    global incoming_request_batches, running_request_batches, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
 
     with batch_processing_lock:
 
@@ -164,7 +167,7 @@ def process_batch(model_alias, batch_size):
                     #     save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
 
                 # Reset the timer for the next batch
-                batch_timers[model_alias] = None
+                #batch_timers[model_alias] = None
 
                 last_batch_processed_time = time.time()
 
