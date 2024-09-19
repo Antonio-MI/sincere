@@ -199,13 +199,36 @@ def get_optimal_batch_size(model_alias):
     optimal_batch_size = min(allowed_batch_sizes, key=lambda x: abs(x - optimal_batch_size))
     return optimal_batch_size
 
+
 def adjust_batch_time_limit(model_alias):
+    # Adjust the batch time limit based on model loading/unloading times and queue size
     queue_size = incoming_request_batches[model_alias].qsize()
+    
+    # Get the current loaded model
+    current_loaded_model = list(loaded_models.keys())[0] if loaded_models else None
+
+    # Get loading and unloading times with standard deviations
+    loading_time = model_load_times.get(model_alias, 0)
+    loading_time_std = model_load_times_std.get(model_alias, 0)
+    unloading_time = model_unload_times.get(current_loaded_model, 0) if current_loaded_model else 0
+    unloading_time_std = model_unload_times_std.get(current_loaded_model, 0) if current_loaded_model else 0
+
+    # Consider 3 standard deviations to be conservative
+    total_loading_time = loading_time + 3 * loading_time_std
+    total_unloading_time = unloading_time + 3 * unloading_time_std
+
+    # Adjust the time limit by subtracting loading and unloading times
+    adjusted_time_limit = batch_time_limit - (total_loading_time + total_unloading_time)
+    adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)  # Ensure it's not below minimum
+
+    # Further adjust based on queue size
     if queue_size > 0:
         # Shorten the time limit when the queue is growing
-        adjusted_time_limit = max(batch_time_limit / (queue_size + 1), min_batch_time_limit)
+        adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.01 + 1), min_batch_time_limit)
     else:
-        adjusted_time_limit = batch_time_limit
+        adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
+
+    logging.debug(f"Adjusted batch time limit for {model_alias}: {adjusted_time_limit:.4f} seconds")
     return adjusted_time_limit
 
 def process_batch(model_alias, condition, batch_size):
