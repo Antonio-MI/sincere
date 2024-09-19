@@ -67,8 +67,8 @@ if mode == "batchedFCFS+SLA":
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
 # Time constraint for batch processing - only will be used with SLA, but need to be defined because in inference() appears as global
-batch_time_limit = 15  # Seconds
-min_batch_time_limit = 10  # Minimum time limit in seconds
+batch_time_limit = 30  # Seconds
+min_batch_time_limit = 3  # Minimum time limit in seconds
 
 # List of allowed models
 allowed_models = ["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
