@@ -255,7 +255,7 @@ def process_batch(model_alias, condition, batch_size):
             logging.debug(f"Batch processing started for model {model_alias}")
 
             responses = {}
-            for i, output in enumerate(pipe(batch_generator, max_new_tokens=64, batch_size=current_batch_size)):
+            for i, output in enumerate(pipe(batch_generator, max_new_tokens=50, batch_size=current_batch_size)):
                 try:
                     generated_text = output[0]['generated_text']
                     request_id = batch[i]['id']

@@ -53,14 +53,14 @@ if mode == "FCFS":
 if mode == "batchedFCFS":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: WAITS TO FILL BATCHES OF FIXED SIZE, 
-    allowed_batch_sizes = [4]
+    allowed_batch_sizes = [16]
 
 if mode == "BestBatch+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
-    allowed_batch_sizes = [8, 16, 32, 64]
+    allowed_batch_sizes = [4, 8, 16, 32, 64]
     # Load model profiling data
     #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
     model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
@@ -249,11 +249,11 @@ def adjust_batch_time_limit(model_alias):
     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)  # Ensure it's not below minimum
 
     # Further adjust based on queue size
-    # if queue_size > 0:
-    #     # Shorten the time limit when the queue is growing
-    #     adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.01 + 1), min_batch_time_limit)
-    # else:
-    #     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
+    if queue_size > 0:
+        # Shorten the time limit when the queue is growing
+        adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.005 + 1), min_batch_time_limit)
+    else:
+        adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
 
     logging.debug(f"Adjusted batch time limit for {model_alias}: {adjusted_time_limit:.4f} seconds")
     return adjusted_time_limit
@@ -416,19 +416,18 @@ def inference():
     incoming_request_batches[model_alias].put(request_data)
 
     if mode == "BestBatch+SLA":
-        # Record arrival time for arrival rate estimation
-        if model_alias not in arrival_times:
-            arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
-        arrival_times[model_alias].append(time.time())
-
-
-    if mode == "BestBatch+SLA":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
             adjusted_time_limit = adjust_batch_time_limit(model_alias)
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
+
+    if mode == "BestBatch+SLA":
+        # Record arrival time for arrival rate estimation
+        if model_alias not in arrival_times:
+            arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
+        arrival_times[model_alias].append(time.time())
 
     if mode == "FCFS" or mode == "batchedFCFS":
         # Check if batch size is met
