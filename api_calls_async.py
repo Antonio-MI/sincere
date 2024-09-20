@@ -19,7 +19,7 @@ model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-
 model_frequencies = [0.1, 0.3, 0.6]
 
 # Define the parameters for the Gamma distribution
-rate = 10
+rate = 5
 shape, scale = 1.0, 1/rate  # Shape (alpha) and scale (θ) for the Gamma distribution
 
 # Define the API endpoint

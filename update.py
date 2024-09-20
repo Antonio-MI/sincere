@@ -70,7 +70,6 @@ if mode == "BestBatch":
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
-
 if mode == "BestBatch+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
@@ -474,6 +473,20 @@ def inference():
             return jsonify({
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
+
+    if mode == "HigherBatch":
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
+            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+
+            return jsonify({
+            'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
+        })
 
     return jsonify({
         'message': f"Request queued with ID {request_id} for model {model_alias}"
