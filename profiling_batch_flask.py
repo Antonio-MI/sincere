@@ -56,30 +56,39 @@ if device.type == "cuda":
 # Function to load models
 def load_model(model_alias):
     global loaded_models
+    try:
+        if model_alias in loaded_models:
+            print(f"Model {model_alias} already loaded")
+            return
 
-    if model_alias in loaded_models:
-        print(f"Model {model_alias} already loaded")
-        return
+        # Unload the previous model
+        if loaded_models:
+            for old_model_alias in list(loaded_models.keys()):
+                del loaded_models[old_model_alias]
+                if device.type == "cuda":
+                    torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
+            print(f"Unloaded previous model")
 
-    # Unload the previous model
-    if loaded_models:
-        for old_model_alias in list(loaded_models.keys()):
-            del loaded_models[old_model_alias]
-            if device.type == "cuda":
-                torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
-        print(f"Unloaded previous model")
+        model_dir = os.path.join(base_dir, model_alias)
+        tokenizer = AutoTokenizer.from_pretrained(model_dir)
+        tokenizer.padding_side = "left"  # Set padding to the left side for decoder-only architectures
+        model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
 
-    model_dir = os.path.join(base_dir, model_alias)
-    tokenizer = AutoTokenizer.from_pretrained(model_dir)
-    tokenizer.padding_side = "left"  # Set padding to the left side for decoder-only architectures
-    model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
+        if tokenizer.pad_token_id is None:
+            tokenizer.pad_token_id = tokenizer.eos_token_id
 
-    if tokenizer.pad_token_id is None:
-        tokenizer.pad_token_id = tokenizer.eos_token_id
+        print(f"Loaded model {model_alias}")
 
-    print(f"Loaded model {model_alias}")
+        loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
 
-    loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
+    except RuntimeError as e:
+        if "out of memory" in str(e).lower():
+            print(f"Out of GPU memory during model loading. Error: {e}")
+            # Handle the OOM error appropriately
+            return jsonify({'error': f"Out of memory error while loading model {model_alias}"}), 500
+        else:
+            print(f"Runtime error during model loading: {e}")
+            return jsonify({'error': f"Unexpected error while loading model {model_alias}: {e}"}), 500
 
 
 # Function to generate a dataset for batching
@@ -121,7 +130,7 @@ def process_batch(model_alias, batch_size):
 
                 start_time = time.perf_counter()
                 responses = {}
-                for i, output in enumerate(pipe(batch_generator, max_new_tokens=128, batch_size=batch_size)):
+                for i, output in enumerate(pipe(batch_generator, max_new_tokens=64, batch_size=batch_size)):
                     try:
                         generated_text = output[0]['generated_text']
                         request_id = batch[i]['id']
@@ -163,6 +172,7 @@ def process_batch(model_alias, batch_size):
                     latency = "None"
                     batch_inference_time = "None"
                     sys_info = "None"
+                    request_id = "None"
                     save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
                     return None, f"Out of memory error while processing batch for {model_alias}"
                 else:
@@ -172,6 +182,7 @@ def process_batch(model_alias, batch_size):
                     latency = "None"
                     batch_inference_time = "None"
                     sys_info = "None"
+                    request_id = "None"
                     save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
                     return None, f"Unexpected error while processing batch for {model_alias}"
 
