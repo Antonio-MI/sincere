@@ -16,7 +16,7 @@ from collections import deque  # For arrival rate estimation
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, 
 
-mode = "batchedFCFS+SLA"  # One of ["FCFS", "batchedFCFS", "batchedFCFS+SLA"]
+mode = "BestBatch+SLA"  # One of ["FCFS", "batchedFCFS", "batchedFCFS+SLA"]
 
 # Ensure that the logs directory exists
 if not os.path.exists("logs"):
