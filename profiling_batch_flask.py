@@ -168,7 +168,7 @@ def process_batch(model_alias, batch_size):
                     torch.cuda.empty_cache()  # Clear GPU memory
                     print(f"GPU memory cleared after OOM error.")
                     batch_inference_time = "None"
-                    sys_info = "None"
+                    sys_info = monitor.get_sys_info()
                     save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
                     return None, f"Out of memory error while processing batch for {model_alias}"
                 else:
@@ -176,7 +176,7 @@ def process_batch(model_alias, batch_size):
                     torch.cuda.empty_cache()
                     #elapsed_time = "None"
                     batch_inference_time = "None"
-                    sys_info = "None"
+                    sys_info = monitor.get_sys_info()
                     save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
                     return None, f"Unexpected error while processing batch for {model_alias}"
 
