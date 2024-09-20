@@ -55,6 +55,22 @@ if mode == "batchedFCFS":
     # LOGIC: WAITS TO FILL BATCHES OF FIXED SIZE, 
     allowed_batch_sizes = [16]
 
+if mode == "BestBatch":
+    logging.debug(f"Scheduling mode set as {mode}")
+    # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
+    #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
+    allowed_batch_sizes = [4, 8, 16, 32, 64]
+    # Load model profiling data
+    #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
+    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
+    # Create dictionaries to store loading and unloading times
+    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
+    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
+    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
+    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
+
+
 if mode == "BestBatch+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
@@ -160,8 +176,8 @@ def create_batch_generator(batch):
     for request_data in batch:
         yield request_data['prompt']
 
-def save_measurements(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput):
-    csv_filename = f"measurements_results_{machine_name}_{device}_{timestamp}.csv"
+def save_measurements(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, mode):
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
@@ -180,8 +196,8 @@ def save_measurements(request_id, request_time, model_alias, batch_size, latency
     else:
         df.to_csv(csv_path, index=False)
 
-def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info):
-    csv_filename = f"measurements_results_{machine_name}_{device}_{timestamp}.csv"
+def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info, mode):
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
@@ -259,7 +275,7 @@ def adjust_batch_time_limit(model_alias):
     return adjusted_time_limit
 
 def process_batch(model_alias, condition, batch_size):
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor
+    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag, monitoring, monitor, mode
 
     logging.debug(f"{condition} condition met for model {model_alias}")
 
@@ -327,10 +343,10 @@ def process_batch(model_alias, condition, batch_size):
                 # Save the latency result to a CSV file
                 if monitoring == True:
                     logging.debug("Saving results with gpu monitoring")
-                    save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, sys_info)
+                    save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, sys_info, mode)
                 else:
                     logging.debug("Saving results without gpu monitoring")
-                    save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput)
+                    save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, mode)
 
             # Reset the timer for the next batch
             batch_timers[model_alias] = None
@@ -415,7 +431,7 @@ def inference():
 
     incoming_request_batches[model_alias].put(request_data)
 
-    if mode == "BestBatch+SLA":
+    if mode == "BestBatch" or mode == "BestBatch+SLA":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
@@ -423,7 +439,7 @@ def inference():
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
 
-    if mode == "BestBatch+SLA":
+    if mode == "BestBatch" or mode == "BestBatch+SLA":
         # Record arrival time for arrival rate estimation
         if model_alias not in arrival_times:
             arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
@@ -443,7 +459,7 @@ def inference():
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
 
-    if mode == "BestBatch+SLA":
+    if mode == "BestBatch" or mode == "BestBatch+SLA":
         # Calculate the optimal batch size
         optimal_batch_size = get_optimal_batch_size(model_alias)
         # Check if batch size is met
@@ -470,7 +486,7 @@ def health():
 if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
-    if mode == "batchedFCFS+SLA":
+    if mode == "BestBatch+SLA":
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
     # Start the Flask app
