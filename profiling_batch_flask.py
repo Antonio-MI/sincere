@@ -146,44 +146,38 @@ def process_batch(model_alias, batch_size):
                 
                 print(f"Processed batch: {list(responses.keys())} with model {model_alias}")
 
+                batch_inference_time = round(end_time - start_time,3)
+
                 if monitoring == True:
                     logging.debug("Saving sys info")
                     sys_info = monitor.get_sys_info()
+                    logging.debug("Saving results with gpu monitoring")
+                    save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
 
-                batch_inference_time = round(end_time - start_time,3)
 
-                # Calculate latency for each request
-                for request in batch:
-                    request_id = request['id']
-                    request_time = request['request_time']
-                    latency = round(end_time - request_time,3)  # Time since the request was received until the batch was processed
-                    logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")
-
-                    # Save the latency result to a CSV file
-                    if monitoring == True:
-                        logging.debug("Saving results with gpu monitoring")
-                        save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                # # Calculate latency for each request
+                # for request in batch:
+                #     request_id = request['id']
+                #     request_time = request['request_time']
+                #     latency = round(end_time - request_time,3)  # Time since the request was received until the batch was processed
+                #     logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")  
 
             except RuntimeError as e:
                 if "out of memory" in str(e).lower():
                     print(f"Out of GPU memory. Error: {e}")
                     torch.cuda.empty_cache()  # Clear GPU memory
                     print(f"GPU memory cleared after OOM error.")
-                    latency = "None"
                     batch_inference_time = "None"
                     sys_info = "None"
-                    request_id = "None"
-                    save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                    save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
                     return None, f"Out of memory error while processing batch for {model_alias}"
                 else:
                     print(f"Unexpected runtime error: {e}")
                     torch.cuda.empty_cache()
                     #elapsed_time = "None"
-                    latency = "None"
                     batch_inference_time = "None"
                     sys_info = "None"
-                    request_id = "None"
-                    save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
+                    save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
                     return None, f"Unexpected error while processing batch for {model_alias}"
 
         # Clean cache after processing
@@ -191,13 +185,12 @@ def process_batch(model_alias, batch_size):
 
         return list(responses.keys()), None
 
-def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, sys_info):
+def save_measurements_and_monitor(model_alias, batch_size, batch_inference_time, sys_info):
     csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "model": model_alias,
         "batch_size": batch_size,
-        "latency (s)": latency,
         "processing time (s)": batch_inference_time,
         "throughput (qps)": "None" if batch_inference_time=="None" else round(batch_size/batch_inference_time, 2)
     }
@@ -208,21 +201,6 @@ def save_measurements_and_monitor(request_id, request_time, model_alias, batch_s
     # Convert the combined data into a DataFrame
     df = pd.DataFrame([data])
 
-    file_exists = os.path.isfile(csv_path)
-    if file_exists:
-        df.to_csv(csv_path, mode="a", header=False, index=False)
-    else:
-        df.to_csv(csv_path, index=False)
-
-def save_profiling_result(model_alias, batch_size, processing_time):
-    csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
-    csv_path = os.path.join("outputs", csv_filename)
-    data = {
-        "model_alias": model_alias,
-        "batch_size": batch_size,
-        "processing_time": processing_time,  
-    }
-    df = pd.DataFrame([data])
     file_exists = os.path.isfile(csv_path)
     if file_exists:
         df.to_csv(csv_path, mode="a", header=False, index=False)
