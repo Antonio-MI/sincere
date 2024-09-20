@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Timeout duration (e.g., 60 seconds)
-timeout_duration=12000
+timeout_duration=600
 
 # Function to check if Flask API is up
 wait_for_flask() {

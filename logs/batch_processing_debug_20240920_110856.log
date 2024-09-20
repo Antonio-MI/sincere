@@ -3987,3 +3987,980 @@ Traceback (most recent call last):
     save_measurements_and_monitor(request_id, request_time, model_alias, current_batch_size, latency, batch_inference_time, sys_info)
 UnboundLocalError: local variable 'request_time' referenced before assignment
 2024-09-20 11:13:34,844 127.0.0.1 - - [20/Sep/2024 11:13:34] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-20 11:31:05,659 127.0.0.1 - - [20/Sep/2024 11:31:05] "GET /health HTTP/1.1" 200 -
+2024-09-20 11:31:24,987 Saving sys info
+2024-09-20 11:31:25,019 Latency for request ba64306c with model granite-7b: 18.8900 seconds
+2024-09-20 11:31:25,019 Saving results with gpu monitoring
+2024-09-20 11:31:25,036 127.0.0.1 - - [20/Sep/2024 11:31:25] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:27,724 Saving sys info
+2024-09-20 11:31:27,758 Latency for request 2614e379 with model granite-7b: 1.6810 seconds
+2024-09-20 11:31:27,758 Saving results with gpu monitoring
+2024-09-20 11:31:27,765 127.0.0.1 - - [20/Sep/2024 11:31:27] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:30,464 Saving sys info
+2024-09-20 11:31:30,498 Latency for request f197ae59 with model granite-7b: 1.6920 seconds
+2024-09-20 11:31:30,498 Saving results with gpu monitoring
+2024-09-20 11:31:30,506 127.0.0.1 - - [20/Sep/2024 11:31:30] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,582 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,596 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,599 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,602 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,605 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,606 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,607 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,607 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,609 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,609 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,610 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,611 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,612 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,613 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,615 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,616 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,617 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,618 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,619 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,620 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,621 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,622 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,622 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,624 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,625 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,626 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,627 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,629 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,630 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,631 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,631 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,632 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,633 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,633 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,634 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,635 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,636 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,637 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,638 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,639 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,640 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,641 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,642 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,643 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,643 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,644 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,645 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,646 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,647 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,648 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,649 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,650 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,651 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,652 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,652 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,653 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,654 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,655 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,656 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,657 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,659 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,660 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:31,661 127.0.0.1 - - [20/Sep/2024 11:31:31] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:38,161 Saving sys info
+2024-09-20 11:31:38,198 Latency for request 2cec63e1 with model granite-7b: 6.5900 seconds
+2024-09-20 11:31:38,198 Saving results with gpu monitoring
+2024-09-20 11:31:38,201 Latency for request 72082252 with model granite-7b: 6.5890 seconds
+2024-09-20 11:31:38,201 Saving results with gpu monitoring
+2024-09-20 11:31:38,203 Latency for request 3c8be8b2 with model granite-7b: 6.5870 seconds
+2024-09-20 11:31:38,203 Saving results with gpu monitoring
+2024-09-20 11:31:38,205 Latency for request c5fe70c0 with model granite-7b: 6.5870 seconds
+2024-09-20 11:31:38,205 Saving results with gpu monitoring
+2024-09-20 11:31:38,207 Latency for request b1ba8da0 with model granite-7b: 6.5860 seconds
+2024-09-20 11:31:38,207 Saving results with gpu monitoring
+2024-09-20 11:31:38,209 Latency for request cc482102 with model granite-7b: 6.5850 seconds
+2024-09-20 11:31:38,209 Saving results with gpu monitoring
+2024-09-20 11:31:38,210 Latency for request 5a393fb4 with model granite-7b: 6.5840 seconds
+2024-09-20 11:31:38,210 Saving results with gpu monitoring
+2024-09-20 11:31:38,212 Latency for request 65c12ec4 with model granite-7b: 6.5820 seconds
+2024-09-20 11:31:38,212 Saving results with gpu monitoring
+2024-09-20 11:31:38,214 Latency for request 04b5c416 with model granite-7b: 6.5810 seconds
+2024-09-20 11:31:38,214 Saving results with gpu monitoring
+2024-09-20 11:31:38,216 Latency for request db6a23e3 with model granite-7b: 6.5800 seconds
+2024-09-20 11:31:38,216 Saving results with gpu monitoring
+2024-09-20 11:31:38,218 Latency for request 1dfd731d with model granite-7b: 6.5780 seconds
+2024-09-20 11:31:38,218 Saving results with gpu monitoring
+2024-09-20 11:31:38,220 Latency for request 3bef0002 with model granite-7b: 6.5760 seconds
+2024-09-20 11:31:38,220 Saving results with gpu monitoring
+2024-09-20 11:31:38,225 Latency for request 88d3658b with model granite-7b: 6.5750 seconds
+2024-09-20 11:31:38,225 Saving results with gpu monitoring
+2024-09-20 11:31:38,227 Latency for request 42d2a0b0 with model granite-7b: 6.5750 seconds
+2024-09-20 11:31:38,227 Saving results with gpu monitoring
+2024-09-20 11:31:38,229 Latency for request 3e47ee39 with model granite-7b: 6.5880 seconds
+2024-09-20 11:31:38,229 Saving results with gpu monitoring
+2024-09-20 11:31:38,231 Latency for request dd71671b with model granite-7b: 6.5740 seconds
+2024-09-20 11:31:38,231 Saving results with gpu monitoring
+2024-09-20 11:31:38,233 Latency for request 86fbd09c with model granite-7b: 6.5730 seconds
+2024-09-20 11:31:38,233 Saving results with gpu monitoring
+2024-09-20 11:31:38,235 Latency for request cc537b6c with model granite-7b: 6.5720 seconds
+2024-09-20 11:31:38,235 Saving results with gpu monitoring
+2024-09-20 11:31:38,237 Latency for request 34d97dad with model granite-7b: 6.5710 seconds
+2024-09-20 11:31:38,237 Saving results with gpu monitoring
+2024-09-20 11:31:38,239 Latency for request dc22053f with model granite-7b: 6.5700 seconds
+2024-09-20 11:31:38,239 Saving results with gpu monitoring
+2024-09-20 11:31:38,241 Latency for request f62711ff with model granite-7b: 6.5690 seconds
+2024-09-20 11:31:38,241 Saving results with gpu monitoring
+2024-09-20 11:31:38,243 Latency for request 07d6a919 with model granite-7b: 6.5680 seconds
+2024-09-20 11:31:38,243 Saving results with gpu monitoring
+2024-09-20 11:31:38,244 Latency for request d916986a with model granite-7b: 6.5680 seconds
+2024-09-20 11:31:38,245 Saving results with gpu monitoring
+2024-09-20 11:31:38,246 Latency for request 2dde2d38 with model granite-7b: 6.5660 seconds
+2024-09-20 11:31:38,246 Saving results with gpu monitoring
+2024-09-20 11:31:38,248 Latency for request 5bdc06b8 with model granite-7b: 6.5650 seconds
+2024-09-20 11:31:38,248 Saving results with gpu monitoring
+2024-09-20 11:31:38,250 Latency for request 093b2afe with model granite-7b: 6.5640 seconds
+2024-09-20 11:31:38,250 Saving results with gpu monitoring
+2024-09-20 11:31:38,252 Latency for request f7c3086f with model granite-7b: 6.5630 seconds
+2024-09-20 11:31:38,252 Saving results with gpu monitoring
+2024-09-20 11:31:38,254 Latency for request e28a3a1d with model granite-7b: 6.5630 seconds
+2024-09-20 11:31:38,254 Saving results with gpu monitoring
+2024-09-20 11:31:38,256 Latency for request 258d3611 with model granite-7b: 6.5610 seconds
+2024-09-20 11:31:38,256 Saving results with gpu monitoring
+2024-09-20 11:31:38,258 Latency for request 614d01c2 with model granite-7b: 6.5610 seconds
+2024-09-20 11:31:38,258 Saving results with gpu monitoring
+2024-09-20 11:31:38,260 Latency for request 7a1ee315 with model granite-7b: 6.5860 seconds
+2024-09-20 11:31:38,260 Saving results with gpu monitoring
+2024-09-20 11:31:38,262 Latency for request 26028a3f with model granite-7b: 6.5590 seconds
+2024-09-20 11:31:38,262 Saving results with gpu monitoring
+2024-09-20 11:31:38,264 Latency for request 0f196942 with model granite-7b: 6.5590 seconds
+2024-09-20 11:31:38,264 Saving results with gpu monitoring
+2024-09-20 11:31:38,265 Latency for request c98bb9d8 with model granite-7b: 6.5580 seconds
+2024-09-20 11:31:38,265 Saving results with gpu monitoring
+2024-09-20 11:31:38,267 Latency for request ef97ba14 with model granite-7b: 6.5850 seconds
+2024-09-20 11:31:38,267 Saving results with gpu monitoring
+2024-09-20 11:31:38,269 Latency for request 0e0e8ea6 with model granite-7b: 6.5840 seconds
+2024-09-20 11:31:38,269 Saving results with gpu monitoring
+2024-09-20 11:31:38,271 Latency for request ac269e20 with model granite-7b: 6.5800 seconds
+2024-09-20 11:31:38,271 Saving results with gpu monitoring
+2024-09-20 11:31:38,273 Latency for request 30e06baa with model granite-7b: 6.5770 seconds
+2024-09-20 11:31:38,273 Saving results with gpu monitoring
+2024-09-20 11:31:38,275 Latency for request a12de68e with model granite-7b: 6.5750 seconds
+2024-09-20 11:31:38,275 Saving results with gpu monitoring
+2024-09-20 11:31:38,277 Latency for request 045dadb8 with model granite-7b: 6.5740 seconds
+2024-09-20 11:31:38,277 Saving results with gpu monitoring
+2024-09-20 11:31:38,279 Latency for request cbf1654d with model granite-7b: 6.5730 seconds
+2024-09-20 11:31:38,279 Saving results with gpu monitoring
+2024-09-20 11:31:38,281 Latency for request 3eaa2b63 with model granite-7b: 6.5700 seconds
+2024-09-20 11:31:38,281 Saving results with gpu monitoring
+2024-09-20 11:31:38,283 Latency for request abd17815 with model granite-7b: 6.5690 seconds
+2024-09-20 11:31:38,283 Saving results with gpu monitoring
+2024-09-20 11:31:38,285 Latency for request 143caa7b with model granite-7b: 6.5660 seconds
+2024-09-20 11:31:38,285 Saving results with gpu monitoring
+2024-09-20 11:31:38,286 Latency for request a6f9fc24 with model granite-7b: 6.5640 seconds
+2024-09-20 11:31:38,287 Saving results with gpu monitoring
+2024-09-20 11:31:38,288 Latency for request 06f15692 with model granite-7b: 6.5630 seconds
+2024-09-20 11:31:38,288 Saving results with gpu monitoring
+2024-09-20 11:31:38,290 Latency for request f35a5630 with model granite-7b: 6.5610 seconds
+2024-09-20 11:31:38,290 Saving results with gpu monitoring
+2024-09-20 11:31:38,292 Latency for request cb0ecd43 with model granite-7b: 6.5600 seconds
+2024-09-20 11:31:38,292 Saving results with gpu monitoring
+2024-09-20 11:31:38,294 Latency for request 7f10c671 with model granite-7b: 6.5580 seconds
+2024-09-20 11:31:38,294 Saving results with gpu monitoring
+2024-09-20 11:31:38,296 Latency for request c451a938 with model granite-7b: 6.5850 seconds
+2024-09-20 11:31:38,296 Saving results with gpu monitoring
+2024-09-20 11:31:38,298 Latency for request c8bc294d with model granite-7b: 6.5790 seconds
+2024-09-20 11:31:38,298 Saving results with gpu monitoring
+2024-09-20 11:31:38,300 Latency for request 1095ab9e with model granite-7b: 6.5750 seconds
+2024-09-20 11:31:38,300 Saving results with gpu monitoring
+2024-09-20 11:31:38,302 Latency for request 2237b12a with model granite-7b: 6.5710 seconds
+2024-09-20 11:31:38,302 Saving results with gpu monitoring
+2024-09-20 11:31:38,304 Latency for request d4827fcd with model granite-7b: 6.5680 seconds
+2024-09-20 11:31:38,304 Saving results with gpu monitoring
+2024-09-20 11:31:38,306 Latency for request aaf48a1d with model granite-7b: 6.5640 seconds
+2024-09-20 11:31:38,306 Saving results with gpu monitoring
+2024-09-20 11:31:38,308 Latency for request f9d82850 with model granite-7b: 6.5600 seconds
+2024-09-20 11:31:38,308 Saving results with gpu monitoring
+2024-09-20 11:31:38,310 Latency for request 50059c11 with model granite-7b: 6.5570 seconds
+2024-09-20 11:31:38,310 Saving results with gpu monitoring
+2024-09-20 11:31:38,312 Latency for request e0f1c2cd with model granite-7b: 6.5760 seconds
+2024-09-20 11:31:38,312 Saving results with gpu monitoring
+2024-09-20 11:31:38,314 Latency for request 2155c515 with model granite-7b: 6.5700 seconds
+2024-09-20 11:31:38,314 Saving results with gpu monitoring
+2024-09-20 11:31:38,315 Latency for request 3015239f with model granite-7b: 6.5870 seconds
+2024-09-20 11:31:38,315 Saving results with gpu monitoring
+2024-09-20 11:31:38,317 Latency for request 369f31a5 with model granite-7b: 6.5820 seconds
+2024-09-20 11:31:38,317 Saving results with gpu monitoring
+2024-09-20 11:31:38,319 Latency for request de2e52a6 with model granite-7b: 6.5660 seconds
+2024-09-20 11:31:38,319 Saving results with gpu monitoring
+2024-09-20 11:31:38,321 Latency for request e1fd860a with model granite-7b: 6.5740 seconds
+2024-09-20 11:31:38,321 Saving results with gpu monitoring
+2024-09-20 11:31:38,323 Latency for request 2f0f545c with model granite-7b: 6.5590 seconds
+2024-09-20 11:31:38,323 Saving results with gpu monitoring
+2024-09-20 11:31:38,345 127.0.0.1 - - [20/Sep/2024 11:31:38] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,408 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,429 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,430 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,432 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,433 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,434 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,435 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,435 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,437 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,438 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,439 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,439 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,440 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,441 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,442 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,443 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,444 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,445 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,446 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,447 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,448 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,449 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,450 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,451 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,452 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,453 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,454 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,455 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,456 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,457 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,457 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,458 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,461 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,462 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,462 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,463 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,464 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,466 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,467 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,468 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,468 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,469 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,471 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,471 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,473 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,474 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,474 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,475 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,476 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,476 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,477 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,479 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,480 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,480 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,481 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,482 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,484 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,484 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,486 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,487 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,488 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,489 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:39,490 127.0.0.1 - - [20/Sep/2024 11:31:39] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:48,328 Saving sys info
+2024-09-20 11:31:48,360 Latency for request 42ab8b12 with model granite-7b: 8.9300 seconds
+2024-09-20 11:31:48,360 Saving results with gpu monitoring
+2024-09-20 11:31:48,363 Latency for request 703769b6 with model granite-7b: 8.9290 seconds
+2024-09-20 11:31:48,363 Saving results with gpu monitoring
+2024-09-20 11:31:48,365 Latency for request 8b155377 with model granite-7b: 8.9280 seconds
+2024-09-20 11:31:48,365 Saving results with gpu monitoring
+2024-09-20 11:31:48,367 Latency for request cf6930b2 with model granite-7b: 8.9270 seconds
+2024-09-20 11:31:48,367 Saving results with gpu monitoring
+2024-09-20 11:31:48,369 Latency for request 0c59a1e6 with model granite-7b: 8.9260 seconds
+2024-09-20 11:31:48,369 Saving results with gpu monitoring
+2024-09-20 11:31:48,371 Latency for request e8e4542e with model granite-7b: 8.9250 seconds
+2024-09-20 11:31:48,371 Saving results with gpu monitoring
+2024-09-20 11:31:48,373 Latency for request cf6dc53a with model granite-7b: 8.9250 seconds
+2024-09-20 11:31:48,373 Saving results with gpu monitoring
+2024-09-20 11:31:48,375 Latency for request 3f0dcacb with model granite-7b: 8.9230 seconds
+2024-09-20 11:31:48,375 Saving results with gpu monitoring
+2024-09-20 11:31:48,377 Latency for request e61f45cb with model granite-7b: 8.9220 seconds
+2024-09-20 11:31:48,377 Saving results with gpu monitoring
+2024-09-20 11:31:48,379 Latency for request e67135f4 with model granite-7b: 8.9210 seconds
+2024-09-20 11:31:48,379 Saving results with gpu monitoring
+2024-09-20 11:31:48,381 Latency for request ba7d19c0 with model granite-7b: 8.9190 seconds
+2024-09-20 11:31:48,381 Saving results with gpu monitoring
+2024-09-20 11:31:48,382 Latency for request 6687e7dd with model granite-7b: 8.9180 seconds
+2024-09-20 11:31:48,383 Saving results with gpu monitoring
+2024-09-20 11:31:48,384 Latency for request b4040529 with model granite-7b: 8.9160 seconds
+2024-09-20 11:31:48,384 Saving results with gpu monitoring
+2024-09-20 11:31:48,386 Latency for request 08853ee4 with model granite-7b: 8.9150 seconds
+2024-09-20 11:31:48,386 Saving results with gpu monitoring
+2024-09-20 11:31:48,388 Latency for request ce423629 with model granite-7b: 8.9150 seconds
+2024-09-20 11:31:48,388 Saving results with gpu monitoring
+2024-09-20 11:31:48,390 Latency for request 31e14430 with model granite-7b: 8.9140 seconds
+2024-09-20 11:31:48,390 Saving results with gpu monitoring
+2024-09-20 11:31:48,392 Latency for request ac5297b5 with model granite-7b: 8.9130 seconds
+2024-09-20 11:31:48,392 Saving results with gpu monitoring
+2024-09-20 11:31:48,394 Latency for request 5a31b130 with model granite-7b: 8.9110 seconds
+2024-09-20 11:31:48,394 Saving results with gpu monitoring
+2024-09-20 11:31:48,396 Latency for request 6aac8edb with model granite-7b: 8.9110 seconds
+2024-09-20 11:31:48,396 Saving results with gpu monitoring
+2024-09-20 11:31:48,398 Latency for request 2e357c54 with model granite-7b: 8.9100 seconds
+2024-09-20 11:31:48,398 Saving results with gpu monitoring
+2024-09-20 11:31:48,400 Latency for request 34048cd0 with model granite-7b: 8.9100 seconds
+2024-09-20 11:31:48,400 Saving results with gpu monitoring
+2024-09-20 11:31:48,402 Latency for request 65d9a6e3 with model granite-7b: 8.9090 seconds
+2024-09-20 11:31:48,402 Saving results with gpu monitoring
+2024-09-20 11:31:48,404 Latency for request 005b2b5e with model granite-7b: 8.9080 seconds
+2024-09-20 11:31:48,404 Saving results with gpu monitoring
+2024-09-20 11:31:48,406 Latency for request 07768c5e with model granite-7b: 8.9060 seconds
+2024-09-20 11:31:48,406 Saving results with gpu monitoring
+2024-09-20 11:31:48,408 Latency for request b6787a87 with model granite-7b: 8.9050 seconds
+2024-09-20 11:31:48,408 Saving results with gpu monitoring
+2024-09-20 11:31:48,410 Latency for request 0fe9edd0 with model granite-7b: 8.9040 seconds
+2024-09-20 11:31:48,410 Saving results with gpu monitoring
+2024-09-20 11:31:48,412 Latency for request d61f9a07 with model granite-7b: 8.9040 seconds
+2024-09-20 11:31:48,412 Saving results with gpu monitoring
+2024-09-20 11:31:48,414 Latency for request dfa18509 with model granite-7b: 8.9030 seconds
+2024-09-20 11:31:48,414 Saving results with gpu monitoring
+2024-09-20 11:31:48,416 Latency for request c702259e with model granite-7b: 8.9020 seconds
+2024-09-20 11:31:48,416 Saving results with gpu monitoring
+2024-09-20 11:31:48,418 Latency for request 02b32970 with model granite-7b: 8.9010 seconds
+2024-09-20 11:31:48,418 Saving results with gpu monitoring
+2024-09-20 11:31:48,420 Latency for request 79d640c1 with model granite-7b: 8.9290 seconds
+2024-09-20 11:31:48,420 Saving results with gpu monitoring
+2024-09-20 11:31:48,422 Latency for request cc5d9ada with model granite-7b: 8.8990 seconds
+2024-09-20 11:31:48,422 Saving results with gpu monitoring
+2024-09-20 11:31:48,424 Latency for request 83a58104 with model granite-7b: 8.8970 seconds
+2024-09-20 11:31:48,424 Saving results with gpu monitoring
+2024-09-20 11:31:48,426 Latency for request c2c03f74 with model granite-7b: 8.9260 seconds
+2024-09-20 11:31:48,426 Saving results with gpu monitoring
+2024-09-20 11:31:48,428 Latency for request 2acf9b81 with model granite-7b: 8.9250 seconds
+2024-09-20 11:31:48,428 Saving results with gpu monitoring
+2024-09-20 11:31:48,430 Latency for request a1f10f46 with model granite-7b: 8.9220 seconds
+2024-09-20 11:31:48,430 Saving results with gpu monitoring
+2024-09-20 11:31:48,432 Latency for request 64964ac1 with model granite-7b: 8.9200 seconds
+2024-09-20 11:31:48,432 Saving results with gpu monitoring
+2024-09-20 11:31:48,433 Latency for request ed99a909 with model granite-7b: 8.9170 seconds
+2024-09-20 11:31:48,434 Saving results with gpu monitoring
+2024-09-20 11:31:48,435 Latency for request 5d6baa34 with model granite-7b: 8.9150 seconds
+2024-09-20 11:31:48,435 Saving results with gpu monitoring
+2024-09-20 11:31:48,437 Latency for request 4a3be926 with model granite-7b: 8.9130 seconds
+2024-09-20 11:31:48,437 Saving results with gpu monitoring
+2024-09-20 11:31:48,439 Latency for request 0ed1cb36 with model granite-7b: 8.9110 seconds
+2024-09-20 11:31:48,439 Saving results with gpu monitoring
+2024-09-20 11:31:48,441 Latency for request 6f27d654 with model granite-7b: 8.9100 seconds
+2024-09-20 11:31:48,441 Saving results with gpu monitoring
+2024-09-20 11:31:48,443 Latency for request 18fe5ea9 with model granite-7b: 8.9080 seconds
+2024-09-20 11:31:48,443 Saving results with gpu monitoring
+2024-09-20 11:31:48,445 Latency for request 3a6ad511 with model granite-7b: 8.9070 seconds
+2024-09-20 11:31:48,445 Saving results with gpu monitoring
+2024-09-20 11:31:48,447 Latency for request d5fb08f3 with model granite-7b: 8.9060 seconds
+2024-09-20 11:31:48,447 Saving results with gpu monitoring
+2024-09-20 11:31:48,449 Latency for request 46686a8f with model granite-7b: 8.9040 seconds
+2024-09-20 11:31:48,449 Saving results with gpu monitoring
+2024-09-20 11:31:48,451 Latency for request 75f3f6ed with model granite-7b: 8.9030 seconds
+2024-09-20 11:31:48,451 Saving results with gpu monitoring
+2024-09-20 11:31:48,453 Latency for request 4df546e7 with model granite-7b: 8.9010 seconds
+2024-09-20 11:31:48,453 Saving results with gpu monitoring
+2024-09-20 11:31:48,455 Latency for request 92423612 with model granite-7b: 8.9270 seconds
+2024-09-20 11:31:48,455 Saving results with gpu monitoring
+2024-09-20 11:31:48,457 Latency for request 85dd2319 with model granite-7b: 8.9250 seconds
+2024-09-20 11:31:48,457 Saving results with gpu monitoring
+2024-09-20 11:31:48,459 Latency for request 2b947d9b with model granite-7b: 8.9210 seconds
+2024-09-20 11:31:48,459 Saving results with gpu monitoring
+2024-09-20 11:31:48,460 Latency for request 2d9f34a2 with model granite-7b: 8.9160 seconds
+2024-09-20 11:31:48,461 Saving results with gpu monitoring
+2024-09-20 11:31:48,462 Latency for request 652659a8 with model granite-7b: 8.9120 seconds
+2024-09-20 11:31:48,462 Saving results with gpu monitoring
+2024-09-20 11:31:48,464 Latency for request d04d9832 with model granite-7b: 8.9090 seconds
+2024-09-20 11:31:48,464 Saving results with gpu monitoring
+2024-09-20 11:31:48,466 Latency for request b2801903 with model granite-7b: 8.9050 seconds
+2024-09-20 11:31:48,466 Saving results with gpu monitoring
+2024-09-20 11:31:48,468 Latency for request 45c476d4 with model granite-7b: 8.9010 seconds
+2024-09-20 11:31:48,468 Saving results with gpu monitoring
+2024-09-20 11:31:48,470 Latency for request f79e8f50 with model granite-7b: 8.9230 seconds
+2024-09-20 11:31:48,470 Saving results with gpu monitoring
+2024-09-20 11:31:48,472 Latency for request 5f256326 with model granite-7b: 8.9140 seconds
+2024-09-20 11:31:48,472 Saving results with gpu monitoring
+2024-09-20 11:31:48,474 Latency for request 5c50a57e with model granite-7b: 8.9070 seconds
+2024-09-20 11:31:48,474 Saving results with gpu monitoring
+2024-09-20 11:31:48,476 Latency for request 7ed42e54 with model granite-7b: 8.9000 seconds
+2024-09-20 11:31:48,476 Saving results with gpu monitoring
+2024-09-20 11:31:48,478 Latency for request 1a2bc37d with model granite-7b: 8.9190 seconds
+2024-09-20 11:31:48,478 Saving results with gpu monitoring
+2024-09-20 11:31:48,480 Latency for request 620ca00b with model granite-7b: 8.9030 seconds
+2024-09-20 11:31:48,480 Saving results with gpu monitoring
+2024-09-20 11:31:48,482 Latency for request cfb1460e with model granite-7b: 8.9110 seconds
+2024-09-20 11:31:48,482 Saving results with gpu monitoring
+2024-09-20 11:31:48,484 Latency for request 6871235c with model granite-7b: 8.8970 seconds
+2024-09-20 11:31:48,484 Saving results with gpu monitoring
+2024-09-20 11:31:48,509 127.0.0.1 - - [20/Sep/2024 11:31:48] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,569 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,595 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,598 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,598 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,599 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,600 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,602 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,603 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,604 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,605 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,606 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,607 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,608 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,609 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,610 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,611 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,611 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,612 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,613 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,614 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,615 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,616 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,617 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,618 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,619 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,620 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,621 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,622 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,624 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,625 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,625 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,626 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,627 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,628 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,629 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,630 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,631 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,632 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,633 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,634 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,635 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,636 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,637 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,638 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,639 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,640 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,641 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,641 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,642 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,643 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,644 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,645 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,646 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,647 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,648 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,649 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,650 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,651 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,652 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,653 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,654 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,655 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:49,656 127.0.0.1 - - [20/Sep/2024 11:31:49] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:56,696 Saving sys info
+2024-09-20 11:31:56,738 Latency for request 09c766ba with model granite-7b: 7.1320 seconds
+2024-09-20 11:31:56,738 Saving results with gpu monitoring
+2024-09-20 11:31:56,741 Latency for request f268569c with model granite-7b: 7.1320 seconds
+2024-09-20 11:31:56,741 Saving results with gpu monitoring
+2024-09-20 11:31:56,743 Latency for request 02fc75a4 with model granite-7b: 7.1310 seconds
+2024-09-20 11:31:56,743 Saving results with gpu monitoring
+2024-09-20 11:31:56,745 Latency for request e04cba42 with model granite-7b: 7.1290 seconds
+2024-09-20 11:31:56,745 Saving results with gpu monitoring
+2024-09-20 11:31:56,747 Latency for request 7a804ebe with model granite-7b: 7.1280 seconds
+2024-09-20 11:31:56,747 Saving results with gpu monitoring
+2024-09-20 11:31:56,749 Latency for request 27a440d9 with model granite-7b: 7.1260 seconds
+2024-09-20 11:31:56,749 Saving results with gpu monitoring
+2024-09-20 11:31:56,751 Latency for request 2c70b8c6 with model granite-7b: 7.1250 seconds
+2024-09-20 11:31:56,751 Saving results with gpu monitoring
+2024-09-20 11:31:56,753 Latency for request ff541891 with model granite-7b: 7.1240 seconds
+2024-09-20 11:31:56,753 Saving results with gpu monitoring
+2024-09-20 11:31:56,755 Latency for request b68d13cc with model granite-7b: 7.1230 seconds
+2024-09-20 11:31:56,755 Saving results with gpu monitoring
+2024-09-20 11:31:56,757 Latency for request f734187e with model granite-7b: 7.1210 seconds
+2024-09-20 11:31:56,757 Saving results with gpu monitoring
+2024-09-20 11:31:56,759 Latency for request 6a784373 with model granite-7b: 7.1200 seconds
+2024-09-20 11:31:56,759 Saving results with gpu monitoring
+2024-09-20 11:31:56,761 Latency for request f9919b71 with model granite-7b: 7.1190 seconds
+2024-09-20 11:31:56,761 Saving results with gpu monitoring
+2024-09-20 11:31:56,763 Latency for request bbea8291 with model granite-7b: 7.1180 seconds
+2024-09-20 11:31:56,763 Saving results with gpu monitoring
+2024-09-20 11:31:56,764 Latency for request 257b9881 with model granite-7b: 7.1170 seconds
+2024-09-20 11:31:56,764 Saving results with gpu monitoring
+2024-09-20 11:31:56,766 Latency for request fc51d34f with model granite-7b: 7.1160 seconds
+2024-09-20 11:31:56,766 Saving results with gpu monitoring
+2024-09-20 11:31:56,768 Latency for request f5775438 with model granite-7b: 7.1150 seconds
+2024-09-20 11:31:56,768 Saving results with gpu monitoring
+2024-09-20 11:31:56,770 Latency for request face6a68 with model granite-7b: 7.1130 seconds
+2024-09-20 11:31:56,770 Saving results with gpu monitoring
+2024-09-20 11:31:56,772 Latency for request a463678c with model granite-7b: 7.1130 seconds
+2024-09-20 11:31:56,772 Saving results with gpu monitoring
+2024-09-20 11:31:56,774 Latency for request 95de10aa with model granite-7b: 7.1120 seconds
+2024-09-20 11:31:56,774 Saving results with gpu monitoring
+2024-09-20 11:31:56,776 Latency for request 709c3469 with model granite-7b: 7.1110 seconds
+2024-09-20 11:31:56,776 Saving results with gpu monitoring
+2024-09-20 11:31:56,778 Latency for request 96e0184f with model granite-7b: 7.1100 seconds
+2024-09-20 11:31:56,778 Saving results with gpu monitoring
+2024-09-20 11:31:56,780 Latency for request 4f90c315 with model granite-7b: 7.1090 seconds
+2024-09-20 11:31:56,780 Saving results with gpu monitoring
+2024-09-20 11:31:56,782 Latency for request ed1b386f with model granite-7b: 7.1090 seconds
+2024-09-20 11:31:56,782 Saving results with gpu monitoring
+2024-09-20 11:31:56,784 Latency for request ebbceee6 with model granite-7b: 7.1080 seconds
+2024-09-20 11:31:56,784 Saving results with gpu monitoring
+2024-09-20 11:31:56,786 Latency for request 18ccb634 with model granite-7b: 7.1070 seconds
+2024-09-20 11:31:56,786 Saving results with gpu monitoring
+2024-09-20 11:31:56,788 Latency for request e7c4d4f4 with model granite-7b: 7.1060 seconds
+2024-09-20 11:31:56,788 Saving results with gpu monitoring
+2024-09-20 11:31:56,790 Latency for request 22a0c7c8 with model granite-7b: 7.1310 seconds
+2024-09-20 11:31:56,790 Saving results with gpu monitoring
+2024-09-20 11:31:56,792 Latency for request 669c9e21 with model granite-7b: 7.1040 seconds
+2024-09-20 11:31:56,792 Saving results with gpu monitoring
+2024-09-20 11:31:56,793 Latency for request b1a21155 with model granite-7b: 7.1030 seconds
+2024-09-20 11:31:56,793 Saving results with gpu monitoring
+2024-09-20 11:31:56,795 Latency for request 492eb5e3 with model granite-7b: 7.1020 seconds
+2024-09-20 11:31:56,795 Saving results with gpu monitoring
+2024-09-20 11:31:56,797 Latency for request d88f514d with model granite-7b: 7.1010 seconds
+2024-09-20 11:31:56,797 Saving results with gpu monitoring
+2024-09-20 11:31:56,799 Latency for request fe5a783b with model granite-7b: 7.1000 seconds
+2024-09-20 11:31:56,799 Saving results with gpu monitoring
+2024-09-20 11:31:56,801 Latency for request c218053f with model granite-7b: 7.1300 seconds
+2024-09-20 11:31:56,801 Saving results with gpu monitoring
+2024-09-20 11:31:56,803 Latency for request c8ae5986 with model granite-7b: 7.1280 seconds
+2024-09-20 11:31:56,803 Saving results with gpu monitoring
+2024-09-20 11:31:56,805 Latency for request 1d2ba98a with model granite-7b: 7.1260 seconds
+2024-09-20 11:31:56,805 Saving results with gpu monitoring
+2024-09-20 11:31:56,807 Latency for request 78894f29 with model granite-7b: 7.1230 seconds
+2024-09-20 11:31:56,807 Saving results with gpu monitoring
+2024-09-20 11:31:56,809 Latency for request 2265a4ef with model granite-7b: 7.1200 seconds
+2024-09-20 11:31:56,809 Saving results with gpu monitoring
+2024-09-20 11:31:56,811 Latency for request 27c649b7 with model granite-7b: 7.1180 seconds
+2024-09-20 11:31:56,811 Saving results with gpu monitoring
+2024-09-20 11:31:56,813 Latency for request a54c85d2 with model granite-7b: 7.1170 seconds
+2024-09-20 11:31:56,813 Saving results with gpu monitoring
+2024-09-20 11:31:56,815 Latency for request 5eb012a0 with model granite-7b: 7.1150 seconds
+2024-09-20 11:31:56,815 Saving results with gpu monitoring
+2024-09-20 11:31:56,816 Latency for request 7325a7ff with model granite-7b: 7.1130 seconds
+2024-09-20 11:31:56,817 Saving results with gpu monitoring
+2024-09-20 11:31:56,818 Latency for request d96d4421 with model granite-7b: 7.1120 seconds
+2024-09-20 11:31:56,818 Saving results with gpu monitoring
+2024-09-20 11:31:56,820 Latency for request 54de662c with model granite-7b: 7.1100 seconds
+2024-09-20 11:31:56,820 Saving results with gpu monitoring
+2024-09-20 11:31:56,822 Latency for request 28a81e1b with model granite-7b: 7.1090 seconds
+2024-09-20 11:31:56,822 Saving results with gpu monitoring
+2024-09-20 11:31:56,824 Latency for request de1adc52 with model granite-7b: 7.1060 seconds
+2024-09-20 11:31:56,824 Saving results with gpu monitoring
+2024-09-20 11:31:56,826 Latency for request 7934f55f with model granite-7b: 7.1050 seconds
+2024-09-20 11:31:56,826 Saving results with gpu monitoring
+2024-09-20 11:31:56,828 Latency for request 861b56c0 with model granite-7b: 7.1030 seconds
+2024-09-20 11:31:56,828 Saving results with gpu monitoring
+2024-09-20 11:31:56,830 Latency for request 5a907726 with model granite-7b: 7.1010 seconds
+2024-09-20 11:31:56,830 Saving results with gpu monitoring
+2024-09-20 11:31:56,832 Latency for request 6c7a0ff7 with model granite-7b: 7.0980 seconds
+2024-09-20 11:31:56,832 Saving results with gpu monitoring
+2024-09-20 11:31:56,834 Latency for request 733644bf with model granite-7b: 7.1250 seconds
+2024-09-20 11:31:56,834 Saving results with gpu monitoring
+2024-09-20 11:31:56,836 Latency for request f9ac39cb with model granite-7b: 7.1190 seconds
+2024-09-20 11:31:56,836 Saving results with gpu monitoring
+2024-09-20 11:31:56,838 Latency for request b66cdc31 with model granite-7b: 7.1160 seconds
+2024-09-20 11:31:56,838 Saving results with gpu monitoring
+2024-09-20 11:31:56,840 Latency for request 8490362d with model granite-7b: 7.1140 seconds
+2024-09-20 11:31:56,840 Saving results with gpu monitoring
+2024-09-20 11:31:56,842 Latency for request cd750efa with model granite-7b: 7.1110 seconds
+2024-09-20 11:31:56,842 Saving results with gpu monitoring
+2024-09-20 11:31:56,843 Latency for request e9d52272 with model granite-7b: 7.1080 seconds
+2024-09-20 11:31:56,844 Saving results with gpu monitoring
+2024-09-20 11:31:56,845 Latency for request 8b91b780 with model granite-7b: 7.1040 seconds
+2024-09-20 11:31:56,845 Saving results with gpu monitoring
+2024-09-20 11:31:56,847 Latency for request f199eb0f with model granite-7b: 7.0990 seconds
+2024-09-20 11:31:56,847 Saving results with gpu monitoring
+2024-09-20 11:31:56,849 Latency for request fc124fa2 with model granite-7b: 7.1220 seconds
+2024-09-20 11:31:56,849 Saving results with gpu monitoring
+2024-09-20 11:31:56,851 Latency for request 4fa24c1b with model granite-7b: 7.1130 seconds
+2024-09-20 11:31:56,851 Saving results with gpu monitoring
+2024-09-20 11:31:56,853 Latency for request 394d1cb5 with model granite-7b: 7.1050 seconds
+2024-09-20 11:31:56,853 Saving results with gpu monitoring
+2024-09-20 11:31:56,855 Latency for request 93498e01 with model granite-7b: 7.1270 seconds
+2024-09-20 11:31:56,855 Saving results with gpu monitoring
+2024-09-20 11:31:56,857 Latency for request a4d69c9b with model granite-7b: 7.1090 seconds
+2024-09-20 11:31:56,857 Saving results with gpu monitoring
+2024-09-20 11:31:56,859 Latency for request a7e0bfaa with model granite-7b: 7.1180 seconds
+2024-09-20 11:31:56,859 Saving results with gpu monitoring
+2024-09-20 11:31:56,861 Latency for request fe81bbae with model granite-7b: 7.1020 seconds
+2024-09-20 11:31:56,861 Saving results with gpu monitoring
+2024-09-20 11:31:56,880 127.0.0.1 - - [20/Sep/2024 11:31:56] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:57,989 127.0.0.1 - - [20/Sep/2024 11:31:57] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,018 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,022 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,025 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,029 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,031 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,033 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,034 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,035 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,036 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,039 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,040 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,041 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,043 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,045 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,047 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,049 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,050 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,051 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,054 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,054 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,056 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,057 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,058 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,059 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,062 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,063 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,065 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,067 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,069 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,071 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,072 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,074 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,075 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,078 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,081 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,081 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,082 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,084 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,085 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,086 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,087 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,088 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,088 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,089 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,090 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,091 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,092 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,092 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,094 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,095 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,097 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,098 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,099 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,100 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,101 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,102 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,102 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,103 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,104 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,105 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,106 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,107 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,108 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,109 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,110 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,111 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,112 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,113 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,114 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,115 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,116 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,116 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,118 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,119 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,120 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,121 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,122 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,122 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,123 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,124 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,125 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,126 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,127 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,128 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,129 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,130 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,131 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,132 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,133 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,134 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,135 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,136 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,137 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,138 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,139 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,140 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,140 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,141 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,142 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,143 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,144 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,145 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,146 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,147 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,148 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,149 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,150 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,151 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,152 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,153 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,154 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,155 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,156 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,157 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,157 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,158 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,159 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,160 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,161 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,162 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,163 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,164 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,164 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,166 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,167 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:31:58,168 127.0.0.1 - - [20/Sep/2024 11:31:58] "POST /inference HTTP/1.1" 200 -
+2024-09-20 11:32:11,328 Saving sys info
+2024-09-20 11:32:11,359 Latency for request b554b003 with model granite-7b: 13.3590 seconds
+2024-09-20 11:32:11,359 Saving results with gpu monitoring
+2024-09-20 11:32:11,362 Latency for request 4d279262 with model granite-7b: 13.3560 seconds
+2024-09-20 11:32:11,362 Saving results with gpu monitoring
+2024-09-20 11:32:11,364 Latency for request 38d6cf9d with model granite-7b: 13.3540 seconds
+2024-09-20 11:32:11,364 Saving results with gpu monitoring
+2024-09-20 11:32:11,366 Latency for request e3b5807b with model granite-7b: 13.3520 seconds
+2024-09-20 11:32:11,366 Saving results with gpu monitoring
+2024-09-20 11:32:11,368 Latency for request be566934 with model granite-7b: 13.3500 seconds
+2024-09-20 11:32:11,368 Saving results with gpu monitoring
+2024-09-20 11:32:11,370 Latency for request 688fa7c0 with model granite-7b: 13.3490 seconds
+2024-09-20 11:32:11,370 Saving results with gpu monitoring
+2024-09-20 11:32:11,372 Latency for request 291f24ca with model granite-7b: 13.3480 seconds
+2024-09-20 11:32:11,372 Saving results with gpu monitoring
+2024-09-20 11:32:11,374 Latency for request 5a301678 with model granite-7b: 13.3480 seconds
+2024-09-20 11:32:11,374 Saving results with gpu monitoring
+2024-09-20 11:32:11,376 Latency for request 13c05d32 with model granite-7b: 13.3460 seconds
+2024-09-20 11:32:11,376 Saving results with gpu monitoring
+2024-09-20 11:32:11,378 Latency for request 4e2a278f with model granite-7b: 13.3440 seconds
+2024-09-20 11:32:11,378 Saving results with gpu monitoring
+2024-09-20 11:32:11,380 Latency for request 81b9996b with model granite-7b: 13.3440 seconds
+2024-09-20 11:32:11,380 Saving results with gpu monitoring
+2024-09-20 11:32:11,382 Latency for request aa2d2e91 with model granite-7b: 13.3430 seconds
+2024-09-20 11:32:11,382 Saving results with gpu monitoring
+2024-09-20 11:32:11,384 Latency for request aa1d9c53 with model granite-7b: 13.3420 seconds
+2024-09-20 11:32:11,384 Saving results with gpu monitoring
+2024-09-20 11:32:11,386 Latency for request fdc489a7 with model granite-7b: 13.3410 seconds
+2024-09-20 11:32:11,386 Saving results with gpu monitoring
+2024-09-20 11:32:11,388 Latency for request 1ef50e67 with model granite-7b: 13.3390 seconds
+2024-09-20 11:32:11,388 Saving results with gpu monitoring
+2024-09-20 11:32:11,390 Latency for request fa6f9264 with model granite-7b: 13.3390 seconds
+2024-09-20 11:32:11,390 Saving results with gpu monitoring
+2024-09-20 11:32:11,391 Latency for request a467b6a4 with model granite-7b: 13.3380 seconds
+2024-09-20 11:32:11,391 Saving results with gpu monitoring
+2024-09-20 11:32:11,393 Latency for request bc6b5d4a with model granite-7b: 13.3360 seconds
+2024-09-20 11:32:11,393 Saving results with gpu monitoring
+2024-09-20 11:32:11,395 Latency for request bc72b0dc with model granite-7b: 13.3350 seconds
+2024-09-20 11:32:11,395 Saving results with gpu monitoring
+2024-09-20 11:32:11,397 Latency for request 823e24ab with model granite-7b: 13.3340 seconds
+2024-09-20 11:32:11,397 Saving results with gpu monitoring
+2024-09-20 11:32:11,399 Latency for request 47fc4e6b with model granite-7b: 13.3340 seconds
+2024-09-20 11:32:11,399 Saving results with gpu monitoring
+2024-09-20 11:32:11,401 Latency for request 2d8e2636 with model granite-7b: 13.3330 seconds
+2024-09-20 11:32:11,401 Saving results with gpu monitoring
+2024-09-20 11:32:11,403 Latency for request bb192e00 with model granite-7b: 13.3310 seconds
+2024-09-20 11:32:11,403 Saving results with gpu monitoring
+2024-09-20 11:32:11,405 Latency for request 385eecae with model granite-7b: 13.3290 seconds
+2024-09-20 11:32:11,405 Saving results with gpu monitoring
+2024-09-20 11:32:11,407 Latency for request d1f547ef with model granite-7b: 13.3290 seconds
+2024-09-20 11:32:11,407 Saving results with gpu monitoring
+2024-09-20 11:32:11,409 Latency for request 338cf79c with model granite-7b: 13.3280 seconds
+2024-09-20 11:32:11,409 Saving results with gpu monitoring
+2024-09-20 11:32:11,411 Latency for request 2ae73c8d with model granite-7b: 13.3260 seconds
+2024-09-20 11:32:11,411 Saving results with gpu monitoring
+2024-09-20 11:32:11,413 Latency for request 60f32f00 with model granite-7b: 13.3260 seconds
+2024-09-20 11:32:11,413 Saving results with gpu monitoring
+2024-09-20 11:32:11,415 Latency for request d191737e with model granite-7b: 13.3250 seconds
+2024-09-20 11:32:11,415 Saving results with gpu monitoring
+2024-09-20 11:32:11,417 Latency for request 7e2d7c2d with model granite-7b: 13.3550 seconds
+2024-09-20 11:32:11,417 Saving results with gpu monitoring
+2024-09-20 11:32:11,419 Latency for request 6a92b471 with model granite-7b: 13.3230 seconds
+2024-09-20 11:32:11,419 Saving results with gpu monitoring
+2024-09-20 11:32:11,420 Latency for request 2c202e66 with model granite-7b: 13.3220 seconds
+2024-09-20 11:32:11,421 Saving results with gpu monitoring
+2024-09-20 11:32:11,422 Latency for request af858ea6 with model granite-7b: 13.3220 seconds
+2024-09-20 11:32:11,422 Saving results with gpu monitoring
+2024-09-20 11:32:11,424 Latency for request cc088dfb with model granite-7b: 13.3210 seconds
+2024-09-20 11:32:11,424 Saving results with gpu monitoring
+2024-09-20 11:32:11,426 Latency for request 38ff46da with model granite-7b: 13.3190 seconds
+2024-09-20 11:32:11,426 Saving results with gpu monitoring
+2024-09-20 11:32:11,428 Latency for request c7be38b3 with model granite-7b: 13.3180 seconds
+2024-09-20 11:32:11,428 Saving results with gpu monitoring
+2024-09-20 11:32:11,430 Latency for request 390b5278 with model granite-7b: 13.3170 seconds
+2024-09-20 11:32:11,430 Saving results with gpu monitoring
+2024-09-20 11:32:11,432 Latency for request dce49c86 with model granite-7b: 13.3160 seconds
+2024-09-20 11:32:11,432 Saving results with gpu monitoring
+2024-09-20 11:32:11,434 Latency for request b8808b45 with model granite-7b: 13.3150 seconds
+2024-09-20 11:32:11,434 Saving results with gpu monitoring
+2024-09-20 11:32:11,436 Latency for request 56c7c074 with model granite-7b: 13.3130 seconds
+2024-09-20 11:32:11,436 Saving results with gpu monitoring
+2024-09-20 11:32:11,438 Latency for request 8118f3bc with model granite-7b: 13.3120 seconds
+2024-09-20 11:32:11,438 Saving results with gpu monitoring
+2024-09-20 11:32:11,440 Latency for request 4067b8a8 with model granite-7b: 13.3120 seconds
+2024-09-20 11:32:11,440 Saving results with gpu monitoring
+2024-09-20 11:32:11,442 Latency for request 41aa3704 with model granite-7b: 13.3110 seconds
+2024-09-20 11:32:11,442 Saving results with gpu monitoring
+2024-09-20 11:32:11,444 Latency for request 8fd87a36 with model granite-7b: 13.3100 seconds
+2024-09-20 11:32:11,444 Saving results with gpu monitoring
+2024-09-20 11:32:11,446 Latency for request dcb43b00 with model granite-7b: 13.3090 seconds
+2024-09-20 11:32:11,446 Saving results with gpu monitoring
+2024-09-20 11:32:11,448 Latency for request 4bc40d87 with model granite-7b: 13.3090 seconds
+2024-09-20 11:32:11,448 Saving results with gpu monitoring
+2024-09-20 11:32:11,450 Latency for request ad8701f7 with model granite-7b: 13.3080 seconds
+2024-09-20 11:32:11,450 Saving results with gpu monitoring
+2024-09-20 11:32:11,451 Latency for request 65f3f5cd with model granite-7b: 13.3070 seconds
+2024-09-20 11:32:11,452 Saving results with gpu monitoring
+2024-09-20 11:32:11,453 Latency for request cf5a7e70 with model granite-7b: 13.3530 seconds
+2024-09-20 11:32:11,453 Saving results with gpu monitoring
+2024-09-20 11:32:11,455 Latency for request e2a24ea5 with model granite-7b: 13.3040 seconds
+2024-09-20 11:32:11,455 Saving results with gpu monitoring
+2024-09-20 11:32:11,457 Latency for request 82162bae with model granite-7b: 13.3040 seconds
+2024-09-20 11:32:11,457 Saving results with gpu monitoring
+2024-09-20 11:32:11,459 Latency for request ea0d864d with model granite-7b: 13.3030 seconds
+2024-09-20 11:32:11,459 Saving results with gpu monitoring
+2024-09-20 11:32:11,461 Latency for request a4b6e3d1 with model granite-7b: 13.3010 seconds
+2024-09-20 11:32:11,461 Saving results with gpu monitoring
+2024-09-20 11:32:11,463 Latency for request bbc12d0f with model granite-7b: 13.3000 seconds
+2024-09-20 11:32:11,463 Saving results with gpu monitoring
+2024-09-20 11:32:11,465 Latency for request ac98f750 with model granite-7b: 13.2970 seconds
+2024-09-20 11:32:11,465 Saving results with gpu monitoring
+2024-09-20 11:32:11,467 Latency for request 86eab6ce with model granite-7b: 13.2960 seconds
+2024-09-20 11:32:11,467 Saving results with gpu monitoring
+2024-09-20 11:32:11,469 Latency for request 88d6e6b2 with model granite-7b: 13.3470 seconds
+2024-09-20 11:32:11,469 Saving results with gpu monitoring
+2024-09-20 11:32:11,471 Latency for request c77b80df with model granite-7b: 13.3440 seconds
+2024-09-20 11:32:11,471 Saving results with gpu monitoring
+2024-09-20 11:32:11,473 Latency for request 4ce8f550 with model granite-7b: 13.3430 seconds
+2024-09-20 11:32:11,473 Saving results with gpu monitoring
+2024-09-20 11:32:11,475 Latency for request fdecabb6 with model granite-7b: 13.3420 seconds
+2024-09-20 11:32:11,475 Saving results with gpu monitoring
+2024-09-20 11:32:11,477 Latency for request 9a55cb92 with model granite-7b: 13.3410 seconds
+2024-09-20 11:32:11,477 Saving results with gpu monitoring
+2024-09-20 11:32:11,479 Latency for request 6ae8fa8c with model granite-7b: 13.2850 seconds
+2024-09-20 11:32:11,479 Saving results with gpu monitoring
+2024-09-20 11:32:11,481 Latency for request 9b129110 with model granite-7b: 13.2830 seconds
+2024-09-20 11:32:11,481 Saving results with gpu monitoring
+2024-09-20 11:32:11,483 Latency for request e33f5ae3 with model granite-7b: 13.2810 seconds
+2024-09-20 11:32:11,483 Saving results with gpu monitoring
+2024-09-20 11:32:11,485 Latency for request a07b608f with model granite-7b: 13.2800 seconds
+2024-09-20 11:32:11,485 Saving results with gpu monitoring
+2024-09-20 11:32:11,487 Latency for request 2dab4edf with model granite-7b: 13.3350 seconds
+2024-09-20 11:32:11,487 Saving results with gpu monitoring
+2024-09-20 11:32:11,489 Latency for request be882b50 with model granite-7b: 13.2750 seconds
+2024-09-20 11:32:11,489 Saving results with gpu monitoring
+2024-09-20 11:32:11,490 Latency for request 8f9cacc8 with model granite-7b: 13.3320 seconds
+2024-09-20 11:32:11,491 Saving results with gpu monitoring
+2024-09-20 11:32:11,492 Latency for request 841f467d with model granite-7b: 13.3290 seconds
+2024-09-20 11:32:11,492 Saving results with gpu monitoring
+2024-09-20 11:32:11,494 Latency for request 87d7cffd with model granite-7b: 13.2680 seconds
+2024-09-20 11:32:11,494 Saving results with gpu monitoring
+2024-09-20 11:32:11,496 Latency for request 22538833 with model granite-7b: 13.3270 seconds
+2024-09-20 11:32:11,496 Saving results with gpu monitoring
+2024-09-20 11:32:11,498 Latency for request 382e0748 with model granite-7b: 13.3260 seconds
+2024-09-20 11:32:11,498 Saving results with gpu monitoring
+2024-09-20 11:32:11,500 Latency for request 3cd064e3 with model granite-7b: 13.2620 seconds
+2024-09-20 11:32:11,500 Saving results with gpu monitoring
+2024-09-20 11:32:11,502 Latency for request d8f2ae71 with model granite-7b: 13.3240 seconds
+2024-09-20 11:32:11,502 Saving results with gpu monitoring
+2024-09-20 11:32:11,504 Latency for request f026c0a3 with model granite-7b: 13.2580 seconds
+2024-09-20 11:32:11,504 Saving results with gpu monitoring
+2024-09-20 11:32:11,506 Latency for request 277a967a with model granite-7b: 13.2570 seconds
+2024-09-20 11:32:11,506 Saving results with gpu monitoring
+2024-09-20 11:32:11,508 Latency for request 92c49bc6 with model granite-7b: 13.2550 seconds
+2024-09-20 11:32:11,508 Saving results with gpu monitoring
+2024-09-20 11:32:11,510 Latency for request 5a48f94e with model granite-7b: 13.3200 seconds
+2024-09-20 11:32:11,510 Saving results with gpu monitoring
+2024-09-20 11:32:11,512 Latency for request 45e0a34e with model granite-7b: 13.2510 seconds
+2024-09-20 11:32:11,512 Saving results with gpu monitoring
+2024-09-20 11:32:11,514 Latency for request dc7558bb with model granite-7b: 13.2490 seconds
+2024-09-20 11:32:11,514 Saving results with gpu monitoring
+2024-09-20 11:32:11,516 Latency for request b6a043cf with model granite-7b: 13.2480 seconds
+2024-09-20 11:32:11,516 Saving results with gpu monitoring
+2024-09-20 11:32:11,518 Latency for request 810b9e50 with model granite-7b: 13.3150 seconds
+2024-09-20 11:32:11,518 Saving results with gpu monitoring
+2024-09-20 11:32:11,520 Latency for request 1a8abcd7 with model granite-7b: 13.2450 seconds
+2024-09-20 11:32:11,520 Saving results with gpu monitoring
+2024-09-20 11:32:11,521 Latency for request 8de2026d with model granite-7b: 13.3120 seconds
+2024-09-20 11:32:11,521 Saving results with gpu monitoring
+2024-09-20 11:32:11,523 Latency for request e62bdf09 with model granite-7b: 13.3110 seconds
+2024-09-20 11:32:11,523 Saving results with gpu monitoring
+2024-09-20 11:32:11,525 Latency for request c96b16cb with model granite-7b: 13.3090 seconds
+2024-09-20 11:32:11,525 Saving results with gpu monitoring
+2024-09-20 11:32:11,527 Latency for request 1a9b735d with model granite-7b: 13.3070 seconds
+2024-09-20 11:32:11,527 Saving results with gpu monitoring
+2024-09-20 11:32:11,529 Latency for request ad87b108 with model granite-7b: 13.3050 seconds
+2024-09-20 11:32:11,529 Saving results with gpu monitoring
+2024-09-20 11:32:11,531 Latency for request 731368b2 with model granite-7b: 13.3040 seconds
+2024-09-20 11:32:11,531 Saving results with gpu monitoring
+2024-09-20 11:32:11,533 Latency for request 645cf1cf with model granite-7b: 13.3490 seconds
+2024-09-20 11:32:11,533 Saving results with gpu monitoring
+2024-09-20 11:32:11,535 Latency for request cb5f72ed with model granite-7b: 13.3490 seconds
+2024-09-20 11:32:11,535 Saving results with gpu monitoring
+2024-09-20 11:32:11,537 Latency for request 63dc0c65 with model granite-7b: 13.3450 seconds
+2024-09-20 11:32:11,537 Saving results with gpu monitoring
+2024-09-20 11:32:11,539 Latency for request 52dc3d38 with model granite-7b: 13.2900 seconds
+2024-09-20 11:32:11,539 Saving results with gpu monitoring
+2024-09-20 11:32:11,541 Latency for request e6d27a4d with model granite-7b: 13.3400 seconds
+2024-09-20 11:32:11,541 Saving results with gpu monitoring
+2024-09-20 11:32:11,543 Latency for request 95a63bde with model granite-7b: 13.3380 seconds
+2024-09-20 11:32:11,543 Saving results with gpu monitoring
+2024-09-20 11:32:11,545 Latency for request e6b075a3 with model granite-7b: 13.3360 seconds
+2024-09-20 11:32:11,545 Saving results with gpu monitoring
+2024-09-20 11:32:11,547 Latency for request 7b162c8f with model granite-7b: 13.3340 seconds
+2024-09-20 11:32:11,547 Saving results with gpu monitoring
+2024-09-20 11:32:11,549 Latency for request 02d36833 with model granite-7b: 13.2720 seconds
+2024-09-20 11:32:11,549 Saving results with gpu monitoring
+2024-09-20 11:32:11,551 Latency for request 54a20e20 with model granite-7b: 13.3300 seconds
+2024-09-20 11:32:11,551 Saving results with gpu monitoring
+2024-09-20 11:32:11,552 Latency for request bd619c7d with model granite-7b: 13.2670 seconds
+2024-09-20 11:32:11,553 Saving results with gpu monitoring
+2024-09-20 11:32:11,554 Latency for request cd54060e with model granite-7b: 13.3250 seconds
+2024-09-20 11:32:11,554 Saving results with gpu monitoring
+2024-09-20 11:32:11,556 Latency for request 0cfc6309 with model granite-7b: 13.2600 seconds
+2024-09-20 11:32:11,556 Saving results with gpu monitoring
+2024-09-20 11:32:11,558 Latency for request 555f237d with model granite-7b: 13.3220 seconds
+2024-09-20 11:32:11,558 Saving results with gpu monitoring
+2024-09-20 11:32:11,560 Latency for request bd8a5820 with model granite-7b: 13.2520 seconds
+2024-09-20 11:32:11,560 Saving results with gpu monitoring
+2024-09-20 11:32:11,562 Latency for request 76a08980 with model granite-7b: 13.3180 seconds
+2024-09-20 11:32:11,562 Saving results with gpu monitoring
+2024-09-20 11:32:11,564 Latency for request 97943838 with model granite-7b: 13.3140 seconds
+2024-09-20 11:32:11,564 Saving results with gpu monitoring
+2024-09-20 11:32:11,566 Latency for request db4eabe8 with model granite-7b: 13.3120 seconds
+2024-09-20 11:32:11,566 Saving results with gpu monitoring
+2024-09-20 11:32:11,568 Latency for request 225376c5 with model granite-7b: 13.3080 seconds
+2024-09-20 11:32:11,568 Saving results with gpu monitoring
+2024-09-20 11:32:11,570 Latency for request 7bc0f2b4 with model granite-7b: 13.3520 seconds
+2024-09-20 11:32:11,570 Saving results with gpu monitoring
+2024-09-20 11:32:11,572 Latency for request 2514f38f with model granite-7b: 13.2980 seconds
+2024-09-20 11:32:11,572 Saving results with gpu monitoring
+2024-09-20 11:32:11,574 Latency for request 5ba202f9 with model granite-7b: 13.2910 seconds
+2024-09-20 11:32:11,574 Saving results with gpu monitoring
+2024-09-20 11:32:11,576 Latency for request 4f0639cc with model granite-7b: 13.3390 seconds
+2024-09-20 11:32:11,576 Saving results with gpu monitoring
+2024-09-20 11:32:11,578 Latency for request 51eb9116 with model granite-7b: 13.2760 seconds
+2024-09-20 11:32:11,578 Saving results with gpu monitoring
+2024-09-20 11:32:11,580 Latency for request 01eecc90 with model granite-7b: 13.3280 seconds
+2024-09-20 11:32:11,580 Saving results with gpu monitoring
+2024-09-20 11:32:11,582 Latency for request 4d6422f6 with model granite-7b: 13.3240 seconds
+2024-09-20 11:32:11,582 Saving results with gpu monitoring
+2024-09-20 11:32:11,583 Latency for request 50e76949 with model granite-7b: 13.3210 seconds
+2024-09-20 11:32:11,584 Saving results with gpu monitoring
+2024-09-20 11:32:11,585 Latency for request e071e172 with model granite-7b: 13.3160 seconds
+2024-09-20 11:32:11,585 Saving results with gpu monitoring
+2024-09-20 11:32:11,587 Latency for request baae753f with model granite-7b: 13.3100 seconds
+2024-09-20 11:32:11,587 Saving results with gpu monitoring
+2024-09-20 11:32:11,589 Latency for request 36c8ef57 with model granite-7b: 13.3020 seconds
+2024-09-20 11:32:11,589 Saving results with gpu monitoring
+2024-09-20 11:32:11,591 Latency for request 42b07bcc with model granite-7b: 13.2870 seconds
+2024-09-20 11:32:11,591 Saving results with gpu monitoring
+2024-09-20 11:32:11,593 Latency for request 8e598784 with model granite-7b: 13.3340 seconds
+2024-09-20 11:32:11,593 Saving results with gpu monitoring
+2024-09-20 11:32:11,595 Latency for request fec66bb8 with model granite-7b: 13.2650 seconds
+2024-09-20 11:32:11,595 Saving results with gpu monitoring
+2024-09-20 11:32:11,597 Latency for request 1d7c053b with model granite-7b: 13.3190 seconds
+2024-09-20 11:32:11,597 Saving results with gpu monitoring
+2024-09-20 11:32:11,599 Latency for request 10476718 with model granite-7b: 13.3060 seconds
+2024-09-20 11:32:11,599 Saving results with gpu monitoring
+2024-09-20 11:32:11,601 Latency for request 56f998f6 with model granite-7b: 13.3370 seconds
+2024-09-20 11:32:11,601 Saving results with gpu monitoring
+2024-09-20 11:32:11,603 Latency for request b5e8c6f2 with model granite-7b: 13.3130 seconds
+2024-09-20 11:32:11,603 Saving results with gpu monitoring
+2024-09-20 11:32:11,605 Latency for request d08afe7d with model granite-7b: 13.3230 seconds
+2024-09-20 11:32:11,605 Saving results with gpu monitoring
+2024-09-20 11:32:11,607 Latency for request fbded2e8 with model granite-7b: 13.3480 seconds
+2024-09-20 11:32:11,607 Saving results with gpu monitoring
+2024-09-20 11:32:11,643 127.0.0.1 - - [20/Sep/2024 11:32:11] "POST /inference HTTP/1.1" 200 -
