@@ -16,7 +16,7 @@ run_duration = 120  # seconds
 distribution = "gamma" 
 
 model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
-model_frequencies = [0.04, 0.31, 0.65]
+model_frequencies = [0.1, 0.3, 0.6]
 
 # Define the parameters for the Gamma distribution
 rate = 5

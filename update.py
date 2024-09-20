@@ -415,14 +415,14 @@ def inference():
 
     incoming_request_batches[model_alias].put(request_data)
 
-    if mode == "batchedFCFS+SLA":
+    if mode == "BestBatch+SLA":
         # Record arrival time for arrival rate estimation
         if model_alias not in arrival_times:
             arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
         arrival_times[model_alias].append(time.time())
 
 
-    if mode == "batchedFCFS+SLA":
+    if mode == "BestBatch+SLA":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
@@ -444,7 +444,7 @@ def inference():
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
 
-    if mode == "batchedFCFS+SLA":
+    if mode == "BestBatch+SLA":
         # Calculate the optimal batch size
         optimal_batch_size = get_optimal_batch_size(model_alias)
         # Check if batch size is met

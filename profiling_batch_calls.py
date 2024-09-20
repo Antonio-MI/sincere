@@ -26,16 +26,16 @@ workload_folder = "./workloads"
 #                199, 211, 223, 227, 229, 233, 239, 241, 251, 256, 257, 263, 269, 271, 277, 281, 283,	293, 307, 311, 313, 317, 331,
 #                337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463,
 #                467, 479, 487, 491, 499, 503, 509, 512, 1024, 2048] #, 4096, 8192, 16384, 32768] 
-# batch_sizes = [1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 19, 23, 29, 32, 41, 53, 64, 79, 83, 89, 109, 128, 149, 167, 191, 211, 233, 256, 307, 353, 409, 457, 512, 1024, 2048]
+batch_sizes = [1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 19, 23, 29, 32, 41, 53, 64, 79, 83, 89, 109, 128, 149, 167, 191, 211, 233, 256, 307, 353, 409, 457, 512, 1024, 2048]
 
-batch_sizes = [1, 64, 128, 256, 512, 1024]
+#batch_sizes = [1, 64, 128, 256, 512, 1024]
 
 
 # List of models to profile
 models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]  # Add more models as needed
 
 # Number of profiling runs per batch size
-num_runs_per_batch_size = 3
+num_runs_per_batch_size = 10
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""

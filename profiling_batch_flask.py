@@ -71,7 +71,7 @@ def load_model(model_alias):
 
         model_dir = os.path.join(base_dir, model_alias)
         tokenizer = AutoTokenizer.from_pretrained(model_dir)
-        tokenizer.padding_side = "left"  # Set padding to the left side for decoder-only architectures
+        tokenizer.padding_side = "left" 
         model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
 
         if tokenizer.pad_token_id is None:
@@ -130,7 +130,7 @@ def process_batch(model_alias, batch_size):
 
                 start_time = time.perf_counter()
                 responses = {}
-                for i, output in enumerate(pipe(batch_generator, max_new_tokens=64, batch_size=batch_size)):
+                for i, output in enumerate(pipe(batch_generator, max_new_tokens=50, batch_size=batch_size)):
                     try:
                         generated_text = output[0]['generated_text']
                         request_id = batch[i]['id']
@@ -153,14 +153,6 @@ def process_batch(model_alias, batch_size):
                     sys_info = monitor.get_sys_info()
                     logging.debug("Saving results with gpu monitoring")
                     save_measurements_and_monitor(model_alias, current_batch_size, batch_inference_time, sys_info)
-
-
-                # # Calculate latency for each request
-                # for request in batch:
-                #     request_id = request['id']
-                #     request_time = request['request_time']
-                #     latency = round(end_time - request_time,3)  # Time since the request was received until the batch was processed
-                #     logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")  
 
             except RuntimeError as e:
                 if "out of memory" in str(e).lower():
