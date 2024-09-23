@@ -5,6 +5,7 @@ import numpy as np
 import json
 import os
 import random
+import sys
 
 # Seed for reproducible trials
 np.random.seed(42)
@@ -12,15 +13,17 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 120  # seconds
-distribution = "gamma" 
+run_duration = sys.argv[1] #120  # seconds
+distribution = sys.argv[2] #"gamma" 
 
-model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
+model_list = list(map(int, sys.argv[3].split(',')))#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
 model_frequencies = [0.1, 0.3, 0.6]
 
 # Define the parameters for the Gamma distribution
+# Use sys.argv
 rate = 8
 shape, scale = 1.0, 1/rate  # Shape (alpha) and scale (θ) for the Gamma distribution
+# Rate 8 and shape 1 gives ~250 requests in 30 seconds | ~450 in 60 -> Close to an average of 8 request/s
 
 # Define the API endpoint
 api_url = "http://127.0.0.1:5000/inference"
@@ -28,6 +31,7 @@ api_url = "http://127.0.0.1:5000/inference"
 # Folder where workload jsons are located
 workload_folder = "./workloads"
 
+count = 0
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
@@ -66,6 +70,7 @@ async def send_request(session, workload):
         print()
 
 async def automated_calls(workloads, run_duration):
+    count = 0
     start_time = time.time()
     async with aiohttp.ClientSession() as session:
         while time.time() - start_time < run_duration:
@@ -83,7 +88,9 @@ async def automated_calls(workloads, run_duration):
 
             # Send the request asynchronously
             asyncio.create_task(send_request(session, workload))
-            
+            count += 1
+            print(count)
+
             # Generate a sleep interval following the Gamma distribution
             if distribution == "gamma":
                 interval = np.random.gamma(shape, scale)

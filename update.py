@@ -12,14 +12,13 @@ import platform
 import logging
 from monitor import Monitor
 from collections import deque  # For arrival rate estimation
-import heapq
-from collections import defaultdict
+
 
 # PARAMS FROM SH SCRIPT
-# MODE, ALLOWED MODELS, 
+# MODE, ALLOWED MODELS, BATCH TIME LIMIT, MODEL STAY TIME
 
-mode = "HigherBatch+PartialBatch+SLA"  # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+SLA",
-                      # "HigherBatch", "HigherBatch+SLA", "HigherBatch+SLA+PartialBatch"]
+mode = "HigherBatch+PartialBatch+Timer"  # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+Timer",
+                      # "HigherBatch", "HigherBatch+Timer", "HigherBatch+Timer+PartialBatch"]
 
 # Ensure that the logs directory exists
 if not os.path.exists("logs"):
@@ -63,37 +62,24 @@ if mode == "BestBatch":
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
     allowed_batch_sizes = [4, 8, 16, 32, 64]
 
-if mode == "BestBatch+SLA":
+if mode == "BestBatch+Timer":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     allowed_batch_sizes = [4, 8, 16, 32, 64]
-    # Load model profiling data
-    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
-    # Create dictionaries to store loading and unloading times
-    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
-    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
-    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
-    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
 if mode == "HigherBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
-if mode == "HigherBatch+SLA":
+if mode == "HigherBatch+Timer":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
     # Load model profiling data
-    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
-    # Create dictionaries to store loading and unloading times
-    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
-    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
-    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
-    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
 if mode == "HigherBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
@@ -101,22 +87,23 @@ if mode == "HigherBatch+PartialBatch":
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
-if mode == "HigherBatch+PartialBatch+SLA":
+if mode == "HigherBatch+PartialBatch+Timer":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+
+if "Timer" in mode:
     # Load model profiling data
     model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
-    # Create dictionaries to store loading and unloading times
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
 
-# Time constraint for batch processing - only will be used with SLA, but need to be defined because in inference() appears as global
+# Time constraint for batch processing - only will be used wwith some modes
 batch_time_limit = 20  # Seconds
 min_batch_time_limit = 5  # Minimum time limit in seconds
 
@@ -149,7 +136,7 @@ arrival_times = {}
 ARRIVAL_RATE_WINDOW = 50  # Number of recent arrivals to consider
 
 # Model usage tracking
-model_usage_count = defaultdict(int)  # Tracks the number of requests for each model
+# model_usage_count = {}  # Tracks the number of requests for each model
 current_loaded_model = None  # Tracks the currently loaded model
 model_stay_time = 10  # Minimum time to keep a model loaded in seconds
 model_loaded_timestamp = None  # Timestamp when the current model was loaded
@@ -185,7 +172,6 @@ def load_model(model_alias):
     loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
     current_loaded_model = model_alias
     model_loaded_timestamp = time.time()
-
 
 # Function to generate a dataset for batching
 def create_batch_generator(batch):
@@ -401,27 +387,23 @@ def process_partial_batch():
                 time.sleep(0.2)
 
 # Function to decide if we should switch models
-def should_switch_model(new_model_alias):
-    global model_usage_count, current_loaded_model, model_loaded_timestamp
-    if current_loaded_model is None:
-        return True  # No model is loaded, so we need to load the new model
-    
-    if new_model_alias == current_loaded_model:
-        return False  # Already loaded
-    
-    # Keep the current model loaded for at least 'model_stay_time' seconds
-    if (time.time() - model_loaded_timestamp) < model_stay_time:
-        return False  # Do not switch yet
-
-    # Decide based on usage frequency
-    current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
-    new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()
-    
-    # Switch if there are more requests for the new model
-    if new_model_requests > current_model_requests:
-        return True
-    else:
-        return False  # Keep current model loaded
+# def should_switch_model(new_model_alias):
+#     global model_usage_count, current_loaded_model, model_loaded_timestamp
+#     if current_loaded_model is None:
+#         return True  # No model is loaded, so we need to load the new model 
+#     if new_model_alias == current_loaded_model:
+#         return False  # Already loaded  
+#     # Keep the current model loaded for at least 'model_stay_time' seconds
+#     if (time.time() - model_loaded_timestamp) < model_stay_time:
+#         return False  # Do not switch yet
+#     # Decide based on usage frequency
+#     current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
+#     new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()    
+#     # Switch if there are more requests for the new model
+#     if new_model_requests > current_model_requests:
+#         return True
+#     else:
+#         return False  # Keep current model loaded
 
 
 app = Flask(__name__)
@@ -489,7 +471,7 @@ def inference():
     model_usage_count[model_alias] += 1
 
 
-    if "SLA" in mode: #mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
+    if "Timer" in mode: #mode == "BestBatch+Timer" or mode == "HigherBatch+Timer":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
@@ -511,7 +493,7 @@ def inference():
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
 
-    if "BestBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+SLA":
+    if "BestBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+Timer":
         # Record arrival time for arrival rate estimation
         if model_alias not in arrival_times:
             arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
@@ -531,7 +513,7 @@ def inference():
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
 
-    if "HigherBatch" in mode: #mode == "HigherBatch" or mode == "HigherBatch+SLA":
+    if "HigherBatch" in mode: #mode == "HigherBatch" or mode == "HigherBatch+Timer":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")
@@ -556,8 +538,8 @@ def health():
 if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
-    #if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
-    if "SLA" in mode:
+    #if mode == "BestBatch+Timer" or mode == "HigherBatch+Timer":
+    if "Timer" in mode:
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
     if "PartialBatch" in mode:
