@@ -1,0 +1,2047 @@
+2024-09-23 12:12:16,469 Using device: cuda
+2024-09-23 12:12:16,469 Scheduling mode set as HigherBatch+PartialBatch
+2024-09-23 12:12:16,469 Monitoring status set to True
+2024-09-23 12:12:31,540 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-23 12:12:31,540 [33mPress CTRL+C to quit[0m
+2024-09-23 12:12:31,620 Request with ID b925cd22 for model granite-7b received
+2024-09-23 12:12:31,621 Decided to switch to model granite-7b
+2024-09-23 12:12:31,621 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:12:31,621 Next: call load_model for granite-7b
+2024-09-23 12:12:31,827 Request with ID 72dc5220 for model llama3-8b received
+2024-09-23 12:12:31,827 Request with ID f159da0e for model llama3-8b received
+2024-09-23 12:12:31,828 Decided to switch to model llama3-8b
+2024-09-23 12:12:31,828 Decided to switch to model llama3-8b
+2024-09-23 12:12:31,828 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:31,829 No pending requests for model llama3-8b after loading
+2024-09-23 12:12:31,830 127.0.0.1 - - [23/Sep/2024 12:12:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:32,242 Request with ID c3b4c88c for model gemma-7b received
+2024-09-23 12:12:32,245 Decided to switch to model gemma-7b
+2024-09-23 12:12:32,246 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:32,406 Request with ID 72efc443 for model granite-7b received
+2024-09-23 12:12:32,406 Decided to switch to model granite-7b
+2024-09-23 12:12:32,408 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:12:32,860 Request with ID 2d1d76bd for model gemma-7b received
+2024-09-23 12:12:32,861 Decided to switch to model gemma-7b
+2024-09-23 12:12:32,861 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:33,147 Request with ID 95c1cb1a for model llama3-8b received
+2024-09-23 12:12:33,148 Decided to switch to model llama3-8b
+2024-09-23 12:12:33,148 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:33,306 Request with ID 682bf324 for model llama3-8b received
+2024-09-23 12:12:33,306 Decided to switch to model llama3-8b
+2024-09-23 12:12:33,306 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:33,605 Request with ID b7ab8048 for model gemma-7b received
+2024-09-23 12:12:33,606 Decided to switch to model gemma-7b
+2024-09-23 12:12:33,606 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:34,130 Request with ID 7605a551 for model gemma-7b received
+2024-09-23 12:12:34,131 Decided to switch to model gemma-7b
+2024-09-23 12:12:34,131 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:34,301 Request with ID 0c1a54e4 for model granite-7b received
+2024-09-23 12:12:34,301 Decided to switch to model granite-7b
+2024-09-23 12:12:34,301 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:12:34,381 Request with ID 5f0b80ee for model llama3-8b received
+2024-09-23 12:12:34,382 Decided to switch to model llama3-8b
+2024-09-23 12:12:34,382 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:34,560 Request with ID e97515e5 for model llama3-8b received
+2024-09-23 12:12:34,561 Decided to switch to model llama3-8b
+2024-09-23 12:12:34,561 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:34,626 Request with ID 325587d7 for model llama3-8b received
+2024-09-23 12:12:34,626 Decided to switch to model llama3-8b
+2024-09-23 12:12:34,626 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:34,643 Request with ID 443f9d3e for model gemma-7b received
+2024-09-23 12:12:34,643 Decided to switch to model gemma-7b
+2024-09-23 12:12:34,643 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:34,715 Request with ID 88e79775 for model gemma-7b received
+2024-09-23 12:12:34,715 Decided to switch to model gemma-7b
+2024-09-23 12:12:34,715 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:34,964 Request with ID efd1f92f for model llama3-8b received
+2024-09-23 12:12:34,965 Decided to switch to model llama3-8b
+2024-09-23 12:12:34,965 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:34,980 Request with ID 3d77d72e for model llama3-8b received
+2024-09-23 12:12:34,980 Decided to switch to model llama3-8b
+2024-09-23 12:12:34,980 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:35,362 Request with ID 87a16000 for model gemma-7b received
+2024-09-23 12:12:35,363 Decided to switch to model gemma-7b
+2024-09-23 12:12:35,363 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:35,376 Request with ID b64a4ad9 for model llama3-8b received
+2024-09-23 12:12:35,376 Decided to switch to model llama3-8b
+2024-09-23 12:12:35,376 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:35,557 Request with ID 10d8b0cd for model llama3-8b received
+2024-09-23 12:12:35,557 Decided to switch to model llama3-8b
+2024-09-23 12:12:35,557 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:35,583 Request with ID 00674e19 for model llama3-8b received
+2024-09-23 12:12:35,583 Decided to switch to model llama3-8b
+2024-09-23 12:12:35,583 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:35,841 Request with ID b432d786 for model llama3-8b received
+2024-09-23 12:12:35,842 Decided to switch to model llama3-8b
+2024-09-23 12:12:35,842 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:35,979 Request with ID ef93662f for model llama3-8b received
+2024-09-23 12:12:35,979 Decided to switch to model llama3-8b
+2024-09-23 12:12:35,979 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:36,003 Request with ID 4101e65e for model gemma-7b received
+2024-09-23 12:12:36,003 Decided to switch to model gemma-7b
+2024-09-23 12:12:36,003 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:36,458 Request with ID 4f7a7753 for model llama3-8b received
+2024-09-23 12:12:36,459 Decided to switch to model llama3-8b
+2024-09-23 12:12:36,459 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:36,700 Request with ID e431323b for model llama3-8b received
+2024-09-23 12:12:36,700 Decided to switch to model llama3-8b
+2024-09-23 12:12:36,700 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:36,753 Request with ID 647f0114 for model llama3-8b received
+2024-09-23 12:12:36,753 Decided to switch to model llama3-8b
+2024-09-23 12:12:36,753 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:36,994 Request with ID 71d77aea for model llama3-8b received
+2024-09-23 12:12:36,994 Decided to switch to model llama3-8b
+2024-09-23 12:12:36,994 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:37,326 Request with ID acb60f3c for model llama3-8b received
+2024-09-23 12:12:37,326 Decided to switch to model llama3-8b
+2024-09-23 12:12:37,326 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:37,368 Request with ID 37f94ea6 for model llama3-8b received
+2024-09-23 12:12:37,368 Decided to switch to model llama3-8b
+2024-09-23 12:12:37,368 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:37,700 Request with ID 78971f76 for model gemma-7b received
+2024-09-23 12:12:37,700 Decided to switch to model gemma-7b
+2024-09-23 12:12:37,700 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:37,725 Request with ID 573ab38f for model llama3-8b received
+2024-09-23 12:12:37,726 Request with ID 2cdeb458 for model llama3-8b received
+2024-09-23 12:12:37,726 Decided to switch to model llama3-8b
+2024-09-23 12:12:37,726 Decided to switch to model llama3-8b
+2024-09-23 12:12:37,727 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:37,727 No pending requests for model llama3-8b after loading
+2024-09-23 12:12:37,728 Request with ID 057d2ca9 for model llama3-8b received
+2024-09-23 12:12:37,729 127.0.0.1 - - [23/Sep/2024 12:12:37] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:37,729 Decided to switch to model llama3-8b
+2024-09-23 12:12:37,729 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:37,863 Request with ID d0e061b6 for model gemma-7b received
+2024-09-23 12:12:37,863 Decided to switch to model gemma-7b
+2024-09-23 12:12:37,863 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:38,439 Request with ID b304c1cc for model llama3-8b received
+2024-09-23 12:12:38,439 Decided to switch to model llama3-8b
+2024-09-23 12:12:38,440 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:38,544 Request with ID 122da0e9 for model llama3-8b received
+2024-09-23 12:12:38,544 Decided to switch to model llama3-8b
+2024-09-23 12:12:38,545 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:39,203 Request with ID 88bb2404 for model gemma-7b received
+2024-09-23 12:12:39,203 Decided to switch to model gemma-7b
+2024-09-23 12:12:39,203 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:39,210 Request with ID b6f646ca for model llama3-8b received
+2024-09-23 12:12:39,210 Decided to switch to model llama3-8b
+2024-09-23 12:12:39,210 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:39,318 Request with ID a1a89394 for model gemma-7b received
+2024-09-23 12:12:39,318 Decided to switch to model gemma-7b
+2024-09-23 12:12:39,318 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:39,799 Request with ID e0dfb593 for model gemma-7b received
+2024-09-23 12:12:39,799 Decided to switch to model gemma-7b
+2024-09-23 12:12:39,800 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:39,935 Request with ID e095ecbf for model llama3-8b received
+2024-09-23 12:12:39,935 Decided to switch to model llama3-8b
+2024-09-23 12:12:39,935 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:40,117 Request with ID cc0410b4 for model gemma-7b received
+2024-09-23 12:12:40,117 Decided to switch to model gemma-7b
+2024-09-23 12:12:40,117 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:40,173 Request with ID 9ff9f414 for model gemma-7b received
+2024-09-23 12:12:40,173 Decided to switch to model gemma-7b
+2024-09-23 12:12:40,173 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:40,375 Request with ID 3f9fe1bc for model gemma-7b received
+2024-09-23 12:12:40,376 Decided to switch to model gemma-7b
+2024-09-23 12:12:40,376 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:40,716 Request with ID 472ab231 for model gemma-7b received
+2024-09-23 12:12:40,716 Decided to switch to model gemma-7b
+2024-09-23 12:12:40,717 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:40,860 Request with ID 12f851e0 for model llama3-8b received
+2024-09-23 12:12:40,860 Decided to switch to model llama3-8b
+2024-09-23 12:12:40,861 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:41,088 Request with ID aeca9fa6 for model llama3-8b received
+2024-09-23 12:12:41,089 Decided to switch to model llama3-8b
+2024-09-23 12:12:41,089 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:41,140 Request with ID 621918ad for model gemma-7b received
+2024-09-23 12:12:41,141 Decided to switch to model gemma-7b
+2024-09-23 12:12:41,141 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:41,378 Request with ID b27780c8 for model llama3-8b received
+2024-09-23 12:12:41,378 Decided to switch to model llama3-8b
+2024-09-23 12:12:41,378 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:41,743 Request with ID 195c336a for model gemma-7b received
+2024-09-23 12:12:41,744 Decided to switch to model gemma-7b
+2024-09-23 12:12:41,744 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:41,768 Request with ID 52970b73 for model llama3-8b received
+2024-09-23 12:12:41,768 Decided to switch to model llama3-8b
+2024-09-23 12:12:41,768 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:41,831 Request with ID 73fdd4d5 for model gemma-7b received
+2024-09-23 12:12:41,831 Decided to switch to model gemma-7b
+2024-09-23 12:12:41,831 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:42,638 Request with ID 3aac8767 for model gemma-7b received
+2024-09-23 12:12:42,638 Decided to switch to model gemma-7b
+2024-09-23 12:12:42,638 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:42,659 Request with ID 4b88e34e for model llama3-8b received
+2024-09-23 12:12:42,659 Decided to switch to model llama3-8b
+2024-09-23 12:12:42,659 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:42,862 Request with ID 8980c749 for model gemma-7b received
+2024-09-23 12:12:42,862 Decided to switch to model gemma-7b
+2024-09-23 12:12:42,862 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:43,105 Request with ID 47737cf5 for model llama3-8b received
+2024-09-23 12:12:43,105 Decided to switch to model llama3-8b
+2024-09-23 12:12:43,105 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:43,210 Request with ID 4492853c for model llama3-8b received
+2024-09-23 12:12:43,210 Decided to switch to model llama3-8b
+2024-09-23 12:12:43,210 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:43,228 Request with ID 9a9072c6 for model llama3-8b received
+2024-09-23 12:12:43,229 Decided to switch to model llama3-8b
+2024-09-23 12:12:43,229 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:43,418 Request with ID 0db5314d for model llama3-8b received
+2024-09-23 12:12:43,418 Decided to switch to model llama3-8b
+2024-09-23 12:12:43,418 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:43,419 Request with ID 396b51e3 for model gemma-7b received
+2024-09-23 12:12:43,420 Decided to switch to model gemma-7b
+2024-09-23 12:12:43,420 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:43,554 Request with ID cbd1f504 for model gemma-7b received
+2024-09-23 12:12:43,554 Decided to switch to model gemma-7b
+2024-09-23 12:12:43,554 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:43,804 Request with ID d61404f3 for model gemma-7b received
+2024-09-23 12:12:43,805 Decided to switch to model gemma-7b
+2024-09-23 12:12:43,805 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:44,081 Request with ID 91acd589 for model llama3-8b received
+2024-09-23 12:12:44,081 Decided to switch to model llama3-8b
+2024-09-23 12:12:44,081 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:44,337 Request with ID 3e159a16 for model llama3-8b received
+2024-09-23 12:12:44,338 Decided to switch to model llama3-8b
+2024-09-23 12:12:44,338 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:44,359 Request with ID 1e245187 for model gemma-7b received
+2024-09-23 12:12:44,359 Decided to switch to model gemma-7b
+2024-09-23 12:12:44,359 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:44,416 Request with ID 9b163e86 for model llama3-8b received
+2024-09-23 12:12:44,416 Decided to switch to model llama3-8b
+2024-09-23 12:12:44,416 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:44,552 Request with ID b89ed822 for model llama3-8b received
+2024-09-23 12:12:44,552 Decided to switch to model llama3-8b
+2024-09-23 12:12:44,552 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:44,871 Request with ID 0071e426 for model llama3-8b received
+2024-09-23 12:12:44,871 Decided to switch to model llama3-8b
+2024-09-23 12:12:44,871 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:45,094 Request with ID 0e298b51 for model gemma-7b received
+2024-09-23 12:12:45,094 Decided to switch to model gemma-7b
+2024-09-23 12:12:45,094 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:45,352 Request with ID f9a84f53 for model llama3-8b received
+2024-09-23 12:12:45,352 Decided to switch to model llama3-8b
+2024-09-23 12:12:45,352 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:45,562 Loaded model granite-7b
+2024-09-23 12:12:45,565 Batch processing started for model granite-7b
+2024-09-23 12:12:45,647 Request with ID 39a237ad for model llama3-8b received
+2024-09-23 12:12:45,647 Keeping current model granite-7b loaded
+2024-09-23 12:12:45,647 127.0.0.1 - - [23/Sep/2024 12:12:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:45,788 Request with ID 915c80b9 for model llama3-8b received
+2024-09-23 12:12:45,789 Keeping current model granite-7b loaded
+2024-09-23 12:12:45,789 127.0.0.1 - - [23/Sep/2024 12:12:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:45,875 Request with ID 40c74c01 for model llama3-8b received
+2024-09-23 12:12:45,875 Keeping current model granite-7b loaded
+2024-09-23 12:12:45,876 127.0.0.1 - - [23/Sep/2024 12:12:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:45,953 Request with ID 0803e6d1 for model llama3-8b received
+2024-09-23 12:12:45,953 Keeping current model granite-7b loaded
+2024-09-23 12:12:45,954 127.0.0.1 - - [23/Sep/2024 12:12:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:46,618 Request with ID 7d0ef758 for model granite-7b received
+2024-09-23 12:12:46,618 Current model granite-7b is already loaded
+2024-09-23 12:12:46,618 Waiting for more requests for model granite-7b
+2024-09-23 12:12:46,619 127.0.0.1 - - [23/Sep/2024 12:12:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:46,692 Request with ID f3526d00 for model gemma-7b received
+2024-09-23 12:12:46,693 Keeping current model granite-7b loaded
+2024-09-23 12:12:46,693 127.0.0.1 - - [23/Sep/2024 12:12:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:46,827 Request with ID eda55576 for model llama3-8b received
+2024-09-23 12:12:46,827 Keeping current model granite-7b loaded
+2024-09-23 12:12:46,827 127.0.0.1 - - [23/Sep/2024 12:12:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:47,378 Request with ID 3d26f91d for model llama3-8b received
+2024-09-23 12:12:47,379 Keeping current model granite-7b loaded
+2024-09-23 12:12:47,379 127.0.0.1 - - [23/Sep/2024 12:12:47] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:47,394 Request with ID 120febcb for model llama3-8b received
+2024-09-23 12:12:47,394 Keeping current model granite-7b loaded
+2024-09-23 12:12:47,395 127.0.0.1 - - [23/Sep/2024 12:12:47] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:47,700 Processed batch: ['b925cd22'] with model granite-7b in 2.1348 seconds
+2024-09-23 12:12:47,700 Saving sys info
+2024-09-23 12:12:47,740 Latency for request b925cd22 with model granite-7b: 16.0800 seconds
+2024-09-23 12:12:47,740 Saving results with gpu monitoring
+2024-09-23 12:12:47,746 127.0.0.1 - - [23/Sep/2024 12:12:47] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:47,746 Next: call load_model for llama3-8b
+2024-09-23 12:12:47,821 Unloaded previous model
+2024-09-23 12:12:48,341 Request with ID 7b301223 for model gemma-7b received
+2024-09-23 12:12:48,341 Keeping current model granite-7b loaded
+2024-09-23 12:12:48,341 127.0.0.1 - - [23/Sep/2024 12:12:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:48,438 Request with ID 52bc4e41 for model gemma-7b received
+2024-09-23 12:12:48,438 Keeping current model granite-7b loaded
+2024-09-23 12:12:48,439 127.0.0.1 - - [23/Sep/2024 12:12:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:48,532 Request with ID c82eb11a for model llama3-8b received
+2024-09-23 12:12:48,532 Keeping current model granite-7b loaded
+2024-09-23 12:12:48,538 127.0.0.1 - - [23/Sep/2024 12:12:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:48,874 Request with ID 5285d446 for model granite-7b received
+2024-09-23 12:12:48,875 Current model granite-7b is already loaded
+2024-09-23 12:12:48,875 Waiting for more requests for model granite-7b
+2024-09-23 12:12:48,875 127.0.0.1 - - [23/Sep/2024 12:12:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:48,877 Request with ID 8f3e1f32 for model llama3-8b received
+2024-09-23 12:12:48,877 Keeping current model granite-7b loaded
+2024-09-23 12:12:48,878 127.0.0.1 - - [23/Sep/2024 12:12:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:49,090 Request with ID 80e7cefb for model granite-7b received
+2024-09-23 12:12:49,090 Current model granite-7b is already loaded
+2024-09-23 12:12:49,090 Waiting for more requests for model granite-7b
+2024-09-23 12:12:49,090 127.0.0.1 - - [23/Sep/2024 12:12:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:49,527 Request with ID a20f4b3c for model gemma-7b received
+2024-09-23 12:12:49,527 Keeping current model granite-7b loaded
+2024-09-23 12:12:49,528 127.0.0.1 - - [23/Sep/2024 12:12:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:49,547 Request with ID 61bf1316 for model granite-7b received
+2024-09-23 12:12:49,547 Current model granite-7b is already loaded
+2024-09-23 12:12:49,547 Waiting for more requests for model granite-7b
+2024-09-23 12:12:49,547 127.0.0.1 - - [23/Sep/2024 12:12:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:49,674 Request with ID 649b82d8 for model llama3-8b received
+2024-09-23 12:12:49,675 Keeping current model granite-7b loaded
+2024-09-23 12:12:49,675 127.0.0.1 - - [23/Sep/2024 12:12:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,042 Request with ID 21374eb2 for model granite-7b received
+2024-09-23 12:12:50,042 Current model granite-7b is already loaded
+2024-09-23 12:12:50,042 Waiting for more requests for model granite-7b
+2024-09-23 12:12:50,042 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,116 Request with ID 41bc299a for model gemma-7b received
+2024-09-23 12:12:50,116 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,116 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,313 Request with ID 697d8945 for model llama3-8b received
+2024-09-23 12:12:50,313 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,313 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,357 Request with ID 45504060 for model llama3-8b received
+2024-09-23 12:12:50,357 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,357 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,388 Request with ID 5efcd962 for model llama3-8b received
+2024-09-23 12:12:50,388 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,388 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,641 Request with ID ccd80d0c for model llama3-8b received
+2024-09-23 12:12:50,641 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,641 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,705 Request with ID b0cb67b3 for model granite-7b received
+2024-09-23 12:12:50,706 Current model granite-7b is already loaded
+2024-09-23 12:12:50,706 Waiting for more requests for model granite-7b
+2024-09-23 12:12:50,706 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,711 Request with ID de49259e for model granite-7b received
+2024-09-23 12:12:50,711 Current model granite-7b is already loaded
+2024-09-23 12:12:50,711 Waiting for more requests for model granite-7b
+2024-09-23 12:12:50,712 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,825 Request with ID f4ae448e for model llama3-8b received
+2024-09-23 12:12:50,825 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,826 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,863 Request with ID 2c961bf8 for model llama3-8b received
+2024-09-23 12:12:50,864 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,864 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:50,921 Request with ID 09900232 for model llama3-8b received
+2024-09-23 12:12:50,921 Keeping current model granite-7b loaded
+2024-09-23 12:12:50,922 127.0.0.1 - - [23/Sep/2024 12:12:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:51,139 Request with ID f8a6dbd6 for model llama3-8b received
+2024-09-23 12:12:51,139 Keeping current model granite-7b loaded
+2024-09-23 12:12:51,140 127.0.0.1 - - [23/Sep/2024 12:12:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:51,409 Request with ID 7cd63a18 for model llama3-8b received
+2024-09-23 12:12:51,409 Keeping current model granite-7b loaded
+2024-09-23 12:12:51,409 127.0.0.1 - - [23/Sep/2024 12:12:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:51,672 Request with ID 052ebd69 for model gemma-7b received
+2024-09-23 12:12:51,672 Keeping current model granite-7b loaded
+2024-09-23 12:12:51,672 127.0.0.1 - - [23/Sep/2024 12:12:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:51,957 Request with ID 067b095f for model granite-7b received
+2024-09-23 12:12:51,957 Current model granite-7b is already loaded
+2024-09-23 12:12:51,958 Waiting for more requests for model granite-7b
+2024-09-23 12:12:51,958 127.0.0.1 - - [23/Sep/2024 12:12:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:51,966 Request with ID 00f82268 for model llama3-8b received
+2024-09-23 12:12:51,966 Keeping current model granite-7b loaded
+2024-09-23 12:12:51,967 127.0.0.1 - - [23/Sep/2024 12:12:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:52,007 Request with ID b1a79fcb for model gemma-7b received
+2024-09-23 12:12:52,008 Keeping current model granite-7b loaded
+2024-09-23 12:12:52,008 127.0.0.1 - - [23/Sep/2024 12:12:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:52,145 Request with ID ea02f245 for model gemma-7b received
+2024-09-23 12:12:52,145 Keeping current model granite-7b loaded
+2024-09-23 12:12:52,145 127.0.0.1 - - [23/Sep/2024 12:12:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:52,327 Request with ID 963c064c for model llama3-8b received
+2024-09-23 12:12:52,327 Keeping current model granite-7b loaded
+2024-09-23 12:12:52,328 127.0.0.1 - - [23/Sep/2024 12:12:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:52,544 Request with ID 7f0e37ba for model llama3-8b received
+2024-09-23 12:12:52,544 Keeping current model granite-7b loaded
+2024-09-23 12:12:52,545 127.0.0.1 - - [23/Sep/2024 12:12:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,124 Request with ID 41288395 for model llama3-8b received
+2024-09-23 12:12:53,124 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,125 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,329 Request with ID c45e41e2 for model llama3-8b received
+2024-09-23 12:12:53,329 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,329 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,429 Request with ID 276533d4 for model llama3-8b received
+2024-09-23 12:12:53,429 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,430 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,588 Request with ID 5808e983 for model llama3-8b received
+2024-09-23 12:12:53,589 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,589 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,934 Request with ID b864b810 for model llama3-8b received
+2024-09-23 12:12:53,934 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,935 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,979 Request with ID 13f8fd4c for model gemma-7b received
+2024-09-23 12:12:53,979 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,979 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,983 Request with ID 18745382 for model llama3-8b received
+2024-09-23 12:12:53,984 Keeping current model granite-7b loaded
+2024-09-23 12:12:53,984 127.0.0.1 - - [23/Sep/2024 12:12:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:53,999 Request with ID 27113d05 for model gemma-7b received
+2024-09-23 12:12:53,999 Keeping current model granite-7b loaded
+2024-09-23 12:12:54,000 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:54,230 Request with ID 31be572d for model gemma-7b received
+2024-09-23 12:12:54,230 Keeping current model granite-7b loaded
+2024-09-23 12:12:54,231 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:54,370 Request with ID e63d92c5 for model llama3-8b received
+2024-09-23 12:12:54,370 Keeping current model granite-7b loaded
+2024-09-23 12:12:54,371 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:54,571 Request with ID 12a5a2b3 for model granite-7b received
+2024-09-23 12:12:54,571 Current model granite-7b is already loaded
+2024-09-23 12:12:54,571 Waiting for more requests for model granite-7b
+2024-09-23 12:12:54,571 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:54,681 Request with ID 5ac30ca6 for model gemma-7b received
+2024-09-23 12:12:54,681 Keeping current model granite-7b loaded
+2024-09-23 12:12:54,681 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:54,960 Request with ID e0ef657c for model llama3-8b received
+2024-09-23 12:12:54,960 Keeping current model granite-7b loaded
+2024-09-23 12:12:54,961 127.0.0.1 - - [23/Sep/2024 12:12:54] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:55,055 Request with ID 279bb1fb for model gemma-7b received
+2024-09-23 12:12:55,055 Keeping current model granite-7b loaded
+2024-09-23 12:12:55,056 127.0.0.1 - - [23/Sep/2024 12:12:55] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:55,592 Request with ID 813cf446 for model gemma-7b received
+2024-09-23 12:12:55,592 Decided to switch to model gemma-7b
+2024-09-23 12:12:55,592 Processing pending requests for current model granite-7b before switching
+2024-09-23 12:12:55,592 Processing pending requests before switch condition met for model granite-7b
+2024-09-23 12:12:55,821 Request with ID 630cdbc6 for model gemma-7b received
+2024-09-23 12:12:55,822 Decided to switch to model gemma-7b
+2024-09-23 12:12:55,822 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:55,977 Request with ID b9074e5b for model llama3-8b received
+2024-09-23 12:12:55,977 Decided to switch to model llama3-8b
+2024-09-23 12:12:55,977 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:56,056 Request with ID 22237176 for model granite-7b received
+2024-09-23 12:12:56,056 Current model granite-7b is already loaded
+2024-09-23 12:12:56,056 Processing partial batch for model granite-7b after stay time
+2024-09-23 12:12:56,056 Partial batch after stay time condition met for model granite-7b
+2024-09-23 12:12:56,067 Request with ID 7b320c9d for model gemma-7b received
+2024-09-23 12:12:56,067 Decided to switch to model gemma-7b
+2024-09-23 12:12:56,067 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:56,698 Request with ID 02216e6e for model llama3-8b received
+2024-09-23 12:12:56,698 Decided to switch to model llama3-8b
+2024-09-23 12:12:56,698 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:56,716 Request with ID 840d9480 for model gemma-7b received
+2024-09-23 12:12:56,717 Decided to switch to model gemma-7b
+2024-09-23 12:12:56,717 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:12:56,941 Request with ID 20461d3d for model llama3-8b received
+2024-09-23 12:12:56,941 Decided to switch to model llama3-8b
+2024-09-23 12:12:56,941 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:56,962 Request with ID d2fc9ab4 for model llama3-8b received
+2024-09-23 12:12:56,962 Decided to switch to model llama3-8b
+2024-09-23 12:12:56,962 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:58,066 Request with ID 059257ea for model llama3-8b received
+2024-09-23 12:12:58,066 Decided to switch to model llama3-8b
+2024-09-23 12:12:58,066 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:58,505 Request with ID 2b02495f for model llama3-8b received
+2024-09-23 12:12:58,505 Decided to switch to model llama3-8b
+2024-09-23 12:12:58,505 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:59,200 Request with ID a70554f6 for model llama3-8b received
+2024-09-23 12:12:59,200 Decided to switch to model llama3-8b
+2024-09-23 12:12:59,200 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:59,222 Request with ID 0e110b0b for model llama3-8b received
+2024-09-23 12:12:59,222 Decided to switch to model llama3-8b
+2024-09-23 12:12:59,222 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:59,274 Request with ID 924681fb for model llama3-8b received
+2024-09-23 12:12:59,274 Decided to switch to model llama3-8b
+2024-09-23 12:12:59,274 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:12:59,427 Loaded model llama3-8b
+2024-09-23 12:12:59,430 Batch processing started for model llama3-8b
+2024-09-23 12:12:59,521 Request with ID fc8c0fce for model llama3-8b received
+2024-09-23 12:12:59,521 Current model llama3-8b is already loaded
+2024-09-23 12:12:59,521 Waiting for more requests for model llama3-8b
+2024-09-23 12:12:59,521 127.0.0.1 - - [23/Sep/2024 12:12:59] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:12:59,574 Request with ID 8c0f7a47 for model llama3-8b received
+2024-09-23 12:12:59,574 Current model llama3-8b is already loaded
+2024-09-23 12:12:59,574 Waiting for more requests for model llama3-8b
+2024-09-23 12:12:59,575 127.0.0.1 - - [23/Sep/2024 12:12:59] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:00,002 Request with ID 78ff6546 for model llama3-8b received
+2024-09-23 12:13:00,002 Current model llama3-8b is already loaded
+2024-09-23 12:13:00,002 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:00,002 127.0.0.1 - - [23/Sep/2024 12:13:00] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:00,858 Request with ID 2139567e for model gemma-7b received
+2024-09-23 12:13:00,858 Keeping current model llama3-8b loaded
+2024-09-23 12:13:00,859 127.0.0.1 - - [23/Sep/2024 12:13:00] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,105 Request with ID 7d36742c for model llama3-8b received
+2024-09-23 12:13:01,106 Current model llama3-8b is already loaded
+2024-09-23 12:13:01,106 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:01,106 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,271 Request with ID a263bebb for model gemma-7b received
+2024-09-23 12:13:01,271 Keeping current model llama3-8b loaded
+2024-09-23 12:13:01,272 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,352 Request with ID 7544f93c for model granite-7b received
+2024-09-23 12:13:01,352 Keeping current model llama3-8b loaded
+2024-09-23 12:13:01,353 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,355 Processed batch: ['f9a84f53'] with model llama3-8b in 1.9253 seconds
+2024-09-23 12:13:01,356 Saving sys info
+2024-09-23 12:13:01,390 Latency for request f9a84f53 with model llama3-8b: 16.0040 seconds
+2024-09-23 12:13:01,390 Saving results with gpu monitoring
+2024-09-23 12:13:01,393 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,393 Next: call load_model for gemma-7b
+2024-09-23 12:13:01,481 Unloaded previous model
+2024-09-23 12:13:01,484 Request with ID 4f70b740 for model llama3-8b received
+2024-09-23 12:13:01,485 Current model llama3-8b is already loaded
+2024-09-23 12:13:01,485 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:01,485 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:01,917 Request with ID c6755ee9 for model llama3-8b received
+2024-09-23 12:13:01,918 Current model llama3-8b is already loaded
+2024-09-23 12:13:01,919 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:01,919 127.0.0.1 - - [23/Sep/2024 12:13:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:02,059 Request with ID f0ddfcf8 for model gemma-7b received
+2024-09-23 12:13:02,059 Keeping current model llama3-8b loaded
+2024-09-23 12:13:02,060 127.0.0.1 - - [23/Sep/2024 12:13:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:02,158 Request with ID 11f5645c for model gemma-7b received
+2024-09-23 12:13:02,245 Keeping current model llama3-8b loaded
+2024-09-23 12:13:02,246 127.0.0.1 - - [23/Sep/2024 12:13:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:02,693 Request with ID 53a0bf65 for model llama3-8b received
+2024-09-23 12:13:02,694 Current model llama3-8b is already loaded
+2024-09-23 12:13:02,694 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:02,694 127.0.0.1 - - [23/Sep/2024 12:13:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:02,887 Request with ID c22070f8 for model llama3-8b received
+2024-09-23 12:13:02,887 Current model llama3-8b is already loaded
+2024-09-23 12:13:02,887 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:02,887 127.0.0.1 - - [23/Sep/2024 12:13:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:02,896 Request with ID e84ad525 for model granite-7b received
+2024-09-23 12:13:02,896 Keeping current model llama3-8b loaded
+2024-09-23 12:13:02,897 127.0.0.1 - - [23/Sep/2024 12:13:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:03,416 Request with ID 5c6500b0 for model gemma-7b received
+2024-09-23 12:13:03,416 Keeping current model llama3-8b loaded
+2024-09-23 12:13:03,417 127.0.0.1 - - [23/Sep/2024 12:13:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:03,656 Request with ID dc19913e for model llama3-8b received
+2024-09-23 12:13:03,656 Current model llama3-8b is already loaded
+2024-09-23 12:13:03,656 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:03,657 127.0.0.1 - - [23/Sep/2024 12:13:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:03,896 Request with ID 9c125ecb for model llama3-8b received
+2024-09-23 12:13:03,896 Current model llama3-8b is already loaded
+2024-09-23 12:13:03,896 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:03,897 127.0.0.1 - - [23/Sep/2024 12:13:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:03,995 Request with ID e7d97d17 for model granite-7b received
+2024-09-23 12:13:03,996 Keeping current model llama3-8b loaded
+2024-09-23 12:13:03,996 127.0.0.1 - - [23/Sep/2024 12:13:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:04,062 Request with ID d64e25a8 for model gemma-7b received
+2024-09-23 12:13:04,062 Keeping current model llama3-8b loaded
+2024-09-23 12:13:04,063 127.0.0.1 - - [23/Sep/2024 12:13:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:04,086 Request with ID 695bc311 for model gemma-7b received
+2024-09-23 12:13:04,086 Keeping current model llama3-8b loaded
+2024-09-23 12:13:04,086 127.0.0.1 - - [23/Sep/2024 12:13:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:04,129 Request with ID 5b203d77 for model gemma-7b received
+2024-09-23 12:13:04,129 Keeping current model llama3-8b loaded
+2024-09-23 12:13:04,129 127.0.0.1 - - [23/Sep/2024 12:13:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:04,183 Request with ID f4a25a45 for model granite-7b received
+2024-09-23 12:13:04,183 Keeping current model llama3-8b loaded
+2024-09-23 12:13:04,184 127.0.0.1 - - [23/Sep/2024 12:13:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:04,919 Request with ID 6a8bba5c for model llama3-8b received
+2024-09-23 12:13:04,919 Current model llama3-8b is already loaded
+2024-09-23 12:13:04,919 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:04,919 127.0.0.1 - - [23/Sep/2024 12:13:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,074 Request with ID 92416309 for model llama3-8b received
+2024-09-23 12:13:05,074 Current model llama3-8b is already loaded
+2024-09-23 12:13:05,074 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:05,074 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,261 Request with ID 9d1c2fd9 for model gemma-7b received
+2024-09-23 12:13:05,261 Keeping current model llama3-8b loaded
+2024-09-23 12:13:05,261 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,278 Request with ID 3e998e1b for model llama3-8b received
+2024-09-23 12:13:05,278 Current model llama3-8b is already loaded
+2024-09-23 12:13:05,278 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:05,279 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,540 Request with ID 65e25fab for model llama3-8b received
+2024-09-23 12:13:05,540 Current model llama3-8b is already loaded
+2024-09-23 12:13:05,540 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:05,540 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,558 Request with ID e3d818d1 for model llama3-8b received
+2024-09-23 12:13:05,558 Current model llama3-8b is already loaded
+2024-09-23 12:13:05,558 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:05,558 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,568 Request with ID 30c3459f for model gemma-7b received
+2024-09-23 12:13:05,568 Keeping current model llama3-8b loaded
+2024-09-23 12:13:05,568 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:05,904 Request with ID 7dd4b205 for model llama3-8b received
+2024-09-23 12:13:05,904 Current model llama3-8b is already loaded
+2024-09-23 12:13:05,904 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:05,904 127.0.0.1 - - [23/Sep/2024 12:13:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,000 Request with ID 1685ede5 for model gemma-7b received
+2024-09-23 12:13:06,000 Keeping current model llama3-8b loaded
+2024-09-23 12:13:06,000 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,356 Request with ID 8b67f321 for model llama3-8b received
+2024-09-23 12:13:06,357 Current model llama3-8b is already loaded
+2024-09-23 12:13:06,357 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:06,357 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,484 Request with ID 93afd74b for model gemma-7b received
+2024-09-23 12:13:06,484 Keeping current model llama3-8b loaded
+2024-09-23 12:13:06,484 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,498 Request with ID db8d7c39 for model llama3-8b received
+2024-09-23 12:13:06,498 Current model llama3-8b is already loaded
+2024-09-23 12:13:06,498 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:06,498 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,654 Request with ID 78682bc5 for model llama3-8b received
+2024-09-23 12:13:06,654 Current model llama3-8b is already loaded
+2024-09-23 12:13:06,654 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:06,655 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,816 Request with ID 5d369217 for model llama3-8b received
+2024-09-23 12:13:06,817 Current model llama3-8b is already loaded
+2024-09-23 12:13:06,817 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:06,817 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,876 Request with ID 00fdb5b2 for model gemma-7b received
+2024-09-23 12:13:06,876 Keeping current model llama3-8b loaded
+2024-09-23 12:13:06,877 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:06,941 Request with ID b32dc2ac for model llama3-8b received
+2024-09-23 12:13:06,941 Current model llama3-8b is already loaded
+2024-09-23 12:13:06,941 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:06,941 127.0.0.1 - - [23/Sep/2024 12:13:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:07,227 Request with ID 0a6de9c1 for model gemma-7b received
+2024-09-23 12:13:07,228 Keeping current model llama3-8b loaded
+2024-09-23 12:13:07,228 127.0.0.1 - - [23/Sep/2024 12:13:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:07,251 Request with ID 17abb833 for model llama3-8b received
+2024-09-23 12:13:07,251 Current model llama3-8b is already loaded
+2024-09-23 12:13:07,251 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:07,251 127.0.0.1 - - [23/Sep/2024 12:13:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:07,550 Request with ID f31201f4 for model llama3-8b received
+2024-09-23 12:13:07,550 Current model llama3-8b is already loaded
+2024-09-23 12:13:07,550 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:07,550 127.0.0.1 - - [23/Sep/2024 12:13:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,240 Request with ID a8974bbf for model llama3-8b received
+2024-09-23 12:13:08,240 Current model llama3-8b is already loaded
+2024-09-23 12:13:08,240 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:08,241 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,271 Request with ID 5e44d85e for model llama3-8b received
+2024-09-23 12:13:08,271 Current model llama3-8b is already loaded
+2024-09-23 12:13:08,271 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:08,272 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,517 Request with ID 4c2e817c for model llama3-8b received
+2024-09-23 12:13:08,517 Current model llama3-8b is already loaded
+2024-09-23 12:13:08,517 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:08,517 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,711 Request with ID 1de67267 for model llama3-8b received
+2024-09-23 12:13:08,711 Current model llama3-8b is already loaded
+2024-09-23 12:13:08,711 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:08,711 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,812 Request with ID 7c4bc477 for model llama3-8b received
+2024-09-23 12:13:08,813 Current model llama3-8b is already loaded
+2024-09-23 12:13:08,813 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:08,813 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:08,973 Request with ID f1cca424 for model gemma-7b received
+2024-09-23 12:13:08,973 Keeping current model llama3-8b loaded
+2024-09-23 12:13:08,974 127.0.0.1 - - [23/Sep/2024 12:13:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:09,171 Request with ID 60ac3514 for model llama3-8b received
+2024-09-23 12:13:09,171 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,171 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:09,171 127.0.0.1 - - [23/Sep/2024 12:13:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:09,203 Request with ID 47d9f807 for model llama3-8b received
+2024-09-23 12:13:09,203 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,203 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:09,203 127.0.0.1 - - [23/Sep/2024 12:13:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:09,217 Request with ID 060de93f for model llama3-8b received
+2024-09-23 12:13:09,217 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,217 Waiting for more requests for model llama3-8b
+2024-09-23 12:13:09,217 127.0.0.1 - - [23/Sep/2024 12:13:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:09,356 Request with ID fa9b4bb2 for model gemma-7b received
+2024-09-23 12:13:09,357 Keeping current model llama3-8b loaded
+2024-09-23 12:13:09,357 127.0.0.1 - - [23/Sep/2024 12:13:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:09,532 Request with ID db02b0ff for model llama3-8b received
+2024-09-23 12:13:09,532 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,532 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:09,532 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:09,656 Request with ID 72607333 for model llama3-8b received
+2024-09-23 12:13:09,656 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,656 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:09,656 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:09,898 Request with ID a78301ce for model gemma-7b received
+2024-09-23 12:13:09,899 Decided to switch to model gemma-7b
+2024-09-23 12:13:09,899 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:09,985 Request with ID 6256a51e for model llama3-8b received
+2024-09-23 12:13:09,986 Current model llama3-8b is already loaded
+2024-09-23 12:13:09,986 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:09,986 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,207 Request with ID 041da91e for model llama3-8b received
+2024-09-23 12:13:10,207 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,207 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,207 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,259 Request with ID 78f904c8 for model gemma-7b received
+2024-09-23 12:13:10,259 Decided to switch to model gemma-7b
+2024-09-23 12:13:10,259 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:10,347 Request with ID f40bf8f9 for model llama3-8b received
+2024-09-23 12:13:10,347 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,347 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,347 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,502 Request with ID 5c139e2a for model gemma-7b received
+2024-09-23 12:13:10,502 Decided to switch to model gemma-7b
+2024-09-23 12:13:10,502 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:10,594 Request with ID 8bb64d2f for model gemma-7b received
+2024-09-23 12:13:10,594 Decided to switch to model gemma-7b
+2024-09-23 12:13:10,594 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:10,674 Request with ID 7e55e779 for model llama3-8b received
+2024-09-23 12:13:10,674 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,674 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,674 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,692 Request with ID 79c0765c for model llama3-8b received
+2024-09-23 12:13:10,692 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,692 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,692 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,705 Request with ID d80a7e5c for model llama3-8b received
+2024-09-23 12:13:10,705 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,705 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,705 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,724 Request with ID 760dd258 for model gemma-7b received
+2024-09-23 12:13:10,724 Decided to switch to model gemma-7b
+2024-09-23 12:13:10,724 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:10,772 Request with ID 08fc871c for model llama3-8b received
+2024-09-23 12:13:10,772 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,772 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,772 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:10,828 Request with ID 81b0b7f5 for model gemma-7b received
+2024-09-23 12:13:10,828 Decided to switch to model gemma-7b
+2024-09-23 12:13:10,828 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:10,954 Request with ID c4409eaa for model granite-7b received
+2024-09-23 12:13:10,954 Decided to switch to model granite-7b
+2024-09-23 12:13:10,954 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:10,987 Request with ID e5b9d8d7 for model llama3-8b received
+2024-09-23 12:13:10,987 Current model llama3-8b is already loaded
+2024-09-23 12:13:10,987 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:13:10,987 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:13:11,442 Request with ID 12d72817 for model granite-7b received
+2024-09-23 12:13:11,443 Decided to switch to model granite-7b
+2024-09-23 12:13:11,443 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:18,351 Loaded model gemma-7b
+2024-09-23 12:13:18,354 Batch processing started for model gemma-7b
+2024-09-23 12:13:18,419 Processed batch: ['840d9480'] with model gemma-7b in 0.0654 seconds
+2024-09-23 12:13:18,419 Saving sys info
+2024-09-23 12:13:18,451 Latency for request 840d9480 with model gemma-7b: 21.7030 seconds
+2024-09-23 12:13:18,451 Saving results with gpu monitoring
+2024-09-23 12:13:18,454 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,454 Next: call load_model for granite-7b
+2024-09-23 12:13:18,457 Request with ID 94bcd6e7 for model gemma-7b received
+2024-09-23 12:13:18,457 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,457 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,457 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,567 Unloaded previous model
+2024-09-23 12:13:18,617 Request with ID fbbd3a2b for model gemma-7b received
+2024-09-23 12:13:18,618 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,618 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,618 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,623 Request with ID e487869e for model gemma-7b received
+2024-09-23 12:13:18,624 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,624 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,624 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,627 Request with ID ea8fb8ba for model llama3-8b received
+2024-09-23 12:13:18,627 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,627 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,630 Request with ID 6312a2a9 for model gemma-7b received
+2024-09-23 12:13:18,630 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,630 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,630 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,632 Request with ID a1b0caf7 for model granite-7b received
+2024-09-23 12:13:18,632 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,633 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,635 Request with ID fa4cfc86 for model llama3-8b received
+2024-09-23 12:13:18,635 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,635 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,638 Request with ID 9908c2e6 for model llama3-8b received
+2024-09-23 12:13:18,638 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,639 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,641 Request with ID 9981ebe1 for model llama3-8b received
+2024-09-23 12:13:18,641 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,642 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,643 Request with ID c9bf389d for model granite-7b received
+2024-09-23 12:13:18,644 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,644 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,646 Request with ID 99917c34 for model gemma-7b received
+2024-09-23 12:13:18,646 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,646 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,646 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,648 Request with ID 02bed61f for model granite-7b received
+2024-09-23 12:13:18,648 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,648 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,650 Request with ID 44b6b0d2 for model granite-7b received
+2024-09-23 12:13:18,650 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,650 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,652 Request with ID ffe40d4d for model gemma-7b received
+2024-09-23 12:13:18,652 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,652 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,652 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,655 Request with ID 733e5e81 for model llama3-8b received
+2024-09-23 12:13:18,655 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,655 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,657 Request with ID 15f21eb5 for model gemma-7b received
+2024-09-23 12:13:18,658 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,658 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,658 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,661 Request with ID c4af2472 for model llama3-8b received
+2024-09-23 12:13:18,661 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,661 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,664 Request with ID 7a6edefc for model llama3-8b received
+2024-09-23 12:13:18,664 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,664 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,666 Request with ID 33fdd4b4 for model gemma-7b received
+2024-09-23 12:13:18,667 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,667 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,667 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,669 Request with ID 7149bc83 for model gemma-7b received
+2024-09-23 12:13:18,669 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,669 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,669 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,671 Request with ID 8b2f426e for model llama3-8b received
+2024-09-23 12:13:18,671 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,671 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,673 Request with ID f6d43c4a for model llama3-8b received
+2024-09-23 12:13:18,673 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,674 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,677 Request with ID 8ec7ea9b for model llama3-8b received
+2024-09-23 12:13:18,677 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,677 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,679 Request with ID d75a7fc4 for model gemma-7b received
+2024-09-23 12:13:18,679 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,679 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,679 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,681 Request with ID a4677c90 for model llama3-8b received
+2024-09-23 12:13:18,681 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,682 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,684 Request with ID 1e6c0561 for model llama3-8b received
+2024-09-23 12:13:18,685 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,685 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,687 Request with ID 17b6cedc for model llama3-8b received
+2024-09-23 12:13:18,687 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,687 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,690 Request with ID c5b5c4da for model llama3-8b received
+2024-09-23 12:13:18,691 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,691 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,693 Request with ID a69765fa for model llama3-8b received
+2024-09-23 12:13:18,694 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,694 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,695 Request with ID 3b1b9f04 for model gemma-7b received
+2024-09-23 12:13:18,695 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,695 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,695 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,697 Request with ID 65b69fa7 for model llama3-8b received
+2024-09-23 12:13:18,697 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,697 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,699 Request with ID 14c4b4cc for model gemma-7b received
+2024-09-23 12:13:18,699 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,699 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,700 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,702 Request with ID 2d64dd4b for model gemma-7b received
+2024-09-23 12:13:18,702 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,702 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,702 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,704 Request with ID 29dc6ea7 for model gemma-7b received
+2024-09-23 12:13:18,704 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,704 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,705 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,707 Request with ID 84cb14c8 for model gemma-7b received
+2024-09-23 12:13:18,707 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,708 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,708 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,710 Request with ID 7969658f for model llama3-8b received
+2024-09-23 12:13:18,711 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,711 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,713 Request with ID 37eca359 for model llama3-8b received
+2024-09-23 12:13:18,713 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,714 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,717 Request with ID c01e22c7 for model gemma-7b received
+2024-09-23 12:13:18,718 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,719 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,719 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,723 Request with ID 79754982 for model llama3-8b received
+2024-09-23 12:13:18,723 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,723 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,725 Request with ID ca9fd369 for model llama3-8b received
+2024-09-23 12:13:18,725 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,726 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,727 Request with ID 264b7e07 for model gemma-7b received
+2024-09-23 12:13:18,727 Current model gemma-7b is already loaded
+2024-09-23 12:13:18,727 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:18,728 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,729 Request with ID 9062241b for model llama3-8b received
+2024-09-23 12:13:18,729 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,729 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:18,731 Request with ID 0bd97a93 for model llama3-8b received
+2024-09-23 12:13:18,731 Keeping current model gemma-7b loaded
+2024-09-23 12:13:18,731 127.0.0.1 - - [23/Sep/2024 12:13:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:19,732 Request with ID e48c6103 for model llama3-8b received
+2024-09-23 12:13:19,732 Keeping current model gemma-7b loaded
+2024-09-23 12:13:19,732 127.0.0.1 - - [23/Sep/2024 12:13:19] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:20,035 Request with ID ac47e35c for model gemma-7b received
+2024-09-23 12:13:20,035 Current model gemma-7b is already loaded
+2024-09-23 12:13:20,035 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:20,036 127.0.0.1 - - [23/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:20,287 Request with ID 4b6d4647 for model llama3-8b received
+2024-09-23 12:13:20,288 Keeping current model gemma-7b loaded
+2024-09-23 12:13:20,288 127.0.0.1 - - [23/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:20,373 Request with ID e59c465d for model gemma-7b received
+2024-09-23 12:13:20,373 Current model gemma-7b is already loaded
+2024-09-23 12:13:20,373 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:20,373 127.0.0.1 - - [23/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:20,749 Request with ID 7b26315c for model llama3-8b received
+2024-09-23 12:13:20,749 Keeping current model gemma-7b loaded
+2024-09-23 12:13:20,749 127.0.0.1 - - [23/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:20,782 Request with ID bed225f5 for model llama3-8b received
+2024-09-23 12:13:20,783 Keeping current model gemma-7b loaded
+2024-09-23 12:13:20,783 127.0.0.1 - - [23/Sep/2024 12:13:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,080 Request with ID 34c29de8 for model llama3-8b received
+2024-09-23 12:13:21,080 Keeping current model gemma-7b loaded
+2024-09-23 12:13:21,080 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,248 Request with ID 74a9030a for model gemma-7b received
+2024-09-23 12:13:21,248 Current model gemma-7b is already loaded
+2024-09-23 12:13:21,248 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:21,248 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,334 Request with ID 2d7661e7 for model llama3-8b received
+2024-09-23 12:13:21,334 Keeping current model gemma-7b loaded
+2024-09-23 12:13:21,334 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,420 Request with ID b4813600 for model llama3-8b received
+2024-09-23 12:13:21,420 Keeping current model gemma-7b loaded
+2024-09-23 12:13:21,420 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,489 Request with ID f171acca for model gemma-7b received
+2024-09-23 12:13:21,489 Current model gemma-7b is already loaded
+2024-09-23 12:13:21,490 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:21,490 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,667 Request with ID 50a713f8 for model gemma-7b received
+2024-09-23 12:13:21,667 Current model gemma-7b is already loaded
+2024-09-23 12:13:21,668 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:21,668 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:21,928 Request with ID 8e81fb30 for model llama3-8b received
+2024-09-23 12:13:21,929 Keeping current model gemma-7b loaded
+2024-09-23 12:13:21,929 127.0.0.1 - - [23/Sep/2024 12:13:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:22,243 Request with ID 302bb9bd for model llama3-8b received
+2024-09-23 12:13:22,243 Keeping current model gemma-7b loaded
+2024-09-23 12:13:22,243 127.0.0.1 - - [23/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:22,540 Request with ID fa527d77 for model llama3-8b received
+2024-09-23 12:13:22,541 Keeping current model gemma-7b loaded
+2024-09-23 12:13:22,541 127.0.0.1 - - [23/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:22,809 Request with ID e7fa7784 for model gemma-7b received
+2024-09-23 12:13:22,809 Current model gemma-7b is already loaded
+2024-09-23 12:13:22,809 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:22,809 127.0.0.1 - - [23/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:22,863 Request with ID b1a5b78b for model gemma-7b received
+2024-09-23 12:13:22,863 Current model gemma-7b is already loaded
+2024-09-23 12:13:22,863 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:22,864 127.0.0.1 - - [23/Sep/2024 12:13:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,228 Request with ID cc362da2 for model gemma-7b received
+2024-09-23 12:13:23,229 Current model gemma-7b is already loaded
+2024-09-23 12:13:23,229 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:23,229 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,282 Request with ID 2226c457 for model gemma-7b received
+2024-09-23 12:13:23,282 Current model gemma-7b is already loaded
+2024-09-23 12:13:23,282 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:23,283 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,294 Request with ID a8deb974 for model llama3-8b received
+2024-09-23 12:13:23,294 Keeping current model gemma-7b loaded
+2024-09-23 12:13:23,295 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,297 Request with ID 594ec464 for model gemma-7b received
+2024-09-23 12:13:23,297 Current model gemma-7b is already loaded
+2024-09-23 12:13:23,297 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:23,297 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,406 Request with ID 2d990925 for model llama3-8b received
+2024-09-23 12:13:23,406 Keeping current model gemma-7b loaded
+2024-09-23 12:13:23,406 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,493 Request with ID 6af9ddb6 for model llama3-8b received
+2024-09-23 12:13:23,493 Keeping current model gemma-7b loaded
+2024-09-23 12:13:23,493 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:23,614 Request with ID a3cafe2d for model granite-7b received
+2024-09-23 12:13:23,615 Keeping current model gemma-7b loaded
+2024-09-23 12:13:23,615 127.0.0.1 - - [23/Sep/2024 12:13:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:24,105 Request with ID 8588435f for model gemma-7b received
+2024-09-23 12:13:24,105 Current model gemma-7b is already loaded
+2024-09-23 12:13:24,105 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:24,105 127.0.0.1 - - [23/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:24,265 Request with ID 9ac9e8e7 for model granite-7b received
+2024-09-23 12:13:24,265 Keeping current model gemma-7b loaded
+2024-09-23 12:13:24,266 127.0.0.1 - - [23/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:24,321 Request with ID 0a7b7456 for model llama3-8b received
+2024-09-23 12:13:24,321 Keeping current model gemma-7b loaded
+2024-09-23 12:13:24,321 127.0.0.1 - - [23/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:24,523 Request with ID 1b6233dc for model llama3-8b received
+2024-09-23 12:13:24,523 Keeping current model gemma-7b loaded
+2024-09-23 12:13:24,523 127.0.0.1 - - [23/Sep/2024 12:13:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:25,267 Request with ID 36886ef9 for model llama3-8b received
+2024-09-23 12:13:25,268 Keeping current model gemma-7b loaded
+2024-09-23 12:13:25,268 127.0.0.1 - - [23/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:25,664 Request with ID 1aa915c2 for model llama3-8b received
+2024-09-23 12:13:25,664 Keeping current model gemma-7b loaded
+2024-09-23 12:13:25,664 127.0.0.1 - - [23/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:25,851 Request with ID 719fe9a2 for model gemma-7b received
+2024-09-23 12:13:25,851 Current model gemma-7b is already loaded
+2024-09-23 12:13:25,851 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:25,851 127.0.0.1 - - [23/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:25,909 Request with ID 54abe836 for model llama3-8b received
+2024-09-23 12:13:25,909 Keeping current model gemma-7b loaded
+2024-09-23 12:13:25,909 127.0.0.1 - - [23/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:25,956 Request with ID 98d12a74 for model gemma-7b received
+2024-09-23 12:13:25,956 Current model gemma-7b is already loaded
+2024-09-23 12:13:25,956 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:25,957 127.0.0.1 - - [23/Sep/2024 12:13:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,320 Request with ID 5b882c25 for model gemma-7b received
+2024-09-23 12:13:26,321 Current model gemma-7b is already loaded
+2024-09-23 12:13:26,321 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:26,321 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,573 Request with ID 78155b64 for model llama3-8b received
+2024-09-23 12:13:26,573 Keeping current model gemma-7b loaded
+2024-09-23 12:13:26,573 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,706 Request with ID 274c2832 for model llama3-8b received
+2024-09-23 12:13:26,706 Keeping current model gemma-7b loaded
+2024-09-23 12:13:26,706 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,729 Request with ID 34d634d2 for model llama3-8b received
+2024-09-23 12:13:26,729 Keeping current model gemma-7b loaded
+2024-09-23 12:13:26,729 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,825 Request with ID 937034d4 for model llama3-8b received
+2024-09-23 12:13:26,825 Keeping current model gemma-7b loaded
+2024-09-23 12:13:26,825 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:26,976 Request with ID 845c06c8 for model llama3-8b received
+2024-09-23 12:13:26,976 Keeping current model gemma-7b loaded
+2024-09-23 12:13:26,976 127.0.0.1 - - [23/Sep/2024 12:13:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,344 Request with ID be45fd29 for model llama3-8b received
+2024-09-23 12:13:27,344 Keeping current model gemma-7b loaded
+2024-09-23 12:13:27,344 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,431 Request with ID 44be5755 for model llama3-8b received
+2024-09-23 12:13:27,431 Keeping current model gemma-7b loaded
+2024-09-23 12:13:27,431 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,434 Request with ID d8e00f4e for model granite-7b received
+2024-09-23 12:13:27,434 Keeping current model gemma-7b loaded
+2024-09-23 12:13:27,435 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,465 Request with ID d2806ad4 for model llama3-8b received
+2024-09-23 12:13:27,465 Keeping current model gemma-7b loaded
+2024-09-23 12:13:27,466 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,822 Request with ID aa8cf826 for model llama3-8b received
+2024-09-23 12:13:27,822 Keeping current model gemma-7b loaded
+2024-09-23 12:13:27,823 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:27,853 Request with ID 537178fe for model gemma-7b received
+2024-09-23 12:13:27,854 Current model gemma-7b is already loaded
+2024-09-23 12:13:27,854 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:27,854 127.0.0.1 - - [23/Sep/2024 12:13:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:28,319 Loaded model granite-7b
+2024-09-23 12:13:28,321 Request with ID 6910ece7 for model llama3-8b received
+2024-09-23 12:13:28,322 Keeping current model granite-7b loaded
+2024-09-23 12:13:28,322 127.0.0.1 - - [23/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:28,325 Batch processing started for model granite-7b
+2024-09-23 12:13:28,578 Request with ID dac44f7e for model gemma-7b received
+2024-09-23 12:13:28,578 Keeping current model granite-7b loaded
+2024-09-23 12:13:28,578 127.0.0.1 - - [23/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:28,998 Request with ID 11899377 for model llama3-8b received
+2024-09-23 12:13:28,999 Keeping current model granite-7b loaded
+2024-09-23 12:13:28,999 127.0.0.1 - - [23/Sep/2024 12:13:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:29,447 Request with ID 25718c2f for model gemma-7b received
+2024-09-23 12:13:29,447 Keeping current model granite-7b loaded
+2024-09-23 12:13:29,448 127.0.0.1 - - [23/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:29,798 Request with ID bcc587a6 for model llama3-8b received
+2024-09-23 12:13:29,798 Keeping current model granite-7b loaded
+2024-09-23 12:13:29,798 127.0.0.1 - - [23/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:29,862 Request with ID a8f3bcbf for model llama3-8b received
+2024-09-23 12:13:29,863 Keeping current model granite-7b loaded
+2024-09-23 12:13:29,863 127.0.0.1 - - [23/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:29,963 Processed batch: ['12d72817'] with model granite-7b in 1.6378 seconds
+2024-09-23 12:13:29,963 Saving sys info
+2024-09-23 12:13:29,993 Latency for request 12d72817 with model granite-7b: 18.5200 seconds
+2024-09-23 12:13:29,993 Saving results with gpu monitoring
+2024-09-23 12:13:29,996 127.0.0.1 - - [23/Sep/2024 12:13:29] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:29,997 Next: call load_model for gemma-7b
+2024-09-23 12:13:30,074 Unloaded previous model
+2024-09-23 12:13:30,076 Request with ID aeb4a709 for model gemma-7b received
+2024-09-23 12:13:30,077 Keeping current model granite-7b loaded
+2024-09-23 12:13:30,077 127.0.0.1 - - [23/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:30,634 Request with ID d8ff043a for model gemma-7b received
+2024-09-23 12:13:30,636 Keeping current model granite-7b loaded
+2024-09-23 12:13:30,637 127.0.0.1 - - [23/Sep/2024 12:13:30] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:31,180 Request with ID 5686e8b8 for model llama3-8b received
+2024-09-23 12:13:31,181 Keeping current model granite-7b loaded
+2024-09-23 12:13:31,181 127.0.0.1 - - [23/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:31,351 Request with ID 9c51a7a6 for model llama3-8b received
+2024-09-23 12:13:31,351 Keeping current model granite-7b loaded
+2024-09-23 12:13:31,351 127.0.0.1 - - [23/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:31,553 Request with ID 5bc20ec3 for model llama3-8b received
+2024-09-23 12:13:31,553 Keeping current model granite-7b loaded
+2024-09-23 12:13:31,554 127.0.0.1 - - [23/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:31,664 Request with ID babc7e87 for model llama3-8b received
+2024-09-23 12:13:31,665 Keeping current model granite-7b loaded
+2024-09-23 12:13:31,665 127.0.0.1 - - [23/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:31,902 Request with ID 39c8a532 for model granite-7b received
+2024-09-23 12:13:31,902 Current model granite-7b is already loaded
+2024-09-23 12:13:31,902 Waiting for more requests for model granite-7b
+2024-09-23 12:13:31,903 127.0.0.1 - - [23/Sep/2024 12:13:31] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:32,395 Request with ID b8aed879 for model llama3-8b received
+2024-09-23 12:13:32,395 Keeping current model granite-7b loaded
+2024-09-23 12:13:32,395 127.0.0.1 - - [23/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:32,460 Request with ID 77f79f61 for model llama3-8b received
+2024-09-23 12:13:32,460 Keeping current model granite-7b loaded
+2024-09-23 12:13:32,460 127.0.0.1 - - [23/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:32,817 Request with ID 067c0db9 for model gemma-7b received
+2024-09-23 12:13:32,817 Keeping current model granite-7b loaded
+2024-09-23 12:13:32,818 127.0.0.1 - - [23/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:32,849 Request with ID f3e8da47 for model llama3-8b received
+2024-09-23 12:13:32,849 Keeping current model granite-7b loaded
+2024-09-23 12:13:32,849 127.0.0.1 - - [23/Sep/2024 12:13:32] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,281 Request with ID 8d9dc58a for model gemma-7b received
+2024-09-23 12:13:33,281 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,281 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,467 Request with ID 54db3342 for model llama3-8b received
+2024-09-23 12:13:33,467 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,468 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,833 Request with ID b67629fe for model llama3-8b received
+2024-09-23 12:13:33,834 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,834 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,843 Request with ID 80cc0d34 for model llama3-8b received
+2024-09-23 12:13:33,843 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,844 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,862 Request with ID f9cdbb3d for model gemma-7b received
+2024-09-23 12:13:33,862 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,862 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:33,963 Request with ID 9457a062 for model llama3-8b received
+2024-09-23 12:13:33,963 Keeping current model granite-7b loaded
+2024-09-23 12:13:33,963 127.0.0.1 - - [23/Sep/2024 12:13:33] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:34,460 Request with ID db5e6c71 for model gemma-7b received
+2024-09-23 12:13:34,460 Keeping current model granite-7b loaded
+2024-09-23 12:13:34,460 127.0.0.1 - - [23/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:34,629 Request with ID 04d651a7 for model gemma-7b received
+2024-09-23 12:13:34,630 Keeping current model granite-7b loaded
+2024-09-23 12:13:34,630 127.0.0.1 - - [23/Sep/2024 12:13:34] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:35,248 Request with ID 2d323c5d for model llama3-8b received
+2024-09-23 12:13:35,248 Keeping current model granite-7b loaded
+2024-09-23 12:13:35,248 127.0.0.1 - - [23/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:35,297 Request with ID 82b44042 for model gemma-7b received
+2024-09-23 12:13:35,297 Keeping current model granite-7b loaded
+2024-09-23 12:13:35,298 127.0.0.1 - - [23/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:35,481 Request with ID 0c1e9068 for model gemma-7b received
+2024-09-23 12:13:35,481 Keeping current model granite-7b loaded
+2024-09-23 12:13:35,482 127.0.0.1 - - [23/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:35,677 Request with ID ab68bee3 for model gemma-7b received
+2024-09-23 12:13:35,678 Keeping current model granite-7b loaded
+2024-09-23 12:13:35,678 127.0.0.1 - - [23/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:35,766 Request with ID c91580e9 for model llama3-8b received
+2024-09-23 12:13:35,766 Keeping current model granite-7b loaded
+2024-09-23 12:13:35,766 127.0.0.1 - - [23/Sep/2024 12:13:35] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:36,001 Request with ID 43d089e8 for model llama3-8b received
+2024-09-23 12:13:36,001 Keeping current model granite-7b loaded
+2024-09-23 12:13:36,001 127.0.0.1 - - [23/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:36,016 Request with ID 4f43bc60 for model granite-7b received
+2024-09-23 12:13:36,017 Current model granite-7b is already loaded
+2024-09-23 12:13:36,017 Waiting for more requests for model granite-7b
+2024-09-23 12:13:36,017 127.0.0.1 - - [23/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:36,762 Request with ID dfc43727 for model llama3-8b received
+2024-09-23 12:13:36,762 Keeping current model granite-7b loaded
+2024-09-23 12:13:36,763 127.0.0.1 - - [23/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:36,797 Request with ID 8fe70d7a for model llama3-8b received
+2024-09-23 12:13:36,797 Keeping current model granite-7b loaded
+2024-09-23 12:13:36,798 127.0.0.1 - - [23/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:36,917 Request with ID 782442e4 for model llama3-8b received
+2024-09-23 12:13:36,917 Keeping current model granite-7b loaded
+2024-09-23 12:13:36,918 127.0.0.1 - - [23/Sep/2024 12:13:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:37,332 Request with ID f966077d for model llama3-8b received
+2024-09-23 12:13:37,332 Keeping current model granite-7b loaded
+2024-09-23 12:13:37,332 127.0.0.1 - - [23/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:37,618 Request with ID c93a7740 for model llama3-8b received
+2024-09-23 12:13:37,618 Keeping current model granite-7b loaded
+2024-09-23 12:13:37,618 127.0.0.1 - - [23/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:37,998 Request with ID d233eeab for model llama3-8b received
+2024-09-23 12:13:37,998 Keeping current model granite-7b loaded
+2024-09-23 12:13:37,999 127.0.0.1 - - [23/Sep/2024 12:13:37] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:38,236 Request with ID 3aade3c6 for model llama3-8b received
+2024-09-23 12:13:38,236 Keeping current model granite-7b loaded
+2024-09-23 12:13:38,236 127.0.0.1 - - [23/Sep/2024 12:13:38] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:38,244 Request with ID 7b392722 for model llama3-8b received
+2024-09-23 12:13:38,244 Keeping current model granite-7b loaded
+2024-09-23 12:13:38,244 127.0.0.1 - - [23/Sep/2024 12:13:38] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:39,716 Request with ID 3e1de2ad for model llama3-8b received
+2024-09-23 12:13:39,716 Decided to switch to model llama3-8b
+2024-09-23 12:13:39,716 Processing pending requests for current model granite-7b before switching
+2024-09-23 12:13:39,716 Processing pending requests before switch condition met for model granite-7b
+2024-09-23 12:13:40,243 Request with ID c0854ea3 for model llama3-8b received
+2024-09-23 12:13:40,243 Decided to switch to model llama3-8b
+2024-09-23 12:13:40,244 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:40,285 Request with ID f5f310fc for model llama3-8b received
+2024-09-23 12:13:40,285 Decided to switch to model llama3-8b
+2024-09-23 12:13:40,285 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:40,604 Request with ID b738ee5c for model granite-7b received
+2024-09-23 12:13:40,604 Current model granite-7b is already loaded
+2024-09-23 12:13:40,604 Processing partial batch for model granite-7b after stay time
+2024-09-23 12:13:40,605 Partial batch after stay time condition met for model granite-7b
+2024-09-23 12:13:40,727 Request with ID 2a3bb220 for model llama3-8b received
+2024-09-23 12:13:40,727 Decided to switch to model llama3-8b
+2024-09-23 12:13:40,727 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:40,735 Request with ID 4d10ecb5 for model gemma-7b received
+2024-09-23 12:13:40,735 Decided to switch to model gemma-7b
+2024-09-23 12:13:40,735 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:13:40,902 Request with ID dc26605f for model llama3-8b received
+2024-09-23 12:13:40,902 Decided to switch to model llama3-8b
+2024-09-23 12:13:40,902 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:41,055 Request with ID 921c0620 for model llama3-8b received
+2024-09-23 12:13:41,055 Decided to switch to model llama3-8b
+2024-09-23 12:13:41,055 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:41,227 Request with ID 736a737a for model llama3-8b received
+2024-09-23 12:13:41,227 Decided to switch to model llama3-8b
+2024-09-23 12:13:41,227 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:41,497 Request with ID 0858e7d7 for model llama3-8b received
+2024-09-23 12:13:41,498 Decided to switch to model llama3-8b
+2024-09-23 12:13:41,498 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:41,973 Request with ID 240526da for model llama3-8b received
+2024-09-23 12:13:41,974 Decided to switch to model llama3-8b
+2024-09-23 12:13:41,974 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:42,849 Request with ID f92df246 for model llama3-8b received
+2024-09-23 12:13:42,849 Decided to switch to model llama3-8b
+2024-09-23 12:13:42,849 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:43,002 Request with ID 188ff583 for model llama3-8b received
+2024-09-23 12:13:43,002 Decided to switch to model llama3-8b
+2024-09-23 12:13:43,002 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:43,951 Loaded model gemma-7b
+2024-09-23 12:13:43,954 Batch processing started for model gemma-7b
+2024-09-23 12:13:44,240 Request with ID 8ff6690e for model llama3-8b received
+2024-09-23 12:13:44,240 Keeping current model gemma-7b loaded
+2024-09-23 12:13:44,241 127.0.0.1 - - [23/Sep/2024 12:13:44] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:44,345 Request with ID c8d8a9c3 for model llama3-8b received
+2024-09-23 12:13:44,345 Keeping current model gemma-7b loaded
+2024-09-23 12:13:44,345 127.0.0.1 - - [23/Sep/2024 12:13:44] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:44,520 Request with ID 7f50128c for model llama3-8b received
+2024-09-23 12:13:44,520 Keeping current model gemma-7b loaded
+2024-09-23 12:13:44,521 127.0.0.1 - - [23/Sep/2024 12:13:44] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:44,815 Request with ID 148ae392 for model gemma-7b received
+2024-09-23 12:13:44,815 Current model gemma-7b is already loaded
+2024-09-23 12:13:44,815 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:44,815 127.0.0.1 - - [23/Sep/2024 12:13:44] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:44,965 Request with ID b0e6b913 for model llama3-8b received
+2024-09-23 12:13:44,965 Keeping current model gemma-7b loaded
+2024-09-23 12:13:44,965 127.0.0.1 - - [23/Sep/2024 12:13:44] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:45,038 Request with ID 08665a2a for model gemma-7b received
+2024-09-23 12:13:45,038 Current model gemma-7b is already loaded
+2024-09-23 12:13:45,038 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:45,038 127.0.0.1 - - [23/Sep/2024 12:13:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:45,093 Request with ID 31169a34 for model granite-7b received
+2024-09-23 12:13:45,094 Keeping current model gemma-7b loaded
+2024-09-23 12:13:45,094 127.0.0.1 - - [23/Sep/2024 12:13:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:45,827 Processed batch: ['81b0b7f5'] with model gemma-7b in 1.8729 seconds
+2024-09-23 12:13:45,827 Saving sys info
+2024-09-23 12:13:45,857 Latency for request 81b0b7f5 with model gemma-7b: 34.9990 seconds
+2024-09-23 12:13:45,858 Saving results with gpu monitoring
+2024-09-23 12:13:45,861 127.0.0.1 - - [23/Sep/2024 12:13:45] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:45,861 Next: call load_model for llama3-8b
+2024-09-23 12:13:45,965 Unloaded previous model
+2024-09-23 12:13:46,154 Request with ID 746b23d1 for model gemma-7b received
+2024-09-23 12:13:46,154 Current model gemma-7b is already loaded
+2024-09-23 12:13:46,155 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:46,156 127.0.0.1 - - [23/Sep/2024 12:13:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:46,220 Request with ID 9e034991 for model llama3-8b received
+2024-09-23 12:13:46,221 Keeping current model gemma-7b loaded
+2024-09-23 12:13:46,221 127.0.0.1 - - [23/Sep/2024 12:13:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:46,355 Request with ID 3b43494f for model llama3-8b received
+2024-09-23 12:13:46,355 Keeping current model gemma-7b loaded
+2024-09-23 12:13:46,355 127.0.0.1 - - [23/Sep/2024 12:13:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:46,746 Request with ID 6578fd1f for model llama3-8b received
+2024-09-23 12:13:46,749 Keeping current model gemma-7b loaded
+2024-09-23 12:13:46,754 127.0.0.1 - - [23/Sep/2024 12:13:46] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:47,608 Request with ID d823ee2f for model gemma-7b received
+2024-09-23 12:13:47,608 Current model gemma-7b is already loaded
+2024-09-23 12:13:47,608 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:47,608 127.0.0.1 - - [23/Sep/2024 12:13:47] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,182 Request with ID 6c0a4893 for model llama3-8b received
+2024-09-23 12:13:48,183 Keeping current model gemma-7b loaded
+2024-09-23 12:13:48,183 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,327 Request with ID 708a0472 for model gemma-7b received
+2024-09-23 12:13:48,328 Current model gemma-7b is already loaded
+2024-09-23 12:13:48,328 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:48,328 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,334 Request with ID 7f7dece9 for model gemma-7b received
+2024-09-23 12:13:48,335 Current model gemma-7b is already loaded
+2024-09-23 12:13:48,335 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:48,335 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,347 Request with ID 39a25b0e for model llama3-8b received
+2024-09-23 12:13:48,348 Keeping current model gemma-7b loaded
+2024-09-23 12:13:48,348 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,877 Request with ID 5ba47130 for model llama3-8b received
+2024-09-23 12:13:48,877 Keeping current model gemma-7b loaded
+2024-09-23 12:13:48,877 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,971 Request with ID dd032b85 for model llama3-8b received
+2024-09-23 12:13:48,971 Keeping current model gemma-7b loaded
+2024-09-23 12:13:48,972 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:48,973 Request with ID 706bb4f5 for model llama3-8b received
+2024-09-23 12:13:48,974 Keeping current model gemma-7b loaded
+2024-09-23 12:13:48,974 127.0.0.1 - - [23/Sep/2024 12:13:48] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:49,171 Request with ID 6622e616 for model llama3-8b received
+2024-09-23 12:13:49,171 Keeping current model gemma-7b loaded
+2024-09-23 12:13:49,171 127.0.0.1 - - [23/Sep/2024 12:13:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:49,352 Request with ID 4bab49dd for model llama3-8b received
+2024-09-23 12:13:49,352 Keeping current model gemma-7b loaded
+2024-09-23 12:13:49,353 127.0.0.1 - - [23/Sep/2024 12:13:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:49,477 Request with ID 01ce43d7 for model gemma-7b received
+2024-09-23 12:13:49,478 Current model gemma-7b is already loaded
+2024-09-23 12:13:49,478 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:49,478 127.0.0.1 - - [23/Sep/2024 12:13:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:49,506 Request with ID da1a5187 for model llama3-8b received
+2024-09-23 12:13:49,506 Keeping current model gemma-7b loaded
+2024-09-23 12:13:49,506 127.0.0.1 - - [23/Sep/2024 12:13:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:49,904 Request with ID ad59ef8c for model gemma-7b received
+2024-09-23 12:13:49,905 Current model gemma-7b is already loaded
+2024-09-23 12:13:49,905 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:49,905 127.0.0.1 - - [23/Sep/2024 12:13:49] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:50,443 Request with ID 7d2f403e for model granite-7b received
+2024-09-23 12:13:50,443 Keeping current model gemma-7b loaded
+2024-09-23 12:13:50,443 127.0.0.1 - - [23/Sep/2024 12:13:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:50,550 Request with ID 40186be1 for model granite-7b received
+2024-09-23 12:13:50,550 Keeping current model gemma-7b loaded
+2024-09-23 12:13:50,550 127.0.0.1 - - [23/Sep/2024 12:13:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:50,790 Request with ID d1c26338 for model llama3-8b received
+2024-09-23 12:13:50,790 Keeping current model gemma-7b loaded
+2024-09-23 12:13:50,791 127.0.0.1 - - [23/Sep/2024 12:13:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:50,808 Request with ID f16130d1 for model llama3-8b received
+2024-09-23 12:13:50,808 Keeping current model gemma-7b loaded
+2024-09-23 12:13:50,808 127.0.0.1 - - [23/Sep/2024 12:13:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:50,825 Request with ID aa78cd49 for model granite-7b received
+2024-09-23 12:13:50,825 Keeping current model gemma-7b loaded
+2024-09-23 12:13:50,825 127.0.0.1 - - [23/Sep/2024 12:13:50] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:51,257 Request with ID bbd8bd9e for model llama3-8b received
+2024-09-23 12:13:51,257 Keeping current model gemma-7b loaded
+2024-09-23 12:13:51,257 127.0.0.1 - - [23/Sep/2024 12:13:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:51,607 Request with ID 96a6cdbf for model llama3-8b received
+2024-09-23 12:13:51,607 Keeping current model gemma-7b loaded
+2024-09-23 12:13:51,608 127.0.0.1 - - [23/Sep/2024 12:13:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:51,766 Request with ID 8f07ccd0 for model gemma-7b received
+2024-09-23 12:13:51,767 Current model gemma-7b is already loaded
+2024-09-23 12:13:51,767 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:51,767 127.0.0.1 - - [23/Sep/2024 12:13:51] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:52,190 Request with ID 107bb38e for model llama3-8b received
+2024-09-23 12:13:52,190 Keeping current model gemma-7b loaded
+2024-09-23 12:13:52,191 127.0.0.1 - - [23/Sep/2024 12:13:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:52,596 Request with ID 56b30f33 for model gemma-7b received
+2024-09-23 12:13:52,596 Current model gemma-7b is already loaded
+2024-09-23 12:13:52,596 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:52,596 127.0.0.1 - - [23/Sep/2024 12:13:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:52,651 Request with ID 00de5ee2 for model llama3-8b received
+2024-09-23 12:13:52,651 Keeping current model gemma-7b loaded
+2024-09-23 12:13:52,652 127.0.0.1 - - [23/Sep/2024 12:13:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:52,846 Request with ID f04c87b1 for model gemma-7b received
+2024-09-23 12:13:52,846 Current model gemma-7b is already loaded
+2024-09-23 12:13:52,846 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:52,847 127.0.0.1 - - [23/Sep/2024 12:13:52] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:53,274 Request with ID 60914522 for model llama3-8b received
+2024-09-23 12:13:53,274 Keeping current model gemma-7b loaded
+2024-09-23 12:13:53,274 127.0.0.1 - - [23/Sep/2024 12:13:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:53,698 Request with ID 407ca863 for model gemma-7b received
+2024-09-23 12:13:53,698 Current model gemma-7b is already loaded
+2024-09-23 12:13:53,698 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:53,698 127.0.0.1 - - [23/Sep/2024 12:13:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:53,781 Request with ID 2218c751 for model gemma-7b received
+2024-09-23 12:13:53,781 Current model gemma-7b is already loaded
+2024-09-23 12:13:53,781 Waiting for more requests for model gemma-7b
+2024-09-23 12:13:53,782 127.0.0.1 - - [23/Sep/2024 12:13:53] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:13:54,124 Request with ID 431641f7 for model llama3-8b received
+2024-09-23 12:13:54,124 Decided to switch to model llama3-8b
+2024-09-23 12:13:54,124 Processing pending requests for current model gemma-7b before switching
+2024-09-23 12:13:54,124 Processing pending requests before switch condition met for model gemma-7b
+2024-09-23 12:13:54,127 Request with ID c5487c82 for model granite-7b received
+2024-09-23 12:13:54,127 Decided to switch to model granite-7b
+2024-09-23 12:13:54,127 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:54,208 Request with ID 86491f6c for model llama3-8b received
+2024-09-23 12:13:54,208 Decided to switch to model llama3-8b
+2024-09-23 12:13:54,209 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:54,267 Request with ID 62e68298 for model granite-7b received
+2024-09-23 12:13:54,268 Decided to switch to model granite-7b
+2024-09-23 12:13:54,268 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:54,612 Request with ID b6713369 for model gemma-7b received
+2024-09-23 12:13:54,612 Current model gemma-7b is already loaded
+2024-09-23 12:13:54,612 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:54,612 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:54,901 Request with ID 298aa3f6 for model llama3-8b received
+2024-09-23 12:13:54,901 Decided to switch to model llama3-8b
+2024-09-23 12:13:54,901 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:55,270 Request with ID dff3883f for model llama3-8b received
+2024-09-23 12:13:55,270 Decided to switch to model llama3-8b
+2024-09-23 12:13:55,270 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:55,810 Request with ID d7ba267f for model llama3-8b received
+2024-09-23 12:13:55,810 Decided to switch to model llama3-8b
+2024-09-23 12:13:55,811 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:55,936 Request with ID 072d9a68 for model granite-7b received
+2024-09-23 12:13:55,937 Request with ID e4b96d8e for model llama3-8b received
+2024-09-23 12:13:55,937 Decided to switch to model granite-7b
+2024-09-23 12:13:55,938 Decided to switch to model llama3-8b
+2024-09-23 12:13:55,938 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:55,938 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:56,172 Request with ID dcbace43 for model gemma-7b received
+2024-09-23 12:13:56,173 Current model gemma-7b is already loaded
+2024-09-23 12:13:56,173 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:56,173 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:56,368 Request with ID 56de3616 for model llama3-8b received
+2024-09-23 12:13:56,369 Decided to switch to model llama3-8b
+2024-09-23 12:13:56,369 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:56,488 Request with ID 4f4ee629 for model gemma-7b received
+2024-09-23 12:13:56,488 Current model gemma-7b is already loaded
+2024-09-23 12:13:56,488 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:56,488 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:56,774 Request with ID a09a2998 for model granite-7b received
+2024-09-23 12:13:56,774 Decided to switch to model granite-7b
+2024-09-23 12:13:56,774 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:57,120 Request with ID beac5afd for model llama3-8b received
+2024-09-23 12:13:57,120 Decided to switch to model llama3-8b
+2024-09-23 12:13:57,120 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:57,180 Request with ID a306a5a6 for model llama3-8b received
+2024-09-23 12:13:57,180 Decided to switch to model llama3-8b
+2024-09-23 12:13:57,180 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:57,246 Request with ID 47b1c682 for model llama3-8b received
+2024-09-23 12:13:57,246 Decided to switch to model llama3-8b
+2024-09-23 12:13:57,246 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:57,371 Request with ID fc8d9042 for model llama3-8b received
+2024-09-23 12:13:57,371 Decided to switch to model llama3-8b
+2024-09-23 12:13:57,371 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:57,719 Request with ID 6b48748d for model gemma-7b received
+2024-09-23 12:13:57,720 Current model gemma-7b is already loaded
+2024-09-23 12:13:57,720 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:57,720 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:57,737 Request with ID be12ad84 for model gemma-7b received
+2024-09-23 12:13:57,737 Current model gemma-7b is already loaded
+2024-09-23 12:13:57,737 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:57,737 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:57,767 Request with ID 0006469a for model llama3-8b received
+2024-09-23 12:13:57,767 Decided to switch to model llama3-8b
+2024-09-23 12:13:57,767 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:57,878 Request with ID e522685f for model gemma-7b received
+2024-09-23 12:13:57,878 Current model gemma-7b is already loaded
+2024-09-23 12:13:57,878 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:57,878 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:57,943 Request with ID 1c673120 for model gemma-7b received
+2024-09-23 12:13:57,943 Current model gemma-7b is already loaded
+2024-09-23 12:13:57,943 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:57,943 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:58,022 Request with ID 32f85219 for model gemma-7b received
+2024-09-23 12:13:58,022 Current model gemma-7b is already loaded
+2024-09-23 12:13:58,022 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:58,022 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:58,162 Request with ID 92b8cb1a for model llama3-8b received
+2024-09-23 12:13:58,162 Decided to switch to model llama3-8b
+2024-09-23 12:13:58,162 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:58,324 Request with ID 0cd76b21 for model llama3-8b received
+2024-09-23 12:13:58,324 Decided to switch to model llama3-8b
+2024-09-23 12:13:58,324 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:58,454 Request with ID b5ef5e90 for model gemma-7b received
+2024-09-23 12:13:58,454 Current model gemma-7b is already loaded
+2024-09-23 12:13:58,454 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:58,454 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:58,500 Request with ID a55fab43 for model llama3-8b received
+2024-09-23 12:13:58,500 Decided to switch to model llama3-8b
+2024-09-23 12:13:58,500 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:58,875 Request with ID 97c4feb9 for model granite-7b received
+2024-09-23 12:13:58,876 Decided to switch to model granite-7b
+2024-09-23 12:13:58,876 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:59,196 Request with ID 4e4150cb for model granite-7b received
+2024-09-23 12:13:59,196 Decided to switch to model granite-7b
+2024-09-23 12:13:59,196 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:13:59,705 Request with ID ea348d4c for model llama3-8b received
+2024-09-23 12:13:59,705 Decided to switch to model llama3-8b
+2024-09-23 12:13:59,705 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:13:59,731 Request with ID 85231fe8 for model gemma-7b received
+2024-09-23 12:13:59,731 Current model gemma-7b is already loaded
+2024-09-23 12:13:59,731 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:59,731 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:13:59,896 Request with ID 3d8cc0f8 for model gemma-7b received
+2024-09-23 12:13:59,897 Current model gemma-7b is already loaded
+2024-09-23 12:13:59,897 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:13:59,897 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:14:00,109 Request with ID c2067bd2 for model llama3-8b received
+2024-09-23 12:14:00,109 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,110 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:00,225 Request with ID 830c49b2 for model llama3-8b received
+2024-09-23 12:14:00,225 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,225 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:00,227 Request with ID 4e9d57f4 for model llama3-8b received
+2024-09-23 12:14:00,227 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,227 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:00,330 Request with ID 512cee91 for model llama3-8b received
+2024-09-23 12:14:00,330 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,330 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:00,548 Request with ID 572eb6f8 for model llama3-8b received
+2024-09-23 12:14:00,549 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,549 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:00,850 Request with ID 5de99b9f for model llama3-8b received
+2024-09-23 12:14:00,851 Decided to switch to model llama3-8b
+2024-09-23 12:14:00,851 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:14:01,129 Request with ID 0051b015 for model gemma-7b received
+2024-09-23 12:14:01,130 Current model gemma-7b is already loaded
+2024-09-23 12:14:01,130 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:14:01,130 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:14:01,901 Loaded model llama3-8b
+2024-09-23 12:14:01,904 Batch processing started for model llama3-8b
+2024-09-23 12:14:01,995 Request with ID 96567636 for model granite-7b received
+2024-09-23 12:14:01,995 Keeping current model llama3-8b loaded
+2024-09-23 12:14:01,996 127.0.0.1 - - [23/Sep/2024 12:14:01] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,128 Request with ID 407e1f2f for model llama3-8b received
+2024-09-23 12:14:02,128 Current model llama3-8b is already loaded
+2024-09-23 12:14:02,128 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:02,128 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,293 Request with ID d4f8a5b6 for model llama3-8b received
+2024-09-23 12:14:02,293 Current model llama3-8b is already loaded
+2024-09-23 12:14:02,293 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:02,294 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,308 Request with ID 4022e680 for model gemma-7b received
+2024-09-23 12:14:02,308 Keeping current model llama3-8b loaded
+2024-09-23 12:14:02,309 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,315 Request with ID 64a68e9c for model gemma-7b received
+2024-09-23 12:14:02,316 Keeping current model llama3-8b loaded
+2024-09-23 12:14:02,316 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,396 Request with ID 42f7f0e6 for model llama3-8b received
+2024-09-23 12:14:02,397 Current model llama3-8b is already loaded
+2024-09-23 12:14:02,397 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:02,397 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,721 Request with ID 174e8dca for model gemma-7b received
+2024-09-23 12:14:02,721 Keeping current model llama3-8b loaded
+2024-09-23 12:14:02,722 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:02,744 Request with ID 1a09282a for model gemma-7b received
+2024-09-23 12:14:02,744 Keeping current model llama3-8b loaded
+2024-09-23 12:14:02,745 127.0.0.1 - - [23/Sep/2024 12:14:02] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:03,200 Request with ID 9e1ba2dd for model llama3-8b received
+2024-09-23 12:14:03,200 Current model llama3-8b is already loaded
+2024-09-23 12:14:03,200 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:03,201 127.0.0.1 - - [23/Sep/2024 12:14:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:03,211 Request with ID 7ca8e04b for model gemma-7b received
+2024-09-23 12:14:03,211 Keeping current model llama3-8b loaded
+2024-09-23 12:14:03,212 127.0.0.1 - - [23/Sep/2024 12:14:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:03,761 Request with ID 1c2c7c70 for model llama3-8b received
+2024-09-23 12:14:03,761 Current model llama3-8b is already loaded
+2024-09-23 12:14:03,761 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:03,762 127.0.0.1 - - [23/Sep/2024 12:14:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:03,796 Processed batch: ['188ff583'] with model llama3-8b in 1.8923 seconds
+2024-09-23 12:14:03,796 Saving sys info
+2024-09-23 12:14:03,830 Latency for request 188ff583 with model llama3-8b: 20.7940 seconds
+2024-09-23 12:14:03,830 Saving results with gpu monitoring
+2024-09-23 12:14:03,834 127.0.0.1 - - [23/Sep/2024 12:14:03] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:03,834 Next: call load_model for llama3-8b
+2024-09-23 12:14:03,834 Model llama3-8b already loaded
+2024-09-23 12:14:03,839 Batch processing started for model llama3-8b
+2024-09-23 12:14:04,068 Request with ID 737d42e8 for model llama3-8b received
+2024-09-23 12:14:04,069 Current model llama3-8b is already loaded
+2024-09-23 12:14:04,069 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:04,069 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,086 Request with ID b4b6c270 for model llama3-8b received
+2024-09-23 12:14:04,086 Current model llama3-8b is already loaded
+2024-09-23 12:14:04,086 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:04,087 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,113 Processed batch: ['5de99b9f'] with model llama3-8b in 0.2741 seconds
+2024-09-23 12:14:04,114 Saving sys info
+2024-09-23 12:14:04,149 Latency for request 5de99b9f with model llama3-8b: 3.2630 seconds
+2024-09-23 12:14:04,149 Saving results with gpu monitoring
+2024-09-23 12:14:04,152 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,152 Next: call load_model for gemma-7b
+2024-09-23 12:14:04,239 Unloaded previous model
+2024-09-23 12:14:04,668 Request with ID 0eb11c66 for model llama3-8b received
+2024-09-23 12:14:04,669 Current model llama3-8b is already loaded
+2024-09-23 12:14:04,669 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:04,669 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,671 Request with ID bc2e9a93 for model gemma-7b received
+2024-09-23 12:14:04,671 Keeping current model llama3-8b loaded
+2024-09-23 12:14:04,671 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,676 Request with ID c678f149 for model llama3-8b received
+2024-09-23 12:14:04,676 Current model llama3-8b is already loaded
+2024-09-23 12:14:04,676 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:04,676 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:04,812 Request with ID 47fdc0dc for model gemma-7b received
+2024-09-23 12:14:04,812 Keeping current model llama3-8b loaded
+2024-09-23 12:14:04,815 127.0.0.1 - - [23/Sep/2024 12:14:04] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:05,476 Request with ID 64e42762 for model gemma-7b received
+2024-09-23 12:14:05,476 Keeping current model llama3-8b loaded
+2024-09-23 12:14:05,476 127.0.0.1 - - [23/Sep/2024 12:14:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:05,789 Request with ID 137e93e5 for model granite-7b received
+2024-09-23 12:14:05,789 Keeping current model llama3-8b loaded
+2024-09-23 12:14:05,790 127.0.0.1 - - [23/Sep/2024 12:14:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:05,825 Request with ID a3729c8c for model llama3-8b received
+2024-09-23 12:14:05,825 Current model llama3-8b is already loaded
+2024-09-23 12:14:05,826 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:05,826 127.0.0.1 - - [23/Sep/2024 12:14:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:05,879 Request with ID 92cea624 for model llama3-8b received
+2024-09-23 12:14:05,879 Current model llama3-8b is already loaded
+2024-09-23 12:14:05,879 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:05,879 127.0.0.1 - - [23/Sep/2024 12:14:05] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:06,092 Request with ID a289504a for model llama3-8b received
+2024-09-23 12:14:06,092 Current model llama3-8b is already loaded
+2024-09-23 12:14:06,092 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:06,092 127.0.0.1 - - [23/Sep/2024 12:14:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:06,142 Request with ID 039a1b73 for model gemma-7b received
+2024-09-23 12:14:06,143 Keeping current model llama3-8b loaded
+2024-09-23 12:14:06,143 127.0.0.1 - - [23/Sep/2024 12:14:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:06,512 Request with ID 1f710ce0 for model llama3-8b received
+2024-09-23 12:14:06,512 Current model llama3-8b is already loaded
+2024-09-23 12:14:06,512 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:06,512 127.0.0.1 - - [23/Sep/2024 12:14:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:06,786 Request with ID 3ff87be0 for model llama3-8b received
+2024-09-23 12:14:06,786 Current model llama3-8b is already loaded
+2024-09-23 12:14:06,787 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:06,787 127.0.0.1 - - [23/Sep/2024 12:14:06] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:07,079 Request with ID 6b37a106 for model granite-7b received
+2024-09-23 12:14:07,079 Keeping current model llama3-8b loaded
+2024-09-23 12:14:07,079 127.0.0.1 - - [23/Sep/2024 12:14:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:07,459 Request with ID b4dc417d for model llama3-8b received
+2024-09-23 12:14:07,460 Current model llama3-8b is already loaded
+2024-09-23 12:14:07,460 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:07,460 127.0.0.1 - - [23/Sep/2024 12:14:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:07,465 Request with ID 0412552d for model llama3-8b received
+2024-09-23 12:14:07,465 Current model llama3-8b is already loaded
+2024-09-23 12:14:07,465 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:07,466 127.0.0.1 - - [23/Sep/2024 12:14:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:07,650 Request with ID cde3b348 for model llama3-8b received
+2024-09-23 12:14:07,651 Current model llama3-8b is already loaded
+2024-09-23 12:14:07,651 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:07,651 127.0.0.1 - - [23/Sep/2024 12:14:07] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:08,622 Request with ID 9d0835fb for model llama3-8b received
+2024-09-23 12:14:08,622 Current model llama3-8b is already loaded
+2024-09-23 12:14:08,622 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:08,622 127.0.0.1 - - [23/Sep/2024 12:14:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:08,670 Request with ID 618a5d93 for model llama3-8b received
+2024-09-23 12:14:08,670 Current model llama3-8b is already loaded
+2024-09-23 12:14:08,670 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:08,671 127.0.0.1 - - [23/Sep/2024 12:14:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:08,937 Request with ID f0e1aa91 for model llama3-8b received
+2024-09-23 12:14:08,937 Current model llama3-8b is already loaded
+2024-09-23 12:14:08,937 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:08,937 127.0.0.1 - - [23/Sep/2024 12:14:08] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:09,419 Request with ID 093bc71a for model llama3-8b received
+2024-09-23 12:14:09,420 Current model llama3-8b is already loaded
+2024-09-23 12:14:09,420 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:09,420 127.0.0.1 - - [23/Sep/2024 12:14:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:09,515 Request with ID 87e4d06e for model gemma-7b received
+2024-09-23 12:14:09,515 Keeping current model llama3-8b loaded
+2024-09-23 12:14:09,515 127.0.0.1 - - [23/Sep/2024 12:14:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:09,902 Request with ID 12e77fba for model gemma-7b received
+2024-09-23 12:14:09,902 Keeping current model llama3-8b loaded
+2024-09-23 12:14:09,903 127.0.0.1 - - [23/Sep/2024 12:14:09] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:10,313 Request with ID e95f7d29 for model llama3-8b received
+2024-09-23 12:14:10,313 Current model llama3-8b is already loaded
+2024-09-23 12:14:10,313 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:10,313 127.0.0.1 - - [23/Sep/2024 12:14:10] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:10,488 Request with ID 3ca71cca for model granite-7b received
+2024-09-23 12:14:10,488 Keeping current model llama3-8b loaded
+2024-09-23 12:14:10,489 127.0.0.1 - - [23/Sep/2024 12:14:10] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:10,702 Request with ID fd4c1f89 for model gemma-7b received
+2024-09-23 12:14:10,702 Keeping current model llama3-8b loaded
+2024-09-23 12:14:10,703 127.0.0.1 - - [23/Sep/2024 12:14:10] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,171 Request with ID 1cd1b28f for model gemma-7b received
+2024-09-23 12:14:11,172 Keeping current model llama3-8b loaded
+2024-09-23 12:14:11,172 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,394 Request with ID b28f9674 for model gemma-7b received
+2024-09-23 12:14:11,394 Keeping current model llama3-8b loaded
+2024-09-23 12:14:11,394 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,448 Request with ID 8cb9c127 for model gemma-7b received
+2024-09-23 12:14:11,448 Keeping current model llama3-8b loaded
+2024-09-23 12:14:11,448 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,598 Request with ID 24b732b9 for model llama3-8b received
+2024-09-23 12:14:11,598 Current model llama3-8b is already loaded
+2024-09-23 12:14:11,598 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:11,599 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,630 Request with ID b599709c for model llama3-8b received
+2024-09-23 12:14:11,630 Current model llama3-8b is already loaded
+2024-09-23 12:14:11,630 Waiting for more requests for model llama3-8b
+2024-09-23 12:14:11,631 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,879 Request with ID bfc4966d for model gemma-7b received
+2024-09-23 12:14:11,879 Keeping current model llama3-8b loaded
+2024-09-23 12:14:11,879 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:11,976 Request with ID 7d414d08 for model gemma-7b received
+2024-09-23 12:14:11,976 Keeping current model llama3-8b loaded
+2024-09-23 12:14:11,976 127.0.0.1 - - [23/Sep/2024 12:14:11] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:12,130 Request with ID 14e88917 for model llama3-8b received
+2024-09-23 12:14:12,130 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,130 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,130 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:12,308 Request with ID b1ec69c6 for model llama3-8b received
+2024-09-23 12:14:12,309 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,309 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,309 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:12,465 Request with ID cde4b0be for model gemma-7b received
+2024-09-23 12:14:12,465 Decided to switch to model gemma-7b
+2024-09-23 12:14:12,466 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:12,478 Request with ID 64e35dca for model llama3-8b received
+2024-09-23 12:14:12,478 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,478 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,478 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:12,487 Request with ID c1c53e1b for model gemma-7b received
+2024-09-23 12:14:12,487 Decided to switch to model gemma-7b
+2024-09-23 12:14:12,488 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:12,528 Request with ID 21af0487 for model gemma-7b received
+2024-09-23 12:14:12,528 Decided to switch to model gemma-7b
+2024-09-23 12:14:12,528 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:12,672 Request with ID 31fddbd2 for model llama3-8b received
+2024-09-23 12:14:12,672 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,672 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,672 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:12,775 Request with ID d65aee8b for model llama3-8b received
+2024-09-23 12:14:12,775 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,775 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,775 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:12,778 Request with ID 53ff0f80 for model llama3-8b received
+2024-09-23 12:14:12,778 Current model llama3-8b is already loaded
+2024-09-23 12:14:12,778 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:12,778 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:13,185 Request with ID 349ba56a for model gemma-7b received
+2024-09-23 12:14:13,186 Decided to switch to model gemma-7b
+2024-09-23 12:14:13,186 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:13,335 Request with ID e24165d6 for model llama3-8b received
+2024-09-23 12:14:13,335 Current model llama3-8b is already loaded
+2024-09-23 12:14:13,335 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:13,336 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:13,366 Request with ID dff3e9ad for model gemma-7b received
+2024-09-23 12:14:13,366 Decided to switch to model gemma-7b
+2024-09-23 12:14:13,366 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:13,612 Request with ID 56c0ac6c for model llama3-8b received
+2024-09-23 12:14:13,613 Current model llama3-8b is already loaded
+2024-09-23 12:14:13,613 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:13,613 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:14,316 Request with ID c4c415d0 for model llama3-8b received
+2024-09-23 12:14:14,316 Current model llama3-8b is already loaded
+2024-09-23 12:14:14,316 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:14,316 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:14,351 Request with ID 22327379 for model llama3-8b received
+2024-09-23 12:14:14,351 Current model llama3-8b is already loaded
+2024-09-23 12:14:14,351 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:14,351 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:14,390 Request with ID e153437b for model llama3-8b received
+2024-09-23 12:14:14,390 Current model llama3-8b is already loaded
+2024-09-23 12:14:14,391 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:14,391 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:14,623 Request with ID be694e1a for model gemma-7b received
+2024-09-23 12:14:14,623 Decided to switch to model gemma-7b
+2024-09-23 12:14:14,623 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:14,980 Request with ID 95e59bce for model llama3-8b received
+2024-09-23 12:14:14,980 Current model llama3-8b is already loaded
+2024-09-23 12:14:14,980 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:14,980 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:14,986 Request with ID 5e6ab04b for model llama3-8b received
+2024-09-23 12:14:14,986 Current model llama3-8b is already loaded
+2024-09-23 12:14:14,986 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:14,986 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:15,490 Request with ID 9c0b3875 for model llama3-8b received
+2024-09-23 12:14:15,491 Current model llama3-8b is already loaded
+2024-09-23 12:14:15,491 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:15,491 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:15,592 Request with ID a26e4470 for model llama3-8b received
+2024-09-23 12:14:15,592 Current model llama3-8b is already loaded
+2024-09-23 12:14:15,592 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:15,592 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:15,679 Request with ID 40316384 for model llama3-8b received
+2024-09-23 12:14:15,679 Current model llama3-8b is already loaded
+2024-09-23 12:14:15,680 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:15,680 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:15,758 Request with ID 48e8bf35 for model llama3-8b received
+2024-09-23 12:14:15,758 Current model llama3-8b is already loaded
+2024-09-23 12:14:15,758 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:15,758 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:16,065 Request with ID a60366e1 for model gemma-7b received
+2024-09-23 12:14:16,065 Decided to switch to model gemma-7b
+2024-09-23 12:14:16,065 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:16,277 Request with ID b389c2eb for model llama3-8b received
+2024-09-23 12:14:16,277 Current model llama3-8b is already loaded
+2024-09-23 12:14:16,277 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:16,277 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:16,394 Request with ID 2abfdc66 for model gemma-7b received
+2024-09-23 12:14:16,394 Decided to switch to model gemma-7b
+2024-09-23 12:14:16,394 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:16,839 Request with ID f1e64a5e for model gemma-7b received
+2024-09-23 12:14:16,839 Decided to switch to model gemma-7b
+2024-09-23 12:14:16,839 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:17,013 Request with ID ad8f4864 for model llama3-8b received
+2024-09-23 12:14:17,013 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,013 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,013 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:17,111 Request with ID fd2acc78 for model llama3-8b received
+2024-09-23 12:14:17,111 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,111 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,112 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:17,271 Request with ID 5cbea161 for model granite-7b received
+2024-09-23 12:14:17,271 Decided to switch to model granite-7b
+2024-09-23 12:14:17,271 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:14:17,449 Request with ID f7d8243a for model llama3-8b received
+2024-09-23 12:14:17,449 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,449 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,450 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:17,548 Request with ID 15b1cd60 for model llama3-8b received
+2024-09-23 12:14:17,548 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,548 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,548 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:17,553 Request with ID 22c20465 for model gemma-7b received
+2024-09-23 12:14:17,553 Decided to switch to model gemma-7b
+2024-09-23 12:14:17,553 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:14:17,587 Request with ID e193ca35 for model llama3-8b received
+2024-09-23 12:14:17,587 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,587 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,587 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:17,742 Request with ID 2ae97301 for model llama3-8b received
+2024-09-23 12:14:17,742 Current model llama3-8b is already loaded
+2024-09-23 12:14:17,742 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:17,742 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,079 Request with ID 0f1cd7f3 for model llama3-8b received
+2024-09-23 12:14:18,079 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,079 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,079 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,427 Request with ID d86b83dd for model llama3-8b received
+2024-09-23 12:14:18,427 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,427 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,427 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,478 Request with ID 34b5075f for model llama3-8b received
+2024-09-23 12:14:18,479 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,479 Request with ID a818e9e7 for model llama3-8b received
+2024-09-23 12:14:18,479 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,480 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,480 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,480 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,480 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,501 Request with ID 822f9d66 for model llama3-8b received
+2024-09-23 12:14:18,501 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,501 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,501 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,563 Request with ID d8d9eaab for model llama3-8b received
+2024-09-23 12:14:18,564 Current model llama3-8b is already loaded
+2024-09-23 12:14:18,564 Processing partial batch for model llama3-8b after stay time
+2024-09-23 12:14:18,564 Partial batch after stay time condition met for model llama3-8b
+2024-09-23 12:14:18,646 Loaded model gemma-7b
+2024-09-23 12:14:18,649 Batch processing started for model gemma-7b
+2024-09-23 12:14:18,720 Request with ID bf8f1e1c for model llama3-8b received
+2024-09-23 12:14:18,720 Keeping current model gemma-7b loaded
+2024-09-23 12:14:18,720 127.0.0.1 - - [23/Sep/2024 12:14:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:18,973 Request with ID 9d533d8c for model gemma-7b received
+2024-09-23 12:14:18,973 Current model gemma-7b is already loaded
+2024-09-23 12:14:18,973 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:18,974 127.0.0.1 - - [23/Sep/2024 12:14:18] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:19,015 Request with ID b94469c9 for model llama3-8b received
+2024-09-23 12:14:19,015 Keeping current model gemma-7b loaded
+2024-09-23 12:14:19,015 127.0.0.1 - - [23/Sep/2024 12:14:19] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:19,264 Request with ID 4edb0b7c for model gemma-7b received
+2024-09-23 12:14:19,264 Current model gemma-7b is already loaded
+2024-09-23 12:14:19,264 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:19,265 127.0.0.1 - - [23/Sep/2024 12:14:19] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:19,925 Request with ID bb81b18c for model granite-7b received
+2024-09-23 12:14:19,925 Keeping current model gemma-7b loaded
+2024-09-23 12:14:19,926 127.0.0.1 - - [23/Sep/2024 12:14:19] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,265 Request with ID f8429001 for model granite-7b received
+2024-09-23 12:14:20,266 Keeping current model gemma-7b loaded
+2024-09-23 12:14:20,266 127.0.0.1 - - [23/Sep/2024 12:14:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,468 Request with ID fc5eea5b for model llama3-8b received
+2024-09-23 12:14:20,468 Keeping current model gemma-7b loaded
+2024-09-23 12:14:20,468 127.0.0.1 - - [23/Sep/2024 12:14:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,520 Request with ID fbe22b1e for model llama3-8b received
+2024-09-23 12:14:20,520 Keeping current model gemma-7b loaded
+2024-09-23 12:14:20,521 127.0.0.1 - - [23/Sep/2024 12:14:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,562 Request with ID 3e3ac8f4 for model llama3-8b received
+2024-09-23 12:14:20,562 Keeping current model gemma-7b loaded
+2024-09-23 12:14:20,562 127.0.0.1 - - [23/Sep/2024 12:14:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,587 Processed batch: ['0051b015'] with model gemma-7b in 1.9382 seconds
+2024-09-23 12:14:20,587 Saving sys info
+2024-09-23 12:14:20,618 Latency for request 0051b015 with model gemma-7b: 19.4580 seconds
+2024-09-23 12:14:20,618 Saving results with gpu monitoring
+2024-09-23 12:14:20,621 127.0.0.1 - - [23/Sep/2024 12:14:20] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:20,621 Next: call load_model for gemma-7b
+2024-09-23 12:14:20,622 Model gemma-7b already loaded
+2024-09-23 12:14:20,625 Batch processing started for model gemma-7b
+2024-09-23 12:14:21,024 Request with ID ac9f40a5 for model llama3-8b received
+2024-09-23 12:14:21,025 Keeping current model gemma-7b loaded
+2024-09-23 12:14:21,025 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,084 Request with ID 2f05bacf for model gemma-7b received
+2024-09-23 12:14:21,084 Current model gemma-7b is already loaded
+2024-09-23 12:14:21,084 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:21,084 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,432 Request with ID d88e8014 for model llama3-8b received
+2024-09-23 12:14:21,432 Keeping current model gemma-7b loaded
+2024-09-23 12:14:21,433 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,465 Request with ID 5a11e807 for model llama3-8b received
+2024-09-23 12:14:21,466 Keeping current model gemma-7b loaded
+2024-09-23 12:14:21,466 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,504 Request with ID ceb55cda for model llama3-8b received
+2024-09-23 12:14:21,504 Keeping current model gemma-7b loaded
+2024-09-23 12:14:21,504 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,517 Processed batch: ['22c20465'] with model gemma-7b in 0.8922 seconds
+2024-09-23 12:14:21,517 Saving sys info
+2024-09-23 12:14:21,550 Latency for request 22c20465 with model gemma-7b: 3.9640 seconds
+2024-09-23 12:14:21,550 Saving results with gpu monitoring
+2024-09-23 12:14:21,555 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,555 Next: call load_model for granite-7b
+2024-09-23 12:14:21,664 Unloaded previous model
+2024-09-23 12:14:21,667 Request with ID 99daaa39 for model granite-7b received
+2024-09-23 12:14:21,708 Keeping current model gemma-7b loaded
+2024-09-23 12:14:21,709 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:21,870 Request with ID 5f6497f9 for model gemma-7b received
+2024-09-23 12:14:21,870 Current model gemma-7b is already loaded
+2024-09-23 12:14:21,870 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:21,870 127.0.0.1 - - [23/Sep/2024 12:14:21] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:22,053 Request with ID 498ffc4a for model gemma-7b received
+2024-09-23 12:14:22,057 Current model gemma-7b is already loaded
+2024-09-23 12:14:22,064 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:22,065 127.0.0.1 - - [23/Sep/2024 12:14:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:22,268 Request with ID b3a2bee9 for model llama3-8b received
+2024-09-23 12:14:22,272 Keeping current model gemma-7b loaded
+2024-09-23 12:14:22,277 127.0.0.1 - - [23/Sep/2024 12:14:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:22,293 Request with ID e548a2e2 for model llama3-8b received
+2024-09-23 12:14:22,301 Keeping current model gemma-7b loaded
+2024-09-23 12:14:22,308 127.0.0.1 - - [23/Sep/2024 12:14:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:22,608 Request with ID 432a8feb for model gemma-7b received
+2024-09-23 12:14:22,612 Current model gemma-7b is already loaded
+2024-09-23 12:14:22,614 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:22,616 127.0.0.1 - - [23/Sep/2024 12:14:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:22,856 Request with ID 6e875044 for model llama3-8b received
+2024-09-23 12:14:22,856 Keeping current model gemma-7b loaded
+2024-09-23 12:14:22,857 127.0.0.1 - - [23/Sep/2024 12:14:22] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,030 Request with ID ae8992c9 for model llama3-8b received
+2024-09-23 12:14:23,030 Keeping current model gemma-7b loaded
+2024-09-23 12:14:23,031 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,093 Request with ID 3ffa9be8 for model llama3-8b received
+2024-09-23 12:14:23,093 Keeping current model gemma-7b loaded
+2024-09-23 12:14:23,093 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,136 Request with ID 5a1c6d5b for model gemma-7b received
+2024-09-23 12:14:23,136 Current model gemma-7b is already loaded
+2024-09-23 12:14:23,136 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:23,137 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,226 Request with ID 7d3679e9 for model llama3-8b received
+2024-09-23 12:14:23,227 Keeping current model gemma-7b loaded
+2024-09-23 12:14:23,227 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,585 Request with ID bf8b057e for model llama3-8b received
+2024-09-23 12:14:23,585 Keeping current model gemma-7b loaded
+2024-09-23 12:14:23,586 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,641 Request with ID 3d3959b0 for model llama3-8b received
+2024-09-23 12:14:23,641 Keeping current model gemma-7b loaded
+2024-09-23 12:14:23,642 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:23,793 Request with ID ae1b46f7 for model gemma-7b received
+2024-09-23 12:14:23,794 Current model gemma-7b is already loaded
+2024-09-23 12:14:23,794 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:23,794 127.0.0.1 - - [23/Sep/2024 12:14:23] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,017 Request with ID 20541c79 for model llama3-8b received
+2024-09-23 12:14:24,017 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,017 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,182 Request with ID f5d3bdc6 for model llama3-8b received
+2024-09-23 12:14:24,182 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,182 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,195 Request with ID 1771f9ca for model llama3-8b received
+2024-09-23 12:14:24,195 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,196 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,236 Request with ID 95333d5e for model gemma-7b received
+2024-09-23 12:14:24,236 Current model gemma-7b is already loaded
+2024-09-23 12:14:24,236 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:24,236 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,345 Request with ID 77ce1ec7 for model llama3-8b received
+2024-09-23 12:14:24,345 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,346 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,348 Request with ID f2f6ad36 for model llama3-8b received
+2024-09-23 12:14:24,348 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,349 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,665 Request with ID a78ae9bc for model gemma-7b received
+2024-09-23 12:14:24,665 Current model gemma-7b is already loaded
+2024-09-23 12:14:24,665 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:24,666 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:24,694 Request with ID c461e03b for model llama3-8b received
+2024-09-23 12:14:24,694 Keeping current model gemma-7b loaded
+2024-09-23 12:14:24,694 127.0.0.1 - - [23/Sep/2024 12:14:24] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,217 Request with ID eeb0b2b7 for model gemma-7b received
+2024-09-23 12:14:25,217 Current model gemma-7b is already loaded
+2024-09-23 12:14:25,217 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:25,218 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,441 Request with ID 3d3417bb for model llama3-8b received
+2024-09-23 12:14:25,442 Keeping current model gemma-7b loaded
+2024-09-23 12:14:25,442 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,463 Request with ID cb02f68e for model llama3-8b received
+2024-09-23 12:14:25,463 Keeping current model gemma-7b loaded
+2024-09-23 12:14:25,464 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,650 Request with ID a71792f1 for model llama3-8b received
+2024-09-23 12:14:25,650 Keeping current model gemma-7b loaded
+2024-09-23 12:14:25,651 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,658 Request with ID ae1ee4b7 for model gemma-7b received
+2024-09-23 12:14:25,658 Current model gemma-7b is already loaded
+2024-09-23 12:14:25,658 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:25,658 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,747 Request with ID cd238a16 for model gemma-7b received
+2024-09-23 12:14:25,748 Current model gemma-7b is already loaded
+2024-09-23 12:14:25,748 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:25,748 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,800 Request with ID 48dd7cc0 for model llama3-8b received
+2024-09-23 12:14:25,800 Keeping current model gemma-7b loaded
+2024-09-23 12:14:25,800 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:25,868 Request with ID 7f889696 for model llama3-8b received
+2024-09-23 12:14:25,868 Keeping current model gemma-7b loaded
+2024-09-23 12:14:25,868 127.0.0.1 - - [23/Sep/2024 12:14:25] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,016 Request with ID 06b5226e for model llama3-8b received
+2024-09-23 12:14:26,016 Keeping current model gemma-7b loaded
+2024-09-23 12:14:26,016 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,188 Request with ID 2f035cfe for model llama3-8b received
+2024-09-23 12:14:26,188 Keeping current model gemma-7b loaded
+2024-09-23 12:14:26,188 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,235 Request with ID b1898c7b for model gemma-7b received
+2024-09-23 12:14:26,235 Current model gemma-7b is already loaded
+2024-09-23 12:14:26,235 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:26,236 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,580 Request with ID aecf5e1f for model llama3-8b received
+2024-09-23 12:14:26,581 Keeping current model gemma-7b loaded
+2024-09-23 12:14:26,581 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,731 Request with ID cf2833db for model gemma-7b received
+2024-09-23 12:14:26,732 Current model gemma-7b is already loaded
+2024-09-23 12:14:26,732 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:26,732 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,780 Request with ID 5ec205cb for model gemma-7b received
+2024-09-23 12:14:26,780 Current model gemma-7b is already loaded
+2024-09-23 12:14:26,780 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:26,781 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:26,785 Request with ID e5e4f5a3 for model gemma-7b received
+2024-09-23 12:14:26,785 Current model gemma-7b is already loaded
+2024-09-23 12:14:26,785 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:26,786 127.0.0.1 - - [23/Sep/2024 12:14:26] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:27,420 Request with ID 3fa07793 for model llama3-8b received
+2024-09-23 12:14:27,420 Keeping current model gemma-7b loaded
+2024-09-23 12:14:27,420 127.0.0.1 - - [23/Sep/2024 12:14:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:27,767 Request with ID 6dd02621 for model llama3-8b received
+2024-09-23 12:14:27,767 Keeping current model gemma-7b loaded
+2024-09-23 12:14:27,767 127.0.0.1 - - [23/Sep/2024 12:14:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:27,845 Request with ID f71994df for model llama3-8b received
+2024-09-23 12:14:27,845 Keeping current model gemma-7b loaded
+2024-09-23 12:14:27,846 127.0.0.1 - - [23/Sep/2024 12:14:27] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:28,033 Request with ID 5f61a333 for model llama3-8b received
+2024-09-23 12:14:28,033 Keeping current model gemma-7b loaded
+2024-09-23 12:14:28,034 127.0.0.1 - - [23/Sep/2024 12:14:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:28,111 Request with ID 9c018e86 for model llama3-8b received
+2024-09-23 12:14:28,111 Keeping current model gemma-7b loaded
+2024-09-23 12:14:28,112 127.0.0.1 - - [23/Sep/2024 12:14:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:28,332 Request with ID 47baa816 for model gemma-7b received
+2024-09-23 12:14:28,333 Current model gemma-7b is already loaded
+2024-09-23 12:14:28,333 Waiting for more requests for model gemma-7b
+2024-09-23 12:14:28,333 127.0.0.1 - - [23/Sep/2024 12:14:28] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:28,995 Request with ID a0ca96a5 for model llama3-8b received
+2024-09-23 12:14:28,995 Decided to switch to model llama3-8b
+2024-09-23 12:14:28,995 Processing pending requests for current model gemma-7b before switching
+2024-09-23 12:14:28,995 Processing pending requests before switch condition met for model gemma-7b
+2024-09-23 12:14:29,022 Request with ID 9e520887 for model gemma-7b received
+2024-09-23 12:14:29,022 Current model gemma-7b is already loaded
+2024-09-23 12:14:29,022 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:14:29,022 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:14:29,165 Request with ID 23218666 for model gemma-7b received
+2024-09-23 12:14:29,165 Current model gemma-7b is already loaded
+2024-09-23 12:14:29,165 Processing partial batch for model gemma-7b after stay time
+2024-09-23 12:14:29,165 Partial batch after stay time condition met for model gemma-7b
+2024-09-23 12:14:29,453 Waiting for running processes to finish
+2024-09-23 12:14:31,455 Waiting for running processes to finish
+2024-09-23 12:14:33,458 Waiting for running processes to finish
+2024-09-23 12:14:35,059 Loaded model granite-7b
+2024-09-23 12:14:35,062 Batch processing started for model granite-7b
+2024-09-23 12:14:35,460 Waiting for running processes to finish
+2024-09-23 12:14:36,768 Processed batch: ['96567636', '137e93e5', '6b37a106', '3ca71cca', '5cbea161'] with model granite-7b in 1.7062 seconds
+2024-09-23 12:14:36,768 Saving sys info
+2024-09-23 12:14:36,801 Latency for request 96567636 with model granite-7b: 34.7730 seconds
+2024-09-23 12:14:36,801 Saving results with gpu monitoring
+2024-09-23 12:14:36,804 Latency for request 137e93e5 with model granite-7b: 30.9790 seconds
+2024-09-23 12:14:36,804 Saving results with gpu monitoring
+2024-09-23 12:14:36,806 Latency for request 6b37a106 with model granite-7b: 29.6900 seconds
+2024-09-23 12:14:36,806 Saving results with gpu monitoring
+2024-09-23 12:14:36,808 Latency for request 3ca71cca with model granite-7b: 26.2800 seconds
+2024-09-23 12:14:36,808 Saving results with gpu monitoring
+2024-09-23 12:14:36,810 Latency for request 5cbea161 with model granite-7b: 19.4980 seconds
+2024-09-23 12:14:36,810 Saving results with gpu monitoring
+2024-09-23 12:14:36,812 127.0.0.1 - - [23/Sep/2024 12:14:36] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:36,812 Next: call load_model for llama3-8b
+2024-09-23 12:14:36,891 Unloaded previous model
+2024-09-23 12:14:37,470 Waiting for running processes to finish
+2024-09-23 12:14:39,473 Waiting for running processes to finish
+2024-09-23 12:14:41,476 Waiting for running processes to finish
+2024-09-23 12:14:43,478 Waiting for running processes to finish
+2024-09-23 12:14:45,481 Waiting for running processes to finish
+2024-09-23 12:14:47,483 Waiting for running processes to finish
+2024-09-23 12:14:49,485 Waiting for running processes to finish
+2024-09-23 12:14:51,488 Waiting for running processes to finish
+2024-09-23 12:14:53,323 Loaded model llama3-8b
+2024-09-23 12:14:53,326 Batch processing started for model llama3-8b
+2024-09-23 12:14:53,491 Waiting for running processes to finish
+2024-09-23 12:14:55,206 Processed batch: ['d8d9eaab'] with model llama3-8b in 1.8805 seconds
+2024-09-23 12:14:55,206 Saving sys info
+2024-09-23 12:14:55,238 Latency for request d8d9eaab with model llama3-8b: 36.6430 seconds
+2024-09-23 12:14:55,238 Saving results with gpu monitoring
+2024-09-23 12:14:55,241 127.0.0.1 - - [23/Sep/2024 12:14:55] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:55,241 No batch to process for model llama3-8b
+2024-09-23 12:14:55,242 127.0.0.1 - - [23/Sep/2024 12:14:55] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:55,243 No batch to process for model llama3-8b
+2024-09-23 12:14:55,244 127.0.0.1 - - [23/Sep/2024 12:14:55] "POST /inference HTTP/1.1" 200 -
+2024-09-23 12:14:55,244 Next: call load_model for gemma-7b
+2024-09-23 12:14:55,333 Unloaded previous model
+2024-09-23 12:14:55,783 Waiting for running processes to finish
+2024-09-23 12:14:58,790 Total time: 143.6208 seconds
+2024-09-23 12:14:58,790 Total inference time: 16.2180 seconds
+2024-09-23 12:14:58,790 Inference time as percentage of total time: 11.29%
+2024-09-23 12:14:58,790 END
+2024-09-23 12:14:58,790 127.0.0.1 - - [23/Sep/2024 12:14:58] "POST /inference HTTP/1.1" 200 -

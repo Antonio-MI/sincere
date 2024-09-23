@@ -1,0 +1,248 @@
+2024-09-23 12:09:58,069 Using device: cuda
+2024-09-23 12:09:58,070 Scheduling mode set as HigherBatch+PartialBatch
+2024-09-23 12:09:58,070 Monitoring status set to True
+2024-09-23 12:10:13,141 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-23 12:10:13,141 [33mPress CTRL+C to quit[0m
+2024-09-23 12:10:13,307 Request with ID 85aca8fc for model granite-7b received
+2024-09-23 12:10:13,307 Decided to switch to model granite-7b
+2024-09-23 12:10:13,308 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:10:13,308 Next: call load_model for granite-7b
+2024-09-23 12:10:13,308 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'granite-7b'
+2024-09-23 12:10:13,309 127.0.0.1 - - [23/Sep/2024 12:10:13] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,012 Request with ID 48548fd8 for model llama3-8b received
+2024-09-23 12:10:14,013 Request with ID 34137b2d for model gemma-7b received
+2024-09-23 12:10:14,013 Decided to switch to model llama3-8b
+2024-09-23 12:10:14,014 Decided to switch to model gemma-7b
+2024-09-23 12:10:14,014 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:10:14,014 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:10:14,014 Next: call load_model for llama3-8b
+2024-09-23 12:10:14,015 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'llama3-8b'
+2024-09-23 12:10:14,015 Next: call load_model for gemma-7b
+2024-09-23 12:10:14,015 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,016 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'gemma-7b'
+2024-09-23 12:10:14,017 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,086 Request with ID 73dd65c6 for model granite-7b received
+2024-09-23 12:10:14,086 Decided to switch to model granite-7b
+2024-09-23 12:10:14,086 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:10:14,086 Next: call load_model for granite-7b
+2024-09-23 12:10:14,087 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'granite-7b'
+2024-09-23 12:10:14,087 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,091 Request with ID 9f88a4a3 for model llama3-8b received
+2024-09-23 12:10:14,092 Decided to switch to model llama3-8b
+2024-09-23 12:10:14,092 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:10:14,092 Next: call load_model for llama3-8b
+2024-09-23 12:10:14,092 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'llama3-8b'
+2024-09-23 12:10:14,092 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,123 Request with ID 7f0486d4 for model gemma-7b received
+2024-09-23 12:10:14,123 Decided to switch to model gemma-7b
+2024-09-23 12:10:14,123 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:10:14,123 Next: call load_model for gemma-7b
+2024-09-23 12:10:14,123 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'gemma-7b'
+2024-09-23 12:10:14,124 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,143 Request with ID 6d3f4f7f for model gemma-7b received
+2024-09-23 12:10:14,143 Decided to switch to model gemma-7b
+2024-09-23 12:10:14,144 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:10:14,144 Next: call load_model for gemma-7b
+2024-09-23 12:10:14,144 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'gemma-7b'
+2024-09-23 12:10:14,144 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:14,964 Request with ID c09f2035 for model granite-7b received
+2024-09-23 12:10:14,964 Decided to switch to model granite-7b
+2024-09-23 12:10:14,964 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:10:14,964 Next: call load_model for granite-7b
+2024-09-23 12:10:14,964 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'granite-7b'
+2024-09-23 12:10:14,965 127.0.0.1 - - [23/Sep/2024 12:10:14] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:15,153 Request with ID 7082858b for model llama3-8b received
+2024-09-23 12:10:15,153 Decided to switch to model llama3-8b
+2024-09-23 12:10:15,153 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:10:15,153 Next: call load_model for llama3-8b
+2024-09-23 12:10:15,153 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'llama3-8b'
+2024-09-23 12:10:15,154 127.0.0.1 - - [23/Sep/2024 12:10:15] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:15,156 Request with ID 7a4b9144 for model llama3-8b received
+2024-09-23 12:10:15,156 Decided to switch to model llama3-8b
+2024-09-23 12:10:15,156 Processing batch for new model condition met for model llama3-8b
+2024-09-23 12:10:15,156 Next: call load_model for llama3-8b
+2024-09-23 12:10:15,156 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'llama3-8b'
+2024-09-23 12:10:15,157 127.0.0.1 - - [23/Sep/2024 12:10:15] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:15,489 Request with ID 6290b25b for model gemma-7b received
+2024-09-23 12:10:15,489 Decided to switch to model gemma-7b
+2024-09-23 12:10:15,489 Processing batch for new model condition met for model gemma-7b
+2024-09-23 12:10:15,489 Next: call load_model for gemma-7b
+2024-09-23 12:10:15,489 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'gemma-7b'
+2024-09-23 12:10:15,490 127.0.0.1 - - [23/Sep/2024 12:10:15] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 12:10:15,721 Request with ID 52aa94c1 for model granite-7b received
+2024-09-23 12:10:15,721 Decided to switch to model granite-7b
+2024-09-23 12:10:15,721 Processing batch for new model condition met for model granite-7b
+2024-09-23 12:10:15,721 Next: call load_model for granite-7b
+2024-09-23 12:10:15,721 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/update.py", line 518, in inference
+    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+  File "/home/amartinezi/sincere/update.py", line 326, in process_batch
+    model=loaded_models[model_alias]["model"],
+KeyError: 'granite-7b'
+2024-09-23 12:10:15,722 127.0.0.1 - - [23/Sep/2024 12:10:15] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
