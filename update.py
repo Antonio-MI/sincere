@@ -603,7 +603,5 @@ if __name__ == '__main__':
     if "SLA" in mode:
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
-    load_model("llama3-8b")
-
     # Start the Flask app
     app.run(host='0.0.0.0', port=5000, debug=False)
