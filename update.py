@@ -509,7 +509,7 @@ def inference():
                         # Process the batch
                         completed_inference_ids = process_batch(current_loaded_model, "Processing pending requests before switch", running_request_batches[current_loaded_model].qsize())
                 # Now load the new model
-                load_model(model_alias)
+                # load_model(model_alias)
                 # Process any requests for the new model
                 if not incoming_request_batches[model_alias].empty():
                     running_request_batches[model_alias] = Queue()
@@ -548,7 +548,7 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
-            load_model(model_alias)
+            #load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
@@ -568,7 +568,7 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
-            load_model(model_alias)
+            #load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Dynamic batch size", optimal_batch_size)
             return jsonify({
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
@@ -582,7 +582,7 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
-            load_model(model_alias)
+            #load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
