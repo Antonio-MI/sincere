@@ -481,7 +481,7 @@ def inference():
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
 
-    if mode == "FCFS" or mode == "BatchedFCFS":
+    if mode == "FCFS" or mode == "BatchedFCFS" or mode == "BestBatch":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")

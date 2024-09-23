@@ -32,8 +32,6 @@ api_url = "http://127.0.0.1:5000/inference"
 # Folder where workload jsons are located
 workload_folder = "./workloads"
 
-count = 0
-
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""
     workload_files = [f for f in os.listdir(folder) if f.endswith('.json')]

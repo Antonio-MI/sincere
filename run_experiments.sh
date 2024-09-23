@@ -3,9 +3,9 @@
 
 
 # Run time for calls
-run_duration=30
+run_duration=120
 # Timeout duration (run of calls + 30 seconds)
-timeout_duration=40
+timeout_duration=150
 # Distribution followed by input calls
 distribution=gamma
 # Scheduling mode
