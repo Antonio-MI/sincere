@@ -398,7 +398,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_usage_count
+    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_usage_count, model_loaded_timestamp, model_stay_time, current_loaded_model
 
     # Record the time of the first request
     if first_request_time is None:
