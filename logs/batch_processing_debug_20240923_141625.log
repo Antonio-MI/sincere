@@ -1,0 +1,2529 @@
+2024-09-23 14:16:25,158 Using device: cuda
+2024-09-23 14:16:25,158 Scheduling mode set as BestBatch
+2024-09-23 14:16:25,158 Monitoring status set to True
+2024-09-23 14:16:40,225 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-23 14:16:40,226 [33mPress CTRL+C to quit[0m
+2024-09-23 14:16:41,531 127.0.0.1 - - [23/Sep/2024 14:16:41] "GET /health HTTP/1.1" 200 -
+2024-09-23 14:16:41,733 Request with ID 44ec92a8 for model gemma-7b received
+2024-09-23 14:16:41,733 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:41,734 127.0.0.1 - - [23/Sep/2024 14:16:41] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:41,915 Request with ID 713d1e1c for model llama3-8b received
+2024-09-23 14:16:41,915 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:41,916 127.0.0.1 - - [23/Sep/2024 14:16:41] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:41,928 Request with ID 7e1a0da5 for model llama3-8b received
+2024-09-23 14:16:41,929 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:41,929 127.0.0.1 - - [23/Sep/2024 14:16:41] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,046 Request with ID c8b741e4 for model granite-7b received
+2024-09-23 14:16:42,046 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:42,047 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,487 Request with ID aa5f1037 for model gemma-7b received
+2024-09-23 14:16:42,488 Request with ID 861dc4f6 for model llama3-8b received
+2024-09-23 14:16:42,488 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:42,488 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:42,489 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,490 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,533 Request with ID 9417b7af for model granite-7b received
+2024-09-23 14:16:42,533 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:42,534 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,536 Request with ID d44c0db0 for model llama3-8b received
+2024-09-23 14:16:42,537 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:42,537 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,556 Request with ID 1a37bd3e for model gemma-7b received
+2024-09-23 14:16:42,556 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:42,557 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:42,570 Request with ID 728e7d77 for model gemma-7b received
+2024-09-23 14:16:42,570 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:42,571 127.0.0.1 - - [23/Sep/2024 14:16:42] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,083 Request with ID 72994165 for model granite-7b received
+2024-09-23 14:16:43,084 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:43,084 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,202 Request with ID 7e33601e for model llama3-8b received
+2024-09-23 14:16:43,202 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:43,202 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,203 Request with ID 36fe8e7d for model llama3-8b received
+2024-09-23 14:16:43,204 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:43,204 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,412 Request with ID 65f3af5f for model gemma-7b received
+2024-09-23 14:16:43,413 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:43,413 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,558 Request with ID 6da960d3 for model granite-7b received
+2024-09-23 14:16:43,558 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:43,559 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:43,859 Request with ID d306227d for model gemma-7b received
+2024-09-23 14:16:43,860 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:43,861 127.0.0.1 - - [23/Sep/2024 14:16:43] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,037 Request with ID 5652fb2e for model llama3-8b received
+2024-09-23 14:16:44,037 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:44,038 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,138 Request with ID d388148c for model llama3-8b received
+2024-09-23 14:16:44,138 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:44,138 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,326 Request with ID c7a2e4d4 for model gemma-7b received
+2024-09-23 14:16:44,326 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:44,327 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,655 Request with ID e05950ad for model gemma-7b received
+2024-09-23 14:16:44,655 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:44,655 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,762 Request with ID 6085384e for model granite-7b received
+2024-09-23 14:16:44,762 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:44,763 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,812 Request with ID a58afd8e for model llama3-8b received
+2024-09-23 14:16:44,813 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:44,813 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,925 Request with ID f43f9a46 for model llama3-8b received
+2024-09-23 14:16:44,926 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:44,926 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,967 Request with ID 79de04ba for model llama3-8b received
+2024-09-23 14:16:44,967 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:44,968 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:44,978 Request with ID ce0760dd for model gemma-7b received
+2024-09-23 14:16:44,978 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:44,979 127.0.0.1 - - [23/Sep/2024 14:16:44] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,022 Request with ID 89da2056 for model gemma-7b received
+2024-09-23 14:16:45,022 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:45,023 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,180 Request with ID 805386d1 for model llama3-8b received
+2024-09-23 14:16:45,180 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,180 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,189 Request with ID 884c7461 for model llama3-8b received
+2024-09-23 14:16:45,189 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,190 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,429 Request with ID 9a917f4b for model gemma-7b received
+2024-09-23 14:16:45,429 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:45,430 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,437 Request with ID 2d16b3ea for model llama3-8b received
+2024-09-23 14:16:45,437 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,438 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,551 Request with ID 3bf9a5ab for model llama3-8b received
+2024-09-23 14:16:45,551 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,552 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,567 Request with ID 3f80d3b7 for model llama3-8b received
+2024-09-23 14:16:45,567 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,568 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,729 Request with ID c4fc231a for model llama3-8b received
+2024-09-23 14:16:45,729 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,730 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,816 Request with ID 3b57fe58 for model llama3-8b received
+2024-09-23 14:16:45,816 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:45,817 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:45,831 Request with ID dee0d162 for model gemma-7b received
+2024-09-23 14:16:45,831 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:45,832 127.0.0.1 - - [23/Sep/2024 14:16:45] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,116 Request with ID 84822479 for model llama3-8b received
+2024-09-23 14:16:46,116 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,117 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,267 Request with ID e3d92abb for model llama3-8b received
+2024-09-23 14:16:46,267 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,268 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,299 Request with ID 6fd28ef9 for model llama3-8b received
+2024-09-23 14:16:46,300 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,300 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,450 Request with ID f7690bb2 for model llama3-8b received
+2024-09-23 14:16:46,450 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,451 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,658 Request with ID 6cf39b6f for model llama3-8b received
+2024-09-23 14:16:46,659 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,659 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,685 Request with ID 1fc3882f for model llama3-8b received
+2024-09-23 14:16:46,685 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,686 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,893 Request with ID d16b9005 for model gemma-7b received
+2024-09-23 14:16:46,893 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:46,894 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,909 Request with ID 82d73ce8 for model llama3-8b received
+2024-09-23 14:16:46,909 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,911 Request with ID 7eba0bbb for model llama3-8b received
+2024-09-23 14:16:46,912 Request with ID 2ab8ca73 for model llama3-8b received
+2024-09-23 14:16:46,912 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,913 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,913 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:46,914 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,915 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:46,997 Request with ID 3e4f6b06 for model gemma-7b received
+2024-09-23 14:16:46,997 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:46,997 127.0.0.1 - - [23/Sep/2024 14:16:46] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:47,356 Request with ID 9d9f955b for model llama3-8b received
+2024-09-23 14:16:47,356 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:47,357 127.0.0.1 - - [23/Sep/2024 14:16:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:47,421 Request with ID 89f21006 for model llama3-8b received
+2024-09-23 14:16:47,421 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:47,422 127.0.0.1 - - [23/Sep/2024 14:16:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:47,833 Request with ID 2952f695 for model gemma-7b received
+2024-09-23 14:16:47,834 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:47,834 127.0.0.1 - - [23/Sep/2024 14:16:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:47,838 Request with ID 848636ab for model llama3-8b received
+2024-09-23 14:16:47,838 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:47,838 127.0.0.1 - - [23/Sep/2024 14:16:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:47,907 Request with ID d34d34f9 for model gemma-7b received
+2024-09-23 14:16:47,907 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:47,908 127.0.0.1 - - [23/Sep/2024 14:16:47] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,207 Request with ID 96e580d0 for model gemma-7b received
+2024-09-23 14:16:48,207 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:48,208 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,293 Request with ID 51b98e67 for model llama3-8b received
+2024-09-23 14:16:48,293 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:48,294 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,407 Request with ID 33a9380c for model gemma-7b received
+2024-09-23 14:16:48,407 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:48,408 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,442 Request with ID bbf71738 for model gemma-7b received
+2024-09-23 14:16:48,442 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:48,443 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,570 Request with ID 3e262143 for model gemma-7b received
+2024-09-23 14:16:48,570 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:48,571 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,784 Request with ID 02c29179 for model gemma-7b received
+2024-09-23 14:16:48,784 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:48,785 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:48,874 Request with ID 8d239fec for model llama3-8b received
+2024-09-23 14:16:48,874 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:48,875 127.0.0.1 - - [23/Sep/2024 14:16:48] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,017 Request with ID 7f3577ff for model llama3-8b received
+2024-09-23 14:16:49,017 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:49,018 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,050 Request with ID dadc7ba2 for model gemma-7b received
+2024-09-23 14:16:49,050 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:49,051 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,200 Request with ID ec0412d4 for model llama3-8b received
+2024-09-23 14:16:49,200 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:49,201 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,429 Request with ID e8d74f00 for model gemma-7b received
+2024-09-23 14:16:49,429 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:49,430 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,445 Request with ID e2fa0ef3 for model llama3-8b received
+2024-09-23 14:16:49,445 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:49,445 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,484 Request with ID 867621fc for model gemma-7b received
+2024-09-23 14:16:49,484 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:49,484 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:49,990 Request with ID 33353d7d for model gemma-7b received
+2024-09-23 14:16:49,991 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:49,991 127.0.0.1 - - [23/Sep/2024 14:16:49] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,002 Request with ID 54e4aed2 for model llama3-8b received
+2024-09-23 14:16:50,002 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,003 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,130 Request with ID 75f85d0d for model gemma-7b received
+2024-09-23 14:16:50,130 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:50,131 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,282 Request with ID 17091dbc for model llama3-8b received
+2024-09-23 14:16:50,282 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,283 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,348 Request with ID 66841bb7 for model llama3-8b received
+2024-09-23 14:16:50,348 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,349 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,359 Request with ID 1ddfc705 for model llama3-8b received
+2024-09-23 14:16:50,360 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,360 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,480 Request with ID 71306def for model llama3-8b received
+2024-09-23 14:16:50,482 Request with ID 233f2439 for model gemma-7b received
+2024-09-23 14:16:50,482 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,482 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:50,483 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,484 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,566 Request with ID 0ca18018 for model gemma-7b received
+2024-09-23 14:16:50,566 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:50,566 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,723 Request with ID b12ef48a for model gemma-7b received
+2024-09-23 14:16:50,723 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:50,724 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:50,896 Request with ID a658473b for model llama3-8b received
+2024-09-23 14:16:50,896 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:50,897 127.0.0.1 - - [23/Sep/2024 14:16:50] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,057 Request with ID 8b1db7b8 for model llama3-8b received
+2024-09-23 14:16:51,057 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,058 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,071 Request with ID ed71e43b for model gemma-7b received
+2024-09-23 14:16:51,071 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:51,072 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,107 Request with ID 12fae067 for model llama3-8b received
+2024-09-23 14:16:51,107 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,108 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,193 Request with ID d07eb929 for model llama3-8b received
+2024-09-23 14:16:51,193 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,194 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,392 Request with ID 986b8d71 for model llama3-8b received
+2024-09-23 14:16:51,393 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,393 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,532 Request with ID 1963aff8 for model gemma-7b received
+2024-09-23 14:16:51,532 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:51,533 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,694 Request with ID f7955e44 for model llama3-8b received
+2024-09-23 14:16:51,694 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,695 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,879 Request with ID c0e26e5f for model llama3-8b received
+2024-09-23 14:16:51,879 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,880 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:51,960 Request with ID ca1440ed for model llama3-8b received
+2024-09-23 14:16:51,960 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:51,961 127.0.0.1 - - [23/Sep/2024 14:16:51] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,019 Request with ID 3467a975 for model llama3-8b received
+2024-09-23 14:16:52,019 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:52,020 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,071 Request with ID 2ee71cde for model llama3-8b received
+2024-09-23 14:16:52,072 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:52,072 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,488 Request with ID c9104728 for model granite-7b received
+2024-09-23 14:16:52,488 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:52,489 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,535 Request with ID d01283ee for model gemma-7b received
+2024-09-23 14:16:52,535 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:52,536 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,619 Request with ID 1fc14080 for model llama3-8b received
+2024-09-23 14:16:52,619 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:52,620 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,964 Request with ID b39e2b93 for model llama3-8b received
+2024-09-23 14:16:52,965 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:52,965 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:52,974 Request with ID 19e3bf3c for model llama3-8b received
+2024-09-23 14:16:52,974 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:52,974 127.0.0.1 - - [23/Sep/2024 14:16:52] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:53,554 Request with ID 09e55c2b for model gemma-7b received
+2024-09-23 14:16:53,554 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:53,555 127.0.0.1 - - [23/Sep/2024 14:16:53] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:53,604 Request with ID 84a03ac2 for model gemma-7b received
+2024-09-23 14:16:53,604 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:53,605 127.0.0.1 - - [23/Sep/2024 14:16:53] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:53,649 Request with ID 2444a8b7 for model llama3-8b received
+2024-09-23 14:16:53,649 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:53,650 127.0.0.1 - - [23/Sep/2024 14:16:53] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:53,904 Request with ID 0bb841e3 for model granite-7b received
+2024-09-23 14:16:53,904 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:53,905 Request with ID 49da4e6c for model llama3-8b received
+2024-09-23 14:16:53,906 127.0.0.1 - - [23/Sep/2024 14:16:53] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:53,906 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:53,907 127.0.0.1 - - [23/Sep/2024 14:16:53] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,038 Request with ID b853585c for model granite-7b received
+2024-09-23 14:16:54,038 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:54,039 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,312 Request with ID 53591ed6 for model gemma-7b received
+2024-09-23 14:16:54,312 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:54,313 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,326 Request with ID 32148cff for model granite-7b received
+2024-09-23 14:16:54,326 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:54,326 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,407 Request with ID 5904bb26 for model llama3-8b received
+2024-09-23 14:16:54,407 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:54,408 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,636 Request with ID c135b342 for model granite-7b received
+2024-09-23 14:16:54,637 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:54,637 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,683 Request with ID d8de827f for model gemma-7b received
+2024-09-23 14:16:54,683 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:54,684 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,808 Request with ID 0856a488 for model llama3-8b received
+2024-09-23 14:16:54,809 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:54,809 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,836 Request with ID 6a2875ca for model llama3-8b received
+2024-09-23 14:16:54,836 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:54,837 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:54,854 Request with ID fac7014f for model llama3-8b received
+2024-09-23 14:16:54,855 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:54,855 127.0.0.1 - - [23/Sep/2024 14:16:54] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,014 Request with ID 4716d3ae for model llama3-8b received
+2024-09-23 14:16:55,015 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,015 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,056 Request with ID 40d0f53f for model granite-7b received
+2024-09-23 14:16:55,056 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:55,057 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,059 Request with ID 26333ea1 for model granite-7b received
+2024-09-23 14:16:55,059 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:55,060 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,132 Request with ID 70df9be3 for model llama3-8b received
+2024-09-23 14:16:55,132 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,133 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,156 Request with ID 32ffcc30 for model llama3-8b received
+2024-09-23 14:16:55,156 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,157 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,191 Request with ID c9724b1e for model llama3-8b received
+2024-09-23 14:16:55,192 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,192 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,329 Request with ID 07283427 for model llama3-8b received
+2024-09-23 14:16:55,329 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,329 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,498 Request with ID be1befa2 for model llama3-8b received
+2024-09-23 14:16:55,498 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,499 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,664 Request with ID eb88b17b for model gemma-7b received
+2024-09-23 14:16:55,664 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:55,664 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,842 Request with ID 21b07a3a for model granite-7b received
+2024-09-23 14:16:55,842 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:55,843 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,846 Request with ID 180dbb90 for model llama3-8b received
+2024-09-23 14:16:55,847 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:55,847 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,872 Request with ID 600038e6 for model gemma-7b received
+2024-09-23 14:16:55,872 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:55,873 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:55,953 Request with ID a0e678a9 for model gemma-7b received
+2024-09-23 14:16:55,953 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:55,954 127.0.0.1 - - [23/Sep/2024 14:16:55] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,074 Request with ID 6c5dcb51 for model llama3-8b received
+2024-09-23 14:16:56,074 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,075 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,210 Request with ID 36edd255 for model llama3-8b received
+2024-09-23 14:16:56,210 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,211 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,573 Request with ID 8d645f78 for model llama3-8b received
+2024-09-23 14:16:56,573 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,574 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,700 Request with ID f38b2755 for model llama3-8b received
+2024-09-23 14:16:56,700 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,701 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,763 Request with ID 96c04af4 for model llama3-8b received
+2024-09-23 14:16:56,763 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,764 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:56,863 Request with ID 6e5c9d17 for model llama3-8b received
+2024-09-23 14:16:56,863 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:56,864 127.0.0.1 - - [23/Sep/2024 14:16:56] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,079 Request with ID f2797e21 for model llama3-8b received
+2024-09-23 14:16:57,079 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:57,080 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,108 Request with ID a92992ac for model gemma-7b received
+2024-09-23 14:16:57,108 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:57,108 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,111 Request with ID e12f8498 for model llama3-8b received
+2024-09-23 14:16:57,111 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:57,111 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,121 Request with ID 0a14b3aa for model gemma-7b received
+2024-09-23 14:16:57,122 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:57,122 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,266 Request with ID 87beaf8c for model gemma-7b received
+2024-09-23 14:16:57,267 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:57,267 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,354 Request with ID 2c3a2b2d for model llama3-8b received
+2024-09-23 14:16:57,354 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:57,354 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,479 Request with ID 1d7cd936 for model granite-7b received
+2024-09-23 14:16:57,479 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:57,480 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,548 Request with ID 81792657 for model gemma-7b received
+2024-09-23 14:16:57,548 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:57,549 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,723 Request with ID 879e6555 for model llama3-8b received
+2024-09-23 14:16:57,723 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:57,724 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:57,782 Request with ID 41536b93 for model gemma-7b received
+2024-09-23 14:16:57,782 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:57,783 127.0.0.1 - - [23/Sep/2024 14:16:57] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,119 Request with ID 61aa8a10 for model gemma-7b received
+2024-09-23 14:16:58,119 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:58,119 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,262 Request with ID 5a5e2ebc for model gemma-7b received
+2024-09-23 14:16:58,262 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:58,263 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,359 Request with ID 7c9a44d0 for model llama3-8b received
+2024-09-23 14:16:58,359 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:58,360 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,409 Request with ID 6f8ce56f for model granite-7b received
+2024-09-23 14:16:58,409 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:16:58,409 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,416 Request with ID 99c5948c for model gemma-7b received
+2024-09-23 14:16:58,416 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:58,416 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,812 Request with ID 7225d106 for model llama3-8b received
+2024-09-23 14:16:58,812 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:58,813 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,822 Request with ID fa1b8fe2 for model gemma-7b received
+2024-09-23 14:16:58,822 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:16:58,823 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,965 Request with ID 11b4acec for model llama3-8b received
+2024-09-23 14:16:58,965 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:58,965 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:58,977 Request with ID c5cc2281 for model llama3-8b received
+2024-09-23 14:16:58,977 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:58,978 127.0.0.1 - - [23/Sep/2024 14:16:58] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:59,668 Request with ID ce4bd0ac for model llama3-8b received
+2024-09-23 14:16:59,668 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:59,668 127.0.0.1 - - [23/Sep/2024 14:16:59] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:16:59,943 Request with ID 80c70b7d for model llama3-8b received
+2024-09-23 14:16:59,943 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:16:59,944 127.0.0.1 - - [23/Sep/2024 14:16:59] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,377 Request with ID 03481a41 for model llama3-8b received
+2024-09-23 14:17:00,377 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,378 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,391 Request with ID 92d6c9de for model llama3-8b received
+2024-09-23 14:17:00,391 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,391 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,424 Request with ID 968cf951 for model llama3-8b received
+2024-09-23 14:17:00,424 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,424 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,579 Request with ID 01dcf86a for model llama3-8b received
+2024-09-23 14:17:00,579 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,580 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,612 Request with ID 8e5f3ee9 for model llama3-8b received
+2024-09-23 14:17:00,612 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,613 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:00,881 Request with ID 6c49f23e for model llama3-8b received
+2024-09-23 14:17:00,881 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:00,881 127.0.0.1 - - [23/Sep/2024 14:17:00] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,416 Request with ID ee96b0d3 for model gemma-7b received
+2024-09-23 14:17:01,416 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:01,416 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,572 Request with ID c6ca204e for model llama3-8b received
+2024-09-23 14:17:01,572 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:01,573 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,676 Request with ID aa81c926 for model gemma-7b received
+2024-09-23 14:17:01,676 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:01,677 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,727 Request with ID c0236f0f for model granite-7b received
+2024-09-23 14:17:01,727 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:17:01,728 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,809 Request with ID 3b9d4585 for model llama3-8b received
+2024-09-23 14:17:01,809 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:01,810 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:01,992 Request with ID 0030cafe for model llama3-8b received
+2024-09-23 14:17:01,993 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:01,993 127.0.0.1 - - [23/Sep/2024 14:17:01] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:02,166 Request with ID 9929762c for model gemma-7b received
+2024-09-23 14:17:02,166 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:02,167 127.0.0.1 - - [23/Sep/2024 14:17:02] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:02,231 Request with ID 8deebf50 for model gemma-7b received
+2024-09-23 14:17:02,231 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:02,232 127.0.0.1 - - [23/Sep/2024 14:17:02] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:02,486 Request with ID e687463d for model llama3-8b received
+2024-09-23 14:17:02,486 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:02,487 127.0.0.1 - - [23/Sep/2024 14:17:02] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:02,690 Request with ID eb5c7375 for model llama3-8b received
+2024-09-23 14:17:02,690 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:02,691 127.0.0.1 - - [23/Sep/2024 14:17:02] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:02,695 Request with ID fa29429d for model granite-7b received
+2024-09-23 14:17:02,695 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:17:02,696 127.0.0.1 - - [23/Sep/2024 14:17:02] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,022 Request with ID 5a53d248 for model gemma-7b received
+2024-09-23 14:17:03,022 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:03,023 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,172 Request with ID 0c58766d for model llama3-8b received
+2024-09-23 14:17:03,172 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:03,173 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,323 Request with ID e00850ea for model llama3-8b received
+2024-09-23 14:17:03,323 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'llama3-8b'
+2024-09-23 14:17:03,323 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,385 Request with ID 5afc7105 for model granite-7b received
+2024-09-23 14:17:03,385 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'granite-7b'
+2024-09-23 14:17:03,385 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,427 Request with ID c49e34dc for model gemma-7b received
+2024-09-23 14:17:03,427 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:03,428 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
+2024-09-23 14:17:03,442 Request with ID 63702c17 for model gemma-7b received
+2024-09-23 14:17:03,442 Exception on /inference [POST]
+Traceback (most recent call last):
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/amartinezi/sincere/venv/lib64/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/amartinezi/sincere/api_scheduler_experiments.py", line 473, in inference
+    model_usage_count[model_alias] += 1
+KeyError: 'gemma-7b'
+2024-09-23 14:17:03,442 127.0.0.1 - - [23/Sep/2024 14:17:03] "[35m[1mPOST /inference HTTP/1.1[0m" 500 -
