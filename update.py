@@ -171,28 +171,6 @@ def load_model(model_alias):
     current_loaded_model = model_alias
     model_loaded_timestamp = time.time()
 
-# Function to decide if we should switch models
-def should_switch_model(new_model_alias):
-    global model_usage_count, current_loaded_model, model_loaded_timestamp
-    if current_loaded_model is None:
-        return True  # No model is loaded, so we need to load the new model
-    
-    if new_model_alias == current_loaded_model:
-        return False  # Already loaded
-    
-    # Keep the current model loaded for at least 'model_stay_time' seconds
-    if (time.time() - model_loaded_timestamp) < model_stay_time:
-        return False  # Do not switch yet
-
-    # Decide based on usage frequency
-    current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
-    new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()
-    
-    # Switch if there are more requests for the new model
-    if new_model_requests > current_model_requests:
-        return True
-    else:
-        return False  # Keep current model loaded
 
 # Function to generate a dataset for batching
 def create_batch_generator(batch):
@@ -381,7 +359,7 @@ def process_batch(model_alias, condition, batch_size):
         return list(responses.keys())
 
 def background_batch_processor():
-    global incoming_request_batches, running_request_batches, batch_timers, total_inference_time, last_batch_processed_time, total_time, inference_flag
+    global incoming_request_batches, running_request_batches, batch_timers
     while True:
         current_time = time.time()
         for model_alias, timer in list(batch_timers.items()):
@@ -393,6 +371,41 @@ def background_batch_processor():
                 logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
                 process_batch(model_alias, "Time limit", batch_size)
         time.sleep(0.1)  # Sleep briefly to prevent tight looping
+
+def process_partial_batch():
+    global model_usage_count, current_loaded_model, model_loaded_timestamp, incoming_request_batches, running_request_batches
+    while True:
+        if (time.time() - model_loaded_timestamp) > model_stay_time/2 and incoming_request_batches.get(current_loaded_model, Queue()).qsize() > allowed_batch_sizes[current_loaded_model]/4:
+                while not incoming_request_batches[current_loaded_model].empty():
+                    running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
+                batch_size = running_request_batches[current_loaded_model].qsize()
+                logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
+                process_batch(current_loaded_model, "Partial Batch", batch_size)
+        time.sleep(0.1)
+
+# Function to decide if we should switch models
+def should_switch_model(new_model_alias):
+    global model_usage_count, current_loaded_model, model_loaded_timestamp
+    if current_loaded_model is None:
+        return True  # No model is loaded, so we need to load the new model
+    
+    if new_model_alias == current_loaded_model:
+        return False  # Already loaded
+    
+    # Keep the current model loaded for at least 'model_stay_time' seconds
+    if (time.time() - model_loaded_timestamp) < model_stay_time:
+        return False  # Do not switch yet
+
+    # Decide based on usage frequency
+    current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
+    new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()
+    
+    # Switch if there are more requests for the new model
+    if new_model_requests > current_model_requests:
+        return True
+    else:
+        return False  # Keep current model loaded
+
 
 app = Flask(__name__)
 
@@ -460,76 +473,18 @@ def inference():
 
     # Decide whether to switch models
     if mode == "HigherBatch+PartialBatch":
-        # If the model is already loaded
-        if model_alias == current_loaded_model:
-            logging.debug(f"Current model {current_loaded_model} is already loaded")
-            # Check if batch size is met
-            if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
-                # Move requests to running batch
-                running_request_batches[model_alias] = Queue()
-                while not incoming_request_batches[model_alias].empty():
-                    running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-                # Process the batch
-                completed_inference_ids = process_batch(model_alias, "Batch size met", running_request_batches[model_alias].qsize())
-                return jsonify({
-                    'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
-                })
-            else:
-                # Check if model_stay_time has passed
-                time_since_loaded = time.time() - model_loaded_timestamp
-                if time_since_loaded >= model_stay_time:
-                    # Process any pending requests as partial batch
-                    logging.debug(f"Processing partial batch for model {model_alias} after stay time")
-                    running_request_batches[model_alias] = Queue()
-                    while not incoming_request_batches[model_alias].empty():
-                        running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-                    # Process the batch
-                    completed_inference_ids = process_batch(model_alias, "Partial batch after stay time", running_request_batches[model_alias].qsize())
-                    return jsonify({
-                        'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
-                    })
-                else:
-                    # Keep waiting for more requests
-                    logging.debug(f"Waiting for more requests for model {model_alias}")
-                    return jsonify({
-                        'message': f"Request queued with ID {request_id} for model {model_alias}"
-                    })
-        else:
-            # Decide whether to switch models
-            if should_switch_model(model_alias):
-                logging.debug(f"Decided to switch to model {model_alias}")
-                # Before switching, process any pending requests for the current model
-                if current_loaded_model and incoming_request_batches.get(current_loaded_model):
-                    if not incoming_request_batches[current_loaded_model].empty():
-                        # Process pending requests for current model as partial batch
-                        logging.debug(f"Processing pending requests for current model {current_loaded_model} before switching")
-                        running_request_batches[current_loaded_model] = Queue()
-                        while not incoming_request_batches[current_loaded_model].empty():
-                            running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
-                        # Process the batch
-                        completed_inference_ids = process_batch(current_loaded_model, "Processing pending requests before switch", running_request_batches[current_loaded_model].qsize())
-                # Now load the new model
-                # load_model(model_alias)
-                # Process any requests for the new model
-                if not incoming_request_batches[model_alias].empty():
-                    running_request_batches[model_alias] = Queue()
-                    while not incoming_request_batches[model_alias].empty():
-                        running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-                    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
-                    return jsonify({
-                        'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
-                    })
-                else:
-                    logging.debug(f"No pending requests for model {model_alias} after loading")
-                    return jsonify({
-                        'message': f"Request queued with ID {request_id} for model {model_alias}"
-                    })
-            else:
-                # Keep current model loaded
-                logging.debug(f"Keeping current model {current_loaded_model} loaded")
-                return jsonify({
-                    'message': f"Request queued with ID {request_id} for model {model_alias}"
-                })
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
+            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            #load_model(model_alias)
+            completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+            return jsonify({
+            'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
+        })
 
 
     if "SLA" in mode: #mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
@@ -602,6 +557,9 @@ if __name__ == '__main__':
     #if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
     if "SLA" in mode:
         threading.Thread(target=background_batch_processor, daemon=True).start()
+
+    if "PartialBatch" in mode:
+        threading.Thread(target=process_partial_batch, daemon=True).start()
 
     # Start the Flask app
     app.run(host='0.0.0.0', port=5000, debug=False)
