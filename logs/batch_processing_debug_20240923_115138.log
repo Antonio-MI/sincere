@@ -1,0 +1,355 @@
+2024-09-23 11:51:39,081 Using device: cuda
+2024-09-23 11:51:39,081 Scheduling mode set as HigherBatch+PartialBatch
+2024-09-23 11:51:39,081 Monitoring status set to True
+2024-09-23 11:51:54,155 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-23 11:51:54,155 [33mPress CTRL+C to quit[0m
+2024-09-23 11:52:12,484 Request with ID 20393982 for model gemma-7b received
+2024-09-23 11:52:12,484 Decided to switch to model gemma-7b
+2024-09-23 11:52:12,956 Request with ID d05e590b for model llama3-8b received
+2024-09-23 11:52:12,956 Decided to switch to model llama3-8b
+2024-09-23 11:52:12,958 Request with ID 7b05a3d1 for model llama3-8b received
+2024-09-23 11:52:12,959 Decided to switch to model llama3-8b
+2024-09-23 11:52:13,163 Request with ID 36fec29e for model granite-7b received
+2024-09-23 11:52:13,164 Decided to switch to model granite-7b
+2024-09-23 11:52:13,779 Request with ID 761b97d0 for model llama3-8b received
+2024-09-23 11:52:13,781 Request with ID d63e766f for model gemma-7b received
+2024-09-23 11:52:13,781 Decided to switch to model llama3-8b
+2024-09-23 11:52:13,783 Decided to switch to model gemma-7b
+2024-09-23 11:52:13,785 Request with ID 1b3feff4 for model granite-7b received
+2024-09-23 11:52:13,788 Request with ID 6ec8836a for model llama3-8b received
+2024-09-23 11:52:13,790 Decided to switch to model granite-7b
+2024-09-23 11:52:13,792 Decided to switch to model llama3-8b
+2024-09-23 11:52:14,049 Request with ID 3cb69d8f for model gemma-7b received
+2024-09-23 11:52:14,052 Decided to switch to model gemma-7b
+2024-09-23 11:52:14,057 Request with ID e628f991 for model gemma-7b received
+2024-09-23 11:52:14,057 Decided to switch to model gemma-7b
+2024-09-23 11:52:15,267 Request with ID 8b072e74 for model granite-7b received
+2024-09-23 11:52:15,269 Decided to switch to model granite-7b
+2024-09-23 11:52:15,719 Request with ID 0f469799 for model llama3-8b received
+2024-09-23 11:52:15,720 Decided to switch to model llama3-8b
+2024-09-23 11:52:15,728 Request with ID e7516854 for model llama3-8b received
+2024-09-23 11:52:15,728 Decided to switch to model llama3-8b
+2024-09-23 11:52:15,745 Request with ID 466b1eb6 for model gemma-7b received
+2024-09-23 11:52:15,750 Request with ID 922cf259 for model granite-7b received
+2024-09-23 11:52:15,752 Decided to switch to model gemma-7b
+2024-09-23 11:52:15,987 Decided to switch to model granite-7b
+2024-09-23 11:52:15,991 Request with ID 30cb3463 for model gemma-7b received
+2024-09-23 11:52:16,301 Request with ID 78f2f56a for model llama3-8b received
+2024-09-23 11:52:16,304 Decided to switch to model gemma-7b
+2024-09-23 11:52:16,380 Decided to switch to model llama3-8b
+2024-09-23 11:52:16,400 Request with ID ec2301c7 for model llama3-8b received
+2024-09-23 11:52:16,407 Decided to switch to model llama3-8b
+2024-09-23 11:52:16,862 Request with ID f8bb4930 for model gemma-7b received
+2024-09-23 11:52:16,864 Decided to switch to model gemma-7b
+2024-09-23 11:52:18,013 Request with ID d02e5181 for model gemma-7b received
+2024-09-23 11:52:18,013 Decided to switch to model gemma-7b
+2024-09-23 11:52:18,258 Request with ID 6eaf2641 for model granite-7b received
+2024-09-23 11:52:18,273 Request with ID 2e89a9a7 for model llama3-8b received
+2024-09-23 11:52:18,277 Request with ID 1e897153 for model llama3-8b received
+2024-09-23 11:52:18,278 Decided to switch to model granite-7b
+2024-09-23 11:52:18,287 Request with ID 1517be35 for model llama3-8b received
+2024-09-23 11:52:18,292 Decided to switch to model llama3-8b
+2024-09-23 11:52:18,293 Decided to switch to model llama3-8b
+2024-09-23 11:52:18,300 Request with ID 07455501 for model gemma-7b received
+2024-09-23 11:52:18,304 Decided to switch to model llama3-8b
+2024-09-23 11:52:18,308 Request with ID a611b9fd for model gemma-7b received
+2024-09-23 11:52:18,317 Decided to switch to model gemma-7b
+2024-09-23 11:52:18,320 Request with ID 9a8cec12 for model llama3-8b received
+2024-09-23 11:52:18,404 Request with ID 8400ea62 for model llama3-8b received
+2024-09-23 11:52:18,408 Decided to switch to model gemma-7b
+2024-09-23 11:52:18,847 Request with ID f9b133f9 for model gemma-7b received
+2024-09-23 11:52:18,854 Request with ID 9c289b81 for model llama3-8b received
+2024-09-23 11:52:18,862 Request with ID 06920732 for model llama3-8b received
+2024-09-23 11:52:19,091 Decided to switch to model llama3-8b
+2024-09-23 11:52:19,093 Request with ID 6d13988a for model llama3-8b received
+2024-09-23 11:52:19,103 Decided to switch to model llama3-8b
+2024-09-23 11:52:19,339 Request with ID 04455068 for model llama3-8b received
+2024-09-23 11:52:19,340 Decided to switch to model gemma-7b
+2024-09-23 11:52:19,350 Decided to switch to model llama3-8b
+2024-09-23 11:52:19,599 Request with ID b7d297f1 for model llama3-8b received
+2024-09-23 11:52:19,605 Decided to switch to model llama3-8b
+2024-09-23 11:52:20,515 Request with ID 0da679e9 for model gemma-7b received
+2024-09-23 11:52:20,537 Request with ID ed4f5822 for model llama3-8b received
+2024-09-23 11:52:20,549 Decided to switch to model llama3-8b
+2024-09-23 11:52:20,567 Decided to switch to model llama3-8b
+2024-09-23 11:52:20,569 Request with ID bde21d5e for model llama3-8b received
+2024-09-23 11:52:20,578 Request with ID 95cf2e40 for model llama3-8b received
+2024-09-23 11:52:21,006 Decided to switch to model llama3-8b
+2024-09-23 11:52:21,246 Request with ID b2f6ff42 for model llama3-8b received
+2024-09-23 11:52:21,479 Request with ID 2798d4db for model llama3-8b received
+2024-09-23 11:52:21,737 Decided to switch to model gemma-7b
+2024-09-23 11:52:21,742 Request with ID 0f4c681a for model llama3-8b received
+2024-09-23 11:52:21,743 Decided to switch to model llama3-8b
+2024-09-23 11:52:21,748 Request with ID e23fabbb for model gemma-7b received
+2024-09-23 11:52:21,759 Request with ID 74f99827 for model llama3-8b received
+2024-09-23 11:52:21,760 Request with ID 2b78ba7c for model llama3-8b received
+2024-09-23 11:52:21,766 Decided to switch to model llama3-8b
+2024-09-23 11:52:21,769 Request with ID fa0719d5 for model llama3-8b received
+2024-09-23 11:52:21,772 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,280 Request with ID 6b3bd2ae for model gemma-7b received
+2024-09-23 11:52:22,284 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,553 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,562 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,566 Request with ID a15df189 for model llama3-8b received
+2024-09-23 11:52:22,819 Decided to switch to model gemma-7b
+2024-09-23 11:52:22,822 Request with ID a9cadb14 for model llama3-8b received
+2024-09-23 11:52:22,822 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,827 Decided to switch to model llama3-8b
+2024-09-23 11:52:22,838 Request with ID 96917641 for model gemma-7b received
+2024-09-23 11:52:23,476 Decided to switch to model llama3-8b
+2024-09-23 11:52:23,490 Request with ID a9e9a64b for model llama3-8b received
+2024-09-23 11:52:23,505 Request with ID ae5295a2 for model gemma-7b received
+2024-09-23 11:52:23,509 Decided to switch to model gemma-7b
+2024-09-23 11:52:23,524 Request with ID ff139e62 for model gemma-7b received
+2024-09-23 11:52:23,530 Request with ID b276fdae for model llama3-8b received
+2024-09-23 11:52:23,536 Decided to switch to model llama3-8b
+2024-09-23 11:52:23,544 Request with ID b66b5867 for model gemma-7b received
+2024-09-23 11:52:23,557 Request with ID 30c6cceb for model gemma-7b received
+2024-09-23 11:52:23,560 Request with ID 3a43e836 for model gemma-7b received
+2024-09-23 11:52:23,799 Decided to switch to model llama3-8b
+2024-09-23 11:52:24,532 Decided to switch to model gemma-7b
+2024-09-23 11:52:24,533 Request with ID 50b7112c for model gemma-7b received
+2024-09-23 11:52:24,997 Request with ID 59395b69 for model llama3-8b received
+2024-09-23 11:52:25,228 Request with ID 2436bc37 for model llama3-8b received
+2024-09-23 11:52:25,240 Decided to switch to model llama3-8b
+2024-09-23 11:52:25,243 Request with ID 2ed2f5af for model gemma-7b received
+2024-09-23 11:52:25,246 Decided to switch to model gemma-7b
+2024-09-23 11:52:25,460 Request with ID c9773205 for model llama3-8b received
+2024-09-23 11:52:25,481 Request with ID 52ca60d1 for model gemma-7b received
+2024-09-23 11:52:25,664 Decided to switch to model gemma-7b
+2024-09-23 11:52:25,675 Decided to switch to model llama3-8b
+2024-09-23 11:52:25,679 Request with ID fd5646f7 for model llama3-8b received
+2024-09-23 11:52:26,334 Request with ID 8cfe2413 for model gemma-7b received
+2024-09-23 11:52:26,353 Decided to switch to model gemma-7b
+2024-09-23 11:52:26,361 Decided to switch to model gemma-7b
+2024-09-23 11:52:26,371 Request with ID a7dfbfff for model gemma-7b received
+2024-09-23 11:52:26,372 Decided to switch to model gemma-7b
+2024-09-23 11:52:26,382 Request with ID 9eb023cc for model llama3-8b received
+2024-09-23 11:52:26,391 Request with ID 5ac76e11 for model gemma-7b received
+2024-09-23 11:52:26,395 Decided to switch to model gemma-7b
+2024-09-23 11:52:26,398 Decided to switch to model llama3-8b
+2024-09-23 11:52:26,405 Decided to switch to model llama3-8b
+2024-09-23 11:52:26,419 Request with ID 3322dbd9 for model llama3-8b received
+2024-09-23 11:52:26,423 Decided to switch to model gemma-7b
+2024-09-23 11:52:26,842 Request with ID 726bbcaa for model llama3-8b received
+2024-09-23 11:52:26,852 Decided to switch to model llama3-8b
+2024-09-23 11:52:26,861 Decided to switch to model gemma-7b
+2024-09-23 11:52:27,097 Request with ID 59c8da23 for model llama3-8b received
+2024-09-23 11:52:27,350 Request with ID dd03d9aa for model llama3-8b received
+2024-09-23 11:52:27,355 Decided to switch to model llama3-8b
+2024-09-23 11:52:27,712 Request with ID b8d5fa22 for model gemma-7b received
+2024-09-23 11:52:27,715 Decided to switch to model gemma-7b
+2024-09-23 11:52:28,381 Request with ID 9a43fecc for model gemma-7b received
+2024-09-23 11:52:28,815 Request with ID 840d4961 for model gemma-7b received
+2024-09-23 11:52:28,825 Decided to switch to model gemma-7b
+2024-09-23 11:52:28,832 Request with ID b49e5f8f for model llama3-8b received
+2024-09-23 11:52:28,858 Decided to switch to model llama3-8b
+2024-09-23 11:52:28,866 Decided to switch to model gemma-7b
+2024-09-23 11:52:29,332 Request with ID ba2ffb95 for model llama3-8b received
+2024-09-23 11:52:29,349 Request with ID 3d952887 for model gemma-7b received
+2024-09-23 11:52:29,353 Request with ID ab3f68a5 for model llama3-8b received
+2024-09-23 11:52:29,781 Request with ID 722a85f7 for model llama3-8b received
+2024-09-23 11:52:29,785 Decided to switch to model llama3-8b
+2024-09-23 11:52:30,655 Request with ID 3775805c for model llama3-8b received
+2024-09-23 11:52:30,682 Decided to switch to model llama3-8b
+2024-09-23 11:52:30,696 Decided to switch to model llama3-8b
+2024-09-23 11:52:30,705 Request with ID e9464828 for model gemma-7b received
+2024-09-23 11:52:30,708 Decided to switch to model llama3-8b
+2024-09-23 11:52:30,710 Request with ID 34ed8f55 for model llama3-8b received
+2024-09-23 11:52:30,732 Request with ID 4e02118c for model llama3-8b received
+2024-09-23 11:52:30,959 Decided to switch to model gemma-7b
+2024-09-23 11:52:31,366 Request with ID d096f335 for model llama3-8b received
+2024-09-23 11:52:31,860 Request with ID c2706d2d for model llama3-8b received
+2024-09-23 11:52:31,877 Decided to switch to model gemma-7b
+2024-09-23 11:52:32,079 Decided to switch to model gemma-7b
+2024-09-23 11:52:32,311 Request with ID cc5546cb for model llama3-8b received
+2024-09-23 11:52:32,340 Request with ID 0da079a3 for model granite-7b received
+2024-09-23 11:52:32,341 Decided to switch to model llama3-8b
+2024-09-23 11:52:32,999 Request with ID fab2a510 for model gemma-7b received
+2024-09-23 11:52:33,013 Decided to switch to model llama3-8b
+2024-09-23 11:52:33,023 Request with ID ddad235b for model llama3-8b received
+2024-09-23 11:52:33,024 Decided to switch to model gemma-7b
+2024-09-23 11:52:33,493 Request with ID c41482aa for model llama3-8b received
+2024-09-23 11:52:33,499 Decided to switch to model llama3-8b
+2024-09-23 11:52:33,506 Decided to switch to model llama3-8b
+2024-09-23 11:52:33,509 Request with ID b6c6d45b for model llama3-8b received
+2024-09-23 11:52:33,517 Decided to switch to model llama3-8b
+2024-09-23 11:52:33,536 Decided to switch to model gemma-7b
+2024-09-23 11:52:33,546 Decided to switch to model llama3-8b
+2024-09-23 11:52:33,558 Request with ID e3a58c07 for model gemma-7b received
+2024-09-23 11:52:33,584 Decided to switch to model llama3-8b
+2024-09-23 11:52:34,091 Request with ID 6136e404 for model gemma-7b received
+2024-09-23 11:52:34,553 Request with ID 2d98defc for model llama3-8b received
+2024-09-23 11:52:34,560 Decided to switch to model llama3-8b
+2024-09-23 11:52:34,577 Decided to switch to model llama3-8b
+2024-09-23 11:52:34,814 Request with ID 4060a7f5 for model granite-7b received
+2024-09-23 11:52:35,291 Decided to switch to model llama3-8b
+2024-09-23 11:52:35,306 Decided to switch to model granite-7b
+2024-09-23 11:52:35,323 Request with ID 24201277 for model llama3-8b received
+2024-09-23 11:52:35,328 Decided to switch to model gemma-7b
+2024-09-23 11:52:35,337 Request with ID 0cf99c9b for model granite-7b received
+2024-09-23 11:52:36,713 Decided to switch to model llama3-8b
+2024-09-23 11:52:36,732 Request with ID 19044056 for model gemma-7b received
+2024-09-23 11:52:36,928 Request with ID 7aaace5f for model granite-7b received
+2024-09-23 11:52:36,951 Decided to switch to model llama3-8b
+2024-09-23 11:52:36,958 Request with ID 728edeff for model llama3-8b received
+2024-09-23 11:52:37,238 Decided to switch to model llama3-8b
+2024-09-23 11:52:37,886 Decided to switch to model gemma-7b
+2024-09-23 11:52:37,909 Decided to switch to model gemma-7b
+2024-09-23 11:52:38,104 Decided to switch to model llama3-8b
+2024-09-23 11:52:38,814 Decided to switch to model granite-7b
+2024-09-23 11:52:39,041 Decided to switch to model llama3-8b
+2024-09-23 11:52:39,673 Decided to switch to model granite-7b
+2024-09-23 11:52:39,920 Decided to switch to model gemma-7b
+2024-09-23 11:52:40,169 Decided to switch to model granite-7b
+2024-09-23 11:52:40,186 Decided to switch to model llama3-8b
+2024-09-23 11:53:13,067 Request with ID a406cd14 for model granite-7b received
+2024-09-23 11:53:13,069 Request with ID 0ef660c6 for model llama3-8b received
+2024-09-23 11:53:13,069 Request with ID 49d15316 for model llama3-8b received
+2024-09-23 11:53:13,069 Decided to switch to model granite-7b
+2024-09-23 11:53:13,070 Decided to switch to model llama3-8b
+2024-09-23 11:53:13,070 Request with ID 11e971ef for model gemma-7b received
+2024-09-23 11:53:13,070 Decided to switch to model llama3-8b
+2024-09-23 11:53:13,108 Decided to switch to model gemma-7b
+2024-09-23 11:53:14,076 Request with ID e6c973d0 for model llama3-8b received
+2024-09-23 11:53:14,077 Request with ID e51ffde0 for model llama3-8b received
+2024-09-23 11:53:14,077 Decided to switch to model llama3-8b
+2024-09-23 11:53:14,079 Request with ID 76449880 for model granite-7b received
+2024-09-23 11:53:14,080 Request with ID a80444de for model granite-7b received
+2024-09-23 11:53:14,081 Decided to switch to model llama3-8b
+2024-09-23 11:53:14,084 Request with ID 5b9c0550 for model llama3-8b received
+2024-09-23 11:53:14,086 Request with ID b5695fe2 for model llama3-8b received
+2024-09-23 11:53:14,087 Decided to switch to model granite-7b
+2024-09-23 11:53:14,090 Decided to switch to model granite-7b
+2024-09-23 11:53:14,294 Decided to switch to model llama3-8b
+2024-09-23 11:53:14,298 Decided to switch to model llama3-8b
+2024-09-23 11:53:15,215 Request with ID 825c48e9 for model llama3-8b received
+2024-09-23 11:53:15,217 Decided to switch to model llama3-8b
+2024-09-23 11:53:15,225 Request with ID e8d4a074 for model llama3-8b received
+2024-09-23 11:53:15,225 Decided to switch to model llama3-8b
+2024-09-23 11:53:15,228 Request with ID a35447d8 for model llama3-8b received
+2024-09-23 11:53:15,231 Decided to switch to model llama3-8b
+2024-09-23 11:53:16,068 Request with ID 76524b17 for model gemma-7b received
+2024-09-23 11:53:16,071 Decided to switch to model gemma-7b
+2024-09-23 11:53:16,076 Request with ID dee70d9c for model granite-7b received
+2024-09-23 11:53:16,084 Request with ID a983ee4e for model llama3-8b received
+2024-09-23 11:53:16,085 Decided to switch to model granite-7b
+2024-09-23 11:53:16,095 Decided to switch to model llama3-8b
+2024-09-23 11:53:17,189 Request with ID a83e42b7 for model gemma-7b received
+2024-09-23 11:53:17,196 Decided to switch to model gemma-7b
+2024-09-23 11:53:17,208 Request with ID c97741f9 for model gemma-7b received
+2024-09-23 11:53:17,209 Decided to switch to model gemma-7b
+2024-09-23 11:53:17,212 Request with ID d493377f for model llama3-8b received
+2024-09-23 11:53:17,212 Decided to switch to model llama3-8b
+2024-09-23 11:53:18,118 Request with ID b5ad43d0 for model llama3-8b received
+2024-09-23 11:53:18,124 Decided to switch to model llama3-8b
+2024-09-23 11:53:18,504 Request with ID 6163edf7 for model llama3-8b received
+2024-09-23 11:53:18,509 Decided to switch to model llama3-8b
+2024-09-23 11:53:18,513 Request with ID 84599aaf for model llama3-8b received
+2024-09-23 11:53:18,532 Decided to switch to model llama3-8b
+2024-09-23 11:53:18,545 Request with ID d35a63a1 for model llama3-8b received
+2024-09-23 11:53:18,545 Decided to switch to model llama3-8b
+2024-09-23 11:53:19,685 Request with ID ea91a609 for model llama3-8b received
+2024-09-23 11:53:19,693 Decided to switch to model llama3-8b
+2024-09-23 11:53:19,702 Request with ID a6eb426a for model llama3-8b received
+2024-09-23 11:53:19,714 Request with ID e4e700b0 for model gemma-7b received
+2024-09-23 11:53:19,714 Decided to switch to model llama3-8b
+2024-09-23 11:53:20,305 Request with ID 584d7145 for model llama3-8b received
+2024-09-23 11:53:20,314 Decided to switch to model gemma-7b
+2024-09-23 11:53:20,562 Request with ID e22cc4e7 for model gemma-7b received
+2024-09-23 11:53:20,578 Request with ID 2be793a0 for model gemma-7b received
+2024-09-23 11:53:20,609 Decided to switch to model llama3-8b
+2024-09-23 11:53:20,835 Request with ID 8d34d444 for model granite-7b received
+2024-09-23 11:53:20,841 Request with ID 84f40d3b for model gemma-7b received
+2024-09-23 11:53:20,845 Request with ID fb0f352f for model llama3-8b received
+2024-09-23 11:53:20,855 Request with ID 6b819678 for model llama3-8b received
+2024-09-23 11:53:20,859 Decided to switch to model gemma-7b
+2024-09-23 11:53:21,544 Request with ID 2f42c270 for model gemma-7b received
+2024-09-23 11:53:21,548 Decided to switch to model gemma-7b
+2024-09-23 11:53:21,941 Request with ID 0aff2fb5 for model gemma-7b received
+2024-09-23 11:53:21,945 Decided to switch to model granite-7b
+2024-09-23 11:53:21,954 Request with ID 5138393f for model gemma-7b received
+2024-09-23 11:53:21,959 Request with ID 692ca41b for model llama3-8b received
+2024-09-23 11:53:21,960 Decided to switch to model gemma-7b
+2024-09-23 11:53:21,974 Decided to switch to model llama3-8b
+2024-09-23 11:53:21,981 Decided to switch to model llama3-8b
+2024-09-23 11:53:21,989 Decided to switch to model gemma-7b
+2024-09-23 11:53:21,999 Request with ID 24c6dc69 for model granite-7b received
+2024-09-23 11:53:22,301 Decided to switch to model gemma-7b
+2024-09-23 11:53:22,318 Request with ID 40e09d26 for model gemma-7b received
+2024-09-23 11:53:22,327 Request with ID 77f2aecb for model llama3-8b received
+2024-09-23 11:53:22,330 Decided to switch to model gemma-7b
+2024-09-23 11:53:22,338 Decided to switch to model llama3-8b
+2024-09-23 11:53:22,341 Request with ID 6fe6a7f7 for model gemma-7b received
+2024-09-23 11:53:22,353 Request with ID 146c6c30 for model llama3-8b received
+2024-09-23 11:53:22,377 Request with ID f77cc47b for model llama3-8b received
+2024-09-23 11:53:22,382 Decided to switch to model granite-7b
+2024-09-23 11:53:22,392 Request with ID 9bab112e for model llama3-8b received
+2024-09-23 11:53:22,421 Decided to switch to model gemma-7b
+2024-09-23 11:53:23,340 Request with ID b19a5056 for model llama3-8b received
+2024-09-23 11:53:23,347 Decided to switch to model llama3-8b
+2024-09-23 11:53:24,151 Request with ID f89564a3 for model llama3-8b received
+2024-09-23 11:53:24,989 Decided to switch to model gemma-7b
+2024-09-23 11:53:25,006 Request with ID b7c332e0 for model llama3-8b received
+2024-09-23 11:53:25,319 Decided to switch to model llama3-8b
+2024-09-23 11:53:25,325 Decided to switch to model llama3-8b
+2024-09-23 11:53:25,349 Request with ID b3b17d70 for model llama3-8b received
+2024-09-23 11:53:25,351 Request with ID 3a58a913 for model llama3-8b received
+2024-09-23 11:53:26,070 Decided to switch to model llama3-8b
+2024-09-23 11:53:26,569 Request with ID fee92b57 for model llama3-8b received
+2024-09-23 11:53:27,097 Decided to switch to model llama3-8b
+2024-09-23 11:53:27,298 Decided to switch to model llama3-8b
+2024-09-23 11:53:27,303 Request with ID 693fd95d for model llama3-8b received
+2024-09-23 11:53:27,520 Decided to switch to model llama3-8b
+2024-09-23 11:53:27,551 Decided to switch to model llama3-8b
+2024-09-23 11:53:28,054 Request with ID 2fb59e25 for model gemma-7b received
+2024-09-23 11:53:28,057 Decided to switch to model llama3-8b
+2024-09-23 11:53:28,583 Request with ID 6991fb06 for model llama3-8b received
+2024-09-23 11:53:28,673 Decided to switch to model llama3-8b
+2024-09-23 11:53:29,515 Request with ID 630678ee for model gemma-7b received
+2024-09-23 11:53:29,520 Decided to switch to model llama3-8b
+2024-09-23 11:53:29,561 Request with ID 3bf9c7eb for model granite-7b received
+2024-09-23 11:53:29,562 Request with ID dc8c2c5e for model llama3-8b received
+2024-09-23 11:53:29,572 Decided to switch to model gemma-7b
+2024-09-23 11:53:29,841 Request with ID b2de85a3 for model llama3-8b received
+2024-09-23 11:53:29,877 Decided to switch to model llama3-8b
+2024-09-23 11:53:29,878 Request with ID 0f89b9d6 for model gemma-7b received
+2024-09-23 11:53:30,472 Decided to switch to model gemma-7b
+2024-09-23 11:53:30,492 Request with ID 6a7e1809 for model gemma-7b received
+2024-09-23 11:53:30,504 Decided to switch to model granite-7b
+2024-09-23 11:53:31,004 Decided to switch to model llama3-8b
+2024-09-23 11:53:31,022 Request with ID 6b509583 for model llama3-8b received
+2024-09-23 11:53:31,227 Request with ID 4fabd4ae for model llama3-8b received
+2024-09-23 11:53:31,461 Request with ID 5c7e9959 for model granite-7b received
+2024-09-23 11:53:31,649 Decided to switch to model llama3-8b
+2024-09-23 11:53:31,661 Decided to switch to model gemma-7b
+2024-09-23 11:53:31,674 Request with ID 697e6a3d for model gemma-7b received
+2024-09-23 11:53:31,676 Decided to switch to model gemma-7b
+2024-09-23 11:53:31,947 Request with ID bfef2c96 for model llama3-8b received
+2024-09-23 11:53:32,411 Decided to switch to model llama3-8b
+2024-09-23 11:53:32,433 Request with ID 744b181c for model llama3-8b received
+2024-09-23 11:53:33,121 Request with ID 632b3ccb for model granite-7b received
+2024-09-23 11:53:33,333 Decided to switch to model llama3-8b
+2024-09-23 11:53:33,339 Request with ID 755c61e7 for model gemma-7b received
+2024-09-23 11:53:33,341 Request with ID 15cad1ee for model gemma-7b received
+2024-09-23 11:53:33,351 Decided to switch to model granite-7b
+2024-09-23 11:53:33,442 Request with ID e20fb5b0 for model gemma-7b received
+2024-09-23 11:53:33,446 Decided to switch to model gemma-7b
+2024-09-23 11:53:33,451 Request with ID fc33afbb for model granite-7b received
+2024-09-23 11:53:33,488 Decided to switch to model llama3-8b
+2024-09-23 11:53:33,492 Request with ID 22ea81eb for model llama3-8b received
+2024-09-23 11:53:33,527 Decided to switch to model llama3-8b
+2024-09-23 11:53:33,536 Request with ID 3e6687ab for model llama3-8b received
+2024-09-23 11:53:33,538 Decided to switch to model granite-7b
+2024-09-23 11:53:33,548 Request with ID ad208878 for model gemma-7b received
+2024-09-23 11:53:33,552 Decided to switch to model gemma-7b
+2024-09-23 11:53:33,755 Request with ID e82b401f for model llama3-8b received
+2024-09-23 11:53:34,011 Decided to switch to model gemma-7b
+2024-09-23 11:53:34,029 Request with ID 1f2665b0 for model llama3-8b received
+2024-09-23 11:53:34,037 Decided to switch to model gemma-7b
+2024-09-23 11:53:35,153 Request with ID e117cb75 for model llama3-8b received
+2024-09-23 11:53:35,163 Decided to switch to model granite-7b
+2024-09-23 11:53:35,175 Request with ID 97f021bb for model gemma-7b received
