@@ -375,13 +375,14 @@ def background_batch_processor():
 def process_partial_batch():
     global model_usage_count, current_loaded_model, model_loaded_timestamp, incoming_request_batches, running_request_batches
     while True:
-        if (time.time() - model_loaded_timestamp) > model_stay_time/2 and incoming_request_batches.get(current_loaded_model, Queue()).qsize() > allowed_batch_sizes[current_loaded_model]/4:
-                while not incoming_request_batches[current_loaded_model].empty():
-                    running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
-                batch_size = running_request_batches[current_loaded_model].qsize()
-                logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
-                process_batch(current_loaded_model, "Partial Batch", batch_size)
-        time.sleep(0.1)
+        if model_loaded_timestamp is not None and current_loaded_model is not None:
+            if (time.time() - model_loaded_timestamp) > model_stay_time/2 and incoming_request_batches.get(current_loaded_model, Queue()).qsize() > allowed_batch_sizes[current_loaded_model]/4:
+                    while not incoming_request_batches[current_loaded_model].empty():
+                        running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
+                    batch_size = running_request_batches[current_loaded_model].qsize()
+                    logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
+                    process_batch(current_loaded_model, "Partial Batch", batch_size)
+            time.sleep(0.1)
 
 # Function to decide if we should switch models
 def should_switch_model(new_model_alias):
