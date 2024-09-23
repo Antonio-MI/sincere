@@ -16,7 +16,7 @@ from collections import deque  # For arrival rate estimation
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, 
 
-mode = "HigherBatch"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
+mode = "HigherBatch+SLA"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
                       # "HigherBatch", "HigherBatch+SLA", "HigherBatch+SLA+PartialBatch"]
 
 # Ensure that the logs directory exists
