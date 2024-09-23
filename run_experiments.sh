@@ -11,8 +11,7 @@ distribution=gamma
 # Scheduling mode
 mode="BestBatch" # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+Timer", "HigherBatch", "HigherBatch+Timer", "HigherBatch+PartialBatch+Timer"]
 # Models
-models='["granite-7b", "gemma-7b", "llama3-8b"]'
-
+models="granite-7b,gemma-7b,llama3-8b"
 
 # Function to check if Flask API is up
 wait_for_flask() {
