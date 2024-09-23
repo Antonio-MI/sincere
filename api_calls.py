@@ -16,7 +16,7 @@ random.seed(42)
 run_duration = sys.argv[1] #120  # seconds
 distribution = sys.argv[2] #"gamma" 
 
-model_list = list(map(sys.argv[3].split(',')))#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
+model_list = list(sys.argv[3].split(','))#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
 model_frequencies = [0.1, 0.3, 0.6]
 
 # Define the parameters for the Gamma distribution
