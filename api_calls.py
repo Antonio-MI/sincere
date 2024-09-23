@@ -16,7 +16,7 @@ random.seed(42)
 run_duration = int(sys.argv[1]) #120  # seconds
 distribution = sys.argv[2] #"gamma" 
 
-model_list = list(map(str, sys.argv[3].split(',')))#list(sys.argv[3].split(','))#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
+model_list = json.loads(sys.argv[3])#list(map(str, sys.argv[3].split(','))))#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
 print(model_list)
 model_frequencies = [0.1, 0.3, 0.6]
 
