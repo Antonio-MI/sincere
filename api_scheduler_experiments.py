@@ -138,7 +138,7 @@ arrival_times = {}
 ARRIVAL_RATE_WINDOW = 50  # Number of recent arrivals to consider
 
 # Model usage tracking
-# model_usage_count = {}  # Tracks the number of requests for each model
+model_usage_count = {}  # Tracks the number of requests for each model
 current_loaded_model = None  # Tracks the currently loaded model
 model_stay_time = 10  # Minimum time to keep a model loaded in seconds
 model_loaded_timestamp = None  # Timestamp when the current model was loaded
