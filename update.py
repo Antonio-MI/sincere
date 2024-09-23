@@ -16,7 +16,8 @@ from collections import deque  # For arrival rate estimation
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, 
 
-mode = "HigherBatch"  # One of ["FCFS", "batchedFCFS", "batchedFCFS+SLA"]
+mode = "HigherBatch"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
+                      # "HigherBatch", "HigherBatch+SLA", "HigherBatch+SLA+PartialBatch"]
 
 # Ensure that the logs directory exists
 if not os.path.exists("logs"):
@@ -58,17 +59,7 @@ if mode == "batchedFCFS":
 if mode == "BestBatch":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
-    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
-    #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     allowed_batch_sizes = [4, 8, 16, 32, 64]
-    # Load model profiling data
-    #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
-    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
-    # Create dictionaries to store loading and unloading times
-    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
-    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
-    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
-    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
 if mode == "BestBatch+SLA":
     logging.debug(f"Scheduling mode set as {mode}")
@@ -77,7 +68,6 @@ if mode == "BestBatch+SLA":
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     allowed_batch_sizes = [4, 8, 16, 32, 64]
     # Load model profiling data
-    #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
     model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
     # Create dictionaries to store loading and unloading times
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
@@ -87,22 +77,21 @@ if mode == "BestBatch+SLA":
 
 if mode == "HigherBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
-    #        ++ add another one that also accounts for model swapping time
+    logging.debug(f"Scheduling mode set as {mode}")
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+
+if mode == "HigherBatch+SLA":
+    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
     # Load model profiling data
-    #model_profiling = pd.read_csv("./outputs/model_loading_times_Antonios-Laptop_cpu_20240909_132948.csv")
     model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
     # Create dictionaries to store loading and unloading times
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
-
-if mode == "HigherBatch+SLA":
-    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
-    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
-    logging.debug(f"Scheduling mode set as {mode}")
 
 if mode == "HigherBatch+SLA+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
@@ -430,13 +419,12 @@ def inference():
 
     incoming_request_batches[model_alias].put(request_data)
 
-    if mode == "BestBatch" or mode == "BestBatch+SLA":
+    if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
             adjusted_time_limit = adjust_batch_time_limit(model_alias)
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
-
 
     if mode == "BestBatch" or mode == "BestBatch+SLA":
         # Record arrival time for arrival rate estimation
@@ -444,7 +432,7 @@ def inference():
             arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
         arrival_times[model_alias].append(time.time())
 
-    if mode == "FCFS" or mode == "batchedFCFS":
+    if mode == "FCFS" or mode == "BatchedFCFS":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")
@@ -453,7 +441,6 @@ def inference():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
-
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
@@ -469,12 +456,11 @@ def inference():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
             completed_inference_ids = process_batch(model_alias, "Dynamic batch size", optimal_batch_size)
-
             return jsonify({
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
 
-    if mode == "HigherBatch":
+    if mode == "HigherBatch" or mode == "HigherBatch+SLA":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")
@@ -483,7 +469,6 @@ def inference():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
-
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
@@ -499,7 +484,7 @@ def health():
 if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
-    if mode == "BestBatch+SLA":
+    if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
     # Start the Flask app
