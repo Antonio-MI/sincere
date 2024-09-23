@@ -313,7 +313,7 @@ def process_batch(model_alias, condition, batch_size):
 
             logging.debug(f"Next: call load_model for {model_alias}")
             
-            #load_model(model_alias) # Model loading call from inference function
+            load_model(model_alias) # Model loading call from inference function
 
             # Create a generator for batching
             batch_generator = create_batch_generator(batch)
