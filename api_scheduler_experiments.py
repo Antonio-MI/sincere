@@ -138,7 +138,7 @@ arrival_times = {}
 ARRIVAL_RATE_WINDOW = 50  # Number of recent arrivals to consider
 
 # Model usage tracking
-model_usage_count = {}  # Tracks the number of requests for each model
+# model_usage_count = {}  # Tracks the number of requests for each model
 current_loaded_model = None  # Tracks the currently loaded model
 model_stay_time = 10  # Minimum time to keep a model loaded in seconds
 model_loaded_timestamp = None  # Timestamp when the current model was loaded
@@ -376,7 +376,7 @@ def background_batch_processor():
         time.sleep(0.2)  # Sleep briefly to prevent tight looping
 
 def process_partial_batch():
-    global model_usage_count, current_loaded_model, model_loaded_timestamp, incoming_request_batches, running_request_batches
+    global current_loaded_model, model_loaded_timestamp, incoming_request_batches, running_request_batches
     while True:
         if model_loaded_timestamp is not None and current_loaded_model is not None:
             while (time.time() - model_loaded_timestamp) - model_stay_time > 0:
@@ -412,7 +412,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_usage_count, model_loaded_timestamp, model_stay_time, current_loaded_model
+    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_loaded_timestamp, model_stay_time, current_loaded_model
 
     # Record the time of the first request
     if first_request_time is None:
@@ -470,7 +470,7 @@ def inference():
     incoming_request_batches[model_alias].put(request_data)
 
     # Update model usages
-    model_usage_count[model_alias] += 1
+    # model_usage_count[model_alias] += 1
 
 
     if "Timer" in mode: #mode == "BestBatch+Timer" or mode == "HigherBatch+Timer":
