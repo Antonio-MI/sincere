@@ -109,7 +109,7 @@ batch_time_limit = 20  # Seconds
 min_batch_time_limit = 5  # Minimum time limit in seconds
 
 # List of allowed models
-allowed_models = sys.argv[3].split(",")#["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
+allowed_models = sys.argv[2].split(",")#["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
 allowed_models.append("Stop")
 
 # Lock to not process another batch until the current one has finished
