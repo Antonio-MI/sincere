@@ -12,11 +12,13 @@ import platform
 import logging
 from monitor import Monitor
 from collections import deque  # For arrival rate estimation
+import heapq
+from collections import defaultdict
 
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, 
 
-mode = "HigherBatch+SLA"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
+mode = "HigherBatch+PartialBatch"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
                       # "HigherBatch", "HigherBatch+SLA", "HigherBatch+SLA+PartialBatch"]
 
 # Ensure that the logs directory exists
@@ -93,10 +95,11 @@ if mode == "HigherBatch+SLA":
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
 
-if mode == "HigherBatch+SLA+PartialBatch":
+if mode == "HigherBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     logging.debug(f"Scheduling mode set as {mode}")
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
 # Time constraint for batch processing - only will be used with SLA, but need to be defined because in inference() appears as global
 batch_time_limit = 20  # Seconds
@@ -130,9 +133,16 @@ if device.type == "cuda":
 arrival_times = {}
 ARRIVAL_RATE_WINDOW = 50  # Number of recent arrivals to consider
 
+# Model usage tracking
+model_usage_count = defaultdict(int)  # Tracks the number of requests for each model
+current_loaded_model = None  # Tracks the currently loaded model
+model_stay_time = 10  # Minimum time to keep a model loaded in seconds
+model_loaded_timestamp = None  # Timestamp when the current model was loaded
+
+
 # Function to load models
 def load_model(model_alias):
-    global loaded_models
+    global loaded_models, current_loaded_model, model_loaded_timestamp
 
     if model_alias in loaded_models:
         logging.debug(f"Model {model_alias} already loaded")
@@ -158,6 +168,31 @@ def load_model(model_alias):
     logging.debug(f"Loaded model {model_alias}")
 
     loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
+    current_loaded_model = model_alias
+    model_loaded_timestamp = time.time()
+
+# Function to decide if we should switch models
+def should_switch_model(new_model_alias):
+    global model_usage_count, current_loaded_model, model_loaded_timestamp
+    if current_loaded_model is None:
+        return True  # No model is loaded, so we need to load the new model
+    
+    if new_model_alias == current_loaded_model:
+        return False  # Already loaded
+    
+    # Keep the current model loaded for at least 'model_stay_time' seconds
+    if (time.time() - model_loaded_timestamp) < model_stay_time:
+        return False  # Do not switch yet
+
+    # Decide based on usage frequency
+    current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
+    new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()
+    
+    # Switch if there are more requests for the new model
+    if new_model_requests > current_model_requests:
+        return True
+    else:
+        return False  # Keep current model loaded
 
 # Function to generate a dataset for batching
 def create_batch_generator(batch):
@@ -277,7 +312,8 @@ def process_batch(model_alias, condition, batch_size):
                 return
 
             logging.debug(f"Next: call load_model for {model_alias}")
-            load_model(model_alias)
+            
+            #load_model(model_alias) # Model loading call from inference function
 
             # Create a generator for batching
             batch_generator = create_batch_generator(batch)
@@ -362,7 +398,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times
+    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_usage_count
 
     # Record the time of the first request
     if first_request_time is None:
@@ -419,18 +455,90 @@ def inference():
 
     incoming_request_batches[model_alias].put(request_data)
 
-    if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
+    # Update model usages
+    model_usage_count[model_alias] += 1
+
+    # Decide whether to switch models
+    if mode == "HigherBatch+PartialBatch":
+        # If the model is already loaded
+        if model_alias == current_loaded_model:
+            logging.debug(f"Current model {current_loaded_model} is already loaded")
+            # Check if batch size is met
+            if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
+                # Move requests to running batch
+                running_request_batches[model_alias] = Queue()
+                while not incoming_request_batches[model_alias].empty():
+                    running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+                # Process the batch
+                completed_inference_ids = process_batch(model_alias, "Batch size met", running_request_batches[model_alias].qsize())
+                return jsonify({
+                    'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+                })
+            else:
+                # Check if model_stay_time has passed
+                time_since_loaded = time.time() - model_loaded_timestamp
+                if time_since_loaded >= model_stay_time:
+                    # Process any pending requests as partial batch
+                    logging.debug(f"Processing partial batch for model {model_alias} after stay time")
+                    running_request_batches[model_alias] = Queue()
+                    while not incoming_request_batches[model_alias].empty():
+                        running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+                    # Process the batch
+                    completed_inference_ids = process_batch(model_alias, "Partial batch after stay time", running_request_batches[model_alias].qsize())
+                    return jsonify({
+                        'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+                    })
+                else:
+                    # Keep waiting for more requests
+                    logging.debug(f"Waiting for more requests for model {model_alias}")
+                    return jsonify({
+                        'message': f"Request queued with ID {request_id} for model {model_alias}"
+                    })
+        else:
+            # Decide whether to switch models
+            if should_switch_model(model_alias):
+                logging.debug(f"Decided to switch to model {model_alias}")
+                # Before switching, process any pending requests for the current model
+                if current_loaded_model and incoming_request_batches.get(current_loaded_model):
+                    if not incoming_request_batches[current_loaded_model].empty():
+                        # Process pending requests for current model as partial batch
+                        logging.debug(f"Processing pending requests for current model {current_loaded_model} before switching")
+                        running_request_batches[current_loaded_model] = Queue()
+                        while not incoming_request_batches[current_loaded_model].empty():
+                            running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
+                        # Process the batch
+                        completed_inference_ids = process_batch(current_loaded_model, "Processing pending requests before switch", running_request_batches[current_loaded_model].qsize())
+                # Now load the new model
+                load_model(model_alias)
+                # Process any requests for the new model
+                if not incoming_request_batches[model_alias].empty():
+                    running_request_batches[model_alias] = Queue()
+                    while not incoming_request_batches[model_alias].empty():
+                        running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+                    completed_inference_ids = process_batch(model_alias, "Processing batch for new model", running_request_batches[model_alias].qsize())
+                    return jsonify({
+                        'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
+                    })
+                else:
+                    logging.debug(f"No pending requests for model {model_alias} after loading")
+                    return jsonify({
+                        'message': f"Request queued with ID {request_id} for model {model_alias}"
+                    })
+            else:
+                # Keep current model loaded
+                logging.debug(f"Keeping current model {current_loaded_model} loaded")
+                return jsonify({
+                    'message': f"Request queued with ID {request_id} for model {model_alias}"
+                })
+
+
+    if "SLA" in mode: #mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
             adjusted_time_limit = adjust_batch_time_limit(model_alias)
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
-    if mode == "BestBatch" or mode == "BestBatch+SLA":
-        # Record arrival time for arrival rate estimation
-        if model_alias not in arrival_times:
-            arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
-        arrival_times[model_alias].append(time.time())
 
     if mode == "FCFS" or mode == "BatchedFCFS":
         # Check if batch size is met
@@ -440,12 +548,17 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
+            load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
 
-    if mode == "BestBatch" or mode == "BestBatch+SLA":
+    if "BestBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+SLA":
+        # Record arrival time for arrival rate estimation
+        if model_alias not in arrival_times:
+            arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
+        arrival_times[model_alias].append(time.time())
         # Calculate the optimal batch size
         optimal_batch_size = get_optimal_batch_size(model_alias)
         # Check if batch size is met
@@ -455,6 +568,7 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
+            load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Dynamic batch size", optimal_batch_size)
             return jsonify({
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
@@ -468,6 +582,7 @@ def inference():
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
             # Process the batch because the batch size was met
+            load_model(model_alias)
             completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
             return jsonify({
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
@@ -484,7 +599,8 @@ def health():
 if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
-    if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
+    #if mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
+    if "SLA" in mode:
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
     # Start the Flask app
