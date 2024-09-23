@@ -18,7 +18,7 @@ from collections import defaultdict
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, 
 
-mode = "HigherBatch+PartialBatch"  # One of ["FCFS", "batchedFCFS", "BestBatch", "BestBatch+SLA",
+mode = "HigherBatch+PartialBatch+SLA"  # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+SLA",
                       # "HigherBatch", "HigherBatch+SLA", "HigherBatch+SLA+PartialBatch"]
 
 # Ensure that the logs directory exists
@@ -53,7 +53,7 @@ if mode == "FCFS":
     # LOGIC: PROCESS EACH REQUEST AS SOON AS IT ARRIVES
     allowed_batch_sizes = [1]
 
-if mode == "batchedFCFS":
+if mode == "BatchedFCFS":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: WAITS TO FILL BATCHES OF FIXED SIZE, 
     allowed_batch_sizes = [16]
@@ -97,9 +97,24 @@ if mode == "HigherBatch+SLA":
 
 if mode == "HigherBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
+    logging.debug(f"Scheduling mode set as {mode}")
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+
+if mode == "HigherBatch+PartialBatch+SLA":
+    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+    #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+    # Load model profiling data
+    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
+    # Create dictionaries to store loading and unloading times
+    model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
+    model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
+    model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
+    model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
+
 
 # Time constraint for batch processing - only will be used with SLA, but need to be defined because in inference() appears as global
 batch_time_limit = 20  # Seconds
@@ -370,19 +385,20 @@ def background_batch_processor():
                 batch_size = running_request_batches[model_alias].qsize()
                 logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
                 process_batch(model_alias, "Time limit", batch_size)
-        time.sleep(0.1)  # Sleep briefly to prevent tight looping
+        time.sleep(0.2)  # Sleep briefly to prevent tight looping
 
 def process_partial_batch():
     global model_usage_count, current_loaded_model, model_loaded_timestamp, incoming_request_batches, running_request_batches
     while True:
         if model_loaded_timestamp is not None and current_loaded_model is not None:
-            if (time.time() - model_loaded_timestamp) > model_stay_time/2 and incoming_request_batches.get(current_loaded_model, Queue()).qsize() > allowed_batch_sizes[current_loaded_model]/4:
-                    while not incoming_request_batches[current_loaded_model].empty():
-                        running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
-                    batch_size = running_request_batches[current_loaded_model].qsize()
-                    logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
-                    process_batch(current_loaded_model, "Partial Batch", batch_size)
-            time.sleep(0.1)
+            while (time.time() - model_loaded_timestamp) - model_stay_time > 0:
+                if incoming_request_batches.get(current_loaded_model, Queue()).qsize() > allowed_batch_sizes[current_loaded_model]/4:
+                        while not incoming_request_batches[current_loaded_model].empty():
+                            running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
+                        batch_size = running_request_batches[current_loaded_model].qsize()
+                        logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
+                        process_batch(current_loaded_model, "Partial Batch", batch_size)
+                time.sleep(0.2)
 
 # Function to decide if we should switch models
 def should_switch_model(new_model_alias):
@@ -472,21 +488,6 @@ def inference():
     # Update model usages
     model_usage_count[model_alias] += 1
 
-    # Decide whether to switch models
-    if mode == "HigherBatch+PartialBatch":
-        # Check if batch size is met
-        if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
-            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
-            running_request_batches[model_alias] = Queue()
-            while not incoming_request_batches[model_alias].empty():
-                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-            # Process the batch because the batch size was met
-            #load_model(model_alias)
-            completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
-            return jsonify({
-            'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
-        })
-
 
     if "SLA" in mode: #mode == "BestBatch+SLA" or mode == "HigherBatch+SLA":
         # Start the timer if this is the first request in the batch
@@ -530,7 +531,7 @@ def inference():
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
 
-    if mode == "HigherBatch" or mode == "HigherBatch+SLA":
+    if "HigherBatch" in mode: #mode == "HigherBatch" or mode == "HigherBatch+SLA":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")
