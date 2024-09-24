@@ -58,7 +58,7 @@ async def send_request(session, workload):
             else:
                 print(f"Error: {response.status} - {await response.text()}")
     except Exception as e:
-        #print(f"Failed to make the request: {e}")
+        print(f"Failed to make the request: {e}")
         print()
 
 async def automated_calls(workloads, run_duration, traffic_pattern):
@@ -110,7 +110,7 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
             
             # Adjust model frequency if needed
             workload['model_alias'] = np.random.choice(model_list, p=model_frequencies)
-            print(f"Selected model_alias: {workload['model_alias']}")
+            print(f"Selected model: {workload['model_alias']}")
 
             # Send the request asynchronously
             asyncio.create_task(send_request(session, workload))

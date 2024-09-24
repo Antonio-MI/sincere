@@ -18,16 +18,7 @@ import json
 # PARAMS FROM SH SCRIPT
 # MODE, ALLOWED MODELS, BATCH TIME LIMIT, MODEL STAY TIME
 
-mode = sys.argv[1] #"HigherBatch+PartialBatch+Timer"  # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+Timer",
-                      # "HigherBatch", "HigherBatch+Timer", "HigherBatch+Timer+PartialBatch"]
-
-# Ensure that the logs directory exists
-if not os.path.exists("logs"):
-    os.makedirs("logs")
-
-# Set up logging
-timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-logging.basicConfig(filename=f"logs/batch_processing_debug_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+mode = sys.argv[1] #One of []
 
 # Save machine name to identify csv
 machine_name = platform.node()
@@ -46,52 +37,56 @@ loaded_models = {}
 incoming_request_batches = {}
 running_request_batches = {}
 
+distribution = sys.argv[4]
+run_duration = sys.argv[5] 
+
+# Set up logging
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+
 # Batch sizes depending on the strategy
 
-if mode == "FCFS":
-    logging.debug(f"Scheduling mode set as {mode}")
-    # LOGIC: PROCESS EACH REQUEST AS SOON AS IT ARRIVES
-    allowed_batch_sizes = [1]
+# if mode == "FCFS":
+    # logging.debug(f"Scheduling mode set as {mode}")
+    # # LOGIC: PROCESS EACH REQUEST AS SOON AS IT ARRIVES - TOO SLOW WHEN CONSIDERING LOADING TIMES
+    # allowed_batch_sizes = [1]
 
-if mode == "BatchedFCFS":
-    logging.debug(f"Scheduling mode set as {mode}")
-    # LOGIC: WAITS TO FILL BATCHES OF FIXED SIZE, 
-    allowed_batch_sizes = [16]
-
+# BASELINE - FIXED BATCH FOR EACH MODEL
 if mode == "BestBatch":
     logging.debug(f"Scheduling mode set as {mode}")
-    # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
-    allowed_batch_sizes = [4, 8, 16, 32, 64]
+    # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
 
-if mode == "BestBatch+Timer":
+if mode == "SelectBatch+Timer":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
-    allowed_batch_sizes = [4, 8, 16, 32, 64]
+    # GOAL: MET SLA
+    allowed_batch_sizes = [16, 32, 64]
 
-if mode == "HigherBatch":
-    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
+if mode == "BestBatch+Timer":
+    # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
+    #        ADJUSTS -BATCH WAITING TIME- TO ACCOUNT FOR MODEL SWAPPING TIME
+    # GOAL: MAXIMUM THROUGHPUT WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
 
-if mode == "HigherBatch+Timer":
-    # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
-    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
-    logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
-    # Load model profiling data
-
-if mode == "HigherBatch+PartialBatch":
+if mode == "BestBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
+    # GOAL: MAXIMUM THROUGHPUT
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
-if mode == "HigherBatch+PartialBatch+Timer":
+if mode == "BestBatch+PartialBatch+Timer":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
+    # GOAL: MAXIMUM THROUGHPUT WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
@@ -143,13 +138,12 @@ current_loaded_model = None  # Tracks the currently loaded model
 model_stay_time = 10  # Minimum time to keep a model loaded in seconds
 model_loaded_timestamp = None  # Timestamp when the current model was loaded
 
-
 # Function to load models
 def load_model(model_alias):
     global loaded_models, current_loaded_model, model_loaded_timestamp
 
     if model_alias in loaded_models:
-        logging.debug(f"Model {model_alias} already loaded")
+        #logging.debug(f"Model {model_alias} already loaded")
         return
 
     # Unload the previous model
@@ -158,7 +152,7 @@ def load_model(model_alias):
             del loaded_models[old_model_alias]
             if device.type == "cuda":
                 torch.cuda.empty_cache()  # Clear GPU memory if using CUDA
-        logging.debug(f"Unloaded previous model")
+        #logging.debug(f"Unloaded previous model")
 
     model_dir = os.path.join(base_dir, model_alias)
     tokenizer = AutoTokenizer.from_pretrained(model_dir)
@@ -169,7 +163,7 @@ def load_model(model_alias):
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
-    logging.debug(f"Loaded model {model_alias}")
+    logging.debug(f"LOADED MODEL {model_alias}")
 
     loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
     current_loaded_model = model_alias
@@ -181,7 +175,8 @@ def create_batch_generator(batch):
         yield request_data['prompt']
 
 def save_measurements(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, mode):
-    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{timestamp}.csv"
+    global distribution, run_duration
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{timestamp}_{distribution}_{run_duration}_.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
@@ -201,7 +196,8 @@ def save_measurements(request_id, request_time, model_alias, batch_size, latency
         df.to_csv(csv_path, index=False)
 
 def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info, mode):
-    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{timestamp}.csv"
+    global distribution, run_duration
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
@@ -247,32 +243,28 @@ def get_optimal_batch_size(model_alias):
 def adjust_batch_time_limit(model_alias):
     # Adjust the batch time limit based on model loading/unloading times and queue size
     queue_size = incoming_request_batches[model_alias].qsize()
-    
     # Get the current loaded model
     current_loaded_model = list(loaded_models.keys())[0] if loaded_models else None
-
     # Get loading and unloading times with standard deviations
     loading_time = model_load_times.get(model_alias, 0)
     loading_time_std = model_load_times_std.get(model_alias, 0)
     unloading_time = model_unload_times.get(current_loaded_model, 0) if current_loaded_model else 0
     unloading_time_std = model_unload_times_std.get(current_loaded_model, 0) if current_loaded_model else 0
-
     # Consider 3 standard deviations to be conservative
     total_loading_time = loading_time + 3 * loading_time_std
     total_unloading_time = unloading_time + 3 * unloading_time_std
 
+    mean_completion_time = 6 # Manually computed from prior experiments
     # Adjust the time limit by subtracting loading and unloading times
-    adjusted_time_limit = batch_time_limit - (total_loading_time + total_unloading_time)
+    adjusted_time_limit = batch_time_limit - (total_loading_time + total_unloading_time + mean_completion_time)
     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)  # Ensure it's not below minimum
-
     # Further adjust based on queue size
     if queue_size > 0:
         # Shorten the time limit when the queue is growing
-        adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.005 + 1), min_batch_time_limit)
+        adjusted_time_limit = max(adjusted_time_limit / (queue_size*0.001 + 1), min_batch_time_limit)
     else:
         adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)
-
-    logging.debug(f"Adjusted batch time limit for {model_alias}: {adjusted_time_limit:.4f} seconds")
+    #logging.debug(f"Adjusted batch time limit for {model_alias}: {adjusted_time_limit:.4f} seconds")
     return adjusted_time_limit
 
 def process_batch(model_alias, condition, batch_size):
@@ -286,7 +278,7 @@ def process_batch(model_alias, condition, batch_size):
 
             running_request_batches[model_alias].queue.clear()  # Clear the running queue after copying
             if not batch:
-                logging.debug(f"No batch to process for model {model_alias}")
+                #logging.debug(f"No batch to process for model {model_alias}")
                 return
 
             load_model(model_alias)
@@ -323,7 +315,7 @@ def process_batch(model_alias, condition, batch_size):
             logging.debug(f"Processed batch: {list(responses.keys())} with model {model_alias} in {end_time - start_time:.4f} seconds")
 
             if monitoring == True:
-                logging.debug("Saving sys info")
+                #logging.debug("Saving sys info")
                 sys_info = monitor.get_sys_info()
 
             batch_inference_time = round(end_time - start_time, 3)
@@ -337,14 +329,14 @@ def process_batch(model_alias, condition, batch_size):
                 request_id = request['id']
                 request_time = request['request_time']
                 latency = round(end_time - request_time, 3)  # Time since the request was received until the batch was processed
-                logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")
+                #logging.debug(f"Latency for request {request_id} with model {model_alias}: {latency:.4f} seconds")
 
                 # Save the latency result to a CSV file
                 if monitoring == True:
-                    logging.debug("Saving results with gpu monitoring")
+                    #logging.debug("Saving results with gpu monitoring")
                     save_measurements_and_monitor(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, sys_info, mode)
                 else:
-                    logging.debug("Saving results without gpu monitoring")
+                    #logging.debug("Saving results without gpu monitoring")
                     save_measurements(request_id, request["arrival_time"], model_alias, current_batch_size, latency, batch_inference_time, batch_throughput, mode)
 
             # Reset the timer for the next batch
@@ -365,7 +357,7 @@ def background_batch_processor():
                 while not incoming_request_batches[model_alias].empty():
                     running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
                 batch_size = running_request_batches[model_alias].qsize()
-                logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
+                #logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
                 process_batch(model_alias, "Time limit", batch_size)
         time.sleep(0.2)  # Sleep briefly to prevent tight looping
 
@@ -378,7 +370,7 @@ def process_partial_batch():
                         while not incoming_request_batches[current_loaded_model].empty():
                             running_request_batches[current_loaded_model].put(incoming_request_batches[current_loaded_model].get())
                         batch_size = running_request_batches[current_loaded_model].qsize()
-                        logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
+                        #logging.debug(f"Processing batch for {current_loaded_model} with partial batch before swapping")
                         process_batch(current_loaded_model, "Partial Batch", batch_size)
                 time.sleep(0.2)
 
@@ -406,7 +398,7 @@ def inference():
         while remaining_requests > 0 or time.time() - last_call_timer < 30:
             remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
             logging.debug("Waiting for running processes to finish")
-            time.sleep(2)
+            time.sleep(5)
         time.sleep(1)
         # Log the total time and the percentage of inference time
         total_time = last_batch_processed_time - first_request_time
@@ -448,8 +440,7 @@ def inference():
     # Update model usages
     # model_usage_count[model_alias] += 1
 
-
-    if "Timer" in mode: #mode == "BestBatch+Timer" or mode == "HigherBatch+Timer":
+    if "Timer" in mode: 
         # Start the timer if this is the first request in the batch
         if batch_timers[model_alias] is None:
             # Adjust time limit based on queue size
@@ -457,10 +448,10 @@ def inference():
             batch_timers[model_alias] = time.time() + adjusted_time_limit  # Adjust the timer
 
 
-    if mode == "FCFS" or mode == "BatchedFCFS" or mode == "BestBatch":
+    if mode == "SelectBatch":
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
-            print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            #print(f"Moving batch for {model_alias} from incoming to running due to batch size")
             running_request_batches[model_alias] = Queue()
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
@@ -471,7 +462,7 @@ def inference():
             'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
         })
 
-    if "BestBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+Timer":
+    if "SelectBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+Timer":
         # Record arrival time for arrival rate estimation
         if model_alias not in arrival_times:
             arrival_times[model_alias] = deque(maxlen=ARRIVAL_RATE_WINDOW)
@@ -480,7 +471,7 @@ def inference():
         optimal_batch_size = get_optimal_batch_size(model_alias)
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= optimal_batch_size:
-            logging.debug(f"Moving batch for {model_alias} from incoming to running due to dynamic batch size {optimal_batch_size}")
+            #logging.debug(f"Moving batch for {model_alias} from incoming to running due to dynamic batch size {optimal_batch_size}")
             running_request_batches[model_alias] = Queue()
             while not incoming_request_batches[model_alias].empty():
                 running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
@@ -491,7 +482,7 @@ def inference():
                 'message': f"Inferences completed with {model_alias}: {completed_inference_ids}"
             })
 
-    if "HigherBatch" in mode: #mode == "HigherBatch" or mode == "HigherBatch+Timer":
+    if "BestBatch" in mode: 
         # Check if batch size is met
         if incoming_request_batches[model_alias].qsize() >= allowed_batch_sizes[model_alias]:
             print(f"Moving batch for {model_alias} from incoming to running due to batch size")
