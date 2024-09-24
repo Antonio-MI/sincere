@@ -7,11 +7,13 @@ run_duration=120
 # Timeout duration (run of calls + 30 seconds)
 timeout_duration=150
 # Distribution followed by input calls
-distribution=gamma
+distribution=gamma #gamma, bursty, ramp
 # Scheduling mode
 mode="BestBatch" # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+Timer", "HigherBatch", "HigherBatch+Timer", "HigherBatch+PartialBatch+Timer"]
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
+# SLA
+batch_time_limit=30
 
 # Function to check if Flask API is up
 wait_for_flask() {
@@ -25,7 +27,7 @@ wait_for_flask() {
 
 # Start the Flask API in the background
 echo "Starting Flask API"
-timeout $timeout_duration python3 api_scheduler_experiments.py $mode $models &
+timeout $timeout_duration python3 api_scheduler_experiments.py $mode $models $batch_time_limit &
 
 # Wait until it is running
 wait_for_flask

@@ -13,14 +13,11 @@ random.seed(42)
 
 # Try different frequency of use for each model
 
-run_duration = 30 #int(sys.argv[1]) #120  # seconds
-traffic_pattern = "ramp" #sys.argv[2] #gamma, bursty, ramp
-model_list = ["granite-7b", "gemma-7b", "llama3-8b"] #sys.argv[3].split(",") #["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
+run_duration = int(sys.argv[1])     #120  # seconds
+traffic_pattern = sys.argv[2]       #gamma, bursty, ramp
+model_list = sys.argv[3].split(",")     #["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
 print(model_list)
 model_frequencies = [0.1, 0.3, 0.6]
-
-# Define the parameters for the Gamma distribution
-# Rate 8 and shape 1 gives ~250 requests in 30 seconds | ~450 in 60 -> Close to an average of 8 request/s
 
 # Define the API endpoint
 api_url = "http://127.0.0.1:5000/inference"
@@ -77,9 +74,9 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
         elif traffic_pattern == "bursty":
             # Parameters for Bursty Traffic
             # Initial burst and idle durations and rates
-            burst_duration = np.random.uniform(1, 3)  # seconds
-            idle_duration = np.random.uniform(8, 15)  # seconds
-            burst_rate = np.random.uniform(15, 25)    # requests per second during burst
+            burst_duration = np.random.uniform(1, 4)  # seconds
+            idle_duration = np.random.uniform(8, 12)  # seconds
+            burst_rate = np.random.uniform(30, 45)    # requests per second during burst
             idle_rate = np.random.uniform(0, 1)       # requests per second during idle
             # Initialize burst and idle periods
             is_burst = True
@@ -91,8 +88,8 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
             # Parameters for Repeating Ramp-up/Ramp-down Traffic
             min_rate = 1     # requests per second at start and end
             max_rate = 15    # peak requests per second
-            ramp_up_duration = 10  
-            ramp_down_duration = 10 
+            ramp_up_duration = 20  
+            ramp_down_duration = 20 
             cycle_duration = ramp_up_duration + ramp_down_duration
             print(f"Starting Repeating Ramp-up/Ramp-down traffic pattern with ramp_up_duration={ramp_up_duration:.2f}s and ramp_down_duration={ramp_down_duration:.2f}s")
             cycle_start_time = start_time

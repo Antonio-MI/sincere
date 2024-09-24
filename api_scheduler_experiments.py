@@ -105,7 +105,7 @@ if "Timer" in mode:
 
 
 # Time constraint for batch processing - only will be used wwith some modes
-batch_time_limit = 20  # Seconds
+batch_time_limit = int(sys.argv[3])  # Seconds
 min_batch_time_limit = 5  # Minimum time limit in seconds
 
 # List of allowed models
@@ -307,7 +307,7 @@ def process_batch(model_alias, condition, batch_size):
             logging.debug(f"Batch processing started for model {model_alias}")
 
             responses = {}
-            for i, output in enumerate(pipe(batch_generator, max_new_tokens=64, batch_size=current_batch_size)):
+            for i, output in enumerate(pipe(batch_generator, max_new_tokens=50, batch_size=current_batch_size)):
                 try:
                     generated_text = output[0]['generated_text']
                     request_id = batch[i]['id']
@@ -382,25 +382,6 @@ def process_partial_batch():
                         process_batch(current_loaded_model, "Partial Batch", batch_size)
                 time.sleep(0.2)
 
-# Function to decide if we should switch models
-# def should_switch_model(new_model_alias):
-#     global model_usage_count, current_loaded_model, model_loaded_timestamp
-#     if current_loaded_model is None:
-#         return True  # No model is loaded, so we need to load the new model 
-#     if new_model_alias == current_loaded_model:
-#         return False  # Already loaded  
-#     # Keep the current model loaded for at least 'model_stay_time' seconds
-#     if (time.time() - model_loaded_timestamp) < model_stay_time:
-#         return False  # Do not switch yet
-#     # Decide based on usage frequency
-#     current_model_requests = incoming_request_batches.get(current_loaded_model, Queue()).qsize()
-#     new_model_requests = incoming_request_batches.get(new_model_alias, Queue()).qsize()    
-#     # Switch if there are more requests for the new model
-#     if new_model_requests > current_model_requests:
-#         return True
-#     else:
-#         return False  # Keep current model loaded
-
 
 app = Flask(__name__)
 
@@ -421,7 +402,8 @@ def inference():
     # To finish inference and log time
     remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
     if model_alias == "Stop" and inference_flag == False:
-        while remaining_requests > 0:
+        last_call_timer = time.time()
+        while remaining_requests > 0 or time.time() - last_call_timer < 30:
             remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
             logging.debug("Waiting for running processes to finish")
             time.sleep(2)
