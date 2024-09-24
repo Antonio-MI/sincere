@@ -3,13 +3,13 @@
 
 
 # Run time for calls
-run_duration=120
+run_duration=1200
 # Timeout duration (run of calls + 30 seconds)
-timeout_duration=150
+timeout_duration=1230
 # Distribution followed by input calls
 distribution=gamma #gamma, bursty, ramp
 # Scheduling mode
-mode="BestBatch" # One of ["FCFS", "BatchedFCFS", "BestBatch", "BestBatch+Timer", "HigherBatch", "HigherBatch+Timer", "HigherBatch+PartialBatch+Timer"]
+mode="BestBatch+Timer" # One of ["BatchedFCFS", "BestBatch", "BestBatch+Timer", "HigherBatch", "HigherBatch+Timer", "HigherBatch+PartialBatch+Timer"]
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 # SLA
