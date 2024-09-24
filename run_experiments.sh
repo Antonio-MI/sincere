@@ -18,7 +18,7 @@ wait_for_flask() {
   echo "Checking if Flask API is ready..."
   while ! curl -s http://127.0.0.1:5000/health >/dev/null; do
     echo "Waiting for Flask API to be ready"
-    sleep 3
+    sleep 4
   done
   echo "Flask API is ready!"
 }

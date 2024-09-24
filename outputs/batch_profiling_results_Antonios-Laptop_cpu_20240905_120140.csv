@@ -1,4 +1,0 @@
-model_alias,batch_size,processing_time,throughput
-gpt2-124m,1,1.2495049169810954,0.8
-gpt2-124m,1,0.36219899999559857,2.76
-gpt2-124m,1,0.3586802920035552,2.79

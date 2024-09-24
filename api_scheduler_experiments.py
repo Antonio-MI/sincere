@@ -97,7 +97,7 @@ if mode == "HigherBatch+PartialBatch+Timer":
 
 if "Timer" in mode:
     # Load model profiling data
-    model_profiling = pd.read_csv("./outputs/model_loading_times_red_cuda_20240906_120028.csv")
+    model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20240906_120028.csv")
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
@@ -109,8 +109,8 @@ batch_time_limit = 20  # Seconds
 min_batch_time_limit = 5  # Minimum time limit in seconds
 
 # List of allowed models
-allowed_models = sys.argv[2].split(",")#["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
-allowed_models.append("Stop")
+allowed_models = sys.argv[2].split(",") #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
+allowed_models.append("Stop") # To handle the last request before stopping inference
 
 # Lock to not process another batch until the current one has finished
 batch_processing_lock = threading.Lock()
@@ -213,13 +213,10 @@ def save_measurements_and_monitor(request_id, request_time, model_alias, batch_s
         "processing time (s)": batch_inference_time,
         "throughput (qps)": throughput,
     }
-
     # Update the data dictionary with the sys_info entries
     data.update(sys_info)
-
     # Convert the combined data into a DataFrame
     df = pd.DataFrame([data])
-
     file_exists = os.path.isfile(csv_path)
     if file_exists:
         df.to_csv(csv_path, mode="a", header=False, index=False)
@@ -292,10 +289,7 @@ def process_batch(model_alias, condition, batch_size):
                 logging.debug(f"No batch to process for model {model_alias}")
                 return
 
-            logging.debug(f"Next: call load_model for {model_alias}")
-            
-            load_model(model_alias) # Model loading call from inference function
-
+            load_model(model_alias)
             # Create a generator for batching
             batch_generator = create_batch_generator(batch)
 
@@ -540,10 +534,10 @@ def health():
 if __name__ == '__main__':
 
     # Start the background thread to process batches based on time limit
-    #if mode == "BestBatch+Timer" or mode == "HigherBatch+Timer":
     if "Timer" in mode:
         threading.Thread(target=background_batch_processor, daemon=True).start()
 
+    # To start function that processes partial batches
     if "PartialBatch" in mode:
         threading.Thread(target=process_partial_batch, daemon=True).start()
 
