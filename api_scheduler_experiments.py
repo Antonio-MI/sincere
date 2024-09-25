@@ -58,15 +58,9 @@ logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{devic
 if mode == "BestBatch":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
+    # GOAL: SET BASELINE, OPTIMAL BATCH SIZES FOR THROUGHPUT IGNORING LATENCY AND MODEL LOAD TIMES
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
 
-if mode == "SelectBatch+Timer":
-    logging.debug(f"Scheduling mode set as {mode}")
-    # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
-    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
-    #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
-    # GOAL: MET SLA
-    allowed_batch_sizes = [16, 32, 64]
 
 if mode == "BestBatch+Timer":
     # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
@@ -75,10 +69,20 @@ if mode == "BestBatch+Timer":
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
 
+
+if mode == "SelectBatch+Timer":
+    logging.debug(f"Scheduling mode set as {mode}")
+    # LOGIC: OUT OF A SET OF BATCH SIZES, SELECTS THE BEST ONE BASED ON PAST ARRIVALS
+    #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
+    #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
+    # GOAL: OPTIMIZE FOR MEETING SLA BETTER SACRIFICING THROUGHPUT
+    allowed_batch_sizes = [16, 32, 64]
+
+
 if mode == "BestBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
-    # GOAL: MAXIMUM THROUGHPUT
+    # GOAL: MINIMIZE SWAP FREQUENCY
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 
@@ -86,7 +90,7 @@ if mode == "BestBatch+PartialBatch+Timer":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
-    # GOAL: MAXIMUM THROUGHPUT WHILE TRYING TO MET SLA
+    # GOAL: MINIMIZE SWAP FREQUENCY WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
 

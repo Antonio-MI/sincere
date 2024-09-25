@@ -15,7 +15,8 @@ random.seed(42)
 
 run_duration = int(sys.argv[1])     #120  # seconds
 traffic_pattern = sys.argv[2]       #gamma, bursty, ramp
-model_list = sys.argv[3].split(",")     #["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
+traffic_mean = int(sys.argv[3])
+model_list = sys.argv[4].split(",")     #["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m"] 
 print(model_list)
 model_frequencies = [0.1, 0.3, 0.6]
 
@@ -68,15 +69,29 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
         # Initialize parameters based on traffic pattern
         if traffic_pattern == "gamma":
             # Parameters for Gamma distribution
-            rate = 8
+            if traffic_mean == 2:
+                rate = 2
+            elif traffic_mean == 5:
+                rate = 5
+            elif traffic_mean == 8:
+                rate = 8
             shape, scale = 1.0, 1/rate  # Shape (alpha) and scale (θ)
             print("Starting Gamma traffic pattern")
         elif traffic_pattern == "bursty":
             # Parameters for Bursty Traffic
             # Initial burst and idle durations and rates
-            burst_duration = np.random.uniform(1, 4)  # seconds
-            idle_duration = np.random.uniform(8, 12)  # seconds
-            burst_rate = np.random.uniform(30, 45)    # requests per second during burst
+            if traffic_mean == 2:
+                burst_duration = np.random.uniform(1, 3)  # seconds
+                idle_duration = np.random.uniform(10, 20)  # seconds
+                burst_rate = np.random.uniform(10, 20)    # requests per second during burst
+            if traffic_mean == 5:
+                burst_duration = np.random.uniform(1, 4)  # seconds
+                idle_duration = np.random.uniform(10, 15)  # seconds
+                burst_rate = np.random.uniform(25, 35)    # requests per second during burst
+            if traffic_mean == 8:
+                burst_duration = np.random.uniform(1, 4)  # seconds
+                idle_duration = np.random.uniform(8, 12)  # seconds
+                burst_rate = np.random.uniform(30, 45)    # requests per second during burst
             idle_rate = np.random.uniform(0, 1)       # requests per second during idle
             # Initialize burst and idle periods
             is_burst = True
@@ -87,7 +102,12 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
         elif traffic_pattern == "ramp":
             # Parameters for Repeating Ramp-up/Ramp-down Traffic
             min_rate = 1     # requests per second at start and end
-            max_rate = 15    # peak requests per second
+            if traffic_mean == 2:
+                max_rate = 3    # peak requests per second
+            if traffic_mean == 5:
+                max_rate = 9  
+            if traffic_mean == 8:
+                max_rate = 15  
             ramp_up_duration = 20  
             ramp_down_duration = 20 
             cycle_duration = ramp_up_duration + ramp_down_duration
@@ -128,14 +148,27 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
                     period_start_time = time.time()
                     if is_burst:
                         # Re-sample burst parameters
-                        burst_duration = np.random.uniform(1, 3)
-                        burst_rate = np.random.uniform(15, 25)
+                        if traffic_mean == 2:
+                            burst_duration = np.random.uniform(1, 3)  # seconds
+                            burst_rate = np.random.uniform(10, 20)    # requests per second during burst
+                        if traffic_mean == 5:
+                            burst_duration = np.random.uniform(1, 4)  # seconds
+                            burst_rate = np.random.uniform(25, 35)    # requests per second during burst
+                        if traffic_mean == 8:
+                            burst_duration = np.random.uniform(1, 4)  # seconds
+                            burst_rate = np.random.uniform(30, 45)    # requests per second during burst
+                        idle_rate = np.random.uniform(0, 1)       # requests per second during idle
                         current_period_duration = burst_duration
                         current_rate = burst_rate
                         print(f"Switching to burst period for {current_period_duration:.2f} seconds at rate {current_rate:.2f} req/sec")
                     else:
                         # Re-sample idle parameters
-                        idle_duration = np.random.uniform(8, 15)
+                        if traffic_mean == 2:
+                            idle_duration = np.random.uniform(10, 20)  # seconds
+                        if traffic_mean == 5:
+                            idle_duration = np.random.uniform(10, 15)  # seconds
+                        if traffic_mean == 8:
+                            idle_duration = np.random.uniform(8, 12)  # seconds
                         idle_rate = np.random.uniform(0, 1)
                         current_period_duration = idle_duration
                         current_rate = idle_rate

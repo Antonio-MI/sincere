@@ -3,13 +3,15 @@
 
 
 # Run time for calls
-run_duration=1200
+run_duration=900 
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=1260
+timeout_duration=960
 # Distribution followed by input calls
-distribution=gamma #gamma, bursty, ramp
+distribution=bursty #gamma, bursty, ramp
+# Mean requests per second for the patterns
+traffic_mean=2
 # Scheduling mode
-mode="BestBatch+Timer" # One of []
+mode="BestBatch+Timer" # One of [BestBatch, BestBatch+Timer, SelectBatch+Timer, BestBatch+PartialBatch, BestBatch+PartialBatch+Timer]
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 # SLA
@@ -38,7 +40,7 @@ timeout $timeout_duration bash monitor_gpu.sh &
 
 # Start the inference script in the background
 echo "Starting api calls script"
-timeout $timeout_duration python3 api_calls.py $run_duration $distribution $models &
+timeout $timeout_duration python3 api_calls.py $run_duration $distribution $traffic_mean $models &
 
 # Wait for all background processes to complete
 wait
