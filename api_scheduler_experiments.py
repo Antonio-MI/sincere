@@ -13,12 +13,9 @@ import logging
 from monitor import Monitor
 from collections import deque  # For arrival rate estimation
 import sys
-import json
 
-# PARAMS FROM SH SCRIPT
-# MODE, ALLOWED MODELS, BATCH TIME LIMIT, MODEL STAY TIME
 
-mode = sys.argv[1] #One of []
+mode = sys.argv[1] 
 
 # Save machine name to identify csv
 machine_name = platform.node()
@@ -28,7 +25,6 @@ base_dir = "./models"
 
 # Select device, cpu for now
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
 # To save current model loaded name and model, and its tokenizer
 loaded_models = {}
@@ -39,6 +35,7 @@ running_request_batches = {}
 
 distribution = sys.argv[4]
 run_duration = sys.argv[5] 
+traffic_mean = sys.argv[6]
 
 # Set up logging
 if not os.path.exists("logs"):
@@ -46,6 +43,8 @@ if not os.path.exists("logs"):
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+
+logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
 # Batch sizes depending on the strategy
 
@@ -59,7 +58,7 @@ if mode == "BestBatch":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
     # GOAL: SET BASELINE, OPTIMAL BATCH SIZES FOR THROUGHPUT IGNORING LATENCY AND MODEL LOAD TIMES
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
+    allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
 
 
 if mode == "BestBatch+Timer":
@@ -67,7 +66,7 @@ if mode == "BestBatch+Timer":
     #        ADJUSTS -BATCH WAITING TIME- TO ACCOUNT FOR MODEL SWAPPING TIME
     # GOAL: MAXIMUM THROUGHPUT WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 64, "llama3-8b": 64}
+    allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
 
 
 if mode == "SelectBatch+Timer":
@@ -76,7 +75,7 @@ if mode == "SelectBatch+Timer":
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME - MEANING: IT WILL TRY TO
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     # GOAL: OPTIMIZE FOR MEETING SLA BETTER SACRIFICING THROUGHPUT
-    allowed_batch_sizes = [16, 32, 64]
+    allowed_batch_sizes = [8, 16, 32, 64]
 
 
 if mode == "BestBatch+PartialBatch":
@@ -84,7 +83,7 @@ if mode == "BestBatch+PartialBatch":
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
     # GOAL: MINIMIZE SWAP FREQUENCY
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+    allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
 
 if mode == "BestBatch+PartialBatch+Timer":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
@@ -92,7 +91,7 @@ if mode == "BestBatch+PartialBatch+Timer":
     #        ADJUSTS BATCH WAITING TIME TO ACCOUNT FOR MODEL SWAPPING TIME
     # GOAL: MINIMIZE SWAP FREQUENCY WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
-    allowed_batch_sizes = {"granite-7b": 64, "gemma-7b": 100, "llama3-8b": 128}
+    allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
 
 if "Timer" in mode:
     # Load model profiling data
@@ -146,6 +145,8 @@ model_loaded_timestamp = None  # Timestamp when the current model was loaded
 def load_model(model_alias):
     global loaded_models, current_loaded_model, model_loaded_timestamp
 
+    model_switches = 0
+
     if model_alias in loaded_models:
         #logging.debug(f"Model {model_alias} already loaded")
         return
@@ -168,6 +169,8 @@ def load_model(model_alias):
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
     logging.debug(f"LOADED MODEL {model_alias}")
+    model_switches += 1
+    logging.debug(f"SWITCH COUNT: {model_switches}")
 
     loaded_models[model_alias] = {"model": model, "tokenizer": tokenizer}
     current_loaded_model = model_alias
