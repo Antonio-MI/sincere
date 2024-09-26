@@ -11,7 +11,7 @@ mode="SelectBatch+Timer" # One of [BestBatch, BestBatch+Timer, SelectBatch+Timer
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 # SLA
-batch_time_limit=40
+batch_time_limit=60
 
 # Function to check if Flask API is up
 wait_for_flask() {

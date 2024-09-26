@@ -42,7 +42,7 @@ if not os.path.exists("logs"):
     os.makedirs("logs")
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_mean{traffic_mean}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
 
 logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
@@ -203,7 +203,7 @@ def save_measurements(request_id, request_time, model_alias, batch_size, latency
 
 def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info, mode):
     global distribution, run_duration, traffic_mean
-    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_mean{traffic_mean}_{timestamp}.csv"
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
