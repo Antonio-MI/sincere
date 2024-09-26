@@ -1,0 +1,1585 @@
+2024-09-26 17:53:33,109 Using device: cuda
+2024-09-26 17:53:33,109 Scheduling mode set as BestBatch+PartialBatch+Timer
+2024-09-26 17:53:33,113 Monitoring status set to True
+2024-09-26 17:53:48,310 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.143:5000
+2024-09-26 17:53:48,316 [33mPress CTRL+C to quit[0m
+2024-09-26 17:53:50,969 127.0.0.1 - - [26/Sep/2024 17:53:50] "GET /health HTTP/1.1" 200 -
+2024-09-26 17:53:51,440 Request with ID 48fc71cd for model gemma-7b received
+2024-09-26 17:53:51,440 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,463 Request with ID bdd75f42 for model granite-7b received
+2024-09-26 17:53:51,474 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,497 Request with ID 1f8704bf for model llama3-8b received
+2024-09-26 17:53:51,498 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,537 Request with ID 1fed433a for model granite-7b received
+2024-09-26 17:53:51,543 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,613 Request with ID 796fbd9d for model llama3-8b received
+2024-09-26 17:53:51,619 Request with ID 35395f30 for model gemma-7b received
+2024-09-26 17:53:51,625 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,642 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,652 Request with ID 60f45d85 for model gemma-7b received
+2024-09-26 17:53:51,660 Request with ID 874dfdab for model llama3-8b received
+2024-09-26 17:53:51,683 Request with ID ca2e0393 for model gemma-7b received
+2024-09-26 17:53:51,690 Request with ID fb6859e9 for model llama3-8b received
+2024-09-26 17:53:51,700 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,717 Request with ID 0744a5af for model llama3-8b received
+2024-09-26 17:53:51,744 Request with ID 3f5e6923 for model gemma-7b received
+2024-09-26 17:53:51,760 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,781 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,783 Request with ID 5cf28687 for model llama3-8b received
+2024-09-26 17:53:51,790 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,801 Request with ID 9dc04805 for model granite-7b received
+2024-09-26 17:53:51,813 Request with ID ec9d672c for model llama3-8b received
+2024-09-26 17:53:51,835 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,836 Request with ID 0a27ea2f for model llama3-8b received
+2024-09-26 17:53:51,848 Request with ID 59263dbf for model gemma-7b received
+2024-09-26 17:53:51,849 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,882 Request with ID a4580fe6 for model llama3-8b received
+2024-09-26 17:53:51,883 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,905 Request with ID 854d9055 for model gemma-7b received
+2024-09-26 17:53:51,942 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,944 Request with ID dd3180ba for model granite-7b received
+2024-09-26 17:53:51,944 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:51,952 Request with ID 12016cb0 for model gemma-7b received
+2024-09-26 17:53:51,973 Request with ID fa39f2b6 for model gemma-7b received
+2024-09-26 17:53:51,993 127.0.0.1 - - [26/Sep/2024 17:53:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,021 Request with ID 787c1b11 for model llama3-8b received
+2024-09-26 17:53:52,028 Request with ID 004d63e1 for model llama3-8b received
+2024-09-26 17:53:52,045 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,046 Request with ID 5798a67b for model llama3-8b received
+2024-09-26 17:53:52,075 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,098 Request with ID d02cf543 for model llama3-8b received
+2024-09-26 17:53:52,099 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,126 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,155 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,176 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,177 Request with ID 1eb5e4e9 for model granite-7b received
+2024-09-26 17:53:52,189 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,201 Request with ID d7ddb910 for model granite-7b received
+2024-09-26 17:53:52,202 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,234 Request with ID 03c1e9a2 for model llama3-8b received
+2024-09-26 17:53:52,249 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,250 Request with ID 0a432ce7 for model gemma-7b received
+2024-09-26 17:53:52,257 Request with ID 745a76ea for model gemma-7b received
+2024-09-26 17:53:52,264 Request with ID de2f8984 for model gemma-7b received
+2024-09-26 17:53:52,270 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,287 Request with ID ee3009c1 for model granite-7b received
+2024-09-26 17:53:52,363 Request with ID 22cfe0f2 for model llama3-8b received
+2024-09-26 17:53:52,375 Request with ID e0459e17 for model granite-7b received
+2024-09-26 17:53:52,395 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,418 Request with ID ddd188e5 for model llama3-8b received
+2024-09-26 17:53:52,439 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,446 Request with ID 9673ab60 for model llama3-8b received
+2024-09-26 17:53:52,473 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,495 Request with ID bf5346bd for model gemma-7b received
+2024-09-26 17:53:52,507 Request with ID 372dd057 for model llama3-8b received
+2024-09-26 17:53:52,513 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,525 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,532 Request with ID 6f434d69 for model gemma-7b received
+2024-09-26 17:53:52,538 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,554 Request with ID b92d3102 for model gemma-7b received
+2024-09-26 17:53:52,571 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,583 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,584 Request with ID e62b1a29 for model llama3-8b received
+2024-09-26 17:53:52,599 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,615 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,626 Request with ID bfc5ee26 for model llama3-8b received
+2024-09-26 17:53:52,639 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,646 Request with ID 80d637d6 for model gemma-7b received
+2024-09-26 17:53:52,647 Request with ID 0613c2da for model llama3-8b received
+2024-09-26 17:53:52,659 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,677 Request with ID 7214e37c for model llama3-8b received
+2024-09-26 17:53:52,678 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,684 Request with ID ff2b01d3 for model llama3-8b received
+2024-09-26 17:53:52,694 Request with ID 5fb26a88 for model granite-7b received
+2024-09-26 17:53:52,722 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,723 Request with ID 2194646c for model granite-7b received
+2024-09-26 17:53:52,752 Request with ID 1ed617ae for model gemma-7b received
+2024-09-26 17:53:52,753 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,764 Request with ID e0d81f67 for model llama3-8b received
+2024-09-26 17:53:52,802 Request with ID 4edcf567 for model llama3-8b received
+2024-09-26 17:53:52,817 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,824 Request with ID 44aa2765 for model gemma-7b received
+2024-09-26 17:53:52,864 Request with ID d35d3929 for model gemma-7b received
+2024-09-26 17:53:52,891 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,903 Request with ID dd41e07e for model llama3-8b received
+2024-09-26 17:53:52,909 Request with ID c77a50c3 for model llama3-8b received
+2024-09-26 17:53:52,927 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,943 Request with ID 7910bb0b for model llama3-8b received
+2024-09-26 17:53:52,954 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,966 Request with ID 469d2ebf for model llama3-8b received
+2024-09-26 17:53:52,990 127.0.0.1 - - [26/Sep/2024 17:53:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:52,991 Request with ID d0151127 for model gemma-7b received
+2024-09-26 17:53:52,992 Request with ID 43eec4f9 for model llama3-8b received
+2024-09-26 17:53:53,015 Request with ID 864b82d4 for model gemma-7b received
+2024-09-26 17:53:53,021 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,032 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,048 Request with ID 9e648052 for model llama3-8b received
+2024-09-26 17:53:53,069 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,076 Request with ID 7195fd04 for model granite-7b received
+2024-09-26 17:53:53,086 Request with ID 0833441c for model llama3-8b received
+2024-09-26 17:53:53,115 Request with ID 285f8813 for model gemma-7b received
+2024-09-26 17:53:53,115 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,126 Request with ID ecce1ce9 for model llama3-8b received
+2024-09-26 17:53:53,149 Request with ID 5ca51ee4 for model llama3-8b received
+2024-09-26 17:53:53,165 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,171 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,178 Request with ID 1ac0debe for model gemma-7b received
+2024-09-26 17:53:53,200 Request with ID d0011193 for model llama3-8b received
+2024-09-26 17:53:53,207 Request with ID 746ea835 for model llama3-8b received
+2024-09-26 17:53:53,207 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,219 Request with ID 5bad5dd5 for model gemma-7b received
+2024-09-26 17:53:53,231 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,253 Request with ID 8c60340e for model llama3-8b received
+2024-09-26 17:53:53,274 Request with ID 6cd8e28f for model granite-7b received
+2024-09-26 17:53:53,290 Request with ID 78f15519 for model llama3-8b received
+2024-09-26 17:53:53,311 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,313 Request with ID f4f766c5 for model gemma-7b received
+2024-09-26 17:53:53,314 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,321 Request with ID 6bb85b51 for model llama3-8b received
+2024-09-26 17:53:53,343 Request with ID 5b730bdc for model llama3-8b received
+2024-09-26 17:53:53,349 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,356 Request with ID 3dc6ee27 for model gemma-7b received
+2024-09-26 17:53:53,363 Request with ID f4edc692 for model gemma-7b received
+2024-09-26 17:53:53,369 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,376 Request with ID ba956b9b for model llama3-8b received
+2024-09-26 17:53:53,404 Request with ID b20fc930 for model gemma-7b received
+2024-09-26 17:53:53,414 Request with ID 684fd3c0 for model granite-7b received
+2024-09-26 17:53:53,420 Request with ID 3ad05c20 for model granite-7b received
+2024-09-26 17:53:53,432 Request with ID 943324f3 for model llama3-8b received
+2024-09-26 17:53:53,449 Request with ID df13100f for model llama3-8b received
+2024-09-26 17:53:53,455 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,461 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,468 Request with ID c5219886 for model llama3-8b received
+2024-09-26 17:53:53,478 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,512 Request with ID ab35957b for model llama3-8b received
+2024-09-26 17:53:53,518 Request with ID e4e800f0 for model llama3-8b received
+2024-09-26 17:53:53,530 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,531 Request with ID d7bc5d65 for model gemma-7b received
+2024-09-26 17:53:53,544 Request with ID 9900a9cb for model llama3-8b received
+2024-09-26 17:53:53,545 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,560 Request with ID 54dc230e for model gemma-7b received
+2024-09-26 17:53:53,582 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,598 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,614 Request with ID 23d8f5b2 for model granite-7b received
+2024-09-26 17:53:53,621 Request with ID a3faf836 for model llama3-8b received
+2024-09-26 17:53:53,622 Request with ID 54b3bd82 for model llama3-8b received
+2024-09-26 17:53:53,626 Request with ID b75741f2 for model llama3-8b received
+2024-09-26 17:53:53,653 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,668 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,718 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,739 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,746 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,777 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,805 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,816 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,837 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,880 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,906 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,923 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,967 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:53,978 127.0.0.1 - - [26/Sep/2024 17:53:53] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,005 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,011 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,027 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,049 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,065 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,081 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,108 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,147 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,158 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,180 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,202 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,228 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,277 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,283 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,299 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,310 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:53:54,873 Request with ID 0b6a4b98 for model llama3-8b received
+2024-09-26 17:53:54,878 127.0.0.1 - - [26/Sep/2024 17:53:54] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:01,581 Request with ID ec0f3fb1 for model llama3-8b received
+2024-09-26 17:54:01,587 127.0.0.1 - - [26/Sep/2024 17:54:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,053 Request with ID e2ba3421 for model llama3-8b received
+2024-09-26 17:54:06,058 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,076 Request with ID 70f2956a for model granite-7b received
+2024-09-26 17:54:06,082 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,127 Request with ID 3ac38e14 for model llama3-8b received
+2024-09-26 17:54:06,127 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,145 Request with ID 2f50b683 for model gemma-7b received
+2024-09-26 17:54:06,151 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,164 Request with ID 93dffa20 for model llama3-8b received
+2024-09-26 17:54:06,169 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,176 Request with ID 9d24dc1f for model gemma-7b received
+2024-09-26 17:54:06,177 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,194 Request with ID df0d13ec for model gemma-7b received
+2024-09-26 17:54:06,217 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,240 Request with ID 24f692ff for model llama3-8b received
+2024-09-26 17:54:06,251 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,284 Request with ID 202d97a7 for model llama3-8b received
+2024-09-26 17:54:06,296 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,308 Request with ID 8a81a9ed for model llama3-8b received
+2024-09-26 17:54:06,320 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,343 Request with ID b654c8fd for model gemma-7b received
+2024-09-26 17:54:06,349 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,355 Request with ID 3bab6a50 for model gemma-7b received
+2024-09-26 17:54:06,356 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,405 Request with ID 0b9d5863 for model gemma-7b received
+2024-09-26 17:54:06,411 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,471 Request with ID e5f5cda5 for model llama3-8b received
+2024-09-26 17:54:06,476 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,510 Request with ID 3a824f36 for model llama3-8b received
+2024-09-26 17:54:06,511 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,555 Request with ID 2e98d4c7 for model llama3-8b received
+2024-09-26 17:54:06,561 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,568 Request with ID f922db9c for model llama3-8b received
+2024-09-26 17:54:06,579 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,628 Request with ID b41a5e89 for model granite-7b received
+2024-09-26 17:54:06,634 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,646 Request with ID bdfc2d52 for model gemma-7b received
+2024-09-26 17:54:06,652 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,702 Request with ID 7ec1dce4 for model llama3-8b received
+2024-09-26 17:54:06,707 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,767 Request with ID 243c5a38 for model gemma-7b received
+2024-09-26 17:54:06,773 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:06,786 Request with ID dbe35b27 for model llama3-8b received
+2024-09-26 17:54:06,787 Batch size condition met for model llama3-8b
+2024-09-26 17:54:06,787 STARTING TO LOAD llama3-8b
+2024-09-26 17:54:06,801 Request with ID dc001205 for model llama3-8b received
+2024-09-26 17:54:06,802 127.0.0.1 - - [26/Sep/2024 17:54:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,173 Request with ID 5109699a for model llama3-8b received
+2024-09-26 17:54:07,178 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,198 Request with ID 5991e43c for model gemma-7b received
+2024-09-26 17:54:07,204 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,239 Request with ID b6d33152 for model gemma-7b received
+2024-09-26 17:54:07,245 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,257 Request with ID 40538322 for model llama3-8b received
+2024-09-26 17:54:07,264 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,276 Request with ID 5f575123 for model llama3-8b received
+2024-09-26 17:54:07,281 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,297 Request with ID bcd52fd6 for model granite-7b received
+2024-09-26 17:54:07,322 Request with ID 442fd8c6 for model llama3-8b received
+2024-09-26 17:54:07,323 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,346 Request with ID eecd37d8 for model llama3-8b received
+2024-09-26 17:54:07,346 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,386 Request with ID d40e9ee5 for model llama3-8b received
+2024-09-26 17:54:07,404 Request with ID 10180f3a for model gemma-7b received
+2024-09-26 17:54:07,410 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,417 Request with ID 8cb218e9 for model llama3-8b received
+2024-09-26 17:54:07,448 Request with ID bd04f718 for model llama3-8b received
+2024-09-26 17:54:07,455 Request with ID 4402667f for model llama3-8b received
+2024-09-26 17:54:07,467 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,478 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,496 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,508 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:07,555 127.0.0.1 - - [26/Sep/2024 17:54:07] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:10,558 Request with ID 31752003 for model llama3-8b received
+2024-09-26 17:54:10,559 127.0.0.1 - - [26/Sep/2024 17:54:10] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:12,956 Request with ID bb0d84a3 for model llama3-8b received
+2024-09-26 17:54:12,956 127.0.0.1 - - [26/Sep/2024 17:54:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:17,382 Request with ID f287c2f2 for model gemma-7b received
+2024-09-26 17:54:17,388 127.0.0.1 - - [26/Sep/2024 17:54:17] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,364 Request with ID 24bf86d8 for model granite-7b received
+2024-09-26 17:54:18,371 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,378 Request with ID 36e30da8 for model gemma-7b received
+2024-09-26 17:54:18,395 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,412 Request with ID 407f274f for model granite-7b received
+2024-09-26 17:54:18,424 Request with ID 7abcc089 for model llama3-8b received
+2024-09-26 17:54:18,445 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,455 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,461 Request with ID 1786cb0a for model gemma-7b received
+2024-09-26 17:54:18,468 Request with ID d9d34915 for model llama3-8b received
+2024-09-26 17:54:18,496 Request with ID 7f45a031 for model granite-7b received
+2024-09-26 17:54:18,522 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,532 Request with ID 9363e9ee for model llama3-8b received
+2024-09-26 17:54:18,549 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,550 Request with ID 9e05cf2a for model llama3-8b received
+2024-09-26 17:54:18,577 Request with ID 048c5a25 for model llama3-8b received
+2024-09-26 17:54:18,593 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,617 Request with ID 5fcf896a for model llama3-8b received
+2024-09-26 17:54:18,629 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,636 Request with ID c5cc0530 for model llama3-8b received
+2024-09-26 17:54:18,668 Request with ID 45b21af2 for model llama3-8b received
+2024-09-26 17:54:18,685 Request with ID 2fd542dc for model granite-7b received
+2024-09-26 17:54:18,691 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,723 Request with ID 29347924 for model llama3-8b received
+2024-09-26 17:54:18,733 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,765 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,782 Request with ID 6a9edaef for model llama3-8b received
+2024-09-26 17:54:18,803 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,815 Request with ID bcd6107d for model gemma-7b received
+2024-09-26 17:54:18,815 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,826 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,834 Request with ID f621f919 for model llama3-8b received
+2024-09-26 17:54:18,840 Request with ID 586541ce for model llama3-8b received
+2024-09-26 17:54:18,853 Request with ID eadb67d9 for model llama3-8b received
+2024-09-26 17:54:18,859 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,887 Request with ID 5f58ba1e for model llama3-8b received
+2024-09-26 17:54:18,915 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,916 Request with ID 197555d1 for model llama3-8b received
+2024-09-26 17:54:18,928 Request with ID edba1fc9 for model gemma-7b received
+2024-09-26 17:54:18,929 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,971 Request with ID 5efd97a8 for model granite-7b received
+2024-09-26 17:54:18,982 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:18,994 127.0.0.1 - - [26/Sep/2024 17:54:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,006 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,027 Request with ID ebf8da58 for model granite-7b received
+2024-09-26 17:54:19,049 Request with ID 11d8e07e for model llama3-8b received
+2024-09-26 17:54:19,061 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,073 Request with ID c7b39180 for model llama3-8b received
+2024-09-26 17:54:19,090 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,091 Request with ID a8148d0a for model llama3-8b received
+2024-09-26 17:54:19,102 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,114 Request with ID bf7a0ea8 for model gemma-7b received
+2024-09-26 17:54:19,142 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,143 Request with ID 3daf9572 for model gemma-7b received
+2024-09-26 17:54:19,191 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,203 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,219 Request with ID 1425a8c1 for model llama3-8b received
+2024-09-26 17:54:19,231 Request with ID 3c9f24e3 for model gemma-7b received
+2024-09-26 17:54:19,238 Request with ID 2e2c12b1 for model llama3-8b received
+2024-09-26 17:54:19,238 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,267 Request with ID 292bb48d for model llama3-8b received
+2024-09-26 17:54:19,267 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,279 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,291 Request with ID 123c7bd7 for model granite-7b received
+2024-09-26 17:54:19,298 Request with ID ba59d0ea for model granite-7b received
+2024-09-26 17:54:19,315 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,343 Request with ID 59fb6d68 for model llama3-8b received
+2024-09-26 17:54:19,350 Request with ID 618d6aa0 for model gemma-7b received
+2024-09-26 17:54:19,363 Request with ID 6ec713ec for model llama3-8b received
+2024-09-26 17:54:19,379 Request with ID 29fdfac6 for model llama3-8b received
+2024-09-26 17:54:19,395 Request with ID 559b4bac for model llama3-8b received
+2024-09-26 17:54:19,412 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,419 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,451 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,478 Request with ID 7efa73e1 for model gemma-7b received
+2024-09-26 17:54:19,521 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,522 Request with ID a298c8d3 for model gemma-7b received
+2024-09-26 17:54:19,523 Request with ID f6cd68ac for model granite-7b received
+2024-09-26 17:54:19,544 Request with ID 51d24528 for model granite-7b received
+2024-09-26 17:54:19,567 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,573 Request with ID 46659bf8 for model llama3-8b received
+2024-09-26 17:54:19,586 Request with ID 75cee2c9 for model llama3-8b received
+2024-09-26 17:54:19,587 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,593 Request with ID 1350c7a2 for model gemma-7b received
+2024-09-26 17:54:19,618 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,628 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,635 Request with ID 90e4c5f3 for model llama3-8b received
+2024-09-26 17:54:19,646 Request with ID 4f928e25 for model llama3-8b received
+2024-09-26 17:54:19,666 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,710 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,722 Request with ID 3b17b2b5 for model gemma-7b received
+2024-09-26 17:54:19,723 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,750 Request with ID a0dceaf0 for model llama3-8b received
+2024-09-26 17:54:19,766 Request with ID 27deef17 for model llama3-8b received
+2024-09-26 17:54:19,784 Request with ID 54614ada for model gemma-7b received
+2024-09-26 17:54:19,790 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,807 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,835 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,845 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,867 Request with ID 1e123aba for model gemma-7b received
+2024-09-26 17:54:19,889 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,901 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,937 Request with ID 79d254ac for model llama3-8b received
+2024-09-26 17:54:19,947 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,949 Request with ID debab891 for model llama3-8b received
+2024-09-26 17:54:19,961 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,971 127.0.0.1 - - [26/Sep/2024 17:54:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:19,987 Request with ID 8431628d for model gemma-7b received
+2024-09-26 17:54:20,053 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,077 Request with ID 0dc2afc6 for model llama3-8b received
+2024-09-26 17:54:20,097 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,109 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,120 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,144 Request with ID c6ac578d for model gemma-7b received
+2024-09-26 17:54:20,220 Request with ID d2a2c968 for model gemma-7b received
+2024-09-26 17:54:20,221 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,240 Request with ID 4bd79333 for model llama3-8b received
+2024-09-26 17:54:20,272 Request with ID f95ba6c7 for model gemma-7b received
+2024-09-26 17:54:20,284 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,340 Request with ID 720b7962 for model llama3-8b received
+2024-09-26 17:54:20,353 Request with ID 54fe727e for model llama3-8b received
+2024-09-26 17:54:20,354 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,372 Request with ID b3c9cb4e for model gemma-7b received
+2024-09-26 17:54:20,379 Request with ID 5b7f1a72 for model llama3-8b received
+2024-09-26 17:54:20,401 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,427 Request with ID 3fc3dfe6 for model llama3-8b received
+2024-09-26 17:54:20,439 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,468 Request with ID 9ff4ebe4 for model granite-7b received
+2024-09-26 17:54:20,487 Request with ID 49888164 for model granite-7b received
+2024-09-26 17:54:20,504 Request with ID e8eb3e2f for model llama3-8b received
+2024-09-26 17:54:20,505 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,526 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,553 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,576 Request with ID 08038b5b for model gemma-7b received
+2024-09-26 17:54:20,582 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,588 Request with ID ed2911c2 for model gemma-7b received
+2024-09-26 17:54:20,609 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,615 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,638 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,661 Request with ID d0d36f09 for model llama3-8b received
+2024-09-26 17:54:20,662 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,663 Request with ID cfcde90e for model granite-7b received
+2024-09-26 17:54:20,678 Request with ID 6da183f5 for model granite-7b received
+2024-09-26 17:54:20,704 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,717 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,740 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,746 Request with ID f7437618 for model llama3-8b received
+2024-09-26 17:54:20,763 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,780 Request with ID 2bb56010 for model granite-7b received
+2024-09-26 17:54:20,824 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,862 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,906 Request with ID 1f534acb for model llama3-8b received
+2024-09-26 17:54:20,907 Request with ID b335f84d for model gemma-7b received
+2024-09-26 17:54:20,949 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:20,997 127.0.0.1 - - [26/Sep/2024 17:54:20] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,003 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,010 Request with ID d22774f6 for model llama3-8b received
+2024-09-26 17:54:21,065 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,066 Request with ID cbbcaa94 for model gemma-7b received
+2024-09-26 17:54:21,093 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,148 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,165 Batch size condition met for model gemma-7b
+2024-09-26 17:54:21,236 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:21,253 127.0.0.1 - - [26/Sep/2024 17:54:21] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:22,103 Request with ID 9dfead49 for model llama3-8b received
+2024-09-26 17:54:22,109 127.0.0.1 - - [26/Sep/2024 17:54:22] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:25,155 Request with ID 6df915b0 for model gemma-7b received
+2024-09-26 17:54:25,156 127.0.0.1 - - [26/Sep/2024 17:54:25] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:26,053 Request with ID 15d1b667 for model granite-7b received
+2024-09-26 17:54:26,070 127.0.0.1 - - [26/Sep/2024 17:54:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:26,424 Processing batch for gemma-7b due to time limit with batch size 2
+2024-09-26 17:54:26,425 Time limit condition met for model gemma-7b
+2024-09-26 17:54:26,847 Request with ID d13061f3 for model granite-7b received
+2024-09-26 17:54:26,853 127.0.0.1 - - [26/Sep/2024 17:54:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:27,014 Request with ID 704f5c32 for model gemma-7b received
+2024-09-26 17:54:27,015 127.0.0.1 - - [26/Sep/2024 17:54:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:28,368 Request with ID aebcff16 for model llama3-8b received
+2024-09-26 17:54:28,374 127.0.0.1 - - [26/Sep/2024 17:54:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,491 Request with ID b40e865d for model llama3-8b received
+2024-09-26 17:54:29,492 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,548 Request with ID 001c3663 for model llama3-8b received
+2024-09-26 17:54:29,554 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,587 Request with ID 8bd256fc for model llama3-8b received
+2024-09-26 17:54:29,593 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,616 Request with ID b538f0a7 for model llama3-8b received
+2024-09-26 17:54:29,628 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,662 Request with ID 49304d72 for model llama3-8b received
+2024-09-26 17:54:29,668 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,702 Request with ID 105d2f88 for model llama3-8b received
+2024-09-26 17:54:29,715 Batch size condition met for model llama3-8b
+2024-09-26 17:54:29,733 Request with ID a612c4e0 for model llama3-8b received
+2024-09-26 17:54:29,739 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,778 Request with ID b31b7b67 for model llama3-8b received
+2024-09-26 17:54:29,785 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,802 Request with ID c6cb4e73 for model llama3-8b received
+2024-09-26 17:54:29,808 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,838 Request with ID 234e8083 for model llama3-8b received
+2024-09-26 17:54:29,849 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,871 Request with ID adc1c720 for model gemma-7b received
+2024-09-26 17:54:29,882 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,927 Request with ID ecfde819 for model llama3-8b received
+2024-09-26 17:54:29,933 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:29,966 Request with ID f30b3be1 for model llama3-8b received
+2024-09-26 17:54:29,972 127.0.0.1 - - [26/Sep/2024 17:54:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,007 Request with ID 4ae125d7 for model gemma-7b received
+2024-09-26 17:54:30,007 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,037 Request with ID 5de0f374 for model gemma-7b received
+2024-09-26 17:54:30,043 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,066 Request with ID 63a45a8a for model granite-7b received
+2024-09-26 17:54:30,072 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,107 Request with ID 986d6167 for model llama3-8b received
+2024-09-26 17:54:30,107 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,115 Request with ID 26f8273f for model llama3-8b received
+2024-09-26 17:54:30,121 Request with ID eb96a1fd for model llama3-8b received
+2024-09-26 17:54:30,131 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,143 Request with ID 1ef582f8 for model gemma-7b received
+2024-09-26 17:54:30,144 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,165 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,178 Request with ID 681e38ed for model llama3-8b received
+2024-09-26 17:54:30,228 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,263 Request with ID a2c053a0 for model llama3-8b received
+2024-09-26 17:54:30,270 Request with ID 78e6c815 for model llama3-8b received
+2024-09-26 17:54:30,271 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,288 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,356 Request with ID 2989052d for model llama3-8b received
+2024-09-26 17:54:30,363 Request with ID ad714176 for model granite-7b received
+2024-09-26 17:54:30,369 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,381 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,391 Request with ID 057683c9 for model llama3-8b received
+2024-09-26 17:54:30,430 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,475 Request with ID f2ab07f1 for model gemma-7b received
+2024-09-26 17:54:30,476 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,526 Request with ID 0cf3b96b for model gemma-7b received
+2024-09-26 17:54:30,527 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,610 Request with ID cdcbfd49 for model llama3-8b received
+2024-09-26 17:54:30,610 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,661 Request with ID d94d04a8 for model llama3-8b received
+2024-09-26 17:54:30,673 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,674 Request with ID 617d72b2 for model gemma-7b received
+2024-09-26 17:54:30,711 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,718 Request with ID e4adc46b for model llama3-8b received
+2024-09-26 17:54:30,724 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,736 Request with ID 6437947c for model llama3-8b received
+2024-09-26 17:54:30,770 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,929 Request with ID b2a971fc for model llama3-8b received
+2024-09-26 17:54:30,940 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:30,964 Request with ID ee420562 for model llama3-8b received
+2024-09-26 17:54:30,965 127.0.0.1 - - [26/Sep/2024 17:54:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,090 Request with ID 282674d0 for model gemma-7b received
+2024-09-26 17:54:31,096 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,131 Request with ID 96d6bcdb for model gemma-7b received
+2024-09-26 17:54:31,132 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,155 Request with ID 27fbc751 for model llama3-8b received
+2024-09-26 17:54:31,157 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,201 Request with ID 589dc067 for model llama3-8b received
+2024-09-26 17:54:31,208 Request with ID 78b2a871 for model gemma-7b received
+2024-09-26 17:54:31,234 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,251 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,262 Request with ID 81885fe7 for model llama3-8b received
+2024-09-26 17:54:31,269 Request with ID 078273ec for model llama3-8b received
+2024-09-26 17:54:31,307 Request with ID 5ccc8c7b for model llama3-8b received
+2024-09-26 17:54:31,314 Request with ID 5380eca4 for model llama3-8b received
+2024-09-26 17:54:31,332 Request with ID f45d8448 for model llama3-8b received
+2024-09-26 17:54:31,353 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,366 Request with ID 2fa49d93 for model granite-7b received
+2024-09-26 17:54:31,372 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,401 Request with ID 38cd8145 for model llama3-8b received
+2024-09-26 17:54:31,407 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,419 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,425 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,447 Request with ID d6f1fe4b for model gemma-7b received
+2024-09-26 17:54:31,459 Request with ID 607d6100 for model granite-7b received
+2024-09-26 17:54:31,487 Request with ID dada1098 for model llama3-8b received
+2024-09-26 17:54:31,497 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,535 Request with ID d7f5898a for model llama3-8b received
+2024-09-26 17:54:31,537 Request with ID b044aa1e for model gemma-7b received
+2024-09-26 17:54:31,564 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,575 Request with ID de72c707 for model llama3-8b received
+2024-09-26 17:54:31,603 Request with ID f39fa12b for model llama3-8b received
+2024-09-26 17:54:31,619 Request with ID 87784ae8 for model llama3-8b received
+2024-09-26 17:54:31,641 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,643 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,658 Request with ID ee444569 for model llama3-8b received
+2024-09-26 17:54:31,665 Request with ID 62f38b06 for model gemma-7b received
+2024-09-26 17:54:31,666 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,678 Request with ID 61a62088 for model llama3-8b received
+2024-09-26 17:54:31,700 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,717 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,730 Request with ID 508cbb57 for model gemma-7b received
+2024-09-26 17:54:31,731 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,764 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,774 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,835 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,845 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,893 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,949 127.0.0.1 - - [26/Sep/2024 17:54:31] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:31,978 Request with ID 8e8e0dfd for model gemma-7b received
+2024-09-26 17:54:32,168 127.0.0.1 - - [26/Sep/2024 17:54:32] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:32,534 Request with ID 0f8ea4f5 for model gemma-7b received
+2024-09-26 17:54:32,535 127.0.0.1 - - [26/Sep/2024 17:54:32] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:33,176 Request with ID b891a566 for model llama3-8b received
+2024-09-26 17:54:33,240 127.0.0.1 - - [26/Sep/2024 17:54:33] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:34,010 Request with ID eed49d57 for model gemma-7b received
+2024-09-26 17:54:34,021 127.0.0.1 - - [26/Sep/2024 17:54:34] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,483 Request with ID 0acb2ee3 for model llama3-8b received
+2024-09-26 17:54:43,494 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,506 Request with ID 0ecd2f57 for model gemma-7b received
+2024-09-26 17:54:43,513 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,547 Request with ID 49e24094 for model gemma-7b received
+2024-09-26 17:54:43,553 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,577 Request with ID fad35a96 for model gemma-7b received
+2024-09-26 17:54:43,579 Request with ID 8fabff5c for model gemma-7b received
+2024-09-26 17:54:43,586 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,598 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,605 Request with ID 01c2a79a for model llama3-8b received
+2024-09-26 17:54:43,620 Request with ID e4dfcc49 for model granite-7b received
+2024-09-26 17:54:43,644 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,652 Request with ID a1fde3fc for model llama3-8b received
+2024-09-26 17:54:43,665 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,673 Request with ID e0701f98 for model llama3-8b received
+2024-09-26 17:54:43,693 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,695 Request with ID f88803e3 for model granite-7b received
+2024-09-26 17:54:43,696 Request with ID bb63153f for model llama3-8b received
+2024-09-26 17:54:43,730 Request with ID 820b91d5 for model gemma-7b received
+2024-09-26 17:54:43,730 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,737 Request with ID d5a7f4eb for model gemma-7b received
+2024-09-26 17:54:43,786 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,797 Request with ID 74df6cca for model llama3-8b received
+2024-09-26 17:54:43,808 Request with ID e7e98ab6 for model llama3-8b received
+2024-09-26 17:54:43,823 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,840 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,856 Request with ID 72a3130c for model granite-7b received
+2024-09-26 17:54:43,871 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,916 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,926 Request with ID 7decaefd for model llama3-8b received
+2024-09-26 17:54:43,937 Request with ID 7be251d5 for model llama3-8b received
+2024-09-26 17:54:43,938 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:43,962 Request with ID 147e9852 for model gemma-7b received
+2024-09-26 17:54:43,985 Request with ID f2799ad3 for model llama3-8b received
+2024-09-26 17:54:43,995 127.0.0.1 - - [26/Sep/2024 17:54:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,012 Request with ID df1cbba3 for model gemma-7b received
+2024-09-26 17:54:44,019 Request with ID cc225e5e for model granite-7b received
+2024-09-26 17:54:44,041 Request with ID 4fc084ab for model gemma-7b received
+2024-09-26 17:54:44,068 Request with ID ac5bef87 for model gemma-7b received
+2024-09-26 17:54:44,095 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,096 Request with ID 30f3dc81 for model llama3-8b received
+2024-09-26 17:54:44,113 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,143 Request with ID 094afeaa for model granite-7b received
+2024-09-26 17:54:44,159 Request with ID 197504ad for model llama3-8b received
+2024-09-26 17:54:44,166 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,178 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,194 Request with ID 3b3c78db for model llama3-8b received
+2024-09-26 17:54:44,212 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,232 Request with ID 05038e9f for model llama3-8b received
+2024-09-26 17:54:44,233 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,240 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,262 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,263 Request with ID 25519642 for model gemma-7b received
+2024-09-26 17:54:44,302 Request with ID 50ba235c for model llama3-8b received
+2024-09-26 17:54:44,315 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,322 Request with ID 8504fd14 for model gemma-7b received
+2024-09-26 17:54:44,358 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,522 Request with ID 5ad4cec5 for model llama3-8b received
+2024-09-26 17:54:44,523 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,551 Request with ID 9bd1113b for model gemma-7b received
+2024-09-26 17:54:44,558 Request with ID e674b1ea for model gemma-7b received
+2024-09-26 17:54:44,586 Request with ID bf1f2a7c for model gemma-7b received
+2024-09-26 17:54:44,593 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,610 Request with ID ef0cf5e4 for model gemma-7b received
+2024-09-26 17:54:44,628 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,629 Request with ID fd1d6a62 for model granite-7b received
+2024-09-26 17:54:44,648 Request with ID d2903766 for model llama3-8b received
+2024-09-26 17:54:44,656 Request with ID f2c31d95 for model gemma-7b received
+2024-09-26 17:54:44,657 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,664 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,665 Request with ID c80077d1 for model llama3-8b received
+2024-09-26 17:54:44,697 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,715 Request with ID 94e13d2c for model llama3-8b received
+2024-09-26 17:54:44,760 Request with ID 7ac844f0 for model gemma-7b received
+2024-09-26 17:54:44,761 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,788 Request with ID ca77de5b for model llama3-8b received
+2024-09-26 17:54:44,800 Request with ID a0f8afb1 for model llama3-8b received
+2024-09-26 17:54:44,810 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,826 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,838 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,866 Request with ID 2ebbccc8 for model llama3-8b received
+2024-09-26 17:54:44,876 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,884 Request with ID dbb6980d for model gemma-7b received
+2024-09-26 17:54:44,901 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,916 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,932 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,949 Request with ID 1e114347 for model llama3-8b received
+2024-09-26 17:54:44,970 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:44,988 Request with ID 8a2af6d2 for model gemma-7b received
+2024-09-26 17:54:44,995 Request with ID fa209f8a for model gemma-7b received
+2024-09-26 17:54:44,996 127.0.0.1 - - [26/Sep/2024 17:54:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,013 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,024 Request with ID 06641a50 for model gemma-7b received
+2024-09-26 17:54:45,047 Request with ID 9674aed2 for model llama3-8b received
+2024-09-26 17:54:45,054 Request with ID 9a1dde1c for model gemma-7b received
+2024-09-26 17:54:45,060 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,067 Request with ID a2ca1b4a for model granite-7b received
+2024-09-26 17:54:45,078 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,085 Request with ID a021b2d2 for model gemma-7b received
+2024-09-26 17:54:45,151 Request with ID 29f3bb29 for model gemma-7b received
+2024-09-26 17:54:45,170 Request with ID f9fb844a for model llama3-8b received
+2024-09-26 17:54:45,192 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,225 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,238 Request with ID 44ae2a3e for model llama3-8b received
+2024-09-26 17:54:45,239 Request with ID d9dfc5b0 for model gemma-7b received
+2024-09-26 17:54:45,271 Request with ID 338ca936 for model llama3-8b received
+2024-09-26 17:54:45,321 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,348 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,365 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,399 Request with ID 8ea5d366 for model gemma-7b received
+2024-09-26 17:54:45,411 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,426 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,438 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,452 Request with ID 02b28c47 for model llama3-8b received
+2024-09-26 17:54:45,470 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,473 Request with ID 7137e909 for model granite-7b received
+2024-09-26 17:54:45,475 Request with ID 1abcb05d for model llama3-8b received
+2024-09-26 17:54:45,487 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,499 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,517 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,538 Request with ID 20ad0eb9 for model gemma-7b received
+2024-09-26 17:54:45,540 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,560 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,577 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,593 Request with ID f9802439 for model gemma-7b received
+2024-09-26 17:54:45,606 Request with ID 14557140 for model gemma-7b received
+2024-09-26 17:54:45,646 Request with ID 5ea120ce for model llama3-8b received
+2024-09-26 17:54:45,647 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,689 Request with ID 62a8ae7d for model gemma-7b received
+2024-09-26 17:54:45,723 Request with ID 6d96b40b for model gemma-7b received
+2024-09-26 17:54:45,767 Request with ID 89b04cc3 for model llama3-8b received
+2024-09-26 17:54:45,783 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,784 Batch size condition met for model llama3-8b
+2024-09-26 17:54:45,790 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,808 Request with ID 327cfe52 for model llama3-8b received
+2024-09-26 17:54:45,814 Request with ID 0ba268fa for model llama3-8b received
+2024-09-26 17:54:45,836 Request with ID 04d2ecdc for model gemma-7b received
+2024-09-26 17:54:45,859 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,888 Request with ID 1d5ef8b4 for model gemma-7b received
+2024-09-26 17:54:45,917 Request with ID 1a170486 for model llama3-8b received
+2024-09-26 17:54:45,939 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,957 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:45,972 Request with ID 705dd61c for model gemma-7b received
+2024-09-26 17:54:45,984 127.0.0.1 - - [26/Sep/2024 17:54:45] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,005 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,021 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,027 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,066 Request with ID a97b5dba for model llama3-8b received
+2024-09-26 17:54:46,073 Request with ID 833a8c3e for model gemma-7b received
+2024-09-26 17:54:46,110 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,133 Request with ID 157fcc9a for model llama3-8b received
+2024-09-26 17:54:46,143 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,154 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,178 Request with ID e90a296a for model llama3-8b received
+2024-09-26 17:54:46,184 Request with ID aea6c005 for model gemma-7b received
+2024-09-26 17:54:46,196 Request with ID efdc66ae for model gemma-7b received
+2024-09-26 17:54:46,212 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,227 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,246 Request with ID 69b43931 for model granite-7b received
+2024-09-26 17:54:46,279 Request with ID f5557851 for model llama3-8b received
+2024-09-26 17:54:46,295 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,340 Request with ID b4c7de96 for model gemma-7b received
+2024-09-26 17:54:46,361 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,382 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,406 Request with ID 8e3e5b3d for model gemma-7b received
+2024-09-26 17:54:46,407 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,435 Request with ID 28475bf6 for model gemma-7b received
+2024-09-26 17:54:46,446 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,458 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,468 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,485 Request with ID 80747688 for model llama3-8b received
+2024-09-26 17:54:46,519 Request with ID 7bd2254e for model gemma-7b received
+2024-09-26 17:54:46,531 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,547 Request with ID 1eec80eb for model llama3-8b received
+2024-09-26 17:54:46,553 Batch size condition met for model granite-7b
+2024-09-26 17:54:46,570 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,641 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,664 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,727 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,756 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:46,788 127.0.0.1 - - [26/Sep/2024 17:54:46] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:47,640 Request with ID 8f685b1b for model gemma-7b received
+2024-09-26 17:54:47,646 127.0.0.1 - - [26/Sep/2024 17:54:47] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:48,243 Request with ID ec15fd82 for model gemma-7b received
+2024-09-26 17:54:48,249 127.0.0.1 - - [26/Sep/2024 17:54:48] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:51,704 Request with ID 698c3fd1 for model llama3-8b received
+2024-09-26 17:54:51,710 127.0.0.1 - - [26/Sep/2024 17:54:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:52,446 Request with ID 4c8910cf for model llama3-8b received
+2024-09-26 17:54:52,452 127.0.0.1 - - [26/Sep/2024 17:54:52] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:56,694 Request with ID 2519008a for model gemma-7b received
+2024-09-26 17:54:56,701 127.0.0.1 - - [26/Sep/2024 17:54:56] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:57,985 Request with ID f633351a for model llama3-8b received
+2024-09-26 17:54:57,991 127.0.0.1 - - [26/Sep/2024 17:54:57] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,045 Request with ID 0859bbab for model llama3-8b received
+2024-09-26 17:54:58,051 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,100 Request with ID 069b4103 for model llama3-8b received
+2024-09-26 17:54:58,106 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,140 Request with ID 4dbc8471 for model gemma-7b received
+2024-09-26 17:54:58,156 Batch size condition met for model gemma-7b
+2024-09-26 17:54:58,158 Request with ID 855d58c9 for model llama3-8b received
+2024-09-26 17:54:58,169 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,187 Request with ID 04d13e00 for model llama3-8b received
+2024-09-26 17:54:58,193 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,277 Request with ID b2683a45 for model llama3-8b received
+2024-09-26 17:54:58,283 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,306 Request with ID 16cb947a for model gemma-7b received
+2024-09-26 17:54:58,312 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,443 Request with ID 989f54c5 for model llama3-8b received
+2024-09-26 17:54:58,449 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,483 Request with ID 52677900 for model llama3-8b received
+2024-09-26 17:54:58,488 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,500 Request with ID a92f74c5 for model llama3-8b received
+2024-09-26 17:54:58,506 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,535 Request with ID 77596e77 for model gemma-7b received
+2024-09-26 17:54:58,535 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,548 Request with ID 592de96c for model gemma-7b received
+2024-09-26 17:54:58,553 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,594 Request with ID e59ff4eb for model granite-7b received
+2024-09-26 17:54:58,602 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,620 Request with ID a47ba16a for model gemma-7b received
+2024-09-26 17:54:58,642 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,648 Request with ID a908019e for model llama3-8b received
+2024-09-26 17:54:58,649 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,682 Request with ID 622fc925 for model gemma-7b received
+2024-09-26 17:54:58,689 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,707 Request with ID 3dece0a3 for model llama3-8b received
+2024-09-26 17:54:58,713 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,752 Request with ID de5148aa for model llama3-8b received
+2024-09-26 17:54:58,752 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,797 Request with ID 1921c8f8 for model gemma-7b received
+2024-09-26 17:54:58,814 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,826 Request with ID f34d33d4 for model llama3-8b received
+2024-09-26 17:54:58,827 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,844 Request with ID 616a66ec for model gemma-7b received
+2024-09-26 17:54:58,856 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,869 Request with ID 53fc8c3b for model llama3-8b received
+2024-09-26 17:54:58,881 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,904 Request with ID 98dabd37 for model llama3-8b received
+2024-09-26 17:54:58,909 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,927 Request with ID 6d69dac2 for model llama3-8b received
+2024-09-26 17:54:58,927 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,961 Request with ID fdeac50d for model llama3-8b received
+2024-09-26 17:54:58,962 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:58,974 Request with ID 208465ec for model llama3-8b received
+2024-09-26 17:54:58,974 127.0.0.1 - - [26/Sep/2024 17:54:58] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,008 Request with ID 4698a5f6 for model llama3-8b received
+2024-09-26 17:54:59,014 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,031 Request with ID 2128514e for model llama3-8b received
+2024-09-26 17:54:59,032 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,055 Request with ID 708cbf77 for model llama3-8b received
+2024-09-26 17:54:59,061 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,067 Request with ID 9b1a5d64 for model gemma-7b received
+2024-09-26 17:54:59,073 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,090 Request with ID cb91aff7 for model llama3-8b received
+2024-09-26 17:54:59,091 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,114 Request with ID d4915af1 for model granite-7b received
+2024-09-26 17:54:59,120 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,132 Request with ID 99df7c85 for model llama3-8b received
+2024-09-26 17:54:59,138 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,144 Request with ID 15f1539c for model llama3-8b received
+2024-09-26 17:54:59,150 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,169 Request with ID 2fc876fe for model llama3-8b received
+2024-09-26 17:54:59,170 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,177 Request with ID 4e3be57a for model gemma-7b received
+2024-09-26 17:54:59,185 Request with ID 1889d537 for model llama3-8b received
+2024-09-26 17:54:59,197 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,199 Request with ID cf71dd91 for model gemma-7b received
+2024-09-26 17:54:59,206 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,223 Request with ID c883d501 for model llama3-8b received
+2024-09-26 17:54:59,241 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,242 Request with ID 1acac3e6 for model gemma-7b received
+2024-09-26 17:54:59,268 Request with ID d7d7ed3a for model llama3-8b received
+2024-09-26 17:54:59,285 Request with ID 9673cf87 for model gemma-7b received
+2024-09-26 17:54:59,291 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,298 Request with ID 31767d7b for model llama3-8b received
+2024-09-26 17:54:59,314 Request with ID 7b4e2bb0 for model gemma-7b received
+2024-09-26 17:54:59,334 Request with ID 90a917e1 for model gemma-7b received
+2024-09-26 17:54:59,358 Request with ID 501ad3e6 for model gemma-7b received
+2024-09-26 17:54:59,370 Request with ID 0a5a3a08 for model gemma-7b received
+2024-09-26 17:54:59,380 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,396 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,412 Request with ID 1b12cc8f for model llama3-8b received
+2024-09-26 17:54:59,413 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,435 Request with ID e3b4d784 for model gemma-7b received
+2024-09-26 17:54:59,469 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,485 Request with ID d25c5cf2 for model gemma-7b received
+2024-09-26 17:54:59,486 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,513 Request with ID 81d1e343 for model llama3-8b received
+2024-09-26 17:54:59,514 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,535 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,542 Request with ID 6bfec6f8 for model granite-7b received
+2024-09-26 17:54:59,553 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,576 Request with ID 3c45f9dc for model granite-7b received
+2024-09-26 17:54:59,596 Request with ID 6aad3b70 for model llama3-8b received
+2024-09-26 17:54:59,625 Request with ID 1d9c8ca2 for model llama3-8b received
+2024-09-26 17:54:59,626 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,635 Request with ID 52a76b59 for model gemma-7b received
+2024-09-26 17:54:59,667 Request with ID 58eb3ef4 for model gemma-7b received
+2024-09-26 17:54:59,690 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,712 Request with ID 93082362 for model gemma-7b received
+2024-09-26 17:54:59,723 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,753 Request with ID 2ad64b7b for model llama3-8b received
+2024-09-26 17:54:59,850 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,859 LOADED MODEL llama3-8b
+2024-09-26 17:54:59,876 Request with ID 5829dc6a for model llama3-8b received
+2024-09-26 17:54:59,900 Request with ID 62e1404b for model llama3-8b received
+2024-09-26 17:54:59,918 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,934 Request with ID dc1bd869 for model gemma-7b received
+2024-09-26 17:54:59,952 Request with ID 7f1c9bb9 for model llama3-8b received
+2024-09-26 17:54:59,953 Request with ID 4bdf7ef4 for model llama3-8b received
+2024-09-26 17:54:59,975 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,991 127.0.0.1 - - [26/Sep/2024 17:54:59] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:54:59,992 Request with ID 9e86456f for model granite-7b received
+2024-09-26 17:55:00,010 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,022 Request with ID 9407dcbd for model llama3-8b received
+2024-09-26 17:55:00,034 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,044 Request with ID 5260b4fb for model gemma-7b received
+2024-09-26 17:55:00,056 Request with ID 5765709e for model llama3-8b received
+2024-09-26 17:55:00,057 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,090 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,096 Request with ID 5196a748 for model llama3-8b received
+2024-09-26 17:55:00,109 Request with ID 00fe7b7a for model gemma-7b received
+2024-09-26 17:55:00,121 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,143 Request with ID b1ed5306 for model llama3-8b received
+2024-09-26 17:55:00,155 SWITCH COUNT: 1
+2024-09-26 17:55:00,167 Request with ID c90b044f for model llama3-8b received
+2024-09-26 17:55:00,168 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,179 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,186 Request with ID 40d5fb5b for model llama3-8b received
+2024-09-26 17:55:00,192 Request with ID 34b1c838 for model llama3-8b received
+2024-09-26 17:55:00,214 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,226 Request with ID af397ae3 for model granite-7b received
+2024-09-26 17:55:00,237 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,244 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,288 Request with ID 4fe30f8e for model llama3-8b received
+2024-09-26 17:55:00,295 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,316 Request with ID 0a8ad418 for model llama3-8b received
+2024-09-26 17:55:00,328 Request with ID f730c4d4 for model llama3-8b received
+2024-09-26 17:55:00,335 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,351 Request with ID 12cdff0a for model gemma-7b received
+2024-09-26 17:55:00,364 Request with ID 180aae69 for model llama3-8b received
+2024-09-26 17:55:00,366 Request with ID 53c1b999 for model granite-7b received
+2024-09-26 17:55:00,367 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,373 Request with ID 05ada513 for model llama3-8b received
+2024-09-26 17:55:00,385 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,386 Request with ID 28782a2c for model llama3-8b received
+2024-09-26 17:55:00,409 Request with ID a35d7726 for model gemma-7b received
+2024-09-26 17:55:00,433 Request with ID 85deecc5 for model gemma-7b received
+2024-09-26 17:55:00,445 Request with ID 113203ad for model gemma-7b received
+2024-09-26 17:55:00,451 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,463 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,464 Request with ID 9fd65ffd for model llama3-8b received
+2024-09-26 17:55:00,485 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,491 Request with ID e594b4d5 for model llama3-8b received
+2024-09-26 17:55:00,512 Request with ID 370b835a for model gemma-7b received
+2024-09-26 17:55:00,534 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,554 Request with ID badffba9 for model gemma-7b received
+2024-09-26 17:55:00,561 Request with ID 138f454a for model granite-7b received
+2024-09-26 17:55:00,595 Request with ID 79f3ec87 for model llama3-8b received
+2024-09-26 17:55:00,610 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,618 Request with ID 86130507 for model llama3-8b received
+2024-09-26 17:55:00,644 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,651 Request with ID 2ca343e8 for model llama3-8b received
+2024-09-26 17:55:00,669 Request with ID 6ebc2519 for model granite-7b received
+2024-09-26 17:55:00,676 Request with ID 751faede for model llama3-8b received
+2024-09-26 17:55:00,687 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,705 Request with ID 2e8ddee8 for model llama3-8b received
+2024-09-26 17:55:00,738 Request with ID 34716e78 for model llama3-8b received
+2024-09-26 17:55:00,759 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,772 Request with ID 3c2baaff for model llama3-8b received
+2024-09-26 17:55:00,779 Request with ID 98bd502d for model granite-7b received
+2024-09-26 17:55:00,811 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,818 Request with ID 7bc399d3 for model gemma-7b received
+2024-09-26 17:55:00,819 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,868 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,894 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,922 127.0.0.1 - - [26/Sep/2024 17:55:00] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:00,972 Batch size condition met for model llama3-8b
+2024-09-26 17:55:01,005 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,011 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,023 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,044 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,099 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,138 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,177 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,204 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,232 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,248 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,260 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,304 Request with ID c7a2f5eb for model llama3-8b received
+2024-09-26 17:55:01,322 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,339 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,362 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,406 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,417 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,460 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,488 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,505 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:01,866 127.0.0.1 - - [26/Sep/2024 17:55:01] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:02,293 Batch processing started for model llama3-8b
+2024-09-26 17:55:06,004 Request with ID 7d81c33b for model llama3-8b received
+2024-09-26 17:55:06,011 127.0.0.1 - - [26/Sep/2024 17:55:06] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:09,616 Request with ID cfbeae14 for model llama3-8b received
+2024-09-26 17:55:09,622 127.0.0.1 - - [26/Sep/2024 17:55:09] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,238 Request with ID 23444c51 for model llama3-8b received
+2024-09-26 17:55:12,239 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,884 Request with ID fbaaa068 for model llama3-8b received
+2024-09-26 17:55:12,885 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,886 Request with ID 73e35059 for model llama3-8b received
+2024-09-26 17:55:12,887 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,944 Request with ID a6d99c47 for model gemma-7b received
+2024-09-26 17:55:12,945 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,963 Request with ID d4558505 for model llama3-8b received
+2024-09-26 17:55:12,964 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,965 Request with ID ae8b6f7c for model llama3-8b received
+2024-09-26 17:55:12,965 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:12,972 Request with ID 50d78b3f for model llama3-8b received
+2024-09-26 17:55:12,973 127.0.0.1 - - [26/Sep/2024 17:55:12] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,053 Request with ID 7cbf0119 for model llama3-8b received
+2024-09-26 17:55:13,054 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,068 Request with ID 7f573ad7 for model llama3-8b received
+2024-09-26 17:55:13,068 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,110 Partial Batch condition met for model llama3-8b
+2024-09-26 17:55:13,111 Request with ID 99414d0f for model gemma-7b received
+2024-09-26 17:55:13,112 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,152 Request with ID b0a3712a for model granite-7b received
+2024-09-26 17:55:13,152 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,175 Request with ID 04280c2d for model gemma-7b received
+2024-09-26 17:55:13,175 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,177 Request with ID 64e58d4a for model granite-7b received
+2024-09-26 17:55:13,178 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,206 Request with ID f0586a85 for model gemma-7b received
+2024-09-26 17:55:13,206 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,237 Request with ID cc7f5b39 for model granite-7b received
+2024-09-26 17:55:13,237 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,245 Request with ID 49cd407c for model llama3-8b received
+2024-09-26 17:55:13,246 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,282 Request with ID 98920a2f for model gemma-7b received
+2024-09-26 17:55:13,283 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,305 Request with ID 23298a36 for model llama3-8b received
+2024-09-26 17:55:13,305 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,328 Request with ID 8bbf0110 for model gemma-7b received
+2024-09-26 17:55:13,328 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,329 Request with ID eab0a33d for model llama3-8b received
+2024-09-26 17:55:13,330 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,331 Request with ID 2e2492cb for model llama3-8b received
+2024-09-26 17:55:13,332 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,346 Request with ID 51941a85 for model llama3-8b received
+2024-09-26 17:55:13,346 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,384 Request with ID 27aebb6e for model llama3-8b received
+2024-09-26 17:55:13,384 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,394 Request with ID d5362c22 for model llama3-8b received
+2024-09-26 17:55:13,394 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,406 Request with ID d2f54aaf for model llama3-8b received
+2024-09-26 17:55:13,407 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,429 Request with ID 1b771139 for model llama3-8b received
+2024-09-26 17:55:13,430 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,524 Request with ID 2aab2394 for model llama3-8b received
+2024-09-26 17:55:13,524 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,537 Request with ID e0e33bf2 for model llama3-8b received
+2024-09-26 17:55:13,537 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,568 Request with ID c9804a0d for model gemma-7b received
+2024-09-26 17:55:13,569 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,571 Request with ID 77f95f2d for model gemma-7b received
+2024-09-26 17:55:13,572 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,579 Request with ID ec630d6c for model gemma-7b received
+2024-09-26 17:55:13,579 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,587 Request with ID 8f88a7a6 for model granite-7b received
+2024-09-26 17:55:13,587 Request with ID 668e2a79 for model llama3-8b received
+2024-09-26 17:55:13,588 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,588 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,601 Request with ID fbb61cb0 for model gemma-7b received
+2024-09-26 17:55:13,601 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,627 Request with ID f7520867 for model gemma-7b received
+2024-09-26 17:55:13,628 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,696 Request with ID ac144989 for model llama3-8b received
+2024-09-26 17:55:13,697 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,699 Request with ID 71957c26 for model llama3-8b received
+2024-09-26 17:55:13,699 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,747 Request with ID e9b9019c for model llama3-8b received
+2024-09-26 17:55:13,747 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,761 Request with ID 0c0cca6c for model llama3-8b received
+2024-09-26 17:55:13,762 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,765 Request with ID 063d5846 for model llama3-8b received
+2024-09-26 17:55:13,765 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,772 Request with ID 1b3c8de2 for model llama3-8b received
+2024-09-26 17:55:13,772 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,797 Request with ID c6468410 for model llama3-8b received
+2024-09-26 17:55:13,797 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,814 Request with ID eaf8aeff for model gemma-7b received
+2024-09-26 17:55:13,815 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,819 Request with ID e88dca21 for model gemma-7b received
+2024-09-26 17:55:13,820 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,824 Request with ID 7852e105 for model llama3-8b received
+2024-09-26 17:55:13,824 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,835 Request with ID 8b1946aa for model granite-7b received
+2024-09-26 17:55:13,835 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,915 Request with ID 9eff942f for model llama3-8b received
+2024-09-26 17:55:13,915 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,974 Request with ID 00447255 for model llama3-8b received
+2024-09-26 17:55:13,975 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:13,978 Request with ID e160d358 for model gemma-7b received
+2024-09-26 17:55:13,979 127.0.0.1 - - [26/Sep/2024 17:55:13] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,012 Request with ID ec73d763 for model llama3-8b received
+2024-09-26 17:55:14,013 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,015 Request with ID b06f25e6 for model llama3-8b received
+2024-09-26 17:55:14,016 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,021 Request with ID 2e80123d for model gemma-7b received
+2024-09-26 17:55:14,021 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,039 Request with ID 9ac33a09 for model llama3-8b received
+2024-09-26 17:55:14,039 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,059 Request with ID 3c71d946 for model granite-7b received
+2024-09-26 17:55:14,059 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,108 Request with ID d33ec8b8 for model gemma-7b received
+2024-09-26 17:55:14,108 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,111 Request with ID 3b54f296 for model llama3-8b received
+2024-09-26 17:55:14,112 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,183 Request with ID 637e69c5 for model llama3-8b received
+2024-09-26 17:55:14,184 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,222 Request with ID cd9e9c68 for model llama3-8b received
+2024-09-26 17:55:14,222 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,241 Request with ID c3e4e3e0 for model granite-7b received
+2024-09-26 17:55:14,241 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,254 Request with ID 50158f12 for model gemma-7b received
+2024-09-26 17:55:14,255 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,262 Request with ID 43b749e1 for model llama3-8b received
+2024-09-26 17:55:14,263 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,280 Request with ID bcb88330 for model granite-7b received
+2024-09-26 17:55:14,280 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,286 Request with ID a52b1221 for model llama3-8b received
+2024-09-26 17:55:14,286 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,288 Request with ID 8d8eac51 for model llama3-8b received
+2024-09-26 17:55:14,288 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,305 Request with ID 0f4d3293 for model llama3-8b received
+2024-09-26 17:55:14,306 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,326 Request with ID f87479e3 for model llama3-8b received
+2024-09-26 17:55:14,326 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,336 Request with ID 835edb1d for model llama3-8b received
+2024-09-26 17:55:14,337 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,355 Request with ID f8824eda for model gemma-7b received
+2024-09-26 17:55:14,356 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,404 Request with ID b0f9f581 for model llama3-8b received
+2024-09-26 17:55:14,405 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,429 Request with ID 89941714 for model llama3-8b received
+2024-09-26 17:55:14,430 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,475 Request with ID d9b451c3 for model llama3-8b received
+2024-09-26 17:55:14,476 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,517 Request with ID dbd59457 for model llama3-8b received
+2024-09-26 17:55:14,518 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,544 Request with ID 53e2101e for model llama3-8b received
+2024-09-26 17:55:14,544 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,576 Request with ID afeaee8d for model gemma-7b received
+2024-09-26 17:55:14,576 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,611 Request with ID 7e724992 for model llama3-8b received
+2024-09-26 17:55:14,611 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:14,771 Request with ID b4bd891c for model gemma-7b received
+2024-09-26 17:55:14,771 127.0.0.1 - - [26/Sep/2024 17:55:14] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:16,334 Request with ID a8908425 for model gemma-7b received
+2024-09-26 17:55:16,334 127.0.0.1 - - [26/Sep/2024 17:55:16] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:16,764 Processed batch: ['1f8704bf', '796fbd9d', '874dfdab', 'fb6859e9', '0744a5af', '5cf28687', 'ec9d672c', '0a27ea2f', 'a4580fe6', '787c1b11', '004d63e1', '5798a67b', 'd02cf543', '03c1e9a2', '22cfe0f2', 'ddd188e5', '9673ab60', '372dd057', 'e62b1a29', 'bfc5ee26', '0613c2da', '7214e37c', 'ff2b01d3', 'e0d81f67', '4edcf567', 'dd41e07e', 'c77a50c3', '7910bb0b', '469d2ebf', '43eec4f9', '9e648052', '0833441c', 'ecce1ce9', '5ca51ee4', 'd0011193', '746ea835', '8c60340e', '78f15519', '6bb85b51', '5b730bdc', 'ba956b9b', '943324f3', 'df13100f', 'c5219886', 'ab35957b', 'e4e800f0', '9900a9cb', 'a3faf836', '54b3bd82', 'b75741f2', '0b6a4b98', 'ec0f3fb1', 'e2ba3421', '3ac38e14', '93dffa20', '24f692ff', '202d97a7', '8a81a9ed', 'e5f5cda5', '3a824f36', '2e98d4c7', 'f922db9c', '7ec1dce4', 'dbe35b27'] with model llama3-8b in 14.4719 seconds
+2024-09-26 17:55:16,935 127.0.0.1 - - [26/Sep/2024 17:55:16] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:16,936 STARTING TO LOAD gemma-7b
+2024-09-26 17:55:18,329 Request with ID c1b9d377 for model llama3-8b received
+2024-09-26 17:55:18,329 127.0.0.1 - - [26/Sep/2024 17:55:18] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:19,106 Request with ID bb54e2d1 for model granite-7b received
+2024-09-26 17:55:19,106 127.0.0.1 - - [26/Sep/2024 17:55:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:19,495 Request with ID 37607582 for model llama3-8b received
+2024-09-26 17:55:19,495 127.0.0.1 - - [26/Sep/2024 17:55:19] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:24,183 Request with ID b7453f7a for model llama3-8b received
+2024-09-26 17:55:24,184 127.0.0.1 - - [26/Sep/2024 17:55:24] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:24,402 Request with ID adf1aab1 for model llama3-8b received
+2024-09-26 17:55:24,403 127.0.0.1 - - [26/Sep/2024 17:55:24] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:25,296 Request with ID fa38ce37 for model llama3-8b received
+2024-09-26 17:55:25,296 127.0.0.1 - - [26/Sep/2024 17:55:25] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:25,427 Request with ID 09e0a3bd for model llama3-8b received
+2024-09-26 17:55:25,427 127.0.0.1 - - [26/Sep/2024 17:55:25] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,461 Request with ID 1bffd2bd for model llama3-8b received
+2024-09-26 17:55:26,462 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,463 Request with ID f7b85099 for model llama3-8b received
+2024-09-26 17:55:26,464 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,466 Request with ID 01b9ea47 for model granite-7b received
+2024-09-26 17:55:26,467 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,469 Request with ID f5982542 for model llama3-8b received
+2024-09-26 17:55:26,469 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,471 Request with ID 2b02be79 for model llama3-8b received
+2024-09-26 17:55:26,471 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,473 Request with ID b0ca2663 for model llama3-8b received
+2024-09-26 17:55:26,473 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,475 Request with ID 4c3c8d7a for model llama3-8b received
+2024-09-26 17:55:26,476 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,477 Request with ID 54db9ff3 for model llama3-8b received
+2024-09-26 17:55:26,478 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,512 Request with ID fe09cad8 for model gemma-7b received
+2024-09-26 17:55:26,512 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,549 Request with ID ae522702 for model granite-7b received
+2024-09-26 17:55:26,549 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,551 Request with ID b637f730 for model gemma-7b received
+2024-09-26 17:55:26,551 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,568 Request with ID f3134fb8 for model llama3-8b received
+2024-09-26 17:55:26,569 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,599 Request with ID 1c90a9fc for model llama3-8b received
+2024-09-26 17:55:26,600 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,608 Request with ID e45aaf0d for model llama3-8b received
+2024-09-26 17:55:26,608 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,627 Request with ID d729c738 for model llama3-8b received
+2024-09-26 17:55:26,628 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,630 Request with ID 23f4c442 for model llama3-8b received
+2024-09-26 17:55:26,630 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,661 Request with ID b94a1f14 for model gemma-7b received
+2024-09-26 17:55:26,662 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,664 Request with ID a2398cd1 for model llama3-8b received
+2024-09-26 17:55:26,665 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,692 Request with ID ae49a680 for model gemma-7b received
+2024-09-26 17:55:26,692 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,771 Request with ID 6e505a0f for model gemma-7b received
+2024-09-26 17:55:26,771 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,784 Request with ID 58ca5278 for model llama3-8b received
+2024-09-26 17:55:26,785 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,800 Request with ID b2c90019 for model llama3-8b received
+2024-09-26 17:55:26,800 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,813 Request with ID 537adc89 for model gemma-7b received
+2024-09-26 17:55:26,813 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,921 Request with ID 6e95c92e for model llama3-8b received
+2024-09-26 17:55:26,921 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,979 Request with ID 2b732d29 for model gemma-7b received
+2024-09-26 17:55:26,980 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:26,985 Request with ID 2eca7dbd for model granite-7b received
+2024-09-26 17:55:26,986 127.0.0.1 - - [26/Sep/2024 17:55:26] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,012 Request with ID f4023e32 for model gemma-7b received
+2024-09-26 17:55:27,012 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,065 Request with ID af3b2747 for model llama3-8b received
+2024-09-26 17:55:27,065 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,154 Request with ID b1a2fb61 for model gemma-7b received
+2024-09-26 17:55:27,155 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,206 Request with ID 935a4b15 for model llama3-8b received
+2024-09-26 17:55:27,207 Batch size condition met for model llama3-8b
+2024-09-26 17:55:27,245 Request with ID 3894a57d for model llama3-8b received
+2024-09-26 17:55:27,246 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,282 Request with ID 258d3cd2 for model llama3-8b received
+2024-09-26 17:55:27,283 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,286 Request with ID af026136 for model granite-7b received
+2024-09-26 17:55:27,286 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,353 Request with ID 34a393c3 for model llama3-8b received
+2024-09-26 17:55:27,353 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,394 Request with ID 23ac0164 for model llama3-8b received
+2024-09-26 17:55:27,395 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,398 Request with ID 8e31f082 for model gemma-7b received
+2024-09-26 17:55:27,399 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,430 Request with ID af27cf57 for model llama3-8b received
+2024-09-26 17:55:27,430 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,436 Request with ID 311639a0 for model llama3-8b received
+2024-09-26 17:55:27,440 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,441 Request with ID 2245a35b for model llama3-8b received
+2024-09-26 17:55:27,442 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,447 Request with ID 62c0c51f for model llama3-8b received
+2024-09-26 17:55:27,447 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,458 Request with ID 40f7608b for model llama3-8b received
+2024-09-26 17:55:27,458 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,460 Request with ID 890ebadc for model granite-7b received
+2024-09-26 17:55:27,460 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,471 Request with ID f9cfabb4 for model llama3-8b received
+2024-09-26 17:55:27,471 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,495 Request with ID 7c56eaad for model gemma-7b received
+2024-09-26 17:55:27,496 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,527 Request with ID 148d8ce7 for model llama3-8b received
+2024-09-26 17:55:27,528 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,567 Request with ID 51026e34 for model granite-7b received
+2024-09-26 17:55:27,567 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,585 Request with ID 50de3813 for model gemma-7b received
+2024-09-26 17:55:27,586 Batch size condition met for model gemma-7b
+2024-09-26 17:55:27,593 Request with ID 439ab190 for model llama3-8b received
+2024-09-26 17:55:27,593 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,597 Request with ID d41bb8dc for model llama3-8b received
+2024-09-26 17:55:27,597 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,623 Request with ID 86013863 for model llama3-8b received
+2024-09-26 17:55:27,623 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,646 Request with ID a44d758f for model granite-7b received
+2024-09-26 17:55:27,646 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,656 Request with ID 8b1e9ca4 for model llama3-8b received
+2024-09-26 17:55:27,657 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,660 Request with ID 5dbdc381 for model gemma-7b received
+2024-09-26 17:55:27,661 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,662 Request with ID 1ab155e9 for model granite-7b received
+2024-09-26 17:55:27,663 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,676 Request with ID de048874 for model gemma-7b received
+2024-09-26 17:55:27,676 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,698 Request with ID ac651ee3 for model llama3-8b received
+2024-09-26 17:55:27,699 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,741 Request with ID 6c6515a9 for model gemma-7b received
+2024-09-26 17:55:27,742 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,746 Request with ID 093e27f0 for model gemma-7b received
+2024-09-26 17:55:27,747 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,773 Request with ID c2782995 for model llama3-8b received
+2024-09-26 17:55:27,774 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,775 Request with ID 2239354f for model llama3-8b received
+2024-09-26 17:55:27,776 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,778 Request with ID ec151989 for model llama3-8b received
+2024-09-26 17:55:27,779 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,809 Request with ID e8075274 for model llama3-8b received
+2024-09-26 17:55:27,809 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,842 Request with ID ce03943c for model llama3-8b received
+2024-09-26 17:55:27,843 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,853 Request with ID 09b20d6d for model llama3-8b received
+2024-09-26 17:55:27,853 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,856 Request with ID 00b64a40 for model llama3-8b received
+2024-09-26 17:55:27,857 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,877 Request with ID 26f62345 for model llama3-8b received
+2024-09-26 17:55:27,877 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,894 Request with ID be3c6819 for model llama3-8b received
+2024-09-26 17:55:27,895 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,914 Request with ID b4cf32a2 for model llama3-8b received
+2024-09-26 17:55:27,914 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,917 Request with ID 5951748a for model granite-7b received
+2024-09-26 17:55:27,917 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,924 Request with ID a2fc20f3 for model gemma-7b received
+2024-09-26 17:55:27,924 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:27,979 Request with ID 4f4c8169 for model gemma-7b received
+2024-09-26 17:55:27,979 127.0.0.1 - - [26/Sep/2024 17:55:27] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,074 Request with ID b411a430 for model gemma-7b received
+2024-09-26 17:55:28,074 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,078 Request with ID a0ac8bb6 for model llama3-8b received
+2024-09-26 17:55:28,079 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,107 Request with ID 2d55846d for model llama3-8b received
+2024-09-26 17:55:28,108 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,129 Request with ID e1099493 for model llama3-8b received
+2024-09-26 17:55:28,129 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,135 Request with ID e9a4ac27 for model llama3-8b received
+2024-09-26 17:55:28,136 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,231 Request with ID c3059896 for model llama3-8b received
+2024-09-26 17:55:28,231 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,236 Request with ID e929d631 for model llama3-8b received
+2024-09-26 17:55:28,236 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,239 Request with ID 7ae7074e for model granite-7b received
+2024-09-26 17:55:28,240 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,247 Request with ID a156c6c4 for model llama3-8b received
+2024-09-26 17:55:28,247 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,448 Request with ID c4eafe5e for model llama3-8b received
+2024-09-26 17:55:28,449 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,451 Request with ID 6134b55a for model llama3-8b received
+2024-09-26 17:55:28,452 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,453 Request with ID 51a509d6 for model gemma-7b received
+2024-09-26 17:55:28,454 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:28,458 Request with ID 0db42375 for model granite-7b received
+2024-09-26 17:55:28,459 127.0.0.1 - - [26/Sep/2024 17:55:28] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:29,460 Request with ID 9730a437 for model llama3-8b received
+2024-09-26 17:55:29,460 127.0.0.1 - - [26/Sep/2024 17:55:29] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:30,617 Request with ID 3c61801d for model llama3-8b received
+2024-09-26 17:55:30,618 127.0.0.1 - - [26/Sep/2024 17:55:30] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:32,329 LOADED MODEL gemma-7b
+2024-09-26 17:55:32,329 SWITCH COUNT: 2
+2024-09-26 17:55:32,331 Batch processing started for model gemma-7b
+2024-09-26 17:55:34,611 Request with ID 21bedd30 for model llama3-8b received
+2024-09-26 17:55:34,612 127.0.0.1 - - [26/Sep/2024 17:55:34] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:35,174 Request with ID 0726fa97 for model llama3-8b received
+2024-09-26 17:55:35,174 127.0.0.1 - - [26/Sep/2024 17:55:35] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:39,390 Request with ID a7896f9c for model gemma-7b received
+2024-09-26 17:55:39,390 127.0.0.1 - - [26/Sep/2024 17:55:39] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:40,208 Processed batch: ['704f5c32', 'adc1c720', '4ae125d7', '5de0f374', '1ef582f8', 'f2ab07f1', '0cf3b96b', '617d72b2', '282674d0', '96d6bcdb', '78b2a871', 'd6f1fe4b', 'b044aa1e', '62f38b06', '508cbb57', '8e8e0dfd', '0f8ea4f5', 'eed49d57', '0ecd2f57', '49e24094', 'fad35a96', '8fabff5c', '820b91d5', 'd5a7f4eb', '147e9852', 'df1cbba3', '4fc084ab', 'ac5bef87', '25519642', '8504fd14', '9bd1113b', 'e674b1ea', 'bf1f2a7c', 'ef0cf5e4', 'f2c31d95', '7ac844f0', 'dbb6980d', '8a2af6d2', 'fa209f8a', '06641a50', '9a1dde1c', 'a021b2d2', '29f3bb29', 'd9dfc5b0', '8ea5d366', '20ad0eb9', 'f9802439', '14557140', '62a8ae7d', '6d96b40b', '04d2ecdc', '1d5ef8b4', '705dd61c', '833a8c3e', 'aea6c005', 'efdc66ae', 'b4c7de96', '8e3e5b3d', '28475bf6', '7bd2254e', '8f685b1b', 'ec15fd82', '2519008a', '4dbc8471'] with model gemma-7b in 7.8766 seconds
+2024-09-26 17:55:40,394 127.0.0.1 - - [26/Sep/2024 17:55:40] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:40,394 STARTING TO LOAD gemma-7b
+2024-09-26 17:55:40,399 Batch processing started for model gemma-7b
+2024-09-26 17:55:41,073 Request with ID 42c5aed0 for model llama3-8b received
+2024-09-26 17:55:41,074 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,151 Request with ID 69d491d8 for model gemma-7b received
+2024-09-26 17:55:41,151 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,158 Request with ID f6288697 for model llama3-8b received
+2024-09-26 17:55:41,158 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,165 Request with ID abf6cf5f for model llama3-8b received
+2024-09-26 17:55:41,166 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,187 Request with ID 88f9030a for model gemma-7b received
+2024-09-26 17:55:41,188 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,254 Request with ID 7e64b6f4 for model llama3-8b received
+2024-09-26 17:55:41,254 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,277 Request with ID 9587b04b for model gemma-7b received
+2024-09-26 17:55:41,277 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,306 Request with ID d46d95fa for model gemma-7b received
+2024-09-26 17:55:41,306 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,323 Request with ID db7826b4 for model llama3-8b received
+2024-09-26 17:55:41,324 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,334 Request with ID 3d1b7882 for model llama3-8b received
+2024-09-26 17:55:41,334 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,347 Request with ID 5647103a for model llama3-8b received
+2024-09-26 17:55:41,348 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,352 Request with ID dafb7274 for model llama3-8b received
+2024-09-26 17:55:41,352 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,372 Request with ID 42d5bf6b for model gemma-7b received
+2024-09-26 17:55:41,372 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,375 Request with ID 231f841b for model gemma-7b received
+2024-09-26 17:55:41,375 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,399 Request with ID 3a5c4a06 for model gemma-7b received
+2024-09-26 17:55:41,399 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,456 Request with ID 88b345ef for model llama3-8b received
+2024-09-26 17:55:41,457 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,464 Request with ID 52e9241a for model llama3-8b received
+2024-09-26 17:55:41,465 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,506 Request with ID e5c84052 for model gemma-7b received
+2024-09-26 17:55:41,506 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,510 Request with ID 7b353abe for model granite-7b received
+2024-09-26 17:55:41,511 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,554 Request with ID 53c0835c for model llama3-8b received
+2024-09-26 17:55:41,555 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,575 Request with ID 7d58d9c4 for model llama3-8b received
+2024-09-26 17:55:41,576 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,628 Request with ID 195908a1 for model llama3-8b received
+2024-09-26 17:55:41,628 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,693 Request with ID 4ca2361d for model gemma-7b received
+2024-09-26 17:55:41,693 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,696 Request with ID 16f00ad7 for model gemma-7b received
+2024-09-26 17:55:41,697 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,699 Request with ID 9f04270a for model llama3-8b received
+2024-09-26 17:55:41,699 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,787 Request with ID 5e849189 for model granite-7b received
+2024-09-26 17:55:41,787 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,790 Request with ID b78800a0 for model llama3-8b received
+2024-09-26 17:55:41,791 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,877 Request with ID 9e8a8c75 for model gemma-7b received
+2024-09-26 17:55:41,878 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,901 Request with ID f2524163 for model granite-7b received
+2024-09-26 17:55:41,901 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:41,906 Request with ID 15c8b554 for model llama3-8b received
+2024-09-26 17:55:41,907 127.0.0.1 - - [26/Sep/2024 17:55:41] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,013 Request with ID a83a7ba8 for model granite-7b received
+2024-09-26 17:55:42,014 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,109 Request with ID 89ab6b08 for model llama3-8b received
+2024-09-26 17:55:42,110 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,174 Request with ID e36ea4f0 for model llama3-8b received
+2024-09-26 17:55:42,174 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,197 Request with ID b9a74953 for model llama3-8b received
+2024-09-26 17:55:42,198 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,233 Request with ID 9f936de7 for model gemma-7b received
+2024-09-26 17:55:42,233 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,235 Request with ID 841e07ba for model gemma-7b received
+2024-09-26 17:55:42,235 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,273 Request with ID 6afca0f4 for model gemma-7b received
+2024-09-26 17:55:42,274 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,309 Request with ID dd1d945b for model llama3-8b received
+2024-09-26 17:55:42,309 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,312 Request with ID 3357274a for model llama3-8b received
+2024-09-26 17:55:42,313 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,331 Request with ID ff681385 for model llama3-8b received
+2024-09-26 17:55:42,332 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,338 Request with ID 895744ef for model llama3-8b received
+2024-09-26 17:55:42,338 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,397 Request with ID d5eb4880 for model llama3-8b received
+2024-09-26 17:55:42,398 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,434 Request with ID 15f6f018 for model llama3-8b received
+2024-09-26 17:55:42,435 Batch size condition met for model llama3-8b
+2024-09-26 17:55:42,465 Request with ID 66c61d0b for model llama3-8b received
+2024-09-26 17:55:42,466 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,492 Request with ID b7a48eb9 for model granite-7b received
+2024-09-26 17:55:42,492 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,578 Request with ID c31a1e3b for model llama3-8b received
+2024-09-26 17:55:42,578 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,613 Request with ID c3ad17e8 for model gemma-7b received
+2024-09-26 17:55:42,614 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,647 Request with ID f6246a6c for model gemma-7b received
+2024-09-26 17:55:42,647 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,681 Request with ID 97be7d3d for model gemma-7b received
+2024-09-26 17:55:42,681 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,715 Request with ID d09c528d for model llama3-8b received
+2024-09-26 17:55:42,716 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,718 Request with ID e57037e9 for model llama3-8b received
+2024-09-26 17:55:42,718 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,735 Request with ID 47ca8b83 for model llama3-8b received
+2024-09-26 17:55:42,735 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,784 Request with ID a71efd5f for model llama3-8b received
+2024-09-26 17:55:42,785 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,827 Request with ID ff823264 for model llama3-8b received
+2024-09-26 17:55:42,828 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,845 Request with ID 78722a5b for model gemma-7b received
+2024-09-26 17:55:42,845 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,881 Request with ID e61f0cb1 for model llama3-8b received
+2024-09-26 17:55:42,881 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,926 Request with ID 4873157f for model llama3-8b received
+2024-09-26 17:55:42,927 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,945 Request with ID 3201381b for model llama3-8b received
+2024-09-26 17:55:42,946 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,950 Request with ID f098eaa0 for model llama3-8b received
+2024-09-26 17:55:42,950 Request with ID ab12e2ec for model gemma-7b received
+2024-09-26 17:55:42,951 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,951 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:42,966 Request with ID 43042ae3 for model gemma-7b received
+2024-09-26 17:55:42,966 127.0.0.1 - - [26/Sep/2024 17:55:42] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,003 Request with ID db954932 for model gemma-7b received
+2024-09-26 17:55:43,004 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,023 Request with ID 37d35343 for model gemma-7b received
+2024-09-26 17:55:43,024 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,038 Request with ID 6accb0a3 for model gemma-7b received
+2024-09-26 17:55:43,039 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,041 Request with ID 79f8b7e7 for model llama3-8b received
+2024-09-26 17:55:43,042 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,077 Request with ID 8aa81ec4 for model llama3-8b received
+2024-09-26 17:55:43,077 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,097 Request with ID b3783e55 for model gemma-7b received
+2024-09-26 17:55:43,098 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,162 Request with ID b2e1e0e7 for model llama3-8b received
+2024-09-26 17:55:43,162 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,182 Request with ID 5f62a0e8 for model granite-7b received
+2024-09-26 17:55:43,183 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,196 Request with ID bce44735 for model gemma-7b received
+2024-09-26 17:55:43,196 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,213 Request with ID c3cd2455 for model llama3-8b received
+2024-09-26 17:55:43,213 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,237 Request with ID a514a102 for model llama3-8b received
+2024-09-26 17:55:43,237 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,284 Request with ID e0139de5 for model llama3-8b received
+2024-09-26 17:55:43,285 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,326 Request with ID 1ad5915e for model llama3-8b received
+2024-09-26 17:55:43,326 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,328 Request with ID 54d4d1b6 for model gemma-7b received
+2024-09-26 17:55:43,328 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,330 Request with ID b1bba28c for model llama3-8b received
+2024-09-26 17:55:43,331 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,400 Request with ID 59e8c7e3 for model gemma-7b received
+2024-09-26 17:55:43,400 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,483 Request with ID 608e0fc7 for model granite-7b received
+2024-09-26 17:55:43,484 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,570 Request with ID 843ff5af for model gemma-7b received
+2024-09-26 17:55:43,571 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,574 Request with ID ff642e7b for model llama3-8b received
+2024-09-26 17:55:43,574 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,582 Request with ID e69d14e2 for model gemma-7b received
+2024-09-26 17:55:43,583 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,595 Request with ID 4dc487d0 for model llama3-8b received
+2024-09-26 17:55:43,595 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,620 Request with ID d0dc7d7c for model gemma-7b received
+2024-09-26 17:55:43,621 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,651 Request with ID 5673fa5c for model llama3-8b received
+2024-09-26 17:55:43,651 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,661 Request with ID 4d7f534a for model llama3-8b received
+2024-09-26 17:55:43,662 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,665 Request with ID 6bf6fa3d for model gemma-7b received
+2024-09-26 17:55:43,666 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,703 Request with ID 8633517c for model gemma-7b received
+2024-09-26 17:55:43,703 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,727 Request with ID 3c8e3506 for model llama3-8b received
+2024-09-26 17:55:43,727 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,731 Request with ID 1b4edd9c for model llama3-8b received
+2024-09-26 17:55:43,732 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,741 Request with ID a2a27d9e for model llama3-8b received
+2024-09-26 17:55:43,741 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,763 Request with ID cc4b3b56 for model llama3-8b received
+2024-09-26 17:55:43,763 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,789 Request with ID 086d87f1 for model granite-7b received
+2024-09-26 17:55:43,789 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,822 Request with ID 58d263de for model llama3-8b received
+2024-09-26 17:55:43,822 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,852 Request with ID 8027bb51 for model llama3-8b received
+2024-09-26 17:55:43,853 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,922 Request with ID 2091c5c7 for model gemma-7b received
+2024-09-26 17:55:43,922 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,929 Request with ID db78cb9a for model llama3-8b received
+2024-09-26 17:55:43,930 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:43,947 Request with ID 4a340f8d for model llama3-8b received
+2024-09-26 17:55:43,947 127.0.0.1 - - [26/Sep/2024 17:55:43] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,022 Request with ID 66a740c6 for model gemma-7b received
+2024-09-26 17:55:44,022 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,030 Request with ID 1d111872 for model llama3-8b received
+2024-09-26 17:55:44,030 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,041 Request with ID 1f28cd04 for model llama3-8b received
+2024-09-26 17:55:44,041 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,059 Request with ID 2b308b3c for model llama3-8b received
+2024-09-26 17:55:44,060 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,062 Request with ID d17c5a45 for model llama3-8b received
+2024-09-26 17:55:44,063 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,082 Request with ID dbf5d997 for model llama3-8b received
+2024-09-26 17:55:44,082 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,088 Request with ID 8aaf199b for model llama3-8b received
+2024-09-26 17:55:44,088 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,153 Request with ID cb19fd92 for model gemma-7b received
+2024-09-26 17:55:44,153 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,156 Request with ID 8c9b5c57 for model granite-7b received
+2024-09-26 17:55:44,156 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,189 Request with ID 7a76a91f for model llama3-8b received
+2024-09-26 17:55:44,189 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,215 Request with ID aa900dc6 for model gemma-7b received
+2024-09-26 17:55:44,216 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,233 Request with ID e6642c17 for model llama3-8b received
+2024-09-26 17:55:44,233 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,256 Request with ID e0300037 for model llama3-8b received
+2024-09-26 17:55:44,256 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,260 Request with ID b773e35e for model llama3-8b received
+2024-09-26 17:55:44,260 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:44,277 Request with ID 18a0dd56 for model llama3-8b received
+2024-09-26 17:55:44,277 127.0.0.1 - - [26/Sep/2024 17:55:44] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:48,871 Processed batch: ['16cb947a', '77596e77', '592de96c', 'a47ba16a', '622fc925', '1921c8f8', '616a66ec', '9b1a5d64', '4e3be57a', 'cf71dd91', '1acac3e6', '9673cf87', '7b4e2bb0', '90a917e1', '501ad3e6', '0a5a3a08', 'e3b4d784', 'd25c5cf2', '52a76b59', '58eb3ef4', '93082362', 'dc1bd869', '5260b4fb', '00fe7b7a', '12cdff0a', 'a35d7726', '85deecc5', '113203ad', '370b835a', 'badffba9', '7bc399d3', 'a6d99c47', '99414d0f', '04280c2d', 'f0586a85', '98920a2f', '8bbf0110', 'c9804a0d', '77f95f2d', 'ec630d6c', 'fbb61cb0', 'f7520867', 'eaf8aeff', 'e88dca21', 'e160d358', '2e80123d', 'd33ec8b8', '50158f12', 'f8824eda', 'afeaee8d', 'b4bd891c', 'a8908425', 'fe09cad8', 'b637f730', 'b94a1f14', 'ae49a680', '6e505a0f', '537adc89', '2b732d29', 'f4023e32', 'b1a2fb61', '8e31f082', '7c56eaad', '50de3813'] with model gemma-7b in 8.4713 seconds
+2024-09-26 17:55:49,031 STARTING TO LOAD llama3-8b
+2024-09-26 17:55:49,361 Processing batch for granite-7b due to time limit with batch size 39
+2024-09-26 17:55:49,364 Time limit condition met for model granite-7b
+2024-09-26 17:55:51,128 Request with ID 5b89ccd8 for model gemma-7b received
+2024-09-26 17:55:51,129 127.0.0.1 - - [26/Sep/2024 17:55:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:51,288 Request with ID f56742e3 for model llama3-8b received
+2024-09-26 17:55:51,288 127.0.0.1 - - [26/Sep/2024 17:55:51] "POST /inference HTTP/1.1" 200 -
+2024-09-26 17:55:51,427 Total time: 117.5916 seconds
+2024-09-26 17:55:51,427 Total inference time: 30.8200 seconds
+2024-09-26 17:55:51,427 Inference time as percentage of total time: 26.21%
+2024-09-26 17:55:51,427 END
+2024-09-26 17:55:51,428 127.0.0.1 - - [26/Sep/2024 17:55:51] "POST /inference HTTP/1.1" 200 -
