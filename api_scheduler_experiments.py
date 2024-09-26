@@ -47,6 +47,8 @@ logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{devic
 logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
 # Batch sizes depending on the strategy
+
+# Leave this one out
 if mode == "FCFS":
     logging.debug(f"Scheduling mode set as {mode}")
     # LOGIC: PROCESS EACH REQUEST AS SOON AS IT ARRIVES - TOO SLOW WHEN CONSIDERING LOADING TIMES
@@ -76,6 +78,7 @@ if mode == "SelectBatch+Timer":
     # GOAL: OPTIMIZE FOR MEETING SLA BETTER SACRIFICING THROUGHPUT
     allowed_batch_sizes = [8, 16, 32, 64]
 
+# Leave this one out
 if mode == "BestBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
     #        PROCESSES BATCHES THAT ARE NOT FULL FOR CURRENT LOADED MODEL BEFORE SWAPPING
@@ -132,7 +135,7 @@ if device.type == "cuda":
 
 # Arrival rate estimation variables
 arrival_times = {}
-ARRIVAL_RATE_WINDOW = 50  # Number of recent arrivals to consider
+ARRIVAL_RATE_WINDOW = 100  # Number of recent arrivals to consider
 
 # Model usage tracking
 # model_usage_count = {}  # Tracks the number of requests for each model
@@ -364,7 +367,7 @@ def background_batch_processor():
                 while not incoming_request_batches[model_alias].empty():
                     running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
                 batch_size = running_request_batches[model_alias].qsize()
-                #logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
+                logging.debug(f"Processing batch for {model_alias} due to time limit with batch size {batch_size}")
                 process_batch(model_alias, "Time limit", batch_size)
         time.sleep(0.2)  # Sleep briefly to prevent tight looping
 
@@ -386,7 +389,7 @@ app = Flask(__name__)
 
 @app.route('/inference', methods=['POST'])
 def inference():
-    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_loaded_timestamp, model_stay_time, current_loaded_model
+    global batch_timers, batch_time_limit, incoming_request_batches, running_request_batches, first_request_time, last_batch_processed_time, total_time, inference_flag, arrival_times, model_loaded_timestamp, model_stay_time, current_loaded_model, mode
 
     # Record the time of the first request
     if first_request_time is None:
@@ -457,19 +460,19 @@ def inference():
             batch_timers[model_alias] = time.time() + adjusted_time_limit[model_alias]  # Adjust the timer
 
 
-    # if mode == "SelectBatch":
-    #     # Check if batch size is met
-    #     if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
-    #         #print(f"Moving batch for {model_alias} from incoming to running due to batch size")
-    #         running_request_batches[model_alias] = Queue()
-    #         while not incoming_request_batches[model_alias].empty():
-    #             running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
-    #         # Process the batch because the batch size was met
-    #         #load_model(model_alias)
-    #         completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
-    #         return jsonify({
-    #         'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
-    #     })
+    if mode == "SelectBatch":
+        # Check if batch size is met
+        if incoming_request_batches[model_alias].qsize() >= max(allowed_batch_sizes):
+            #print(f"Moving batch for {model_alias} from incoming to running due to batch size")
+            running_request_batches[model_alias] = Queue()
+            while not incoming_request_batches[model_alias].empty():
+                running_request_batches[model_alias].put(incoming_request_batches[model_alias].get())
+            # Process the batch because the batch size was met
+            #load_model(model_alias)
+            completed_inference_ids = process_batch(model_alias, "Batch size", max(allowed_batch_sizes))
+            return jsonify({
+            'message': f"f'Inferences completed with {model_alias}: {completed_inference_ids}'"
+        })
 
     if "SelectBatch" in mode: #mode == "BestBatch" or mode == "BestBatch+Timer":
         # Record arrival time for arrival rate estimation
