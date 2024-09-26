@@ -24,7 +24,7 @@ wait_for_flask() {
 }
 
 # Iterate over traffic_mean values
-for traffic_mean in 4; do
+for traffic_mean in 5; do
   echo "Running experiment with traffic_mean = $traffic_mean"
 
   # Start the Flask API in the background

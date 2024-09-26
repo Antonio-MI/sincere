@@ -1,0 +1,3 @@
+2024-09-26 11:10:17,061 Using device: cuda
+2024-09-26 11:10:17,061 Scheduling mode set as BestBatch+PartialBatch+Timer
+2024-09-26 11:10:17,066 Monitoring status set to True
