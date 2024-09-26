@@ -42,7 +42,7 @@ if not os.path.exists("logs"):
     os.makedirs("logs")
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_mean{traffic_mean}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
 
 logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
@@ -60,14 +60,12 @@ if mode == "BestBatch":
     # GOAL: SET BASELINE, OPTIMAL BATCH SIZES FOR THROUGHPUT IGNORING LATENCY AND MODEL LOAD TIMES
     allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
 
-
 if mode == "BestBatch+Timer":
     # LOGIC: WAITS TO FILL THE BATCH THAT YIELDS THE MAXIMUM THROUGHPUT FOR EACH MODEL
     #        ADJUSTS -BATCH WAITING TIME- TO ACCOUNT FOR MODEL SWAPPING TIME
     # GOAL: MAXIMUM THROUGHPUT WHILE TRYING TO MET SLA
     logging.debug(f"Scheduling mode set as {mode}")
     allowed_batch_sizes = {"granite-7b": 48, "gemma-7b": 64, "llama3-8b": 64}
-
 
 if mode == "SelectBatch+Timer":
     logging.debug(f"Scheduling mode set as {mode}")
@@ -76,7 +74,6 @@ if mode == "SelectBatch+Timer":
     #        PROCESS THE BATCH WHEN IT KNOWS THAT CONSIDERING THE PROCESSING TIME LATENCY WILL BE MET
     # GOAL: OPTIMIZE FOR MEETING SLA BETTER SACRIFICING THROUGHPUT
     allowed_batch_sizes = [8, 16, 32, 64]
-
 
 if mode == "BestBatch+PartialBatch":
     # LOGIC: WAITS TO FILL THE MAXIMUM BATCH SIZE THAT THE GPU CAN TOLERATE FOR EACH MODEL
@@ -141,11 +138,11 @@ current_loaded_model = None  # Tracks the currently loaded model
 model_stay_time = 10  # Minimum time to keep a model loaded in seconds
 model_loaded_timestamp = None  # Timestamp when the current model was loaded
 
+model_switches = 0
+
 # Function to load models
 def load_model(model_alias):
-    global loaded_models, current_loaded_model, model_loaded_timestamp
-
-    model_switches = 0
+    global loaded_models, current_loaded_model, model_loaded_timestamp, model_switches
 
     if model_alias in loaded_models:
         #logging.debug(f"Model {model_alias} already loaded")
@@ -203,8 +200,8 @@ def save_measurements(request_id, request_time, model_alias, batch_size, latency
         df.to_csv(csv_path, index=False)
 
 def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info, mode):
-    global distribution, run_duration
-    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_{timestamp}.csv"
+    global distribution, run_duration, traffic_mean
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_{run_duration}_mean{traffic_mean}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,
@@ -287,7 +284,7 @@ def process_batch(model_alias, condition, batch_size):
             if not batch:
                 #logging.debug(f"No batch to process for model {model_alias}")
                 return
-
+            logging.debug(f"STARTING TO LOAD {model_alias}")
             load_model(model_alias)
             # Create a generator for batching
             batch_generator = create_batch_generator(batch)
@@ -401,12 +398,12 @@ def inference():
     # To finish inference and log time
     remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
     if model_alias == "Stop" and inference_flag == False:
-        last_call_timer = time.time()
-        while remaining_requests > 0 or time.time() - last_call_timer < 30:
-            remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
-            logging.debug("Waiting for running processes to finish")
-            time.sleep(5)
-        time.sleep(1)
+        # last_call_timer = time.time()
+        # while remaining_requests > 0 or time.time() - last_call_timer < 20:
+        #     remaining_requests = sum(queue.qsize() for queue in running_request_batches.values())
+        #     logging.debug("Waiting for running processes to finish")
+        #     time.sleep(5)
+        # time.sleep(1)
         # Log the total time and the percentage of inference time
         total_time = last_batch_processed_time - first_request_time
         inference_percentage = (total_inference_time / total_time) * 100
@@ -415,6 +412,8 @@ def inference():
         logging.debug(f"Inference time as percentage of total time: {inference_percentage:.2f}%")
         inference_flag = True
         logging.debug("END")
+        logging.shutdown()
+
 
         # Return a response indicating that the process is stopping
         return jsonify({"message": "Inference process stopped."}), 200

@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Run time for calls
-run_duration=900 
+run_duration=240
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=960
+timeout_duration=270
 # Distribution followed by input calls
 distribution=bursty # gamma, bursty, ramp
 # Scheduling mode
-mode="BestBatch+PartialBatch" # One of [BestBatch, BestBatch+Timer, SelectBatch+Timer, BestBatch+PartialBatch, BestBatch+PartialBatch+Timer]
+mode="BestBatch+PartialBatch+Timer" # One of [BestBatch, BestBatch+Timer, SelectBatch+Timer, BestBatch+PartialBatch, BestBatch+PartialBatch+Timer]
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 # SLA
@@ -24,7 +24,7 @@ wait_for_flask() {
 }
 
 # Iterate over traffic_mean values
-for traffic_mean in 2 5 8; do
+for traffic_mean in 4; do
   echo "Running experiment with traffic_mean = $traffic_mean"
 
   # Start the Flask API in the background
