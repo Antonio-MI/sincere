@@ -1,5 +1,0 @@
-model_name,model_size /GB,mean_loading_time /s,std_loading_time /s,mean_unloading_time /s,std_unloading_time /s
-gpt2-124m,0.93,0.3192,0.3045,0.0062,0.0005
-distilgpt2-124m,0.61,0.1495,0.001,0.0058,0.0002
-gptneo-125m,0.94,0.2726,0.0036,0.0061,0.0001
-gpt2medium-355m,2.65,0.5377,0.0274,0.0064,0.0001

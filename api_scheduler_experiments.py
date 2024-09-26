@@ -37,12 +37,17 @@ distribution = sys.argv[4]
 run_duration = sys.argv[5] 
 traffic_mean = sys.argv[6]
 
+# Time constraint for batch processing - only will be used wwith some modes
+batch_time_limit = int(sys.argv[3])  # Seconds
+min_batch_time_limit = 5  # Minimum time limit in seconds
+
+
 # Set up logging
 if not os.path.exists("logs"):
     os.makedirs("logs")
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
+logging.basicConfig(filename=f"logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.log", level=logging.DEBUG, format="%(asctime)s %(message)s")
 
 logging.debug(f"Using device: {device}")  # Check with nvidia-smi
 
@@ -101,11 +106,6 @@ if "Timer" in mode:
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
     model_unload_times_std = model_profiling.set_index("model_name")["std_unloading_time /s"].to_dict()
-
-
-# Time constraint for batch processing - only will be used wwith some modes
-batch_time_limit = int(sys.argv[3])  # Seconds
-min_batch_time_limit = 5  # Minimum time limit in seconds
 
 # List of allowed models
 allowed_models = sys.argv[2].split(",") #["gpt2-124m", "distilgpt2-124m", "gpt2medium-355m", "Stop", "granite-7b", "gemma-7b", "llama3-8b"]
@@ -205,8 +205,8 @@ def save_measurements(request_id, request_time, model_alias, batch_size, latency
         df.to_csv(csv_path, index=False)
 
 def save_measurements_and_monitor(request_id, request_time, model_alias, batch_size, latency, batch_inference_time, throughput, sys_info, mode):
-    global distribution, run_duration, traffic_mean
-    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_{timestamp}.csv"
+    global distribution, run_duration, traffic_mean, batch_time_limit
+    csv_filename = f"measurements_results_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.csv"
     csv_path = os.path.join("outputs", csv_filename)
     data = {
         "request_id": request_id,

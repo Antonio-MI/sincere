@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run time for calls
-run_duration=120
+run_duration=1200
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=150
+timeout_duration=1260
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 
@@ -21,7 +21,7 @@ wait_for_flask() {
 traffic_means=(4 8)
 distributions=("gamma" "bursty" "ramp")
 modes=("BestBatch" "BestBatch+Timer" "SelectBatch+Timer" "BestBatch+PartialBatch+Timer")
-batch_time_limits=(40 60)
+batch_time_limits=(60)
 
 
 # Iterate over batch_time_limits
