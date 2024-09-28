@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Timeout duration (e.g., 60 seconds)
+# Timeout duration
 timeout_duration=10000
 
 # Function to check if Flask API is up
@@ -31,4 +31,4 @@ timeout $timeout_duration python3 profiling_batch_calls.py &
 # Wait for all background processes to complete
 wait
 
-echo "All processes have completed."
+echo "All processes have been completed."

@@ -55,7 +55,7 @@ for batch_time_limit in "${batch_time_limits[@]}"; do
         # Wait for all background processes to complete
         wait
 
-        echo "All processes for traffic_mean = $traffic_mean, batch_time_limit = $batch_time_limit, distribution = $distribution, mode = $mode have completed."
+        echo "All processes for traffic_mean = $traffic_mean, batch_time_limit = $batch_time_limit, distribution = $distribution, mode = $mode have finished."
       done
     done
   done

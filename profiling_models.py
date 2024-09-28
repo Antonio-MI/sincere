@@ -99,7 +99,7 @@ df = pd.DataFrame(
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 csv_filename = f"model_loading_times_{machine_name}_{device}_{timestamp}.csv"
-csv_path = "outputs/" + csv_filename
+csv_path = "profiling_results/" + csv_filename
 file_exists = os.path.isfile(csv_path)
 if file_exists:
     df.to_csv(csv_path, mode="a", header=False, index=False)

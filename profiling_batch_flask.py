@@ -11,8 +11,6 @@ import logging
 from monitor import Monitor
 import threading
 
-# PARAMS TO RECEIVE FROM THE SH FILE
-# LIST OF ALLOWED MODELS (SHOULD BE EQUAL TO THE LIST OF MODELS TO PROFILE IN THE CALLS)
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 

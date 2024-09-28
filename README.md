@@ -44,9 +44,14 @@ The initial version of the script randomly assigns a model out of a list to the 
 
 ## Run model and batch profiling
 
-profiling_models.py
+Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for that purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for scheduling.
 
-For each model in the list defined at the beginning, loads and unloads the model 10 times, and saves a csv containing the model name, its size in GB, the mean loading time in seconds and its standard deviation, the mean unloading time and its standard deviation.
+Batch profiling consists of performing inference using each model with increasing batch sizes until there is an out of memory error, therefore when the GPU can no longer handle a batch size. During that process a csv containing the columns of model, batch size, processing time, throughput (during inference) and several parameters monitored about cpu and gpu functioning with `monitor.py`. In order to do that we have two scripts: 
+(i) `profiling_batch_calls.py` that sends the batches of requests. The batch sizes to try are powers of 2 and several prime numbers.
+(ii) `profiling_batch_flask.py` that creates a flask api to receive and process the batches. 
+
+Batch profiling is controlled by `run_profiling.sh`. Within this both scripts are synchronized and the process runs automatically. The user must set a runtime long enough to profile all the batches (up to out of memory) for all models.
+
 
 ## Run experiments
 
