@@ -1,6 +1,4 @@
 import sys
-print(sys.executable)
-
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from huggingface_hub import login
 import os
@@ -8,20 +6,17 @@ import os
 def download_and_save_model(model_name, model_dir):
     # Directory for models
     os.makedirs(model_dir, exist_ok=True)
-
     # Download model and tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
-
     # Save model and tokenizer
     tokenizer.save_pretrained(model_dir)
     model.save_pretrained(model_dir)
 
-
 if __name__ == "__main__":
 
     # HuggingFace Token
-    login(token='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')
+    login(token='INSERT TOKEN HERE')
 
     models = {
         # "gpt2-124m" : "openai-community/gpt2",
