@@ -111,5 +111,10 @@ The output for each combination of parameters is a csv named after the parameter
 
 ## Process results
 
+Results of prior sections are aggregated and visualized in the `processing_results.ipynb` notebook:
 
+- Batch profiling: results are aggregated grouping by model and batch size, and additional columns are defined such as standard deviations for various values. With that aggregated data we plot "Throughput vs Batch Size", already shown above.
 
+- Input patterns: plots for input patters are also plotted there. Within those plots we manually adjust the parameters of each pattern to obtain the desired mean and make sure that this value is similar between them.
+
+- **Result analysis**: all the csvs and logs files are read and matched. A dataframe is created for each csv and the filename metadata (machine, device, scheduling strategy, traffic pattern, traffic mean, and sla) is added to the dataframe as well as switch count, total time, total inference time, inference time percentage from the logs. With those values we define more columns to account for overall throughput (total requests processed / total time), inference throughput (total requests processed / total inference time), and SLA attainment (percentage of requests with latency < SLA limit). Once we have all that data, we can group as desired to obtain representations of interest.
