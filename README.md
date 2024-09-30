@@ -109,6 +109,8 @@ The scripts controlled by that are:
 
 The output for each combination of parameters is a csv named after the parameters and values of the machine where it ran: `outputs/measurements_results_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.csv`. That csv will contain a row for each request processed, timestamps for arrival and inference, model used, batch size (meaning that the request was processed along with other requests in a batch of that size), latency of the request in seconds (time from arrival to response after inference), batch processing time in seconds, throughput during inference as queries per second (throughput measured as batch size divided by processing time), and cpu and gpu information gathered with `monitor.py`. Along to the csv, a log file is also produced, `logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.log`, to keep track of the requests that have been processed, model switches, total runtime, inference time, and more useful information.
 
+To differenciate between runs with confidential and non-confidential modes, move the results to the folders `outputs_cc`, `outputs_noncc` and same with logs.
+
 ## Process results
 
 Results of prior sections are aggregated and visualized in the `processing_results.ipynb` notebook:
