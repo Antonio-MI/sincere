@@ -52,6 +52,14 @@ The parameters that will vary over the experiments are:
     - "SelectBatch+Timer": consists of selecting the most appropriate batch size out of a set according to past arrivals and SLA limit. For that we know `batch_accumulation_time = batch_size / arrival_rate` and then to met SLA `batch_accumulation_time <= desired_latency` therefore `batch_size <= arrival_rate * desired_latency`. It also adjusts the time a batch has to wait before being moved for processing to account for model swapping time. The goal is optimize to meet SLA better but sacrificing throughput.
     - "BestBatch+PartialBatch+Timer": consists in the same as "BestBatch+Timer" but also processes batches that are not full for current loaded model before swapping. The goal is to minimize swap frequency while trying to meet SLAs
 
+In a more summarized way:
+
+![Scheduling Logic Components](readme_media/SchedulingComponents)
+
+![Scheduling Table](readme_media/SchedulingTable)
+
+Some parameters that have been fixed for this strategies, and that could also be optimize are: (i) the model stay time and the percentage of a batch that has to be filled so it is processed for the "Partial Batch Strategy"; (ii) the timer strategy considers an estimated batch processing time, estimated manually after seeing profiling results, and that timer is also adjusted considering one standard deviation of model loading times; (iii) the estimation for arrival rates in the "Select Batch" strategy. 
+
 - **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40, 60 and 80 seconds.
 
 
@@ -73,7 +81,7 @@ The models used in this work have been downloaded from Huggingface. To access th
 
 The script to download the models is `download_models.py` and there the token should be defined plus a list of models to download with a model alias and the official model name that can be found at https://huggingface.co/models
 
-In this work **"ibm-granite/granite-7b-base", "google/gemma-7b", "meta-llama/Meta-Llama-3.1-8B"** were the models used with a probability distribution of [0.1,0.3,0.6] respectively (those values are defined in `api_calls.py`), that resembles, to some extent, the frequency of use based on Huggingface downloads for those models.
+In this work **"ibm-granite/granite-7b-base", "google/gemma-7b", "meta-llama/Meta-Llama-3.1-8B"** were the models used with a probability distribution of [0.1,0.3,0.6] respectively (those values are defined in `api_calls.py`), that resembles, to some extent, the frequency of use based on Huggingface downloads for those models. The user can experiment with different distributions of models.
 
 The workload used as input for the models has been generated with instructlab (https://github.com/instructlab) as jsonl files. instructlab use is detailed in `instructLab_steps.md`. Once the jsonl has been created, we use `generate_workloads_jsonl.py` which takes a folder that contains workloads generated with instructlab and outputs a json for each list contained in the jsonl with the following structure:
 ```
@@ -86,7 +94,7 @@ The initial version of the script randomly assigns a model out of a list to the 
 
 ## Run model and batch profiling
 
-Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for those purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for some of the scheduling strategies. The user should edit the list of model to profile, which are define in line 14 of the script.
+Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for those purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for some of the scheduling strategies. The user should edit the list of model to profile, which are define in line 14 of the script. The output file of this step will have to be added to line 104 of `api_scheduler_experiments.py` later on.
 
 Batch profiling consists of performing inference using each model with increasing batch sizes until there is an out of memory error, therefore when the GPU can no longer handle that batch size. During that process a csv containing the columns of model, batch size, processing time, throughput (during inference) and several parameters monitored about cpu and gpu functioning with `monitor.py`. In order to do that we have two scripts: 
 
@@ -97,6 +105,10 @@ Batch profiling consists of performing inference using each model with increasin
 Batch profiling is controlled by `run_profiling.sh`. Within this both scripts are synchronized and the process runs automatically. The user must set a runtime long enough to profile all the batches (up to out of memory) for all models being profiled. 
 
 ![Throughput vs Batch Size](readme_media/throughput_vs_batch_size.png)
+
+There one can observe that the higher throughput is given by batches of 64 or similar values.
+
+It is important to mention that for the batch profiling and the following experiments the value for `max_new_tokens` used by the models is set to 50. We have observed that this value is linearly linked to processing time, therefore, for other number of tokens the expected outcome should be different.
 
 
 ## Run experiments
