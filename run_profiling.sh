@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Models
-models=  "granite-7b,gemma-7b,llama3-8b"
+models="granite-7b,gemma-7b,llama3-8b"
 # List of batch sizes to iterate
 batch_sizes="1,2,3,4,5,7,8,11,13,16,19,23,29,32,36,41,48,53,56,60,64,68,72,79,83,86,89,94,100,105,109,112,120,128,136,149,167,191,211,233,256,307,353,409,457,512,1024,2048"
 # Runs per batch size
