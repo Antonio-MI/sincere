@@ -44,7 +44,7 @@ The parameters that will vary over the experiments are:
 
 - **Traffic Pattern Mean**: mean requests per second within each traffic pattern. To compare results, we want to deal with different distributions that over time have the same average request arrival.
 
-![Traffic Inputs with mean request per second 4](readme_media/input_patterns.png)
+    ![Traffic Inputs with mean request per second 4](readme_media/input_patterns.png)
 
 - **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40, 60 and 80 seconds.
 
