@@ -46,21 +46,19 @@ The parameters that will vary over the experiments are:
 
 ![Traffic Inputs with mean request per second 4](readme_media/input_patterns.png)
 
-- **Scheduling Strategies**: the strategies according to which the requests will be batched and processed. The strategies proposed are the following:
-    - "BestBatch": consists of waiting to fill the batch that yields the maximum throughput for each model, value known after performing the batch profiling explained below. The goal is to set a baseline, aiming only for optimal batch sizes for throughput while ignoring latency and model loading times.
-    - "BestBatch+Timer": consists of waiting to fill the batch that yields the maximum throughput for each model and adjusting the time a batch has to wait before being moved for processing to account for model swapping time so if the scheduler sees that the latency constraint is going to be violated proceeds to process the batch with its current size, without waiting for the full batch. The goal is meet SLAs while maintaining a high throughput.
-    - "SelectBatch+Timer": consists of selecting the most appropriate batch size out of a set according to past arrivals and SLA limit. For that we know `batch_accumulation_time = batch_size / arrival_rate` and then to met SLA `batch_accumulation_time <= desired_latency` therefore `batch_size <= arrival_rate * desired_latency`. It also adjusts the time a batch has to wait before being moved for processing to account for model swapping time. The goal is optimize to meet SLA better but sacrificing throughput.
-    - "BestBatch+PartialBatch+Timer": consists in the same as "BestBatch+Timer" but also processes batches that are not full for current loaded model before swapping. The goal is to minimize swap frequency while trying to meet SLAs
+- **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40, 60 and 80 seconds.
 
-In a more summarized way:
+- **Scheduling**: the strategies according to which the requests will be batched and processed. The strategies proposed are composed by one or more of the following components 
+    - **Logic Components**:
+        - “Best Batch”: Wait to fill the batch that yields the maximum throughput for each model, value known after performing the batch profiling.
+        - “Timer”:  Adjust the time a batch has to wait before being moved for processing to account for model swapping time, so if the scheduler sees that the latency constraint is going to be violated proceeds to process the batch with its current size, without waiting for the full batch.
+        - “Partial Batch”: Process batches that are not full for current loaded model before swapping to another model.
+        - “Select Batch”: Select the most appropriate batch size out of a set according to past arrivals and SLA limit. For that we know batch_accumulation_time = batch_size / arrival_rate and then to met SLA batch_accumulation_time <= desired_latency therefore batch_size <= arrival_rate * desired_latency. 
 
-![Scheduling Logic Components](readme_media/SchedulingComponents.png)
-
-![Scheduling Table](readme_media/SchedulingStrategies.png)
+    - **Scheduling Strategies**:
+    ![Scheduling Table](readme_media/SchedulingStrategies.png)
 
 Some parameters that have been fixed for this strategies, and that could also be optimize are: (i) the model stay time and the percentage of a batch that has to be filled so it is processed for the "Partial Batch Strategy"; (ii) the timer strategy considers an estimated batch processing time, estimated manually after seeing profiling results, and that timer is also adjusted considering one standard deviation of model loading times; (iii) the estimation for arrival rates in the "Select Batch" strategy. 
-
-- **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40, 60 and 80 seconds.
 
 
 ## Setup environment
