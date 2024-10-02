@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run time for calls
-run_duration=90 #1200
+run_duration=1200 #1200
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=100 #1260
+timeout_duration=1260 #1260
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 
@@ -18,10 +18,10 @@ wait_for_flask() {
 }
 
 # Arrays of variables to iterate over
-traffic_means=(4) # 8, 12 and 16 (?)
+traffic_means=(4 8) # 8, 12 and 16 (?)
 distributions=("gamma" "bursty" "ramp")
 modes=("BestBatch" "BestBatch+Timer" "SelectBatch+Timer" "BestBatch+PartialBatch+Timer")
-batch_time_limits=(20) #40, 60, 80
+batch_time_limits=(40 60 80) #40, 60, 80
 
 
 # Iterate over batch_time_limits
@@ -45,8 +45,8 @@ for batch_time_limit in "${batch_time_limits[@]}"; do
         wait_for_flask
 
         # Start the GPU utilization monitoring script in the background
-        echo "Starting GPU utilization monitoring"
-        timeout $timeout_duration bash monitor_gpu.sh &
+        # echo "Starting GPU utilization monitoring"
+        # timeout $timeout_duration bash monitor_gpu.sh &
 
         # Start the inference script in the background
         echo "Starting API calls script with traffic_mean = $traffic_mean"
