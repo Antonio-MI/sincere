@@ -101,7 +101,8 @@ if mode == "BestBatch+PartialBatch+Timer":
 
 if "Timer" in mode:
     # Load model profiling data
-    model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20240906_120028_cc.csv")
+    # model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20240906_120028_cc.csv")
+    model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20241002_105724_noncc.csv")
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
