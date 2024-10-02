@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run time for calls
-run_duration=30 #1200
+run_duration=90 #1200
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=10 #1260
+timeout_duration=100 #1260
 # Models
 models="granite-7b,gemma-7b,llama3-8b"
 
