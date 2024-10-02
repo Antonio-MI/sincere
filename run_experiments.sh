@@ -20,7 +20,7 @@ wait_for_flask() {
 # Arrays of variables to iterate over
 traffic_means=(4) # 8, 12 and 16 (?)
 distributions=("gamma" "bursty" "ramp")
-modes=("BestBatch" "BestBatch+Timer" "SelectBatch+Timer" "BestBatch+PartialBatch+Timer")
+modes=("BestBatch" "BestBatch+Timer") #"SelectBatch+Timer" "BestBatch+PartialBatch+Timer"
 batch_time_limits=(30) #80
 
 
