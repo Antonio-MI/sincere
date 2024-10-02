@@ -54,9 +54,9 @@ The parameters that will vary over the experiments are:
 
 In a more summarized way:
 
-![Scheduling Logic Components](readme_media/SchedulingComponents)
+![Scheduling Logic Components](readme_media/SchedulingComponents.png)
 
-![Scheduling Table](readme_media/SchedulingTable)
+![Scheduling Table](readme_media/SchedulingStrategies.png)
 
 Some parameters that have been fixed for this strategies, and that could also be optimize are: (i) the model stay time and the percentage of a batch that has to be filled so it is processed for the "Partial Batch Strategy"; (ii) the timer strategy considers an estimated batch processing time, estimated manually after seeing profiling results, and that timer is also adjusted considering one standard deviation of model loading times; (iii) the estimation for arrival rates in the "Select Batch" strategy. 
 
