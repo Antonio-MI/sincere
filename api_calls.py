@@ -77,6 +77,10 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
                 rate = 5
             elif traffic_mean == 8:
                 rate = 8
+            elif traffic_mean == 12:
+                rate = 12
+            elif traffic_mean == 16:
+                rate = 16
             shape, scale = 1.0, 1/rate  # Shape (alpha) and scale (θ)
             print("Starting Gamma traffic pattern")
         elif traffic_pattern == "bursty":
@@ -98,6 +102,14 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
                 burst_duration = np.random.uniform(1, 4)  # seconds
                 idle_duration = np.random.uniform(8, 12)  # seconds
                 burst_rate = np.random.uniform(30, 45)    # requests per second during burst
+            if traffic_mean == 12:
+                burst_duration = np.random.uniform(1, 4)  # seconds
+                idle_duration = np.random.uniform(8, 12)  # seconds
+                burst_rate = np.random.uniform(50, 75)    # requests per second during burst
+            if traffic_mean == 16:
+                burst_duration = np.random.uniform(1, 4)  # seconds
+                idle_duration = np.random.uniform(8, 10)  # seconds
+                burst_rate = np.random.uniform(60, 85)    # requests per second during burst
             idle_rate = np.random.uniform(0, 1)       # requests per second during idle
             # Initialize burst and idle periods
             is_burst = True
@@ -115,7 +127,11 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
             if traffic_mean == 5:
                 max_rate = 9  
             if traffic_mean == 8:
-                max_rate = 15  
+                max_rate = 15
+            if traffic_mean == 12:
+                max_rate = 24  
+            if traffic_mean == 16:
+                max_rate = 32  
             ramp_up_duration = 20  
             ramp_down_duration = 20 
             cycle_duration = ramp_up_duration + ramp_down_duration
@@ -168,6 +184,12 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
                         if traffic_mean == 8:
                             burst_duration = np.random.uniform(1, 4)  # seconds
                             burst_rate = np.random.uniform(30, 45)    # requests per second during burst
+                        if traffic_mean == 12:
+                            burst_duration = np.random.uniform(1, 4)
+                            burst_rate = np.random.uniform(50, 75) 
+                        if traffic_mean == 16:
+                            burst_duration = np.random.uniform(1, 4)
+                            burst_rate = np.random.uniform(60, 85)
                         idle_rate = np.random.uniform(0, 1)       # requests per second during idle
                         current_period_duration = burst_duration
                         current_rate = burst_rate
@@ -182,6 +204,10 @@ async def automated_calls(workloads, run_duration, traffic_pattern):
                             idle_duration = np.random.uniform(10, 15)  # seconds
                         if traffic_mean == 8:
                             idle_duration = np.random.uniform(8, 12)  # seconds
+                        if traffic_mean == 12:
+                            idle_duration = np.random.uniform(8, 12)
+                        if traffic_mean == 16:
+                            idle_duration = np.random.uniform(8, 10)
                         idle_rate = np.random.uniform(0, 1)
                         current_period_duration = idle_duration
                         current_rate = idle_rate
