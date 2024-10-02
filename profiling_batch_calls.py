@@ -5,6 +5,7 @@ import numpy as np
 import json
 import os
 import random
+import sys
 
 # PARAMS TO GIVE FROM THE SH SCRIPT
 # BATCH SIZES, MODELS TO PROFILE, NUM RUNS PER BATCH SIZE
@@ -27,17 +28,18 @@ workload_folder = "./workloads"
 #                337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463,
 #                467, 479, 487, 491, 499, 503, 509, 512, 1024, 2048] #, 4096, 8192, 16384, 32768] 
 #batch_sizes = [1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 19, 23, 29, 32, 41, 53, 64, 79, 83, 89, 109, 128, 149, 167, 191, 211, 233, 256, 307, 353, 409, 457, 512, 1024, 2048]
+# Powers of two + prime numbers between them (not all of them)
+batch_sizes = list(map(int, sys.argv[2].split(',')))#[1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 19, 23, 29, 32, 36, 41, 48, 53, 56, 60, 64, 68, 72, 79, 83, 86, 89, 94, 100, 105, 109, 112, 120, 128, 136, 149, 167, 191, 211, 233, 256, 307, 353, 409, 457, 512, 1024, 2048]
 
-batch_sizes = [1, 2, 3, 4, 5, 7, 8, 11, 13, 16, 19, 23, 29, 32, 36, 41, 48, 53, 56, 60, 64, 68, 72, 79, 83, 86, 89, 94, 100, 105, 109, 112, 120, 128, 136, 149, 167, 191, 211, 233, 256, 307, 353, 409, 457, 512, 1024, 2048]
 
 #batch_sizes = [1, 64, 128, 256, 512, 1024]
 
 
 # List of models to profile
-models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]  # Add more models as needed
+models_to_profile = sys.argv[1].split(",") #["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"]  # Add more models as needed
 
 # Number of profiling runs per batch size
-num_runs_per_batch_size = 10
+num_runs_per_batch_size = int(sys.argv[3]) #10
 
 def load_workloads_from_folder(folder):
     """Load all JSON files from the specified folder."""

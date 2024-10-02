@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Run time for calls
-run_duration=1200
+run_duration=60
 # Timeout duration (run of calls + 60 seconds)
-timeout_duration=1260
+timeout_duration=90
 # Models
-models="granite-7b,gemma-7b,llama3-8b"
+models="granite-7b,gemma-7b"  #,llama3-8b"
 
 # Function to check if Flask API is up
 wait_for_flask() {
@@ -18,10 +18,10 @@ wait_for_flask() {
 }
 
 # Arrays of variables to iterate over
-traffic_means=(4 8)
+traffic_means=(4) # 8, 12 and 16 (?)
 distributions=("gamma" "bursty" "ramp")
 modes=("BestBatch" "BestBatch+Timer" "SelectBatch+Timer" "BestBatch+PartialBatch+Timer")
-batch_time_limits=(60)
+batch_time_limits=(30) #80
 
 
 # Iterate over batch_time_limits

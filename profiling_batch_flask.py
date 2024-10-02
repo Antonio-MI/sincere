@@ -10,7 +10,7 @@ import platform
 import logging
 from monitor import Monitor
 import threading
-
+import sys
 
 timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
 
@@ -38,7 +38,7 @@ incoming_request_batches = {}
 running_request_batches = {}
 
 # List of allowed models
-allowed_models = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m", "granite-7b", "gemma-7b", "llama3-8b"]
+allowed_models = sys.argv[1].split(",") #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m", "granite-7b", "gemma-7b", "llama3-8b"]
 
 # Lock to not process another batch until the current one has finished
 batch_processing_lock = threading.Lock()
@@ -177,7 +177,7 @@ def process_batch(model_alias, batch_size):
 
 def save_measurements_and_monitor(model_alias, batch_size, batch_inference_time, sys_info):
     csv_filename = f"batch_profiling_results_{machine_name}_{device}_{timestamp}.csv"
-    csv_path = os.path.join("outputs", csv_filename)
+    csv_path = os.path.join("profiling_results", csv_filename)
     data = {
         "model": model_alias,
         "batch_size": batch_size,
@@ -271,6 +271,6 @@ def health():
 
 
 if __name__ == '__main__':
-    os.makedirs("outputs", exist_ok=True)
+    os.makedirs("profiling_results", exist_ok=True)
     
     app.run(host='0.0.0.0', port=5000)

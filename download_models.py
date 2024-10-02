@@ -18,6 +18,7 @@ if __name__ == "__main__":
     # HuggingFace Token
     login(token='INSERT TOKEN HERE')
 
+    # Model alias and full name, as shown in Huggingface
     models = {
         # "gpt2-124m" : "openai-community/gpt2",
         # "distilgpt2-124m": "distilbert/distilgpt2",
@@ -31,6 +32,7 @@ if __name__ == "__main__":
 
     base_dir = "./models"
 
+    # Download each model in its folder
     for model_alias, model_name in models.items():
         model_dir = os.path.join(base_dir, model_alias)
         download_and_save_model(model_name, model_dir)

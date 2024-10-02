@@ -10,6 +10,7 @@ import platform
 # Folder containing models
 base_dir = "./models"
 
+# Define list of models to profile
 models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] 
 
 # Select device
@@ -37,8 +38,8 @@ def get_tokenizer_size_in_bytes(tokenizer_dir):
             total_size += os.path.getsize(fp)
     return total_size
 
-# Directory for models
-os.makedirs("./outputs", exist_ok=True)
+
+# To save results
 results = []
 
 # Iterate through all the models available to profile their mean load and unload

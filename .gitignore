@@ -17,3 +17,6 @@ tokens
 __pycache__/
 __pycache__
 update.py
+logs_cc/
+outputs_cc/
+results/

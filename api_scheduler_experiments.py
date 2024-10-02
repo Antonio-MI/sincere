@@ -101,7 +101,7 @@ if mode == "BestBatch+PartialBatch+Timer":
 
 if "Timer" in mode:
     # Load model profiling data
-    model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20240906_120028.csv")
+    model_profiling = pd.read_csv("./profiling_results/model_loading_times_red_cuda_20240906_120028_cc.csv")
     model_load_times = model_profiling.set_index("model_name")["mean_loading_time /s"].to_dict()
     model_load_times_std = model_profiling.set_index("model_name")["std_loading_time /s"].to_dict()
     model_unload_times = model_profiling.set_index("model_name")["mean_unloading_time /s"].to_dict()
@@ -260,11 +260,11 @@ def adjust_batch_time_limit(model_alias):
     loading_time_std = model_load_times_std.get(model_alias, 0)
     unloading_time = model_unload_times.get(current_loaded_model, 0) if current_loaded_model else 0
     unloading_time_std = model_unload_times_std.get(current_loaded_model, 0) if current_loaded_model else 0
-    # Consider 3 standard deviations to be conservative
-    total_loading_time = loading_time + 2 * loading_time_std
-    total_unloading_time = unloading_time + 2 * unloading_time_std
+    # Consider 1 standard deviation
+    total_loading_time = loading_time + 1 * loading_time_std
+    total_unloading_time = unloading_time + 1 * unloading_time_std
 
-    mean_completion_time = 8 # Manually estimated from prior experiments
+    mean_completion_time = 8 # Manually estimated from prior experiments 8 for cc, ? for non cc
     # Adjust the time limit by subtracting loading and unloading times
     adjusted_time_limit = batch_time_limit - (total_loading_time + total_unloading_time + mean_completion_time)
     adjusted_time_limit = max(adjusted_time_limit, min_batch_time_limit)  # Ensure it's not below minimum

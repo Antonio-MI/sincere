@@ -1,5 +1,7 @@
 # SINCERE: Scheduling Inference batches in Confidential Environments for Relaxed Executions
 
+The general idea for the project is to study GPU usage on confidential environments, schedule workloads for LLMs and get to evaluate performance metrics such as latency or throughput.
+
 ## Problem Stament
 
 ### Initial Problem Statement
@@ -23,7 +25,7 @@ Handle swapping or removing models if requested.
 Optimize batching while meeting deadline requirements.
 
 
-After thinking about proposing a novel problem exclusive to confidential computing and not finding one specific task to tackle, we decide to change the objective.
+But we realized that to really understand how we could use current scheduling strategies for the confidential setting we needed to take a step back, and therefore, we moved to a new problem.
 
 ### Final Problem Statement
 
@@ -47,10 +49,10 @@ The parameters that will vary over the experiments are:
 - **Scheduling Strategies**: the strategies according to which the requests will be batched and processed. The strategies proposed are the following:
     - "BestBatch": consists of waiting to fill the batch that yields the maximum throughput for each model, value known after performing the batch profiling explained below. The goal is to set a baseline, aiming only for optimal batch sizes for throughput while ignoring latency and model loading times.
     - "BestBatch+Timer": consists of waiting to fill the batch that yields the maximum throughput for each model and adjusting the time a batch has to wait before being moved for processing to account for model swapping time so if the scheduler sees that the latency constraint is going to be violated proceeds to process the batch with its current size, without waiting for the full batch. The goal is meet SLAs while maintaining a high throughput.
-    - "SelectBatch+Timer": consists of selecting the most appropriate batch size out of a set = according to past arrivals and SLA limit. For that we know `batch_accumulation_time = batch_size / arrival_rate` and then to met SLA `batch_accumulation_time <= desired_latency` therefore `batch_size <= arrival_rate * desired_latency`. It also adjusts the time a batch has to wait before being moved for processing to account for model swapping time. The goal is optimize to meet SLA better but sacrificing throughput.
+    - "SelectBatch+Timer": consists of selecting the most appropriate batch size out of a set according to past arrivals and SLA limit. For that we know `batch_accumulation_time = batch_size / arrival_rate` and then to met SLA `batch_accumulation_time <= desired_latency` therefore `batch_size <= arrival_rate * desired_latency`. It also adjusts the time a batch has to wait before being moved for processing to account for model swapping time. The goal is optimize to meet SLA better but sacrificing throughput.
     - "BestBatch+PartialBatch+Timer": consists in the same as "BestBatch+Timer" but also processes batches that are not full for current loaded model before swapping. The goal is to minimize swap frequency while trying to meet SLAs
 
-- **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40 and 60 seconds.
+- **SLAs**: Time that can pass before considering that the inference server has not successfully processed the request. The values to explore are 40, 60 and 80 seconds.
 
 
 ## Setup environment
@@ -71,7 +73,7 @@ The models used in this work have been downloaded from Huggingface. To access th
 
 The script to download the models is `download_models.py` and there the token should be defined plus a list of models to download with a model alias and the official model name that can be found at https://huggingface.co/models
 
-In this work **"ibm-granite/granite-7b-base", "google/gemma-7b", "meta-llama/Meta-Llama-3.1-8B"** were the models used with a probability distribution of [0.1,0.3,0.6] respectively, that resembles, to some extent, the frequency of use based on Huggingface downloads for those models.
+In this work **"ibm-granite/granite-7b-base", "google/gemma-7b", "meta-llama/Meta-Llama-3.1-8B"** were the models used with a probability distribution of [0.1,0.3,0.6] respectively (those values are defined in `api_calls.py`), that resembles, to some extent, the frequency of use based on Huggingface downloads for those models.
 
 The workload used as input for the models has been generated with instructlab (https://github.com/instructlab) as jsonl files. instructlab use is detailed in `instructLab_steps.md`. Once the jsonl has been created, we use `generate_workloads_jsonl.py` which takes a folder that contains workloads generated with instructlab and outputs a json for each list contained in the jsonl with the following structure:
 ```
@@ -84,7 +86,7 @@ The initial version of the script randomly assigns a model out of a list to the 
 
 ## Run model and batch profiling
 
-Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for those purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for some of the scheduling strategies.
+Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for those purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for some of the scheduling strategies. The user should edit the list of model to profile, which are define in line 14 of the script.
 
 Batch profiling consists of performing inference using each model with increasing batch sizes until there is an out of memory error, therefore when the GPU can no longer handle that batch size. During that process a csv containing the columns of model, batch size, processing time, throughput (during inference) and several parameters monitored about cpu and gpu functioning with `monitor.py`. In order to do that we have two scripts: 
 
@@ -92,7 +94,7 @@ Batch profiling consists of performing inference using each model with increasin
 
 (ii) `profiling_batch_flask.py` that creates a flask api to receive and process the batches. 
 
-Batch profiling is controlled by `run_profiling.sh`. Within this both scripts are synchronized and the process runs automatically. The user must set a runtime long enough to profile all the batches (up to out of memory) for all models being profiled.
+Batch profiling is controlled by `run_profiling.sh`. Within this both scripts are synchronized and the process runs automatically. The user must set a runtime long enough to profile all the batches (up to out of memory) for all models being profiled. 
 
 ![Throughput vs Batch Size](readme_media/throughput_vs_batch_size.png)
 
@@ -105,7 +107,7 @@ The scripts controlled by that are:
 
 (i) `api_calls.py`: A script that simulates incoming requests to the server, following specified traffic patterns and rates.
 
-(ii) `api_scheduler_experiments.py`: A Flask API that handles incoming inference requests, batches them according to specified strategies, and processes them using machine learning models.
+(ii) `api_scheduler_experiments.py`: A Flask API that handles incoming inference requests, batches them according to specified strategies, and processes them LLMs. The strategies that contain "Timer" make use of model loading times profiled, so in line 104, one must edit the csv path to the appropiate profiling file.
 
 The output for each combination of parameters is a csv named after the parameters and values of the machine where it ran: `outputs/measurements_results_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.csv`. That csv will contain a row for each request processed, timestamps for arrival and inference, model used, batch size (meaning that the request was processed along with other requests in a batch of that size), latency of the request in seconds (time from arrival to response after inference), batch processing time in seconds, throughput during inference as queries per second (throughput measured as batch size divided by processing time), and cpu and gpu information gathered with `monitor.py`. Along to the csv, a log file is also produced, `logs/batch_processing_debug_{machine_name}_{device}_{mode}_{distribution}_mean{traffic_mean}_{run_duration}_sla{batch_time_limit}_{timestamp}.log`, to keep track of the requests that have been processed, model switches, total runtime, inference time, and more useful information.
 
