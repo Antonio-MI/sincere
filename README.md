@@ -94,6 +94,8 @@ The initial version of the script randomly assigns a model out of a list to the 
 
 Model profiling consists of recording model loading and unloading times, along with their sizes and standard deviations computed over several iterations. `profiling_models.py` is used for those purposes, and it saves the results in the folder `profiling_results` in a csv that starts with `"model_loading_times"`. Those results will be used later for some of the scheduling strategies. The user should edit the list of model to profile, which are define in line 14 of the script. The output file of this step will have to be added to line 104 of `api_scheduler_experiments.py` later on.
 
+![Model loading times](readme_media/loading_times.png)
+
 Batch profiling consists of performing inference using each model with increasing batch sizes until there is an out of memory error, therefore when the GPU can no longer handle that batch size. During that process a csv containing the columns of model, batch size, processing time, throughput (during inference) and several parameters monitored about cpu and gpu functioning with `monitor.py`. In order to do that we have two scripts: 
 
 (i) `profiling_batch_calls.py` that sends the batches of requests. The batch sizes to try are powers of 2 and several prime numbers.
