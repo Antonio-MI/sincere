@@ -166,7 +166,7 @@ def load_model(model_alias):
     tokenizer = AutoTokenizer.from_pretrained(model_dir)
     # Check if this padding works for every model
     tokenizer.padding_side = "left"  # Set padding to the left side for decoder-only architectures
-    model = AutoModelForCausalLM.from_pretrained(model_dir).to(device)
+    model = AutoModelForCausalLM.from_pretrained(model_dir).to(device) # CHECK WHERE IT DOES LOAD THE MODEL
 
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token_id = tokenizer.eos_token_id
