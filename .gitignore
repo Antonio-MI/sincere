@@ -20,3 +20,4 @@ update.py
 logs_cc/
 outputs_cc/
 results/
+gpu_utilization/

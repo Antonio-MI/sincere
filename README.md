@@ -35,6 +35,8 @@ We expect to be able to provide an insight on how confidential and non-confident
 
 The experiments will simulate different real-world scenarios by varying parameters such as traffic load, traffic distribution patterns, scheduling modes and SLAs.
 
+Details of the system: NVIDIA H100 80GB HBM3 | Driver Version: 550.54.14 | CUDA Version: 12.4 | PyTorch 2.4.0+cu121 | Python 3.12.4
+
 The parameters that will vary over the experiments are:
 
 - **Input Traffic Pattern**: distribution follow by incoming traffic. Traffic distributions studied are:
