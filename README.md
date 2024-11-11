@@ -65,7 +65,7 @@ Some parameters that have been fixed for this strategies, and that could also be
 
 ## Setup environment
 
-To setup the environment create a new virtual environment where the git repository is located.
+To setup the environment create a new virtual environment where the git repository is located. Python 3.10.12 is recommended
 
 ```
 git clone https://github.com/yourusername/yourrepository.git
