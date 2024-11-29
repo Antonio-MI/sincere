@@ -10,13 +10,13 @@ The repository is structured as follows:
 ├── download_models.py                       # Script for downloading models
 ├── generate_workloads_jsonl.py              # Script for generating workloads in JSONL format
 ├── gpu_utilization                          # Folder for GPU utilization data
-│   └── gpu_usage_yyyymmdd_hhmmss.csv        # Example file or directory under gpu_utilization
+│   └── gpu_usage_yyyymmdd_hhmmss.csv        # Example file
 ├── instructLab_steps.md                     # Documentation for instructLab steps
 ├── logs                                     # Folder for logs
 ├── logs_cc                                  # Folder for confidential computing logs
-│   └── systemparameters_yyyymmdd_hhmmss.log # Example file or directory under logs_cc
+│   └── systemparameters_yyyymmdd_hhmmss.log # Example file 
 ├── logs_noncc                               # Folder for non-confidential computing logs
-│   └── systemparameters_yyyymmdd_hhmmss.log # Example file or directory under logs_noncc
+│   └── systemparameters_yyyymmdd_hhmmss.log # Example file 
 ├── monitor_gpu.sh                           # Script to monitor GPU usage
 ├── monitor.py                               # Python script for monitoring CPU/GPU functioning
 ├── outputs                                  # Folder for output files
