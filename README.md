@@ -2,6 +2,51 @@
 
 The general idea for the project is to study GPU usage on confidential environments, schedule workloads for LLMs and get to evaluate performance metrics such as latency or throughput.
 
+The repository is structured as follows:
+
+├── api_calls.py - script that simulates incoming requests to the server
+├── api_scheduler_experiments.py
+├── download_models.py
+├── generate_workloads_jsonl.py
+├── gpu_utilization
+│   ├── aaa
+├── instructLab_steps.md
+├── logs
+├── logs_cc
+│   ├── aaa
+├── logs_noncc
+│   ├── aaaa
+├── monitor_gpu.sh
+├── monitor.py
+├── outputs
+├── outputs_cc
+│   ├── aaa
+├── outputs_noncc
+│   ├── aaa
+├── process_results.ipynb
+├── profiling_batch_calls.py
+├── profiling_batch_flask.py
+├── profiling_models.py
+├── profiling_results
+│   ├── batch_profiling_results_red_cuda_20240920_181007_ccmode.csv
+│   ├── batch_profiling_results_red_cuda_20240924_181459_ccmode.csv
+│   ├── batch_profiling_results_red_cuda_20241002_112126_noncc.csv
+│   ├── batch_profiling_results_red_cuda_ccmode_grouped.csv
+│   ├── model_loading_times_red_cuda_20240906_120028_cc.csv
+│   └── model_loading_times_red_cuda_20241002_105724_noncc.csv
+├── README.md
+├── readme_media
+│   ├── aaaa
+├── requirements.txt
+├── run_experiments.sh
+├── run_profiling.sh
+├── structure.txt
+├── venv
+│   ├── aaa
+└── workloads
+│   ├── aaaa
+
+
 ## Problem Stament
 
 ### Initial Problem Statement
