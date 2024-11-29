@@ -5,49 +5,45 @@ The general idea for the project is to study GPU usage on confidential environme
 The repository is structured as follows:
 
 ```
-├── api_calls.py                       # Script that simulates incoming requests to the server
-├── api_scheduler_experiments.py       # Script for scheduling API experiments
-├── download_models.py                 # Script for downloading models
-├── generate_workloads_jsonl.py        # Script for generating workloads in JSONL format
-├── gpu_utilization                    # Folder for GPU utilization data
-│   └── aaa                            # Example file or directory under gpu_utilization
-├── instructLab_steps.md               # Documentation for instructLab steps
-├── logs                               # Folder for logs
-├── logs_cc                            # Folder for confidential computing logs
-│   └── aaa                            # Example file or directory under logs_cc
-├── logs_noncc                         # Folder for non-confidential computing logs
-│   └── aaaa                           # Example file or directory under logs_noncc
-├── monitor_gpu.sh                     # Script to monitor GPU usage
-├── monitor.py                         # Python script for monitoring tasks
-├── outputs                            # Folder for output files
-├── outputs_cc                         # Folder for confidential computing outputs
-│   └── aaa                            # Example file or directory under outputs_cc
-├── outputs_noncc                      # Folder for non-confidential computing outputs
-│   └── aaa                            # Example file or directory under outputs_noncc
-├── process_results.ipynb              # Jupyter notebook for processing results
-├── profiling_batch_calls.py           # Script for profiling batch calls
-├── profiling_batch_flask.py           # Script for profiling batch calls with Flask
-├── profiling_models.py                # Script for profiling models
-├── profiling_results                  # Folder for profiling results
-│   ├── batch_profiling_results_red_cuda_20240920_181007_ccmode.csv
-│   ├── batch_profiling_results_red_cuda_20240924_181459_ccmode.csv
-│   ├── batch_profiling_results_red_cuda_20241002_112126_noncc.csv
-│   ├── batch_profiling_results_red_cuda_ccmode_grouped.csv
-│   ├── model_loading_times_red_cuda_20240906_120028_cc.csv
-│   └── model_loading_times_red_cuda_20241002_105724_noncc.csv
-├── README.md                          # Project documentation
-├── readme_media                       # Folder for media related to the README
-│   └── aaaa                           # Example file or directory under readme_media
-├── requirements.txt                   # Python dependencies
-├── run_experiments.sh                 # Script for running experiments
-├── run_profiling.sh                   # Script for running profiling tasks
-├── structure.txt                      # File for directory structure information
-├── venv                               # Virtual environment folder
-│   └── aaa                            # Example file or directory under venv
-└── workloads                          # Folder for workload files
-    └── aaaa                           # Example file or directory under workloads
-
+├── api_calls.py                             # Script that simulates incoming requests to the server
+├── api_scheduler_experiments.py             # Script for scheduling API experiments
+├── download_models.py                       # Script for downloading models
+├── generate_workloads_jsonl.py              # Script for generating workloads in JSONL format
+├── gpu_utilization                          # Folder for GPU utilization data
+│   └── gpu_usage_yyyymmdd_hhmmss.csv        # Example file or directory under gpu_utilization
+├── instructLab_steps.md                     # Documentation for instructLab steps
+├── logs                                     # Folder for logs
+├── logs_cc                                  # Folder for confidential computing logs
+│   └── systemparameters_yyyymmdd_hhmmss.log # Example file or directory under logs_cc
+├── logs_noncc                               # Folder for non-confidential computing logs
+│   └── systemparameters_yyyymmdd_hhmmss.log # Example file or directory under logs_noncc
+├── monitor_gpu.sh                           # Script to monitor GPU usage
+├── monitor.py                               # Python script for monitoring CPU/GPU functioning
+├── outputs                                  # Folder for output files
+├── outputs_cc                               # Folder for confidential computing outputs
+│   └── measurements_parameters_yyyymmdd_hhmmss.csv # Example file 
+├── outputs_noncc                            # Folder for non-confidential computing outputs
+│   └── measurements_parameters_yyyymmdd_hhmmss.csv # Example file 
+├── process_results.ipynb                    # Jupyter notebook for processing results
+├── profiling_batch_calls.py                 # Script to send batches of requests when profiling batches
+├── profiling_batch_flask.py                 # Script that launches the Flask API to receive batches
+├── profiling_models.py                      # Script for profiling models
+├── profiling_results                        # Folder to save profiling results
+│   ├── batch_profiling_yyyymmdd_hhmmss_ccmode.csv    # Batch profiling results in CC mode
+│   ├── batch_profiling_yyyymmdd_hhmmss_nonccmode.csv # Batch profiling results in non-CC mode
+│   ├── model_loading_times_cc.csv                    # Model loading times in CC mode
+│   └── model_loading_times_noncc.csv                 # Model loading times in non-CC mode
+├── README.md                                # Project documentation
+├── readme_media                             # Folder for media related to the README
+├── requirements.txt                         # Python dependencies
+├── run_experiments.sh                       # Script for running the full experiments
+├── run_profiling.sh                         # Script for batch profiling
+├── venv                                     # Virtual environment folder
+└── workloads                                # Folder for JSON workload files
 ```
+
+
+
 
 ## Problem Stament
 
