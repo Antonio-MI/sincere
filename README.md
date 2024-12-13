@@ -24,6 +24,7 @@ The repository is structured as follows:
 │   └── measurements_parameters_yyyymmdd_hhmmss.csv # Example file 
 ├── outputs_noncc                            # Folder for non-confidential computing outputs
 │   └── measurements_parameters_yyyymmdd_hhmmss.csv # Example file 
+├── paper_imgs                               # pdfs and svg imgs for the article
 ├── process_results.ipynb                    # Jupyter notebook for processing results
 ├── profiling_batch_calls.py                 # Script to send batches of requests when profiling batches
 ├── profiling_batch_flask.py                 # Script that launches the Flask API to receive batches
