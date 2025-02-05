@@ -11,7 +11,7 @@ import platform
 base_dir = "./models"
 
 # Define list of models to profile
-models_to_profile = ["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] 
+models_to_profile = ["gpt2-124m", "distilgpt2-124m", "gptneo-125m"]#["granite-7b", "gemma-7b", "llama3-8b"] #["gpt2-124m", "distilgpt2-124m", "gptneo-125m", "gpt2medium-355m"] 
 
 # Select device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -26,18 +26,24 @@ model_unload_times = {}
 
 def get_model_size_in_bytes(model):
     # Calculate the size of the model parameters
-    param_size = sum(p.numel() for p in model.parameters() if p.requires_grad) * 4  # 4 bytes per float32 parameter
+    # param_size = sum(p.numel() for p in model.parameters() if p.requires_grad) * 4  # 4 bytes per float32 parameter
+    param_size = sum(
+    p.numel() * p.element_size()  # p.element_size() gives bytes per element
+    for p in model.parameters()
+    if p.requires_grad
+    )
+    
     return param_size
 
 def get_tokenizer_size_in_bytes(tokenizer_dir):
-    # Calculate the size of all files in the tokenizer directory
+    # Calculate the size of only files that include "tokenizer" in their name
     total_size = 0
     for dirpath, dirnames, filenames in os.walk(tokenizer_dir):
         for f in filenames:
-            fp = os.path.join(dirpath, f)
-            total_size += os.path.getsize(fp)
+            if "tokenizer" in f.lower():  # Case-insensitive match for "tokenizer"
+                fp = os.path.join(dirpath, f)
+                total_size += os.path.getsize(fp)
     return total_size
-
 
 # To save results
 results = []
