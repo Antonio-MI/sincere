@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="diagram_CC_new.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.9098029"
+     inkscape:cx="333.80408"
+     inkscape:cy="444.81029"
+     inkscape:window-width="2486"
+     inkscape:window-height="1376"
+     inkscape:window-x="1994"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path167024" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path167021" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path167021-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path167024-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-6-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path167021-1-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-5-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path167024-5-6" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-3-3"
+       width="82.450073"
+       height="46.193447"
+       x="116.5033"
+       y="118.39544" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:1"
+       id="rect31"
+       width="82.41333"
+       height="53.83601"
+       x="9.2008123"
+       y="55.582001" />
+    <g
+       id="g78278-7"
+       transform="matrix(0.9004934,0,0,0.9004934,-45.910276,-105.55621)"
+       style="stroke-width:0.33315069;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.33315069;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect31-5-3"
+         width="46.996861"
+         height="25.174416"
+         x="103.65662"
+         y="190.73579" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.87641px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.333151;stroke-miterlimit:4;stroke-dasharray:none"
+         x="104.03439"
+         y="197.35466"
+         id="text48442-6"><tspan
+           sodipodi:role="line"
+           id="tspan48440-12"
+           style="font-size:5.87641px;fill:#000000;fill-opacity:1;stroke-width:0.333151;stroke-miterlimit:4;stroke-dasharray:none"
+           x="104.03439"
+           y="197.35466">Confidential VM</tspan></text>
+    </g>
+    <g
+       id="g44390-93"
+       transform="translate(25.74397,-129.19215)"
+       style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="fill:#a0a0a0;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect31-5-6-1"
+         width="35.147297"
+         height="12.345226"
+         x="25.823656"
+         y="203.36873" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000;fill-opacity:1"
+         x="26.253897"
+         y="211.01079"
+         id="text22999-9"><tspan
+           sodipodi:role="line"
+           id="tspan22997-4"
+           style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
+           x="26.253897"
+           y="211.01079">NVIDIA Driver</tspan></text>
+    </g>
+    <rect
+       style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-5-2-6-2-5"
+       width="33.676369"
+       height="10.968163"
+       x="11.581547"
+       y="83.748779" />
+    <rect
+       style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-5-2-6-2-5-9"
+       width="33.676369"
+       height="10.968163"
+       x="11.581547"
+       y="94.716942" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="14.271515"
+       y="91.681213"
+       id="text80757-6-9"><tspan
+         sodipodi:role="line"
+         id="tspan80755-1-2"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="14.271515"
+         y="91.681213">Host OS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.71762px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.268013"
+       x="12.944574"
+       y="103.08289"
+       id="text80757-2"
+       transform="scale(1.0129645,0.98720146)"><tspan
+         sodipodi:role="line"
+         id="tspan80755-8"
+         style="font-size:5.71762px;fill:#000000;fill-opacity:1;stroke-width:0.268013"
+         x="12.944574"
+         y="103.08289">Hypervisor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-3"
+       width="82.450073"
+       height="46.193447"
+       x="9.182435"
+       y="118.39544" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.80035px;line-height:1.25;font-family:sans-serif;stroke-width:0.237522;fill:#000000;fill-opacity:1"
+       x="13.558846"
+       y="151.07904"
+       id="text183677-2"><tspan
+         sodipodi:role="line"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="13.558846"
+         y="151.07904"
+         id="tspan183679-4">No Read or </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="13.558846"
+         y="155.82948"
+         id="tspan203537">Write Access</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-6"
+       width="82.41333"
+       height="53.83601"
+       x="116.48497"
+       y="55.582001" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="151.59601"
+       y="62.539047"
+       id="text128265-7"><tspan
+         sodipodi:role="line"
+         id="tspan128263-8"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="151.59601"
+         y="62.539047">CPU</tspan></text>
+    <rect
+       style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-5-2-8"
+       width="44.074051"
+       height="23.608778"
+       x="152.04866"
+       y="66.023804" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.2934px;line-height:1.25;font-family:sans-serif;stroke-width:0.248128;fill:#000000;fill-opacity:1"
+       x="159.40538"
+       y="72.231033"
+       id="text48442-9-7"><tspan
+         sodipodi:role="line"
+         id="tspan48440-1-9"
+         style="font-size:5.2934px;fill:#000000;fill-opacity:1;stroke-width:0.248128"
+         x="159.40538"
+         y="72.231033">Legacy VM</tspan></text>
+    <path
+       style="fill:none;stroke:#b60000;stroke-width:0.287241;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 135.81788,105.66417 -0.0981,41.44328"
+       id="path167019-4-9" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.98654px;line-height:1.25;font-family:sans-serif;stroke-width:0.332772"
+       x="40.761517"
+       y="50.654137"
+       id="text6696"
+       transform="scale(0.98003848,1.0203681)"><tspan
+         sodipodi:role="line"
+         id="tspan6694"
+         style="stroke-width:0.332772"
+         x="40.761517"
+         y="50.654137">CC On</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.98654px;line-height:1.25;font-family:sans-serif;stroke-width:0.332772"
+       x="148.69733"
+       y="50.918991"
+       id="text6696-5"
+       transform="scale(0.98003848,1.0203681)"><tspan
+         sodipodi:role="line"
+         id="tspan6694-3"
+         style="stroke-width:0.332772"
+         x="148.69733"
+         y="50.918991">CC Off</tspan></text>
+    <rect
+       style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-5-2-6"
+       width="76.902687"
+       height="10.895148"
+       x="119.17096"
+       y="94.721901" />
+    <rect
+       style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect31-5-2-6-2"
+       width="29.180017"
+       height="10.978078"
+       x="119.17096"
+       y="83.74382" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="121.86589"
+       y="91.681213"
+       id="text80757-6"><tspan
+         sodipodi:role="line"
+         id="tspan80755-1"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="121.86589"
+         y="91.681213">Host OS</tspan></text>
+    <g
+       id="g44390-9"
+       transform="translate(130.91039,-129.26441)"
+       style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="fill:#a0a0a0;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect31-5-6-3"
+         width="35.147297"
+         height="12.345226"
+         x="25.823656"
+         y="203.36873" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000;fill-opacity:1"
+         x="26.253897"
+         y="211.01079"
+         id="text22999-6"><tspan
+           sodipodi:role="line"
+           id="tspan22997-0"
+           style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"
+           x="26.253897"
+           y="211.01079">NVIDIA Driver</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="142.41708"
+       y="101.76358"
+       id="text80757"><tspan
+         sodipodi:role="line"
+         id="tspan80755"
+         style="font-size:5.64444px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="142.41708"
+         y="101.76358">Hypervisor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="43.691181"
+       y="62.186806"
+       id="text128265"><tspan
+         sodipodi:role="line"
+         id="tspan128263"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="43.691181"
+         y="62.186806">CPU</tspan></text>
+    <g
+       id="g148082-4"
+       transform="matrix(0.88689328,0,0,0.89227956,73.146062,-65.683989)"
+       style="stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect31-5-2-5"
+         width="46.996861"
+         height="25.174416"
+         x="91.5093"
+         y="224.67746" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.06495px;line-height:1.25;font-family:sans-serif;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000;fill-opacity:1"
+         x="115.15138"
+         y="235.21481"
+         id="text48442-9-0"><tspan
+           sodipodi:role="line"
+           style="font-size:6.06495px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none"
+           x="115.15138"
+           y="235.21481"
+           id="tspan135290-3">NVIDIA </tspan><tspan
+           sodipodi:role="line"
+           style="font-size:6.06495px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none"
+           x="115.15138"
+           y="242.79601"
+           id="tspan141546-6">H100 GPU</tspan></text>
+    </g>
+    <g
+       id="g148082-4-1"
+       transform="matrix(0.89992975,0,0,0.89992975,-34.841357,-67.401147)"
+       style="stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:0.71812093;stroke:#000000;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect31-5-2-5-0"
+         width="46.996861"
+         height="25.174416"
+         x="91.5093"
+         y="224.67746" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.06495px;line-height:1.25;font-family:sans-serif;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none;fill:#000000;fill-opacity:1"
+         x="115.15138"
+         y="235.21481"
+         id="text48442-9-0-6"><tspan
+           sodipodi:role="line"
+           style="font-size:6.06495px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none"
+           x="115.15138"
+           y="235.21481"
+           id="tspan135290-3-3">NVIDIA </tspan><tspan
+           sodipodi:role="line"
+           style="font-size:6.06495px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.322349;stroke-miterlimit:4;stroke-dasharray:none"
+           x="115.15138"
+           y="242.79601"
+           id="tspan141546-6-2">H100 GPU</tspan></text>
+    </g>
+    <rect
+       style="fill:#dfd53c;fill-opacity:0.228188;stroke:#ffc900;stroke-width:0.672519;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.825503"
+       id="rect31-5-2-6-0"
+       width="44.296124"
+       height="95.055222"
+       x="46.514393"
+       y="64.61261" />
+    <path
+       style="fill:none;stroke:#ecb931;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend);opacity:1"
+       d="m 69.455265,88.949762 -0.09796,45.650428"
+       id="path167019" />
+    <path
+       style="fill:none;stroke:#b60000;stroke-width:0.299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-6);marker-end:url(#Arrow1Lend-5)"
+       d="m 175.69536,89.727726 -0.098,44.970424"
+       id="path167019-4" />
+    <path
+       style="fill:#00181b;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.5"
+       d="m 29.388689,105.60335 -0.0455,40.69493"
+       id="path171763"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow1Lend)"
+       d="m 29.343188,146.29828 18.245167,-5.3e-4"
+       id="path171897" />
+    <path
+       style="fill:none;stroke:#b60000;stroke-width:0.291;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 135.72005,147.10734 18.02707,0.0994"
+       id="path167019-4-9-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.80035px;line-height:1.25;font-family:sans-serif;stroke-width:0.237522;fill:#000000;fill-opacity:1"
+       x="47.927605"
+       y="123.88721"
+       id="text183677"><tspan
+         sodipodi:role="line"
+         id="tspan183675"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="47.927605"
+         y="123.88721">Encrypted</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="47.927605"
+         y="128.63765"
+         id="tspan183679">transfers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.80035px;line-height:1.25;font-family:sans-serif;stroke-width:0.237522;fill:#000000;fill-opacity:1"
+       x="150.11829"
+       y="124.04145"
+       id="text183677-7"><tspan
+         sodipodi:role="line"
+         id="tspan183675-4"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="150.11829"
+         y="124.04145">Unencrypted</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="150.11829"
+         y="128.79189"
+         id="tspan183679-5">transfers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.80035px;line-height:1.25;font-family:sans-serif;stroke-width:0.237522;fill:#000000;fill-opacity:1"
+       x="121.13273"
+       y="152.05867"
+       id="text183677-2-7"><tspan
+         sodipodi:role="line"
+         style="font-size:3.80035px;fill:#000000;fill-opacity:1;stroke-width:0.237522"
+         x="121.13273"
+         y="152.05867"
+         id="tspan203537-4">Full Access</tspan></text>
+  </g>
+</svg>
